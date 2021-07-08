@@ -1,0 +1,907 @@
+
+/* Class = "UITextField"; placeholder = "User Name"; ObjectID = "cFu-sx-4FC"; */
+"cFu-sx-4FC.placeholder" = "Nome Utente";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "tUS-7u-RCl"; */
+"tUS-7u-RCl.placeholder" = "Parola d'ordine";
+
+/* Class = "UIButton"; normalTitle = "SIGN IN"; ObjectID = "OQ5-gb-yql"; */
+"OQ5-gb-yql.normalTitle" = "REGISTRATI";
+
+/* Class = "UILabel"; text = "TODAY WORK PLAN"; ObjectID = "So3-XP-ylk"; */
+"So3-XP-ylk.text" = "ITINERARIO DI OGGI";
+
+/* Class = "UILabel"; text = "Tipo di lavoro"; ObjectID = "NuT-OP-tNI"; */
+"NuT-OP-tNI.text" = "Tipo di lavoro";
+
+/* Class = "UILabel"; text = "Headquarters"; ObjectID = "6Cy-id-rnI"; */
+"6Cy-id-rnI.text" = "Provincia";
+
+/* Class = "UILabel"; text = "Headquarters"; ObjectID = "ZuR-Cf-Soo"; */
+"ZuR-Cf-Soo.text" = "Provincia";
+
+/* Class = "UILabel"; text = "CLUSTER"; ObjectID = "j94-e4-7Ny"; */
+"j94-e4-7Ny.text" = "Città";
+
+/* Class = "UILabel"; text = "Cluster"; ObjectID = "41A-qz-jnf"; */
+"41A-qz-jnf.text" = "Città";
+
+/* Class = "UILabel"; text = "Cluster"; ObjectID = "I4r-Br-wc2"; */
+"I4r-Br-wc2.text" = "Città";
+
+/* Class = "UILabel"; text = "Cluster"; ObjectID = "NWA-zQ-pzv"; */
+"NWA-zQ-pzv.text" = "Città";
+
+/* Class = "UILabel"; text = "Remarks"; ObjectID = "20J-tl-Gvt"; */
+"20J-tl-Gvt.text" = "Osservazioni";
+
+/* Class = "UILabel"; text = "Remarks"; ObjectID = "7dI-YM-UNc"; */
+"7dI-YM-UNc.text" = "Osservazioni";
+
+/* Class = "UILabel"; text = "Remarks"; ObjectID = "RFA-DC-ajl"; */
+"RFA-DC-ajl.text" = "Osservazioni";
+
+/* Class = "UILabel"; text = "Remarks"; ObjectID = "TbL-qA-sdr"; */
+"TbL-qA-sdr.text" = "Osservazioni";
+
+/* Class = "UILabel"; text = "Remarks"; ObjectID = "aYZ-cs-9g6"; */
+"aYZ-cs-9g6.text" = "Osservazioni";
+
+/* Class = "UILabel"; text = "Remarks"; ObjectID = "qJZ-XS-96b"; */
+"qJZ-XS-96b.text" = "Osservazioni";
+
+/* Class = "UILabel"; text = "Remarks"; ObjectID = "tPC-kb-MJn"; */
+"tPC-kb-MJn.text" = "Osservazioni";
+
+/* Class = "UIButton"; normalTitle = "Reload"; ObjectID = "rgo-0Q-FBE"; */
+"rgo-0Q-FBE.normalTitle" = "Ricaricare";
+
+/* Class = "UIButton"; normalTitle = "Settings"; ObjectID = "iPh-yh-zWJ"; */
+"iPh-yh-zWJ.normalTitle" = "Impostazioni";
+
+/* Class = "UIButton"; normalTitle = "Save Settings"; ObjectID = "G3a-25-KhS"; */
+"G3a-25-KhS.normalTitle" = "Salva le impostazioni";
+
+/* Class = "UIButton"; normalTitle = "Logout"; ObjectID = "b2t-jH-wFU"; */
+"b2t-jH-wFU.normalTitle" = "Disconnettersi";
+
+/* Class = "UILabel"; text = "   Monthly Call Average"; ObjectID = "0jv-Fz-zQM"; */
+"0jv-Fz-zQM.text" = "   Media mensile delle visite";
+
+/* Class = "UILabel"; text = "   Current Month Call Visit Details"; ObjectID = "ZCk-42-ES2"; */
+"ZCk-42-ES2.text" = "   Mese corrente Chiama Dettagli visita";
+
+/* Class = "UILabel"; text = "Categorywise Visit Details"; ObjectID = "ws1-ev-J4y"; */
+"ws1-ev-J4y.text" = "Dettagli della visita per categoria";
+
+/* Class = "UILabel"; text = "Overall Visit Details"; ObjectID = "ph6-ll-5i3"; */
+"ph6-ll-5i3.text" = "Dettagli generali della visita";
+
+/* Class = "UILabel"; text = "Sun"; ObjectID = "IyQ-yL-SPS"; */
+"IyQ-yL-SPS.text" = "DOM";
+
+/* Class = "UILabel"; text = "Mon"; ObjectID = "cuw-bY-kek"; */
+"cuw-bY-kek.text" = "LUN";
+
+/* Class = "UILabel"; text = "Tue"; ObjectID = "V0x-bK-ZUc"; */
+"V0x-bK-ZUc.text" = "MAR";
+
+/* Class = "UILabel"; text = "Wed"; ObjectID = "CkW-Sp-clf"; */
+"CkW-Sp-clf.text" = "MER";
+
+/* Class = "UILabel"; text = "Thu"; ObjectID = "zP8-vm-RB1"; */
+"zP8-vm-RB1.text" = "GIO";
+
+/* Class = "UILabel"; text = "Fri"; ObjectID = "QgQ-AU-acX"; */
+"QgQ-AU-acX.text" = "VEN";
+
+/* Class = "UILabel"; text = "Sat"; ObjectID = "0Ld-yp-Xgi"; */
+"0Ld-yp-Xgi.text" = "SAB";
+
+/* Class = "UILabel"; text = "Territory"; ObjectID = "0ya-Cb-at0"; */
+"0ya-Cb-at0.text" = "Territorio";
+
+/* Class = "UILabel"; text = "Territory"; ObjectID = "5iK-HP-Byj"; */
+"5iK-HP-Byj.text" = "Territorio";
+
+/* Class = "UILabel"; text = "Territory"; ObjectID = "CTe-kH-dN0"; */
+"CTe-kH-dN0.text" = "Territorio";
+
+/* Class = "UILabel"; text = "Territory"; ObjectID = "DBV-WM-IPw"; */
+"DBV-WM-IPw.text" = "Territorio";
+
+/* Class = "UILabel"; text = "Territory"; ObjectID = "bfP-l8-fzX"; */
+"bfP-l8-fzX.text" = "Territorio";
+
+/* Class = "UILabel"; text = "Territory"; ObjectID = "foe-rZ-xUp"; */
+"foe-rZ-xUp.text" = "Territorio";
+
+/* Class = "UILabel"; text = "Territory"; ObjectID = "nt3-Wl-K6g"; */
+"nt3-Wl-K6g.text" = "Territorio";
+
+/* Class = "UILabel"; text = "Territory"; ObjectID = "r7W-pO-Td8"; */
+"r7W-pO-Td8.text" = "Territorio";
+
+/* Class = "UILabel"; text = "Competitor Company Name"; ObjectID = "13k-TB-Saz"; */
+"13k-TB-Saz.text" = "Nome del concorrente";
+
+/* Class = "UILabel"; text = "Address on Leave"; ObjectID = "1ka-Dx-M1k"; */
+"1ka-Dx-M1k.text" = "Indirizzo in congedo";
+
+/* Class = "UILabel"; text = "Feedback"; ObjectID = "2Ng-aR-LzI"; */
+"2Ng-aR-LzI.text" = "Risposta";
+
+/* Class = "UILabel"; text = "Feedback"; ObjectID = "9jW-1l-ALq"; */
+"9jW-1l-ALq.text" = "Risposta";
+
+/* Class = "UILabel"; text = "Feedback"; ObjectID = "AQh-Ji-QvC"; */
+"AQh-Ji-QvC.text" = "Risposta";
+
+/* Class = "UILabel"; text = "Feedback"; ObjectID = "K68-Uz-BSb"; */
+"K68-Uz-BSb.text" = "Risposta";
+
+/* Class = "UILabel"; text = "Feedback Details"; ObjectID = "b2Q-IW-Fcg"; */
+"b2Q-IW-Fcg.text" = "Risposta";
+
+/* Class = "UILabel"; text = "Feedback"; ObjectID = "pAh-Kd-Rl9"; */
+"pAh-Kd-Rl9.text" = "Risposta";
+
+/* Class = "UILabel"; text = "Feedback"; ObjectID = "zHn-6c-xOP"; */
+"zHn-6c-xOP.text" = "Risposta";
+
+/* Class = "UILabel"; text = "Available :"; ObjectID = "2br-nr-EvC"; */
+"2br-nr-EvC.text" = "A disposizione :";
+
+/* Class = "UIButton"; normalTitle = "Re-Select"; ObjectID = "2iZ-ta-Mgd"; */
+"2iZ-ta-Mgd.normalTitle" = "Modificare";
+
+/* Class = "UILabel"; text = "Licence Key"; ObjectID = "2xm-n5-6oX"; */
+"2xm-n5-6oX.text" = "Chiave di licenza";
+
+/* Class = "UILabel"; text = "Last Visit Date"; ObjectID = "36v-dF-nPx"; */
+"36v-dF-nPx.text" = "Data ultima visita";
+
+/* Class = "UILabel"; text = "Duration :"; ObjectID = "4f2-At-0wr"; */
+"4f2-At-0wr.text" = "Durata :";
+
+/* Class = "UIButton"; normalTitle = "Unlike"; ObjectID = "5C7-KY-7Ju"; */
+"5C7-KY-7Ju.normalTitle" = "antipatia";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "5EV-5Q-vvd"; */
+"5EV-5Q-vvd.normalTitle" = "Salva";
+
+/* Class = "UIButton"; normalTitle = "Like"; ObjectID = "5WP-tA-sO7"; */
+"5WP-tA-sO7.normalTitle" = "Piace";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "5aa-Wp-vSe"; */
+"5aa-Wp-vSe.text" = "Telefono";
+
+/* Class = "UILabel"; text = "E-Mail"; ObjectID = "5b2-3i-ffH"; */
+"5b2-3i-ffH.text" = "E-Mail";
+
+/* Class = "UILabel"; text = "Inputs"; ObjectID = "5dV-hU-aD9"; */
+"5dV-hU-aD9.text" = "Inserimenti";
+
+/* Class = "UIButton"; normalTitle = "Save Presentation"; ObjectID = "5fD-Lt-IAp"; */
+"5fD-Lt-IAp.normalTitle" = "Salva";
+
+/* Class = "UILabel"; text = "Contact Person"; ObjectID = "5yc-Md-NQS"; */
+"5yc-Md-NQS.text" = "Persona di contatto";
+
+/* Class = "UILabel"; text = "Product"; ObjectID = "60d-Qr-nx7"; */
+"60d-Qr-nx7.text" = "Prodotto";
+
+/* Class = "UIButton"; normalTitle = "Yes to Reject"; ObjectID = "653-xY-96x"; */
+"653-xY-96x.normalTitle" = "Sì a rifiutare";
+
+/* Class = "UITextView"; text = "Address"; ObjectID = "65M-os-Cwb"; */
+"65M-os-Cwb.text" = "Indirizzo";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "66U-XM-weq"; */
+"66U-XM-weq.normalTitle" = "OK";
+
+/* Class = "UILabel"; text = "Qty : 000"; ObjectID = "6Nk-W5-W7C"; */
+"6Nk-W5-W7C.text" = "Quantità : 000";
+
+/* Class = "UIButton"; normalTitle = "View"; ObjectID = "6QM-8i-32w"; */
+"6QM-8i-32w.normalTitle" = "vista";
+
+/* Class = "UILabel"; text = "Address On Leave"; ObjectID = "6gc-KI-7O6"; */
+"6gc-KI-7O6.text" = "Indirizzo in congedo";
+
+/* Class = "UIButton"; normalTitle = "Doctorwise Products"; ObjectID = "7LX-IP-jJX"; */
+"7LX-IP-jJX.normalTitle" = "Saggio medico Prodotti";
+
+/* Class = "UILabel"; text = "Products"; ObjectID = "7jw-ml-iIA"; */
+"7jw-ml-iIA.text" = "Prodotti";
+
+/* Class = "UILabel"; text = "Inputs"; ObjectID = "8Aa-9j-JBx"; */
+"8Aa-9j-JBx.text" = "Inserimenti";
+
+/* Class = "UIButton"; normalTitle = "Scribling"; ObjectID = "8YG-4q-DZK"; */
+"8YG-4q-DZK.normalTitle" = "Scarabocchiare";
+
+/* Class = "UILabel"; text = "No of Days :"; ObjectID = "8gH-2L-EbQ"; */
+"8gH-2L-EbQ.text" = "No dei giorni :";
+
+/* Class = "UIButton"; normalTitle = "Add Another Brand"; ObjectID = "8h5-5r-hBa"; */
+"8h5-5r-hBa.normalTitle" = "Aggiungi marca";
+
+/* Class = "UILabel"; text = "Headquaters"; ObjectID = "8iC-YG-IMg"; */
+"8iC-YG-IMg.text" = "Sede centrale";
+
+/* Class = "UILabel"; text = "Medico Name"; ObjectID = "8sc-s6-wVQ"; */
+"8sc-s6-wVQ.text" = "Nome del medico";
+
+/* Class = "UILabel"; text = "Timeline"; ObjectID = "9LR-Hj-0eK"; */
+"9LR-Hj-0eK.text" = "Durata";
+
+/* Class = "UILabel"; text = "Mobile"; ObjectID = "9Tc-9h-HFZ"; */
+"9Tc-9h-HFZ.text" = "Cellulare";
+
+/* Class = "UILabel"; text = "From : "; ObjectID = "9pf-4p-53z"; */
+"9pf-4p-53z.text" = "A partire dal : ";
+
+/* Class = "UILabel"; text = "Group "; ObjectID = "AIU-Fl-pld"; */
+"AIU-Fl-pld.text" = "Gruppo ";
+
+/* Class = "UILabel"; text = "Listed Chemist Selection"; ObjectID = "AWu-k6-Jkd"; */
+"AWu-k6-Jkd.text" = "Elenco Farmacia selezionato";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "AcL-88-bi3"; */
+"AcL-88-bi3.normalTitle" = "Salva";
+
+/* Class = "UILabel"; text = "Categoria"; ObjectID = "B1A-5q-nrg"; */
+"B1A-5q-nrg.text" = "Categoria";
+
+/* Class = "UILabel"; text = "Products"; ObjectID = "BVf-sq-hQy"; */
+"BVf-sq-hQy.text" = "Prodotti";
+
+/* Class = "UILabel"; text = "Speciality"; ObjectID = "Ba6-Pv-woV"; */
+"Ba6-Pv-woV.text" = "Specialità";
+
+/* Class = "UILabel"; text = "Last Visit Date"; ObjectID = "Be5-au-ren"; */
+"Be5-au-ren.text" = "Data ultima visita";
+
+/* Class = "UILabel"; text = "Medico Name"; ObjectID = "BzX-34-npY"; */
+"BzX-34-npY.text" = "Nome del medico";
+
+/* Class = "UILabel"; text = "Total 0 Calls"; ObjectID = "C8g-8D-cqx"; */
+"C8g-8D-cqx.text" = "Totale 0 visite";
+
+/* Class = "UILabel"; text = "Speciality"; ObjectID = "CDL-Oy-jXj"; */
+"CDL-Oy-jXj.text" = "Specialità";
+
+/* Class = "UILabel"; text = "Web Url ( eg: www.yoururl.com )"; ObjectID = "CEY-KU-efJ"; */
+"CEY-KU-efJ.text" = "Web Url ( eg: www.yoururl.com )";
+
+/* Class = "UILabel"; text = "Name :"; ObjectID = "CQW-Tw-XeV"; */
+"CQW-Tw-XeV.text" = "Nome :";
+
+/* Class = "UILabel"; text = "Reason For Leave"; ObjectID = "CiK-kh-Unv"; */
+"CiK-kh-Unv.text" = "Motivo per lasciare";
+
+/* Class = "UILabel"; text = "Tourplan Entry"; ObjectID = "DEU-ZF-wgZ"; */
+"DEU-ZF-wgZ.text" = "Entrata del piano turistico";
+
+/* Class = "UILabel"; text = "Inputs"; ObjectID = "DaS-Bk-DJO"; */
+"DaS-Bk-DJO.text" = "Inserimenti";
+
+/* Class = "UILabel"; text = "Chemist Name"; ObjectID = "EBO-Dq-dQo"; */
+"EBO-Dq-dQo.text" = "Nome del Farmacia";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "EFR-wW-hfx"; */
+"EFR-wW-hfx.text" = "Indirizzo";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "EOG-d5-UVj"; */
+"EOG-d5-UVj.normalTitle" = "selezionare";
+
+/* Class = "UILabel"; text = "Categoria"; ObjectID = "EeR-IY-kN8"; */
+"EeR-IY-kN8.text" = "Categoria";
+
+/* Class = "UILabel"; text = "Fax"; ObjectID = "Ehj-mw-ZgY"; */
+"Ehj-mw-ZgY.text" = "Fax";
+
+/* Class = "UILabel"; text = "Value"; ObjectID = "F2H-gY-qnh"; */
+"F2H-gY-qnh.text" = "Valore";
+
+/* Class = "UILabel"; text = "Tipo di lavoro"; ObjectID = "FOm-aC-ShN"; */
+"FOm-aC-ShN.text" = "Tipo di lavoro";
+
+/* Class = "UILabel"; text = "Last Visit Date"; ObjectID = "G29-Zv-zNy"; */
+"G29-Zv-zNy.text" = "Data ultima visita";
+
+/* Class = "UILabel"; text = "Profile Picture"; ObjectID = "G4J-86-IEJ"; */
+"G4J-86-IEJ.text" = "profilo";
+
+/* Class = "UILabel"; text = "Competitor Brand Name"; ObjectID = "GPQ-pM-LeR"; */
+"GPQ-pM-LeR.text" = "Marchio concorrente";
+
+/* Class = "UILabel"; text = "Reject Reason"; ObjectID = "Ggl-58-uNv"; */
+"Ggl-58-uNv.text" = "Rifiuta motivo";
+
+/* Class = "UILabel"; text = "Leave Application"; ObjectID = "HTT-1v-JsN"; */
+"HTT-1v-JsN.text" = "lasciare l'applicazione";
+
+/* Class = "UILabel"; text = "Product Promoted"; ObjectID = "HVu-Dz-KdR"; */
+"HVu-Dz-KdR.text" = "Prodotto promosso";
+
+/* Class = "UILabel"; text = "Precall Analysis"; ObjectID = "HgG-AC-obo"; */
+"HgG-AC-obo.text" = "Analisi pre-chiamata";
+
+/* Class = "UITextField"; placeholder = "Search Listed Chemist"; ObjectID = "Hlf-ul-cur"; */
+"Hlf-ul-cur.placeholder" = "Cerca un Farmacia quotato";
+
+/* Class = "UIButton"; normalTitle = "Clear Data"; ObjectID = "HrB-W1-nAr"; */
+"HrB-W1-nAr.normalTitle" = "cancella i dati";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "HuH-40-ZAJ"; */
+"HuH-40-ZAJ.text" = "Indirizzo";
+
+/* Class = "UILabel"; text = "Your Device ID"; ObjectID = "Ij5-LF-wni"; */
+"Ij5-LF-wni.text" = "Il tuo ID dispositivo";
+
+/* Class = "UIButton"; normalTitle = "Reject"; ObjectID = "Ikz-7K-EbD"; */
+"Ikz-7K-EbD.normalTitle" = "Rifiutare";
+
+/* Class = "UISegmentedControl"; JaR-Hv-dil.segmentTitles[0] = "CL"; ObjectID = "JaR-Hv-dil"; */
+"JaR-Hv-dil.segmentTitles[0]" = "CL";
+
+/* Class = "UISegmentedControl"; JaR-Hv-dil.segmentTitles[1] = "PL"; ObjectID = "JaR-Hv-dil"; */
+"JaR-Hv-dil.segmentTitles[1]" = "PL";
+
+/* Class = "UISegmentedControl"; JaR-Hv-dil.segmentTitles[2] = "SL"; ObjectID = "JaR-Hv-dil"; */
+"JaR-Hv-dil.segmentTitles[2]" = "SL";
+
+/* Class = "UISegmentedControl"; JaR-Hv-dil.segmentTitles[3] = "LOP"; ObjectID = "JaR-Hv-dil"; */
+"JaR-Hv-dil.segmentTitles[3]" = "LOP";
+
+/* Class = "UILabel"; text = "SF Name"; ObjectID = "Jd0-2v-80t"; */
+"Jd0-2v-80t.text" = "SF Nome";
+
+/* Class = "UILabel"; text = "To"; ObjectID = "JoF-o2-6uh"; */
+"JoF-o2-6uh.text" = "A";
+
+/* Class = "UILabel"; text = "Year"; ObjectID = "K58-mV-WlB"; */
+"K58-mV-WlB.text" = "Anno";
+
+/* Class = "UILabel"; text = "Days : "; ObjectID = "KEN-Dd-KFC"; */
+"KEN-Dd-KFC.text" = "giorni : ";
+
+/* Class = "UIButton"; normalTitle = "Skip Detailing"; ObjectID = "KRH-Ah-haI"; */
+"KRH-Ah-haI.normalTitle" = "Salta dettagli";
+
+/* Class = "UILabel"; text = "Entry Selection"; ObjectID = "L7f-mp-b6l"; */
+"L7f-mp-b6l.text" = "Selezione di voci";
+
+/* Class = "UILabel"; text = "Speciality"; ObjectID = "LYU-Zq-j5T"; */
+"LYU-Zq-j5T.text" = "Specialità";
+
+/* Class = "UIButton"; normalTitle = "Close"; ObjectID = "Lar-V6-DXC"; */
+"Lar-V6-DXC.normalTitle" = "Vicino";
+
+/* Class = "UIButton"; normalTitle = "Send For Approval"; ObjectID = "MGq-ns-cYT"; */
+"MGq-ns-cYT.normalTitle" = "inviare per l'approvazione";
+
+/* Class = "UILabel"; text = "View / Confirm"; ObjectID = "MXf-2t-DbK"; */
+"MXf-2t-DbK.text" = "vista / Confermare";
+
+/* Class = "UITabBarItem"; title = "Stockist"; ObjectID = "Max-cP-Qyq"; */
+"Max-cP-Qyq.title" = "grossista";
+
+/* Class = "UILabel"; text = "Categoria"; ObjectID = "MfG-Jg-vlv"; */
+"MfG-Jg-vlv.text" = "Categoria";
+
+/* Class = "UILabel"; text = "Fax"; ObjectID = "MgH-NW-Fwi"; */
+"MgH-NW-Fwi.text" = "Fax";
+
+/* Class = "UILabel"; text = "Tipo di lavoro"; ObjectID = "MgO-m6-uCG"; */
+"MgO-m6-uCG.text" = "Tipo di lavoro";
+
+/* Class = "UILabel"; text = "Date Of Birth"; ObjectID = "N7F-BH-bA3"; */
+"N7F-BH-bA3.text" = "Data di nascita";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "NPE-dm-N88"; */
+"NPE-dm-N88.normalTitle" = "Annulla/Salva Bozza";
+
+/* Class = "UIButton"; normalTitle = "Close"; ObjectID = "Nbi-8s-pnE"; */
+"Nbi-8s-pnE.normalTitle" = "Vicino";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Nse-1B-q4Y"; */
+"Nse-1B-q4Y.normalTitle" = "Annulla";
+
+/* Class = "UILabel"; text = "Headquater"; ObjectID = "OFI-fZ-f7K"; */
+"OFI-fZ-f7K.text" = "Sede centrale";
+
+/* Class = "UIButton"; normalTitle = "Select the Headquaters"; ObjectID = "OIV-aN-43I"; */
+"OIV-aN-43I.normalTitle" = "Seleziona la sede";
+
+/* Class = "UIButton"; normalTitle = "Next Month"; ObjectID = "OnT-8B-5wL"; */
+"OnT-8B-5wL.normalTitle" = "Il prossimo mese";
+
+/* Class = "UITabBarItem"; title = "Chemist"; ObjectID = "PLi-XC-5cN"; */
+"PLi-XC-5cN.title" = "Farmacia";
+
+/* Class = "UILabel"; text = "Speciality"; ObjectID = "PqM-hZ-bmK"; */
+"PqM-hZ-bmK.text" = "Specialità";
+
+/* Class = "UILabel"; text = "Residence"; ObjectID = "QSb-ie-kOg"; */
+"QSb-ie-kOg.text" = "Residenza";
+
+/* Class = "UILabel"; text = "Tipo di lavoro"; ObjectID = "QYG-7t-apZ"; */
+"QYG-7t-apZ.text" = "Tipo di lavoro";
+
+/* Class = "UILabel"; text = "Precall Analysis"; ObjectID = "QbC-RE-gxg"; */
+"QbC-RE-gxg.text" = "Analisi pre-chiamata";
+
+/* Class = "UITabBarItem"; title = "Medico"; ObjectID = "RdG-p9-Wne"; */
+"RdG-p9-Wne.title" = "Medico";
+
+/* Class = "UILabel"; text = "APP CONFIGURATION"; ObjectID = "Ree-by-nLs"; */
+"Ree-by-nLs.text" = "CONFIGURAZIONE APP";
+
+/* Class = "UILabel"; text = "Speciality"; ObjectID = "S73-Xz-IzM"; */
+"S73-Xz-IzM.text" = "Specialità";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "SFD-Ye-iaV"; */
+"SFD-Ye-iaV.text" = "Indirizzo";
+
+/* Class = "UITextField"; placeholder = "Search Listed Medico"; ObjectID = "SwP-bK-bxz"; */
+"SwP-bK-bxz.placeholder" = "Cerca dottore quotato";
+
+/* Class = "UILabel"; text = "Rate"; ObjectID = "T2o-mO-RjO"; */
+"T2o-mO-RjO.text" = "Vota";
+
+/* Class = "UILabel"; text = "Reason For Leave"; ObjectID = "Tal-6t-KkI"; */
+"Tal-6t-KkI.text" = "Motivo per lasciare";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "U9V-qx-4bm"; */
+"U9V-qx-4bm.normalTitle" = "Invio";///"Sottoscrivi";
+
+/* Class = "UIButton"; normalTitle = "Change"; ObjectID = "UDT-QR-VRA"; */
+"UDT-QR-VRA.normalTitle" = "Modificare";
+
+/* Class = "UILabel"; text = "Mobile"; ObjectID = "UcN-dd-AzB"; */
+"UcN-dd-AzB.text" = "Cellulare";
+
+/* Class = "UILabel"; text = "Last Visit Date"; ObjectID = "VBM-xD-7rQ"; */
+"VBM-xD-7rQ.text" = "Data ultima visita";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "VZI-1n-udC"; */
+"VZI-1n-udC.text" = "Nome";
+
+/* Class = "UILabel"; text = "Specialty"; ObjectID = "W02-gb-REE"; */
+"W02-gb-REE.text" = "Specialty";
+
+/* Class = "UILabel"; text = "Rate : 000"; ObjectID = "WEp-gM-8rb"; */
+"WEp-gM-8rb.text" = "Vota : 000";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "Wa2-VK-KXk"; */
+"Wa2-VK-KXk.normalTitle" = "Salva";
+
+/* Class = "UILabel"; text = "name"; ObjectID = "Wwi-Ls-ihr"; */
+"Wwi-Ls-ihr.text" = "Nome";
+
+/* Class = "UILabel"; text = "RCPA Detail List"; ObjectID = "X9k-6j-ir1"; */
+"X9k-6j-ir1.text" = "Elenco di controllo del marchio";
+
+/* Class = "UILabel"; text = "Additional Calls"; ObjectID = "XAD-BT-2O1"; */
+"XAD-BT-2O1.text" = "visite aggiuntive";
+
+/* Class = "UITextField"; placeholder = "Qty"; ObjectID = "XVQ-3p-eIF"; */
+"XVQ-3p-eIF.placeholder" = "Quantità";
+
+/* Class = "UIButton"; normalTitle = "Not Accept"; ObjectID = "Xrf-l8-27p"; */
+"Xrf-l8-27p.normalTitle" = "v";
+
+/* Class = "UILabel"; text = "Rating"; ObjectID = "Xzg-3b-LSB"; */
+"Xzg-3b-LSB.text" = "valutazione";
+
+/* Class = "UIButton"; normalTitle = "Select the Headquaters"; ObjectID = "Y5o-uC-hPQ"; */
+"Y5o-uC-hPQ.normalTitle" = "Seleziona la sede";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "Y9w-oE-gfk"; */
+"Y9w-oE-gfk.text" = "Indirizzo";
+
+/* Class = "UILabel"; text = "Value"; ObjectID = "YBU-za-2gB"; */
+"YBU-za-2gB.text" = "Valore";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "YFJ-rl-VFu"; */
+"YFJ-rl-VFu.normalTitle" = "selezionare";
+
+/* Class = "UILabel"; text = "Do you like this slide ?"; ObjectID = "YGN-E2-EBi"; */
+"YGN-E2-EBi.text" = "Ti piace questa diapositiva ?";
+
+/* Class = "UIButton"; normalTitle = "Re-Select"; ObjectID = "YLD-eY-l3T"; */
+"YLD-eY-l3T.normalTitle" = "Modificare";
+
+/* Class = "UILabel"; text = "name"; ObjectID = "YLa-RM-MHP"; */
+"YLa-RM-MHP.text" = "Nome";
+
+/* Class = "UITextField"; placeholder = "Search Unlisted Medico"; ObjectID = "Yyw-UJ-5gk"; */
+"Yyw-UJ-5gk.placeholder" = "Cerca un medico non in elenco";
+
+/* Class = "UILabel"; text = "Reports"; ObjectID = "ZBQ-sR-Jxi"; */
+"ZBQ-sR-Jxi.text" = "Rapporti";
+
+/* Class = "UILabel"; text = "Visit Details"; ObjectID = "ZOf-wY-jry"; */
+"ZOf-wY-jry.text" = "Visita i dettagli";
+
+/* Class = "UILabel"; text = "Qty"; ObjectID = "ZdO-59-ZHI"; */
+"ZdO-59-ZHI.text" = "Quantità";
+
+/* Class = "UILabel"; text = "About Slide"; ObjectID = "Zob-vf-ME5"; */
+"Zob-vf-ME5.text" = "Informazioni sulla diapositiva";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "bGA-ot-48H"; */
+"bGA-ot-48H.normalTitle" = "selezionare";
+
+/* Class = "UIButton"; normalTitle = "Save Presentation"; ObjectID = "bI0-So-vKD"; */
+"bI0-So-vKD.normalTitle" = "Salva";
+
+/* Class = "UITabBarItem"; title = "Unlisted Medico"; ObjectID = "bNk-9b-aQw"; */
+"bNk-9b-aQw.title" = "Dottore non elencato";
+
+/* Class = "UIButton"; normalTitle = "Select the Headquaters"; ObjectID = "bRx-lp-ROi"; */
+"bRx-lp-ROi.normalTitle" = "Seleziona la sede";
+
+/* Class = "UIButton"; normalTitle = "Accept"; ObjectID = "bTL-xw-f7A"; */
+"bTL-xw-f7A.normalTitle" = "Accettare";
+
+/* Class = "UILabel"; text = "Tipo di lavoro"; ObjectID = "bVw-bR-V9z"; */
+"bVw-bR-V9z.text" = "Tipo di lavoro";
+
+/* Class = "UIButton"; normalTitle = "Add Competitor"; ObjectID = "biY-O3-MB7"; */
+"biY-O3-MB7.normalTitle" = "Aggiungi concorrente";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "biv-Jq-lEX"; */
+"biv-Jq-lEX.normalTitle" = "OK";
+
+/* Class = "UIButton"; normalTitle = "Select the Headquaters"; ObjectID = "brh-bv-dgv"; */
+"brh-bv-dgv.normalTitle" = "Seleziona la sede";
+
+/* Class = "UILabel"; text = "Mobile"; ObjectID = "cBf-jM-c22"; */
+"cBf-jM-c22.text" = "Cellulare";
+
+/* Class = "UILabel"; text = "Create Presentation"; ObjectID = "cFH-Uk-zlE"; */
+"cFH-Uk-zlE.text" = "Crea presentazione";
+
+/* Class = "UIButton"; normalTitle = "Re-Select"; ObjectID = "cG5-4v-kky"; */
+"cG5-4v-kky.normalTitle" = "Modificare";
+
+/* Class = "UILabel"; text = "FDate"; ObjectID = "cM2-Ed-Pkv"; */
+"cM2-Ed-Pkv.text" = "Dalla data";
+
+/* Class = "UILabel"; text = "E-Mail"; ObjectID = "cTY-e8-hKM"; */
+"cTY-e8-hKM.text" = "E-Mail";
+
+/* Class = "UILabel"; text = "Master List Downloader"; ObjectID = "crH-6y-Kne"; */
+"crH-6y-Kne.text" = "Master List Downloader";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "d9k-m4-PgI"; */
+"d9k-m4-PgI.text" = "Telefono";
+
+/* Class = "UILabel"; text = "SF Name"; ObjectID = "dwl-36-0nP"; */
+"dwl-36-0nP.text" = "SF Nome";
+
+/* Class = "UILabel"; text = "Tour Plan Approval"; ObjectID = "eXh-cL-WCx"; */
+"eXh-cL-WCx.text" = "Approvazione del piano turistico";
+
+/* Class = "UILabel"; text = "SF Name"; ObjectID = "edd-Tb-uee"; */
+"edd-Tb-uee.text" = "SF Nome";
+
+/* Class = "UIButton"; normalTitle = "Cancel Edit"; ObjectID = "edv-pN-E5C"; */
+"edv-pN-E5C.normalTitle" = "Annulla Modifica";
+
+/* Class = "UILabel"; text = "Precall Analysis"; ObjectID = "en2-1f-Zye"; */
+"en2-1f-Zye.text" = "Analisi pre-chiamata";
+
+/* Class = "UILabel"; text = "Leave Approval"; ObjectID = "f5F-77-pSV"; */
+"f5F-77-pSV.text" = "Lascia l'approvazione";
+
+/* Class = "UILabel"; text = "Product Name"; ObjectID = "fEN-N9-pv1"; */
+"fEN-N9-pv1.text" = "nome del prodotto";
+
+/* Class = "UILabel"; text = "name"; ObjectID = "fNe-Ld-Z8H"; */
+"fNe-Ld-Z8H.text" = "Nome";
+
+/* Class = "UITextField"; placeholder = "Search Listed Stockist"; ObjectID = "g2M-N8-55Q"; */
+"g2M-N8-55Q.placeholder" = "Cerca elencato rivenditore";
+
+/* Class = "UILabel"; text = "name"; ObjectID = "gBi-un-9t0"; */
+"gBi-un-9t0.text" = "Nome";
+
+/* Class = "UILabel"; text = "Profile Picture"; ObjectID = "gNl-s8-3X1"; */
+"gNl-s8-3X1.text" = "immagine del profilo";
+
+/* Class = "UIButton"; normalTitle = "Set Profile Picture"; ObjectID = "gWX-c8-18L"; */
+"gWX-c8-18L.normalTitle" = "imposta la foto del profilo";
+
+/* Class = "UILabel"; text = "Are you sure to reject this Leave ?"; ObjectID = "hAq-3e-UUs"; */
+"hAq-3e-UUs.text" = "Sei sicuro di rifiutare questo permesso ?";
+
+/* Class = "UILabel"; text = "ToDate"; ObjectID = "hFa-0I-KFf"; */
+"hFa-0I-KFf.text" = "Ad oggi";
+
+/* Class = "UILabel"; text = "Inputs"; ObjectID = "hG8-7W-YIw"; */
+"hG8-7W-YIw.text" = "Inserimenti";
+
+/* Class = "UIButton"; normalTitle = "Go"; ObjectID = "hiw-JC-FXl"; */
+"hiw-JC-FXl.normalTitle" = "Go";
+
+/* Class = "UILabel"; text = "Input"; ObjectID = "i6J-Qf-KKW"; */
+"i6J-Qf-KKW.text" = "Inserimenti";
+
+/* Class = "UILabel"; text = "Slides Downloader"; ObjectID = "iMI-am-clC"; */
+"iMI-am-clC.text" = " ";
+
+/* Class = "UILabel"; text = "Listed Stockist Selection"; ObjectID = "ihx-LX-mYy"; */
+"ihx-LX-mYy.text" = "Elenco di selezione dei rivenditori";
+
+/* Class = "UILabel"; text = "Listed Medico Selection"; ObjectID = "ihz-vL-Ri6"; */
+"ihz-vL-Ri6.text" = "Selezione medico";
+
+/* Class = "UITextField"; placeholder = "Rate"; ObjectID = "jPb-9S-uwZ"; */
+"jPb-9S-uwZ.placeholder" = "Vota";
+
+/* Class = "UILabel"; text = "Plan For The Day"; ObjectID = "jWw-1y-TJu"; */
+"jWw-1y-TJu.text" = "Pianifica la giornata";
+
+/* Class = "UILabel"; text = "Visit Details"; ObjectID = "jch-cq-M7u"; */
+"jch-cq-M7u.text" = "Visita i dettagli";
+
+/* Class = "UILabel"; text = "Qty"; ObjectID = "kLF-6k-FYg"; */
+"kLF-6k-FYg.text" = "Quantità";
+
+/* Class = "UILabel"; text = "SF Name"; ObjectID = "kXX-HY-XJh"; */
+"kXX-HY-XJh.text" = "SF Nome";
+
+/* Class = "UILabel"; text = "Wedding Date"; ObjectID = "lBK-Ci-VTq"; */
+"lBK-Ci-VTq.text" = "Data di matrimonio";
+
+/* Class = "UILabel"; text = "Rx Qty"; ObjectID = "lFX-ln-Hxn"; */
+"lFX-ln-Hxn.text" = "Rx Quantità";
+
+/* Class = "UILabel"; text = "Visit Details"; ObjectID = "ljE-cY-uSH"; */
+"ljE-cY-uSH.text" = "Visita i dettagli";
+
+/* Class = "UILabel"; text = "Product Promoted"; ObjectID = "m2j-qA-Qam"; */
+"m2j-qA-Qam.text" = "Prodotto promosso";
+
+/* Class = "UILabel"; text = "Qualification"; ObjectID = "m7D-ra-hXP"; */
+"m7D-ra-hXP.text" = "Qualificazione";
+
+/* Class = "UILabel"; text = "Powered by"; ObjectID = "mDD-o7-0hN"; */
+"mDD-o7-0hN.text" = "Powered by";
+
+/* Class = "UILabel"; text = "ENHANCING  INTERACTION  WITH  PHYSICIAN"; ObjectID = "mRb-8U-QEo"; */
+"mRb-8U-QEo.text" = "ENHANCING  INTERACTION  WITH  PHYSICIAN";
+
+/* Class = "UILabel"; text = "Tipo di lavoro"; ObjectID = "mSd-yx-quU"; */
+"mSd-yx-quU.text" = "Tipo di lavoro";
+
+/* Class = "UILabel"; text = "Categoria"; ObjectID = "mVy-b8-CoX"; */
+"mVy-b8-CoX.text" = "Categoria";
+
+/* Class = "UILabel"; text = "Samples"; ObjectID = "mfk-vF-hTv"; */
+"mfk-vF-hTv.text" = "Campioni";
+
+/* Class = "UILabel"; text = "Mobile"; ObjectID = "mwE-kE-bdj"; */
+"mwE-kE-bdj.text" = "Cellulare";
+
+/* Class = "UIButton"; normalTitle = "Change Profile"; ObjectID = "n84-l3-PjN"; */
+"n84-l3-PjN.normalTitle" = "Cambia profilo";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "nYJ-6R-5Cv"; */
+"nYJ-6R-5Cv.normalTitle" = "OK";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "nlL-Ln-cjH"; */
+"nlL-Ln-cjH.text" = "Nome";
+
+/* Class = "UILabel"; text = "Leave Type :"; ObjectID = "oK4-JK-m7y"; */
+"oK4-JK-m7y.text" = "Lascia il tipo :";
+
+/* Class = "UILabel"; text = "Medico Name :"; ObjectID = "oei-J3-L5A"; */
+"oei-J3-L5A.text" = "Nome del medico :";
+
+/* Class = "UILabel"; text = "Sunday"; ObjectID = "ohw-qt-Kr1"; */
+"ohw-qt-Kr1.text" = "Domenica";
+
+/* Class = "UIButton"; normalTitle = "Approve"; ObjectID = "ooq-hq-VpM"; */
+"ooq-hq-VpM.normalTitle" = "Approvare";
+
+/* Class = "UILabel"; text = "Approvals"; ObjectID = "pdp-qz-VYP"; */
+"pdp-qz-VYP.text" = "Approvazioni";
+
+/* Class = "UITextField"; placeholder = "Value"; ObjectID = "phI-a0-pxU"; */
+"phI-a0-pxU.placeholder" = "Valore";
+
+/* Class = "UILabel"; text = "To : "; ObjectID = "q3T-DL-hft"; */
+"q3T-DL-hft.text" = "A : ";
+
+/* Class = "UILabel"; text = "Jointwork"; ObjectID = "qLX-nh-bZk"; */
+"qLX-nh-bZk.text" = "Lavoro congiunto";
+
+/* Class = "UILabel"; text = "LOP"; ObjectID = "qUf-5O-1dd"; */
+"qUf-5O-1dd.text" = "LOP";
+
+/* Class = "UITextField"; text = "Signature Here"; ObjectID = "qg2-7y-2Qz"; */
+"qg2-7y-2Qz.text" = "Firma qui";
+
+/* Class = "UILabel"; text = "Value : 000"; ObjectID = "qoX-Wa-nvE"; */
+"qoX-Wa-nvE.text" = "Valore : 000";
+
+/* Class = "UIButton"; normalTitle = "Final Submit"; ObjectID = "r58-qW-PkZ"; */
+"r58-qW-PkZ.normalTitle" = "Invio finale";
+
+/* Class = "UILabel"; text = "Precall Analysis"; ObjectID = "rIS-RU-fF9"; */
+"rIS-RU-fF9.text" = "Analisi pre-chiamata";
+
+/* Class = "UILabel"; text = "Qualification"; ObjectID = "rTj-eL-tqG"; */
+"rTj-eL-tqG.text" = "Qualificazione";
+
+/* Class = "UILabel"; text = "Month"; ObjectID = "raM-Wi-bBj"; */
+"raM-Wi-bBj.text" = "Mese";
+
+/* Class = "UIButton"; normalTitle = "Current Month"; ObjectID = "red-dQ-7Nq"; */
+"red-dQ-7Nq.normalTitle" = "Corrente mese";
+
+/* Class = "UILabel"; text = "Visit Details"; ObjectID = "sai-Pj-sUK"; */
+"sai-Pj-sUK.text" = "Visita i dettagli";
+
+/* Class = "UILabel"; text = "Our Product Brand"; ObjectID = "son-JD-1tj"; */
+"son-JD-1tj.text" = "Il nostro prodotto";
+
+/* Class = "UILabel"; text = "DIGITAL PROMOTION"; ObjectID = "tWA-PE-oNC"; */
+"tWA-PE-oNC.text" = "DIGITAL PROMOTION";
+
+/* Class = "UIButton"; normalTitle = "RCPA Entry"; ObjectID = "tdc-5H-PdG"; */
+"tdc-5H-PdG.normalTitle" = "Analisi prodotto";
+
+/* Class = "UITextField"; placeholder = "www.yoururl.com"; ObjectID = "tgw-jP-rIJ"; */
+"tgw-jP-rIJ.placeholder" = "www.yoururl.com";
+
+/* Class = "UIButton"; normalTitle = "Re-Select"; ObjectID = "u7k-Gp-Mtd"; */
+"u7k-Gp-Mtd.normalTitle" = "Modificare";
+
+/* Class = "UILabel"; text = "Product Promoted"; ObjectID = "u9I-5o-fcT"; */
+"u9I-5o-fcT.text" = "Prodotto promosso";
+
+/* Class = "UILabel"; text = "Unlisted Medico Selection"; ObjectID = "uMP-yj-cbG"; */
+"uMP-yj-cbG.text" = "Medico non in elenco";
+
+/* Class = "UILabel"; text = "Rate"; ObjectID = "uRq-Mg-QWN"; */
+"uRq-Mg-QWN.text" = "Vota";
+
+/* Class = "UILabel"; text = "Contact Person"; ObjectID = "uyD-Uc-T1m"; */
+"uyD-Uc-T1m.text" = "Persona di contatto";
+
+/* Class = "UILabel"; text = "Comments"; ObjectID = "vBU-5p-j2Q"; */
+"vBU-5p-j2Q.text" = "Commenti";
+
+/* Class = "UILabel"; text = "Leave From"; ObjectID = "vMV-pq-17E"; */
+"vMV-pq-17E.text" = "Partire da";
+
+/* Class = "UILabel"; text = "E-Mail"; ObjectID = "vjd-79-JtA"; */
+"vjd-79-JtA.text" = "E-Mail";
+
+/* Class = "UILabel"; text = "Tipo di lavoro"; ObjectID = "wDx-JK-InJ"; */
+"wDx-JK-InJ.text" = "Tipo di lavoro";
+
+/* Class = "UILabel"; text = "Categoria"; ObjectID = "x3R-e6-pg8"; */
+"x3R-e6-pg8.text" = "Categoria";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "xRH-J9-t61"; */
+"xRH-J9-t61.text" = "Telefono";
+
+/* Class = "UILabel"; text = "Leave Type"; ObjectID = "yyd-L1-hsu"; */
+"yyd-L1-hsu.text" = "Lascia il tipo";
+
+/* Class = "UILabel"; text = "Categoria"; ObjectID = "zIl-Vx-WWc"; */
+"zIl-Vx-WWc.text" = "Categoria";
+
+/* Class = "UILabel"; text = "Search Product"; ObjectID = "zKb-HI-fEp"; */
+"zKb-HI-fEp.text" = "Cerca prodotti";
+
+/* Class = "UIButton"; normalTitle = "Reject"; ObjectID = "zUI-bh-aPt"; */
+"zUI-bh-aPt.normalTitle" = "Rifiutare";
+
+/* Class = "UIButton"; normalTitle = "Cancel Demo"; ObjectID = "zZA-oX-Oze"; */
+"zZA-oX-Oze.normalTitle" = "Annulla la demo";
+
+"2hz-CK-tzK.text"="tipo di visita";
+
+"qZc-7q-hll.text"="Prossima data di visita";
+"58t-mf-EvS.text"="  seleziona tipo di visita";
+
+
+"FFZ-kZ-BZP.text"="Profilo medico";
+
+"6zs-hc-8um.text"="Genere";
+"slA-md-A6Q.normalTitle"="Maschio";
+"L3A-q9-rvi.normalTitle"="Femmina";
+
+"mB5-n9-dbE.text"="Qualifica";
+"vw4-Z1-sFy.text"="Specialità";
+"U9B-Bc-ffJ.text"="Categoria";
+
+"Jo0-Ao-MZU.text"="ANNO DI NASCITA";
+"ETT-bj-zzd.text"="ANNO DI LAUREA";
+"t1x-nn-cUz.text"="Provincia";
+"vbY-2T-KTW.text"="Città";
+"h2S-ta-KKi.text"="Tipo";
+
+"zz4-BY-CkA.text"="Targeting (Nuovi Pazienti/mese)";
+"cb9-99-kLh.text"="Categoria";
+"Gk2-8i-XaG.text"="Potenziale";
+"Ldv-WB-dWv.text"="Prodotto";
+
+"IUW-rl-rqU.text"="Segmentazione";
+"bKj-ij-IQG.text"="Prodotto";
+"s3m-hk-upB.text"="Indirizzo";
+"9kJ-oZ-bTo.text"="Indirizzo principale";
+"eYt-g5-ozA.text"="Indirizzo";
+"jfJ-p7-0vI.text"="Indirizzo";
+"cNB-Q3-rse.text"="Indirizzo";
+"wyN-l2-eat.text"="Indirizzo";
+"oht-N0-bYX.text"="Cap";
+"nvj-8S-PY4.text"="Brick";
+"rEl-7H-unt.text"="Cellulare N°";
+"Id5-do-Tg5.text"="Telefono N°";
+"Aoe-Kh-eYj.text"="E-Mail";
+"ZWV-a9-637.text"="Dettagli di visita";
+"ba2-ST-kBW.text"="Giorni di visita";
+"p5O-q8-xTs.text"="Periodo";
+"dJ3-mv-piX.text"="Media del numero di pazienti al giorno (circa)";
+"wUD-9i-k3g.text"="Classe economica delle pazienti";
+
+"gdD-JD-6yg.text"="Data";
+"p7G-pq-d9d.text"="Indirizzo di visita";
+"Iqi-7I-SlK.text"="qualifica";
+"4jb-pU-kjL.text"="Località";
+"P0E-rb-0E9.text"="CAP ";
+"hn6-Lg-aTO.text"="Provincia";
+
+"84N-L1-F1H.text"="MODULO DI RACCOLTA DEI DATI PERSONALI";
+
+"BQY-J9-zIt.text"="Per mezzo di questa autorizzazione dà il suo esplicito consenso alla Società Exeltis Italia s.r.l. per raccogliere i dati personali in conformità con i termini e le condizioni descritti nella Politica di protezione dei dati";
+
+"av6-EX-zkK.text"="Il medico ACCETTA la Politica di Protezione dei Dati";
+"vds-lc-Afw.text"="Il medico ACCONSENTE  al trattamento dei dati personali per la finalità espressa al punto i) dell’informativa [Gestione Dati di Contatto]";
+"UN5-Cq-wkO.text"="Il medico ACCONSENTE  al trattamento dei dati personali per la finalità espressa al punto ii) dell’informativa [Profilazione]";
+"UDZ-4r-Dad.text"="Il medico ACCONSENTE  al trattamento dei dati personali per la finalità espressa al punto iii) dell’informativa [Inviti a convegni e seminari]";
+"JtQ-gI-OPm.text"="Come espressione del suo consenso, il Sottoscritto firma questa autorizzazione:";
+"BQY-J9-zIt.normalTitle"="Invia politica";
+"SIO-xG-Avt.text"="Firma qui";
+"rjB-yA-lcE.normalTitle" = "Modificare";
+"YEm-YZ-Mac.normalTitle" = "Modificare";
+
+
+"RaS-aU-S8L.normalTitle"="Lunedi";
+"swQ-jb-Vo8.normalTitle"="Martedì";
+"o2R-KO-q2a.normalTitle"="Mercoledì";
+"IKK-Ca-W8j.normalTitle"="Giovedi";
+"AmR-Cp-kZm.normalTitle"="Venerdì";
+"x54-IA-dVw.normalTitle"="Sabato";
+"ML4-2Z-NEb.normalTitle"="Domenica";
+
+"90k-AB-nhT.normalTitle"="Invia richiesta";
+"VMk-De-pZH.text"="dettagli di risposta";
+"nqA-Qu-Ekh.normalTitle"="Risposta";
+"74L-Io-Uqq.text"="Interrogazioni";
+
+"Wh5-iA-aNm.normalTitle"="Inviare";
+"RX7-LM-EU2.normalTitle"="- Seleziona il Dipartimento -";
+"Uek-Km-Q8u.normalTitle"="Invio";
+
+"iSB-V0-hQf.text"="Profilo Farmacia";
+"slc-vi-aNI.text"="Indirizzo";
+"pH7-iP-fQt.text"="Categoria";
+"Kks-aY-BJ0.text"="Nome di Contatto";
+"eLj-d4-jjO.text"="Indirizzo";
+"eSt-mk-MIs.text"="Città";
+"zwU-U2-6aP.text"="Cap";
+"SeY-mT-Fbn.text"="Cellulare N°";
+"Tx6-zJ-D4L.text"="Telefono N°";
+"BYZ-LW-Rvf.text"="E-Mail";
+"OB7-sC-k4i.text"="Provincia";

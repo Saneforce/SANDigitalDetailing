@@ -1,0 +1,11 @@
+use_frameworks!
+target ’SANDigitalDetailing’ do
+    pod 'MSAL'
+    pod 'MSGraphClientSDK'
+    pod 'MSGraphClientModels'
+    pod 'AFNetworking'
+    pod 'SVProgressHUD’
+    pod 'SSZipArchive’
+    pod 'Charts'
+    pod 'FSCalendar'
+end

@@ -1,0 +1,161 @@
+/*
+  Localizable.strings
+  SANDigitalDetailing
+
+  Created by SANeForce.com on 09/09/18.
+  Copyright © 2018 SANeForce.com. All rights reserved.
+*/
+"InvalidUser"="Nome utente / parola d'ordine non validi";
+
+"Calls"="Visite";
+"Create Presentation"="Crea presentazione";
+"Reports"="Rapporti";
+
+"Change Cluster"="Cambia gruppo";
+"Tour Plan"="Itinerario";
+"Leave Application"="Assenza dal lavoro";
+"Settings"="Impostazioni";
+"Logout"="Disconnettersi";
+
+"Pending Calls"="Visite in attesa";
+"Today Calls"="Visite di oggi";
+"Total"="Totale";
+
+"CheckTPMsg"="Verifica del piano del tour...";
+"CheckDyTPMsg" = "Ottenere il piano del tour di oggi ...";
+"MasDownlMsg"="scaricare la lista principale...";
+
+"TPSuccess"="Oggi il piano di lavoro è stato presentato con successo";
+"TPError"="Qualcosa è andato storto.\n Riprova!.";
+"TPFail"="La presentazione del piano di lavoro di oggi non è riuscita";
+
+"NotifyHead"="Messaggio di notifica";
+"NextVstMandate" = "Seleziona la prossima visita data";
+"CallTypeMandate" = "seleziona tipo di visita";
+
+"Drug"="Visita";
+"Non Drug"="Call";
+
+"Monday"="Lunedi";
+"Tuesday"="Martedì";
+"Wednesday"="Mercoledì";
+"Thursday"="Giovedi";
+"Friday"="Venerdì";
+"Saturday"="Sabato";
+"Sunday"="Domenica";
+
+"Morning"="Mattina";
+"Afternoon"="Pomeriggio";
+"Evening"="Sera";
+"Day"="Giornata";
+
+"High"="Alta";
+"Medium High"="Medio Alta";
+"Medium Low"="Medio Bassa";
+"Low"="Bassa";
+
+"Targeting (New Patients / Month)"="Targeting (Nuovi Pazienti/mese)";
+"Average number of patients per day (approximately)"="Media del numero di pazienti al giorno (circa)";
+"Sessions List"="Periodo";
+"Economic class of patients"="Classe economica delle pazienti";
+
+"Doctor Profiling"="Profilo medico";
+"Private clinic"="Ambulatorio Privato";
+"Public Surgery"="Ambulatorio Pubblico";
+"Intramoenia surgery"="Ambulatorio Intramoenia";
+"Hospital"="Ospedale";
+"Clinic"="Clinica";
+
+
+"Brand Matrix"="marketing campaign";
+"Specialitywise"="visual prodotti";
+"All Brands"="tutti visual prodotti";
+"Yes"="sì";
+"No"="No";
+"Save Draft"="salva la bozza";
+"Cancel"="Annulla";
+"Ok"="Fine";
+"Do you want Cancel this call without Submit Call"="Vuoi Annulla questa chiamata senza Invia chiamata";
+
+"Work Type Selection"="Selezione del tipo di lavoro";
+"Headquater Selection"="Selezione della sede";
+"Cluster Selection"="Selezione del cluster";
+
+"Select the worktype"="Sélectionnez le type de travail";
+"Select the Headquaters"="Sélectionnez le siège";
+"Select the Clusters"="Sélectionnez les clusters";
+
+"Few Days TP Entry Missing"="Quelques jours avant l'entrée manquante";
+"Tourplan Submitted For Approval Successfully...."="Plan de tournée soumis pour approbation avec succès ....";
+"Submitting Please Wait..."="Envoi s'il vous plaît attendez ...";
+
+"Do you want to Approve the Tour Plan ?"="Voulez-vous approuver le plan de la tournée?";
+"Approving Please Wait..."="Approbation s'il vous plaît attendez ...";
+"Tourplan Approved Successfully...."="Tourplan approuvé avec succès ...";
+"Tourplan Submission Failed"="La soumission du plan de tour a échoué";
+
+"Do you want to Reject the Tour Plan ?"="Voulez-vous rejeter le plan de la tournée?";
+"Rejecting Please Wait..."="Rejetant s'il vous plaît attendez ...";
+"Tourplan Rejected Successfully...."="Plan de route rejeté avec succès ...";
+"Tourplan Rejection Failed"="Rejet du plan de tour a échoué";
+"Products Selection"="Selezione prodotti";
+"Inputs Selection"="Selezione ingressi";
+"Additional Doctor Selection"="Selezione medico aggiuntivo";
+"Joint Work Selection"="Selezione lavoro congiunto";
+
+"Policy Accepted Successfully...."="richiesta accettata Con successo....";
+"Policy Accepted Failed"="richiesta accettata mancato";
+"Enter the Email ID..."="Inserisci Email...";
+"Do you want delete the Call"="Vuoi cancellare le visite";
+
+
+"Doctor Profile Saved Successfully"="profilo medico salvato con successo";
+"Doctor Profiling Failed."="Il dottore profiling è fallito.";
+"Master Data Not Loaded Properly. Kindly Sycn Again."="Dati master non caricati correttamente, gentilmente ancora Sycn.";
+"Call Deleted Successfully"="visite cancellate con successo";
+"Local Call Synced Successfully"="Visite locali sincronizzate con successo";
+"Today Work Plan Submitted Successfully"="Oggi il piano di lavoro è stato presentato con successo";
+"Something went to wrong"="Qualcosa è andato storto";
+"Today Work Plan Submission Failed"="Invio del piano di lavoro oggi non riuscito";
+"Visit Details"="Dettagli visite";
+"Select / Enter the Feedback"="Seleziona / Inserisci il risposta";
+"Can't Enter Samples"="Impossibile inserire esempi";
+"Sample Qty Exceed. Can Enter Maximum"="La quantità di campione superata. Può essere immessa al massimo";
+"Select the Product"="Seleziona il prodotto";
+"Select the Input"="Seleziona Inserimenti";
+"RCPA Details Missing"="Dettagli RCPA mancanti";
+"Call Submitted Successfully"="visite presentate con successo";
+"Call Submission Failed"="Visite non riuscite";
+"Query Sent Successfully"="Query inviata correttamente";
+"Query Sending Failed"="Invio query non riuscito";
+"All files have been downloaded"="Tutti i file sono stati scaricati";
+"Chemist Selection"="Selezione del Farmacia";
+"Competitor Selection"="Selezione della concorrenza";
+"Competitor Brand Selection"="Selezione del marchio concorrente";
+"Select the Doctor Name"="Seleziona il nome del medico";
+"Select the Chemist Name"="Seleziona il nome del Farmacia";
+"Select the Our Product Brand"="Seleziona il nostro marchio di prodotto";
+"Enter the Our Product Brand Qty"="Inserisci il numero di marca del nostro prodotto";
+"Enter Numbers only and lessthen 1000"="Inserisci solo numeri e meno di 1000";
+"Enter the Our Product Brand Rate"="Inserisci la nostra marca Marchio di prodotto";
+"Enter Numbers with Amount format"="Inserisci i numeri con il formato Quantità";
+"Enter the Our Product Brand Value"="Inserisci il valore del nostro marchio di prodotto";
+"Enter the Competitor Name"="Inserisci il nome del concorrente";
+"Enter the Competitor Product Brand"="Inserisci il marchio del prodotto della concorrenza";
+"Enter the Competitor Qty"="Inserisci la Qtà della concorrenza";
+"Enter the Competitor Rate"="Inserisci la tariffa concorrente";
+"Enter the Competitor Value"="Inserisci il valore della concorrenza";
+"Your Leave Period is Invalid"="Il tuo periodo di congedo non è valido";
+"Availability Exceeded"="Disponibilità superata";
+"Enter the Reason For Leave."="Inserisci il motivo per lasciare.";
+"Leave Application has been Sent For Approval Successfully"="Lascia l'applicazione inviata per approvazione";
+"Leave Application Submission Failed"="Lascia l'invio dell'applicazione non riuscito";
+"Leave has been Approved Successfully"="Il congedo è stato approvato con successo";
+"Leave has been Approval Failed"="Il congedo è stato approvato non riuscito";
+"Enter the Reject Reason"="Inserisci il motivo di rifiuto";
+"Leave has been Rejected Successfully"="Il congedo è stato rifiutato con successo";
+"Leave has been Rejection Failed"="Il congedo è stato rifiutato";
+
+"Chemist Profiling"="Profilo Farmacia";
+"Category List"="Elenco di Categorie";
+"Territory List"="Elenco Provincia";

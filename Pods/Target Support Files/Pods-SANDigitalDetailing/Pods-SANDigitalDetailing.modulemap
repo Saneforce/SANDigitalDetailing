@@ -1,0 +1,6 @@
+framework module Pods_SANDigitalDetailing {
+  umbrella header "Pods-SANDigitalDetailing-umbrella.h"
+
+  export *
+  module * { export * }
+}

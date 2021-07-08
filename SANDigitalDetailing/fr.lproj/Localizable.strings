@@ -1,0 +1,67 @@
+/*
+  Localizable.strings
+  SANDigitalDetailing
+
+  Created by SANeForce.com on 09/09/18.
+  Copyright © 2018 SANeForce.com. All rights reserved.
+*/
+"InvalidUser"="Nom d'utilisateur / mot de passe invalide";
+
+"Calls"="Appels";
+"Create Presentation"="Créer une présentation";
+"Reports"="Rapports";
+
+"Change Cluster"="Changer de cluster";
+"Tour Plan"="Piano del tour";
+"Leave Application"="Laisser application";
+"Settings"="Paramètres";
+"Logout"="Connectez - Out";
+
+"Pending Calls"="Appels en attente";
+"Today Calls"="Appels Aujourd'hui";
+"Total"="Total";
+
+"CheckTPMsg"="Vérification du plan de visite...";
+"CheckDyTPMsg" = "Plan de la tournée d'aujourd'hui ...";
+"MasDownlMsg"="Liste maître Téléchargement...";
+
+"TPSuccess"="Le plan de travail présenté aujourd'hui avec succès";
+"TPError"="Quelque chose a mal tourné.\n Réessayer!.";
+"TPFail"="Aujourd'hui, la soumission du plan de travail a échoué";
+"NotifyHead"="Message de notification";
+"NextVstMandate" = "Sélectionnez la date de la prochaine visite";
+"CallTypeMandate" = "Sélectionnez le type d'appel";
+
+"Drug"="Drogue";
+"Non Drug"="Non-drogue";
+
+"Morning"="Matin";
+"Afternoon"="Après midi";
+"Evening"="Soir";
+"Day"="jour";
+
+"High"="élevé";
+"Medium High"="Moyen-élevé";
+"Medium Low"="Faible à moyen";
+"Low"="Faible";
+
+"Targeting (New Patients / Month)"="Ciblage (nouveaux patients / mois)";
+"Average number of patients per day (approximately)"="Nombre moyen de patients par jour (environ)";
+"Sessions"="période";
+"Economic class of patients"="Classe économique des patients";
+
+"Doctor Profiling"="Profil médical";
+"Private clinic"="Chirurgie privée";
+"Public Surgery"="Chirurgie publique";
+"Intramoenia surgery"="Chirurgie intramoenia";
+"Hospital"="Hôpital";
+"Clinic"="Clinique";
+
+"Brand Matrix"="Marque Matrix";
+"Specialitywise"="Spécialité Wise";
+"All Brands"="Toutes les marques";
+
+"Save Draft"="Enregistrer le brouillon";
+"Cancel"="Annuler";
+"Ok"="D'accord";
+"Do you want Cancel this call without Submit Call"="Voulez-vous annuler cet appel sans soumettre l'appel";
