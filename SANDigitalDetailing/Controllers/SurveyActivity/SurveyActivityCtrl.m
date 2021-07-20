@@ -71,14 +71,14 @@
     btnImg.image=[[UIImage imageNamed:@"DwnArrw"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     btnImg.tintColor=[UIColor colorWithRed:255.0f/255 green:255.0f/255 blue:255.0f/255 alpha:1.0f];
     [_btnFilter addSubview:btnImg];
-
+    
     _SelType=@"";
     _Types=@[
         [self AddItem:@"1" andName:NSLocalizedString(self.SetupData.CapDr, self.SetupData.CapDr)],
         [self AddItem:@"2" andName:NSLocalizedString(self.SetupData.CapChm, self.SetupData.CapChm)],
-       /* [self AddItem:@"3" andName:NSLocalizedString(self.SetupData.CapStk, self.SetupData.CapStk)],
-        [self AddItem:@"4" andName:NSLocalizedString(self.SetupData.CapUdr, self.SetupData.CapUdr)],
-        [self AddItem:@"5" andName:NSLocalizedString(self.SetupData.CapHos, self.SetupData.CapHos)]*/
+        /* [self AddItem:@"3" andName:NSLocalizedString(self.SetupData.CapStk, self.SetupData.CapStk)],
+         [self AddItem:@"4" andName:NSLocalizedString(self.SetupData.CapUdr, self.SetupData.CapUdr)],
+         [self AddItem:@"5" andName:NSLocalizedString(self.SetupData.CapHos, self.SetupData.CapHos)]*/
     ];
     NSMutableDictionary *pram=nil;
     if(_meetData.CustCode!=nil)
@@ -96,7 +96,7 @@
                 _txtSelCus.placeholder=[NSString stringWithFormat:@"Search %@", NSLocalizedString([item objectForKey:@"Name"], [item objectForKey:@"Name"])];
                 int TyCd=[[_Types[ik] objectForKey:@"Code"] intValue];
                 _btnFilter.tag = [[_Types[ik] objectForKey:@"Code"] intValue];
-
+                
                 if(TyCd==1) _SelType=@"D";
                 if(TyCd==2) _SelType=@"C";
                 if(TyCd==3) _SelType=@"S";
@@ -112,26 +112,28 @@
         }
         
     }
-    [self getDataList];
+
     self.TdayPl=[TdayPlDetail sharedTdayPlDetail];
-    
+
     if([_UserDet.Desig isEqualToString:@"MR"]){
         _btnSelectHeadQtr.enabled=NO;
+        self.DataSF = self.UserDet.SFName;
         [_btnSelectHeadQtr setTitle:[NSString stringWithFormat:@"%@",self.UserDet.SFName] forState:UIControlStateNormal];
         //[_btnSelectHeadQtr setHidden:YES];
     }
     else
     {
         [_btnSelectHeadQtr setTitle:[NSString stringWithFormat:@"%@",self.TdayPl.HQNm] forState:UIControlStateNormal];
-//        self.CustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
+        self.DataSF = self.TdayPl.SFMem;
         _btnSelectHeadQtr.enabled=YES;
         [_btnSelectHeadQtr setHidden:NO];
     }
     
+    [self getDataList];
     [WBService SendServerRequest:@"GET/Survey" withParameter:pram withImages:nil DataSF:nil completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage) {
-            _objSurveyList=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
-            [self.tbSurveyLst reloadData];
-        } error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage) {
+        _objSurveyList=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
+        [self.tbSurveyLst reloadData];
+    } error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage) {
     }];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -169,10 +171,10 @@
     }
     if(tableView==self.tblHQList){
         cell=[tableView dequeueReusableCellWithIdentifier:@"HQCell" forIndexPath:indexPath];
-//        UILabel* lbl=[[UILabel alloc] initWithFrame:CGRectMake(10, 0, cell.frame.size.width, cell.frame.size.height)];
-//        lbl.font=[UIFont fontWithName:@"Poppins-Regular" size:13.0];
-//        lbl.text = [self.objHQList[indexPath.row] objectForKey:@"name"];
-//        [cell addSubview:lbl];
+        //        UILabel* lbl=[[UILabel alloc] initWithFrame:CGRectMake(10, 0, cell.frame.size.width, cell.frame.size.height)];
+        //        lbl.font=[UIFont fontWithName:@"Poppins-Regular" size:13.0];
+        //        lbl.text = [self.objHQList[indexPath.row] objectForKey:@"name"];
+        //        [cell addSubview:lbl];
         cell.textLabel.text = [self.objHQList[indexPath.row] objectForKey:@"name"];
     }
     return cell;
@@ -191,7 +193,7 @@
             
         }
         [self getDataList];
-
+        
         if([self.SelType isEqualToString:@"D"])
         {
             [self filterDoctorList];
@@ -203,6 +205,7 @@
         }
     }
     if(tableView==self.selTypeMode) {
+        //[self clearForms];
         NSDictionary *item = _Types[indexPath.row];
         [_btnFilter setTitle:NSLocalizedString([item objectForKey:@"Name"], [item objectForKey:@"Name"]) forState:UIControlStateNormal];
         _txtSelCus.placeholder=[NSString stringWithFormat:@"Search %@", NSLocalizedString([item objectForKey:@"Name"], [item objectForKey:@"Name"])];
@@ -215,21 +218,22 @@
         if(TyCd==5) _SelType=@"H";
         
         [self getDataList];
-
+        
         if([self.SelType isEqualToString:@"D"])
         {
             [self filterDoctorList];
-
+            
         }
         else if ([self.SelType isEqualToString:@"C"])
         {
             [self filterChemistList];
         }
-        //[self.collectionView reloadData];
+        [self.collectionView reloadData];
         [_vwModeModal removeFromSuperview];
         
     }
     if(tableView == self.tblHQList){
+        //[self clearForms];
         NSDictionary *objItem = self.objHQList[indexPath.row];
         
         [self.btnSelectHeadQtr setTitle:[objItem objectForKey:@"name"]  forState:UIControlStateNormal];
@@ -247,9 +251,9 @@
             [self filterChemistList];
         }
         
-
+        
         self.txtSelCus.text=@"";
-        //[self.collectionView reloadData];
+        [self.collectionView reloadData];
         
         
     }
@@ -287,7 +291,7 @@
     self.SpecCode=[SelItem objectForKey:@"SpecialtyCode"];
     self.CateCode=[SelItem objectForKey:@"CategoryCode"];
     _arrControlsDets=[_ObjCtrlList mutableCopy];
-   // _arrControlsDets=[[_ObjCtrlList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Type==%@ and Cat_code == %ld",Typ,CatID]] mutableCopy];
+    // _arrControlsDets=[[_ObjCtrlList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Type==%@ and Cat_code == %ld",Typ,CatID]] mutableCopy];
     [self generateCtrls];
     _vwCusList.hidden=YES;
 }
@@ -317,20 +321,20 @@
     vwMode.backgroundColor=[UIColor whiteColor];
     self.selTypeMode=[[UITableView alloc] initWithFrame:CGRectMake(0, 0, _btnFilter.frame.size.width, /*200*/ _Types.count * 50)];
     [self.selTypeMode registerClass:[TBSelectionBxCell class] forCellReuseIdentifier:@"Cell"];
-        
-   // _selTypeMode.rowHeight = 42;
+    
+    // _selTypeMode.rowHeight = 42;
     _selTypeMode.scrollEnabled = YES;
     _selTypeMode.showsVerticalScrollIndicator = YES;
     _selTypeMode.userInteractionEnabled = YES;
     _selTypeMode.bounces = YES;
-
+    
     _selTypeMode.delegate = self;
     _selTypeMode.dataSource = self;
     [vwMode addSubview:self.selTypeMode];
     [_vwModeModal addSubview:vwMode];
     
     [self.view addSubview:_vwModeModal];   //vwMode
-   // [vwMode.centerXAnchor constraintEqualToAnchor:vwModeModal.centerXAnchor].active=YES;
+    // [vwMode.centerXAnchor constraintEqualToAnchor:vwModeModal.centerXAnchor].active=YES;
     //[vwMode.centerYAnchor constraintEqualToAnchor:vwModeModal.centerYAnchor].active=YES;
 }
 - (void)didChecked:(id)Control{
@@ -345,13 +349,16 @@
 
 -(void) getDataList{
     NSString *DataKey=[[NSString alloc] initWithFormat:@"DoctorDetails_%@.SANAPP",self.DataSF];
+    self.CustomerList = [[NSArray alloc] init];
     if ([_SelType isEqualToString:@"D"]){
         DataKey=[[NSString alloc] initWithFormat:@"DoctorDetails_%@.SANAPP",self.DataSF];
     }
     if ([_SelType isEqualToString:@"C"]){
         DataKey=[[NSString alloc] initWithFormat:@"ChemistDetails_%@.SANAPP",self.DataSF];
         NSMutableArray *arrChemist = [[NSMutableArray alloc] initWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:DataKey]];
-        NSLog(@"%@", arrChemist);
+//        NSLog(@"%@", arrChemist);
+//        NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
+        
     }
     if ([_SelType isEqualToString:@"S"]){
         DataKey=[[NSString alloc] initWithFormat:@"StockistDetails_%@.SANAPP",self.DataSF];
@@ -368,10 +375,10 @@
         if(![_selCat isEqualToString:@""]){
             self.CustomerList =[self FilterRevUnique:self.CustomerList andKey:@"Code"];
             
-//            self.meetData.DataSF=[HQ objectForKey:@"id"];
-//            NSString *DataKey=[[NSString alloc] initWithFormat:@"DoctorDetails_%@.SANAPP",self.meetData.DataSF];
-//
-//            self.CustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
+            //            self.meetData.DataSF=[HQ objectForKey:@"id"];
+            //            NSString *DataKey=[[NSString alloc] initWithFormat:@"DoctorDetails_%@.SANAPP",self.meetData.DataSF];
+            //
+            //            self.CustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
         }
         if(![_selSpec isEqualToString:@""]){
             self.CustomerList =[self FilterRevUnique:self.CustomerList andKey:@"Code"];
@@ -379,13 +386,13 @@
     }
     
     /*int flag=1;
-    self.ObjCustomerList=[[_ObjCustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"PlcyAcptFl.intValue == %d",flag]] mutableCopy];*/
+     self.ObjCustomerList=[[_ObjCustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"PlcyAcptFl.intValue == %d",flag]] mutableCopy];*/
     
     NSSortDescriptor *NameField = [NSSortDescriptor sortDescriptorWithKey:@"Name" ascending:YES];
     NSArray *sortDescriptors = [NSArray arrayWithObjects:NameField, nil];
     
     self.CustomerList = [[self.CustomerList sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
-   
+    
 }
 -(NSArray *) FilterUnique:(NSArray*) srcArray andKey:(NSString*) key {
     NSMutableArray* decArray=[[NSMutableArray alloc] init];
@@ -429,26 +436,26 @@
         if ([_SelType isEqualToString:@"D"] && [QSType rangeOfString:@",D,"].length>0){
             if([_selCat rangeOfString:[NSString stringWithFormat:@",%@,",self.CateCode]].length>0 &&
                [_selSpec rangeOfString:[NSString stringWithFormat:@",%@,",self.SpecCode]].length>0
-            )
-            Flg=YES;
+               )
+                Flg=YES;
         }
         if ([_SelType isEqualToString:@"C"] && [QSType rangeOfString:@",C,"].length>0){
             if([_selCat rangeOfString:[NSString stringWithFormat:@",%@,",self.CateCode]].length>0 &&
                [_selSpec rangeOfString:[NSString stringWithFormat:@",%@,",self.SpecCode]].length>0
-            )
-            Flg=YES;
+               )
+                Flg=YES;
         }
         if ([_SelType isEqualToString:@"S"] && [QSType rangeOfString:@",S,"].length>0){
             if([_selCat rangeOfString:[NSString stringWithFormat:@",%@,",self.CateCode]].length>0 &&
                [_selSpec rangeOfString:[NSString stringWithFormat:@",%@,",self.SpecCode]].length>0
-            )
-            Flg=YES;
+               )
+                Flg=YES;
         }
         if ([_SelType isEqualToString:@"H"] && [QSType rangeOfString:@",H,"].length>0){
             if([_selCat rangeOfString:[NSString stringWithFormat:@",%@,",self.CateCode]].length>0 &&
                [_selSpec rangeOfString:[NSString stringWithFormat:@",%@,",self.SpecCode]].length>0
-            )
-            Flg=YES;
+               )
+                Flg=YES;
         }
         if(Flg==YES){
             NSLog(@"%@",[_arrControlsDets[il] valueForKey:@"Qname"]);
@@ -457,7 +464,7 @@
             NSString* QAns=[_arrControlsDets[il] valueForKey:@"Qanswer"];
             
             NSArray* aryVals=[QAns componentsSeparatedByString:@","];
-           //yet to Change
+            //yet to Change
             int CtrlID=0;
             if([lType isEqualToString:@"Enterable - Text"]) CtrlID=1;
             if([lType isEqualToString:@"Enterable - Numeric"]) CtrlID=2;
@@ -499,11 +506,11 @@
             _cyAxis+=CardView.frame.size.height+5;
             _scrlHeight+=CardView.frame.size.height+5;
             /*
-            if(inc==0) {inc=mWidth;
-            }else{inc=0;
-                _cyAxis+=CardView.frame.size.height+5;
-                _scrlHeight+=CardView.frame.size.height+5;
-            }*/
+             if(inc==0) {inc=mWidth;
+             }else{inc=0;
+             _cyAxis+=CardView.frame.size.height+5;
+             _scrlHeight+=CardView.frame.size.height+5;
+             }*/
             [_FormsCtrls addObject:CardView];
         }
     }
@@ -519,14 +526,14 @@
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)btnSelectHdQtr:(id)sender{
     
@@ -534,60 +541,58 @@
 }
 -(void)filterChemistList
 {
-    
-    NSMutableArray *arrChemist = [[_selChemist componentsSeparatedByString:@","] mutableCopy];
-    NSMutableArray *filteredCustomerList = [[NSMutableArray alloc] init];
-
-    for (id dID in arrChemist) {
-        if(![dID isEqualToString:@""] )
-        {
-        NSArray *data = [self.arrChemistList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"CategoryCode contains[c] %@",dID]];
-            
-            [filteredCustomerList addObjectsFromArray:data];
+    if(self.arrChemistList.count > 0)
+    {
+        NSMutableArray *arrChemist = [[_selChemist componentsSeparatedByString:@","] mutableCopy];
+        NSMutableArray *filteredCustomerList = [[NSMutableArray alloc] init];
+        
+        for (id dID in arrChemist) {
+            if(![dID isEqualToString:@""] )
+            {
+                NSArray *data = [self.arrChemistList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"CategoryCode contains[c] %@",dID]];
+                
+                [filteredCustomerList addObjectsFromArray:data];
+            }
         }
+        [_collectionView reloadData];
     }
-    [_collectionView reloadData];
-
+    
 }
 -(void)filterDoctorList
 {
     NSMutableArray *filteredCustomerList = [[NSMutableArray alloc] init];
-        if(_selCat!= nil && _selCat.length >0 )
-        {
-            //hq code(done in didselect), dr code = CategoryCode, speciality = SpecialtyCode, survey = name
-            NSMutableArray *arrCust = [[_selCat componentsSeparatedByString:@","] mutableCopy];
-            
-            for (id dID in arrCust) {
-                if(![dID isEqualToString:@""] )
-                {
-                NSArray *data = [self.CustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"CategoryCode contains[c] %@",dID]];
-                    
-                    [filteredCustomerList addObjectsFromArray:data];
-                }
-            }
+    if(_selCat!= nil && _selCat.length >0 && self.CustomerList.count > 0 )
+    {
+        //hq code(done in didselect), dr code = CategoryCode, speciality = SpecialtyCode, survey = name
+        NSMutableArray *arrCust = [[_selCat componentsSeparatedByString:@","] mutableCopy];
         
-            NSMutableArray *arrSpl = [[_selSpec componentsSeparatedByString:@","] mutableCopy];
-            
-            
-            for (id dID in arrSpl) {
-                if(![dID isEqualToString:@""] )
-                {
-                filteredCustomerList = [[filteredCustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SpecialtyCode contains[c] %@",dID]] mutableCopy];
-                    
-                }
+        for (id dID in arrCust) {
+            if(![dID isEqualToString:@""] )
+            {
+                NSArray *data = [self.CustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"CategoryCode contains[c] %@",dID]];
+                [filteredCustomerList addObjectsFromArray:data];
             }
-            NSLog(@"HERE %@",filteredCustomerList);
-            self.CustomerList = filteredCustomerList;
-            [_collectionView reloadData];
-
         }
-//    }
-    
-
+        NSMutableArray *arrSpl = [[_selSpec componentsSeparatedByString:@","] mutableCopy];
+        for (id dID in arrSpl) {
+            if(![dID isEqualToString:@""] )
+            {
+                filteredCustomerList = [[filteredCustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SpecialtyCode contains[c] %@",dID]] mutableCopy];
+            }
+        }
+        NSLog(@"HERE %@",filteredCustomerList);
+        self.CustomerList = filteredCustomerList;
+        [_collectionView reloadData];
+        
+    }
 }
 
 -(void)updateHQData
 {
+    if (self.vwAdCtrl != nil) {
+        NSLog(@"test");
+    }
+    
     self.objHQList= [[[NSUserDefaults standardUserDefaults] objectForKey:@"HQDetails.SANAPP"] mutableCopy];
     _vwHQListModel=[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     _vwHQListModel.backgroundColor=[UIColor colorWithRed:0.0f/255 green:0.0f/255 blue:0.0f/255 alpha:0.6];
@@ -596,20 +601,28 @@
     vwHdQtrList.backgroundColor=[UIColor whiteColor];
     self.tblHQList=[[UITableView alloc] initWithFrame:CGRectMake(0, 0, _btnSelectHeadQtr.frame.size.width, /*200*/ _objHQList.count * 50)];
     [self.tblHQList registerClass:[TBSelectionBxCell class] forCellReuseIdentifier:@"HQCell"];
-
     
-   // _tblHQList.rowHeight = 42;
+    
+    // _tblHQList.rowHeight = 42;
     _tblHQList.scrollEnabled = YES;
     _tblHQList.showsVerticalScrollIndicator = YES;
     _tblHQList.userInteractionEnabled = YES;
     _tblHQList.bounces = YES;
-
+    
     _tblHQList.delegate = self;
     _tblHQList.dataSource = self;
     [vwHdQtrList addSubview:self.tblHQList];
     [_vwHQListModel addSubview:vwHdQtrList];
     
     [self.view addSubview:_vwHQListModel];
+    
+}
+
+-(void)clearForms
+{
+    
+    
+    [self.vwAdCtrl removeFromSuperview];
     
 }
 @end
