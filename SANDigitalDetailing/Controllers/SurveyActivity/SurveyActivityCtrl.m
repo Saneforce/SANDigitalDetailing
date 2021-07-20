@@ -14,14 +14,22 @@
 
 @interface SurveyActivityCtrl ()
 
-@property (nonatomic, strong) NSArray* ObjCustomerList;
+//@property (nonatomic, strong) NSArray* ObjCustomerList;
 @property (nonatomic, strong) NSArray* CustomerList;
+@property (nonatomic, strong) NSArray* arrChemistList;
+
+@property (nonatomic,strong) TdayPlDetail* TdayPl;
 
 @property (nonatomic,strong) NSMutableArray *objSurveyList;
 
 @property (nonatomic, retain) IBOutlet UIView* vwModeModal;
+@property (nonatomic, retain) IBOutlet UIView* vwHQListModel;
+
 @property (nonatomic,retain) IBOutlet UITableView *selTypeMode;
+@property (nonatomic,retain) IBOutlet UITableView *tblHQList;
+
 @property (nonatomic, strong) NSArray* Types;
+@property (nonatomic,strong) NSArray *objHQList;
 
 @property (weak, nonatomic) NSString* CustCode;
 @property (weak, nonatomic) NSString* SpecCode;
@@ -37,6 +45,7 @@
 @property(nonatomic,assign) float cyAxis,scrlHeight,defHeight;
 @property(nonatomic,strong) NSString* selCat;
 @property(nonatomic,strong) NSString* selSpec;
+@property(nonatomic,strong) NSString* selChemist;
 
 
 @end
@@ -67,9 +76,9 @@
     _Types=@[
         [self AddItem:@"1" andName:NSLocalizedString(self.SetupData.CapDr, self.SetupData.CapDr)],
         [self AddItem:@"2" andName:NSLocalizedString(self.SetupData.CapChm, self.SetupData.CapChm)],
-        [self AddItem:@"3" andName:NSLocalizedString(self.SetupData.CapStk, self.SetupData.CapStk)],
+       /* [self AddItem:@"3" andName:NSLocalizedString(self.SetupData.CapStk, self.SetupData.CapStk)],
         [self AddItem:@"4" andName:NSLocalizedString(self.SetupData.CapUdr, self.SetupData.CapUdr)],
-        [self AddItem:@"5" andName:NSLocalizedString(self.SetupData.CapHos, self.SetupData.CapHos)]
+        [self AddItem:@"5" andName:NSLocalizedString(self.SetupData.CapHos, self.SetupData.CapHos)]*/
     ];
     NSMutableDictionary *pram=nil;
     if(_meetData.CustCode!=nil)
@@ -103,6 +112,22 @@
         }
         
     }
+    [self getDataList];
+    self.TdayPl=[TdayPlDetail sharedTdayPlDetail];
+    
+    if([_UserDet.Desig isEqualToString:@"MR"]){
+        _btnSelectHeadQtr.enabled=NO;
+        [_btnSelectHeadQtr setTitle:[NSString stringWithFormat:@"%@",self.UserDet.SFName] forState:UIControlStateNormal];
+        //[_btnSelectHeadQtr setHidden:YES];
+    }
+    else
+    {
+        [_btnSelectHeadQtr setTitle:[NSString stringWithFormat:@"%@",self.TdayPl.HQNm] forState:UIControlStateNormal];
+//        self.CustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
+        _btnSelectHeadQtr.enabled=YES;
+        [_btnSelectHeadQtr setHidden:NO];
+    }
+    
     [WBService SendServerRequest:@"GET/Survey" withParameter:pram withImages:nil DataSF:nil completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage) {
             _objSurveyList=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
             [self.tbSurveyLst reloadData];
@@ -111,8 +136,8 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    if(tableView==self.selTypeMode) return 42;
+    if(tableView==self.tblHQList) return  50;
+    if(tableView==self.selTypeMode) return 50;
     if(tableView==self.tbSurveyLst) return 53;
     return 42;
 }
@@ -120,6 +145,7 @@
 {
     if(tableView==self.selTypeMode) return self.Types.count;
     if(tableView==self.tbSurveyLst) return [_objSurveyList count];
+    if(tableView==self.tblHQList) return [self.objHQList count];
     return 0;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -141,6 +167,14 @@
         lbl.text = [_Types[indexPath.row] objectForKey:@"Name"];
         [cell addSubview:lbl];
     }
+    if(tableView==self.tblHQList){
+        cell=[tableView dequeueReusableCellWithIdentifier:@"HQCell" forIndexPath:indexPath];
+//        UILabel* lbl=[[UILabel alloc] initWithFrame:CGRectMake(10, 0, cell.frame.size.width, cell.frame.size.height)];
+//        lbl.font=[UIFont fontWithName:@"Poppins-Regular" size:13.0];
+//        lbl.text = [self.objHQList[indexPath.row] objectForKey:@"name"];
+//        [cell addSubview:lbl];
+        cell.textLabel.text = [self.objHQList[indexPath.row] objectForKey:@"name"];
+    }
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -150,10 +184,21 @@
         _lblSrvyNm.text=[objItem objectForKey:@"name"];
         _selCat=[_ObjCtrlList[0] valueForKey:@"DrCat"];
         _selSpec=[_ObjCtrlList[0] valueForKey:@"DrSpl"];
-        
+        _selChemist=[_ObjCtrlList[0] valueForKey:@"ChmCat"];
         if(_meetData.CustCode!=nil){
             _arrControlsDets=[_ObjCtrlList mutableCopy];
             [self generateCtrls];
+            
+        }
+        [self getDataList];
+
+        if([self.SelType isEqualToString:@"D"])
+        {
+            [self filterDoctorList];
+        }
+        else if ([self.SelType isEqualToString:@"C"])
+        {
+            [self filterChemistList];
             
         }
     }
@@ -170,8 +215,42 @@
         if(TyCd==5) _SelType=@"H";
         
         [self getDataList];
-        [self.collectionView reloadData];
+
+        if([self.SelType isEqualToString:@"D"])
+        {
+            [self filterDoctorList];
+
+        }
+        else if ([self.SelType isEqualToString:@"C"])
+        {
+            [self filterChemistList];
+        }
+        //[self.collectionView reloadData];
         [_vwModeModal removeFromSuperview];
+        
+    }
+    if(tableView == self.tblHQList){
+        NSDictionary *objItem = self.objHQList[indexPath.row];
+        
+        [self.btnSelectHeadQtr setTitle:[objItem objectForKey:@"name"]  forState:UIControlStateNormal];
+        [_vwHQListModel removeFromSuperview];
+        self.DataSF = [objItem objectForKey:@"id"];
+        
+        self.meetData.DataSF=[objItem objectForKey:@"id"];
+        [self getDataList];
+        if([self.SelType isEqualToString:@"D"])
+        {
+            [self filterDoctorList];
+        }
+        else if ([self.SelType isEqualToString:@"C"])
+        {
+            [self filterChemistList];
+        }
+        
+
+        self.txtSelCus.text=@"";
+        //[self.collectionView reloadData];
+        
         
     }
 }
@@ -194,7 +273,6 @@
     
     cell.layer.cornerRadius=4.0f;
     cell.lCustName.text = [self.CustomerList[indexPath.row] objectForKey:@"Name"];
-    cell.lCustName.textColor=[UIColor whiteColor];
     cell.lTownName.text = [self.CustomerList[indexPath.row] objectForKey:@"Town_Name"];
     cell.lCategory.text = [self.CustomerList[indexPath.row] objectForKey:@"Category"];
     cell.lSpeciality.text = [self.CustomerList[indexPath.row] objectForKey:@"Specialty"];
@@ -235,12 +313,12 @@
 -(IBAction) showSelMode:(id)sender{
     _vwModeModal=[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     _vwModeModal.backgroundColor=[UIColor colorWithRed:0.0f/255 green:0.0f/255 blue:0.0f/255 alpha:0.6];
-    UIView* vwMode=[[UIView alloc] initWithFrame:CGRectMake(_vwCusSel.superview.frame.origin.x+_btnFilter.frame.origin.x+10, _vwCusSel.frame.origin.y+_btnFilter.frame.size.height+80, _btnFilter.frame.size.width, 200)];
+    UIView* vwMode=[[UIView alloc] initWithFrame:CGRectMake(_vwCusSel.superview.frame.origin.x+_btnFilter.frame.origin.x+10, _vwCusSel.frame.origin.y+_btnFilter.frame.size.height+80, _btnFilter.frame.size.width, /*200*/ _Types.count * 60)];
     vwMode.backgroundColor=[UIColor whiteColor];
-    self.selTypeMode=[[UITableView alloc] initWithFrame:CGRectMake(0, 0, _btnFilter.frame.size.width, 200)];
+    self.selTypeMode=[[UITableView alloc] initWithFrame:CGRectMake(0, 0, _btnFilter.frame.size.width, /*200*/ _Types.count * 50)];
     [self.selTypeMode registerClass:[TBSelectionBxCell class] forCellReuseIdentifier:@"Cell"];
         
-    _selTypeMode.rowHeight = 42;
+   // _selTypeMode.rowHeight = 42;
     _selTypeMode.scrollEnabled = YES;
     _selTypeMode.showsVerticalScrollIndicator = YES;
     _selTypeMode.userInteractionEnabled = YES;
@@ -272,6 +350,8 @@
     }
     if ([_SelType isEqualToString:@"C"]){
         DataKey=[[NSString alloc] initWithFormat:@"ChemistDetails_%@.SANAPP",self.DataSF];
+        NSMutableArray *arrChemist = [[NSMutableArray alloc] initWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:DataKey]];
+        NSLog(@"%@", arrChemist);
     }
     if ([_SelType isEqualToString:@"S"]){
         DataKey=[[NSString alloc] initWithFormat:@"StockistDetails_%@.SANAPP",self.DataSF];
@@ -282,14 +362,19 @@
     if ([_SelType isEqualToString:@"H"]){
         DataKey=[[NSString alloc] initWithFormat:@"Hospital_%@.SANAPP",self.DataSF];
     }
-    self.ObjCustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
-    self.ObjCustomerList =[self FilterUnique:self.ObjCustomerList andKey:@"Code"];
+    self.CustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
+    self.CustomerList =[self FilterUnique:self.CustomerList andKey:@"Code"];
     if ([_SelType isEqualToString:@"D"]){
         if(![_selCat isEqualToString:@""]){
-            self.ObjCustomerList =[self FilterRevUnique:self.ObjCustomerList andKey:@"Code"];
+            self.CustomerList =[self FilterRevUnique:self.CustomerList andKey:@"Code"];
+            
+//            self.meetData.DataSF=[HQ objectForKey:@"id"];
+//            NSString *DataKey=[[NSString alloc] initWithFormat:@"DoctorDetails_%@.SANAPP",self.meetData.DataSF];
+//
+//            self.CustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
         }
         if(![_selSpec isEqualToString:@""]){
-            self.ObjCustomerList =[self FilterRevUnique:self.ObjCustomerList andKey:@"Code"];
+            self.CustomerList =[self FilterRevUnique:self.CustomerList andKey:@"Code"];
         }
     }
     
@@ -299,7 +384,7 @@
     NSSortDescriptor *NameField = [NSSortDescriptor sortDescriptorWithKey:@"Name" ascending:YES];
     NSArray *sortDescriptors = [NSArray arrayWithObjects:NameField, nil];
     
-    self.CustomerList = [[_ObjCustomerList sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
+    self.CustomerList = [[self.CustomerList sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
    
 }
 -(NSArray *) FilterUnique:(NSArray*) srcArray andKey:(NSString*) key {
@@ -443,4 +528,88 @@
 }
 */
 
+- (IBAction)btnSelectHdQtr:(id)sender{
+    
+    [self updateHQData];
+}
+-(void)filterChemistList
+{
+    
+    NSMutableArray *arrChemist = [[_selChemist componentsSeparatedByString:@","] mutableCopy];
+    NSMutableArray *filteredCustomerList = [[NSMutableArray alloc] init];
+
+    for (id dID in arrChemist) {
+        if(![dID isEqualToString:@""] )
+        {
+        NSArray *data = [self.arrChemistList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"CategoryCode contains[c] %@",dID]];
+            
+            [filteredCustomerList addObjectsFromArray:data];
+        }
+    }
+    [_collectionView reloadData];
+
+}
+-(void)filterDoctorList
+{
+    NSMutableArray *filteredCustomerList = [[NSMutableArray alloc] init];
+        if(_selCat!= nil && _selCat.length >0 )
+        {
+            //hq code(done in didselect), dr code = CategoryCode, speciality = SpecialtyCode, survey = name
+            NSMutableArray *arrCust = [[_selCat componentsSeparatedByString:@","] mutableCopy];
+            
+            for (id dID in arrCust) {
+                if(![dID isEqualToString:@""] )
+                {
+                NSArray *data = [self.CustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"CategoryCode contains[c] %@",dID]];
+                    
+                    [filteredCustomerList addObjectsFromArray:data];
+                }
+            }
+        
+            NSMutableArray *arrSpl = [[_selSpec componentsSeparatedByString:@","] mutableCopy];
+            
+            
+            for (id dID in arrSpl) {
+                if(![dID isEqualToString:@""] )
+                {
+                filteredCustomerList = [[filteredCustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SpecialtyCode contains[c] %@",dID]] mutableCopy];
+                    
+                }
+            }
+            NSLog(@"HERE %@",filteredCustomerList);
+            self.CustomerList = filteredCustomerList;
+            [_collectionView reloadData];
+
+        }
+//    }
+    
+
+}
+
+-(void)updateHQData
+{
+    self.objHQList= [[[NSUserDefaults standardUserDefaults] objectForKey:@"HQDetails.SANAPP"] mutableCopy];
+    _vwHQListModel=[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    _vwHQListModel.backgroundColor=[UIColor colorWithRed:0.0f/255 green:0.0f/255 blue:0.0f/255 alpha:0.6];
+    
+    UIView* vwHdQtrList=[[UIView alloc] initWithFrame:CGRectMake(_btnSelectHeadQtr.frame.origin.x, _btnSelectHeadQtr.frame.origin.y+_btnSelectHeadQtr.frame.size.height, _btnSelectHeadQtr.frame.size.width, /*200*/ _objHQList.count * 60)];
+    vwHdQtrList.backgroundColor=[UIColor whiteColor];
+    self.tblHQList=[[UITableView alloc] initWithFrame:CGRectMake(0, 0, _btnSelectHeadQtr.frame.size.width, /*200*/ _objHQList.count * 50)];
+    [self.tblHQList registerClass:[TBSelectionBxCell class] forCellReuseIdentifier:@"HQCell"];
+
+    
+   // _tblHQList.rowHeight = 42;
+    _tblHQList.scrollEnabled = YES;
+    _tblHQList.showsVerticalScrollIndicator = YES;
+    _tblHQList.userInteractionEnabled = YES;
+    _tblHQList.bounces = YES;
+
+    _tblHQList.delegate = self;
+    _tblHQList.dataSource = self;
+    [vwHdQtrList addSubview:self.tblHQList];
+    [_vwHQListModel addSubview:vwHdQtrList];
+    
+    [self.view addSubview:_vwHQListModel];
+    
+}
 @end
