@@ -12,7 +12,7 @@
 
 #define mHeight 185
 
-@interface SurveyActivityCtrl ()
+@interface SurveyActivityCtrl ()<UISearchBarDelegate>
 
 //@property (nonatomic, strong) NSArray* ObjCustomerList;
 @property (nonatomic, strong) NSArray* CustomerList;
@@ -46,6 +46,9 @@
 @property(nonatomic,strong) NSString* selCat;
 @property(nonatomic,strong) NSString* selSpec;
 @property(nonatomic,strong) NSString* selChemist;
+@property(nonatomic,strong) NSString* selSurvery;
+@property(nonatomic,strong) NSString* selMode;
+@property(nonatomic,strong) NSString* selHQName;
 
 
 @end
@@ -67,6 +70,9 @@
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     
+    self.txtfldSearchBar.showsCancelButton = YES;
+    
+//    [self.vwAdCtrl setBackgroundColor:[UIColor yellowColor]];
     UIImageView* btnImg=[[UIImageView alloc] initWithFrame:CGRectMake(_btnFilter.frame.size.width-18, (_btnFilter.frame.size.height-10)/2,10, 10)];
     btnImg.image=[[UIImage imageNamed:@"DwnArrw"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     btnImg.tintColor=[UIColor colorWithRed:255.0f/255 green:255.0f/255 blue:255.0f/255 alpha:1.0f];
@@ -107,7 +113,7 @@
                 self.CustCode=_meetData.CustCode;
                 
                 [self getDataList];
-                [self.collectionView reloadData];
+                //[self.collectionView reloadData];
             }
         }
         
@@ -180,18 +186,29 @@
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+   
     if(tableView==self.tbSurveyLst){
+        
         NSDictionary *objItem = self.objSurveyList[indexPath.row];
+        if(_selSurvery != nil && ![self.vwAdCtrl isHidden] && ![_selSurvery isEqualToString:[NSString stringWithFormat:@"%@",[objItem objectForKey:@"name"]]])
+        {
+            [self.vwAdCtrl setHidden:YES];
+        }
         _ObjCtrlList=[objItem objectForKey:@"survey_for"];
         _lblSrvyNm.text=[objItem objectForKey:@"name"];
         _selCat=[_ObjCtrlList[0] valueForKey:@"DrCat"];
         _selSpec=[_ObjCtrlList[0] valueForKey:@"DrSpl"];
         _selChemist=[_ObjCtrlList[0] valueForKey:@"ChmCat"];
-        if(_meetData.CustCode!=nil){
-            _arrControlsDets=[_ObjCtrlList mutableCopy];
-            [self generateCtrls];
-            
-        }
+        _selSurvery = [objItem valueForKey:@"name"];
+        
+//        if(_meetData.CustCode!=nil){
+//            self.vwAdCtrl.hidden = NO;
+//            _arrControlsDets=[_ObjCtrlList mutableCopy];
+//            [self generateCtrls];
+//        }
+//        else
+//            self.vwAdCtrl.hidden = YES;
+        
         [self getDataList];
         
         if([self.SelType isEqualToString:@"D"])
@@ -201,16 +218,30 @@
         else if ([self.SelType isEqualToString:@"C"])
         {
             [self filterChemistList];
-            
         }
+        
+        [self addForm];
     }
     if(tableView==self.selTypeMode) {
         //[self clearForms];
         NSDictionary *item = _Types[indexPath.row];
+        
+        if(_selMode != nil && ![self.vwAdCtrl isHidden] && ![_selMode isEqualToString:[NSString stringWithFormat:@"%@",[item objectForKey:@"Name"]]] && _ObjCtrlList.count > 0)
+        {
+            _selCat=[_ObjCtrlList[0] valueForKey:@"DrCat"];
+            _selSpec=[_ObjCtrlList[0] valueForKey:@"DrSpl"];
+            _selChemist=[_ObjCtrlList[0] valueForKey:@"ChmCat"];
+            self.txtSelCus.text=@"";
+            [self.vwAdCtrl setHidden:YES];
+        }
+        
         [_btnFilter setTitle:NSLocalizedString([item objectForKey:@"Name"], [item objectForKey:@"Name"]) forState:UIControlStateNormal];
         _txtSelCus.placeholder=[NSString stringWithFormat:@"Search %@", NSLocalizedString([item objectForKey:@"Name"], [item objectForKey:@"Name"])];
         int TyCd=[[_Types[indexPath.row] objectForKey:@"Code"] intValue];
         _btnFilter.tag = [[_Types[indexPath.row] objectForKey:@"Code"] intValue];
+        
+        _selMode = [item objectForKey:@"Name"];
+        
         if(TyCd==1) _SelType=@"D";
         if(TyCd==2) _SelType=@"C";
         if(TyCd==3) _SelType=@"S";
@@ -219,6 +250,7 @@
         
         [self getDataList];
         
+    
         if([self.SelType isEqualToString:@"D"])
         {
             [self filterDoctorList];
@@ -228,18 +260,25 @@
         {
             [self filterChemistList];
         }
-        [self.collectionView reloadData];
+        //[self.collectionView reloadData];
         [_vwModeModal removeFromSuperview];
+        [self addForm];
+
         
     }
     if(tableView == self.tblHQList){
         //[self clearForms];
         NSDictionary *objItem = self.objHQList[indexPath.row];
         
+        if(_selMode != nil && ![self.vwAdCtrl isHidden] && ![_selHQName isEqualToString:[NSString stringWithFormat:@"%@",[objItem objectForKey:@"Name"]]])
+        {
+            [self.vwAdCtrl setHidden:YES];
+        }
+        
         [self.btnSelectHeadQtr setTitle:[objItem objectForKey:@"name"]  forState:UIControlStateNormal];
         [_vwHQListModel removeFromSuperview];
         self.DataSF = [objItem objectForKey:@"id"];
-        
+        _selHQName = [objItem objectForKey:@"Name"];
         self.meetData.DataSF=[objItem objectForKey:@"id"];
         [self getDataList];
         if([self.SelType isEqualToString:@"D"])
@@ -253,8 +292,9 @@
         
         
         self.txtSelCus.text=@"";
-        [self.collectionView reloadData];
-        
+        //[self.collectionView reloadData];
+        [self addForm];
+
         
     }
 }
@@ -293,6 +333,7 @@
     _arrControlsDets=[_ObjCtrlList mutableCopy];
     // _arrControlsDets=[[_ObjCtrlList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Type==%@ and Cat_code == %ld",Typ,CatID]] mutableCopy];
     [self generateCtrls];
+    [self addForm];
     _vwCusList.hidden=YES;
 }
 
@@ -355,7 +396,7 @@
     }
     if ([_SelType isEqualToString:@"C"]){
         DataKey=[[NSString alloc] initWithFormat:@"ChemistDetails_%@.SANAPP",self.DataSF];
-        NSMutableArray *arrChemist = [[NSMutableArray alloc] initWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:DataKey]];
+//        NSMutableArray *arrChemist = [[NSMutableArray alloc] initWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:DataKey]];
 //        NSLog(@"%@", arrChemist);
 //        NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
         
@@ -429,20 +470,22 @@
     long inc=0;long PrvScroll=0;
     
     for (int il=0; il<[_arrControlsDets count]; il++) {
-        _selCat=[NSString stringWithFormat:@",%@,",[_arrControlsDets[il] valueForKey:@"DrCat"]];
-        _selSpec=[NSString stringWithFormat:@",%@,",[_arrControlsDets[il] valueForKey:@"DrSpl"]];
+       
         NSString* QSType=[NSString stringWithFormat:@",%@",[_arrControlsDets[il] valueForKey:@"Stype"]];
         Boolean Flg=NO;
         if ([_SelType isEqualToString:@"D"] && [QSType rangeOfString:@",D,"].length>0){
+            _selCat=[NSString stringWithFormat:@",%@,",[_arrControlsDets[il] valueForKey:@"DrCat"]];
+            _selSpec=[NSString stringWithFormat:@",%@,",[_arrControlsDets[il] valueForKey:@"DrSpl"]];
             if([_selCat rangeOfString:[NSString stringWithFormat:@",%@,",self.CateCode]].length>0 &&
                [_selSpec rangeOfString:[NSString stringWithFormat:@",%@,",self.SpecCode]].length>0
                )
                 Flg=YES;
         }
         if ([_SelType isEqualToString:@"C"] && [QSType rangeOfString:@",C,"].length>0){
-            if([_selCat rangeOfString:[NSString stringWithFormat:@",%@,",self.CateCode]].length>0 &&
-               [_selSpec rangeOfString:[NSString stringWithFormat:@",%@,",self.SpecCode]].length>0
-               )
+            _selCat=[NSString stringWithFormat:@",%@,",[_arrControlsDets[il] valueForKey:@"ChmCat"]];
+           // _selSpec=[NSString stringWithFormat:@",%@,",[_arrControlsDets[il] valueForKey:@"DrSpl"]];
+            
+            if([_selCat rangeOfString:[NSString stringWithFormat:@",%@,",self.CateCode]].length>0)
                 Flg=YES;
         }
         if ([_SelType isEqualToString:@"S"] && [QSType rangeOfString:@",S,"].length>0){
@@ -541,7 +584,7 @@
 }
 -(void)filterChemistList
 {
-    if(self.arrChemistList.count > 0)
+    if(self.CustomerList.count > 0 && _selChemist!= nil )
     {
         NSMutableArray *arrChemist = [[_selChemist componentsSeparatedByString:@","] mutableCopy];
         NSMutableArray *filteredCustomerList = [[NSMutableArray alloc] init];
@@ -549,7 +592,7 @@
         for (id dID in arrChemist) {
             if(![dID isEqualToString:@""] )
             {
-                NSArray *data = [self.arrChemistList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"CategoryCode contains[c] %@",dID]];
+                NSArray *data = [self.CustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"CategoryCode contains[c] %@",dID]];
                 
                 [filteredCustomerList addObjectsFromArray:data];
             }
@@ -561,6 +604,7 @@
 -(void)filterDoctorList
 {
     NSMutableArray *filteredCustomerList = [[NSMutableArray alloc] init];
+    
     if(_selCat!= nil && _selCat.length >0 && self.CustomerList.count > 0 )
     {
         //hq code(done in didselect), dr code = CategoryCode, speciality = SpecialtyCode, survey = name
@@ -618,11 +662,36 @@
     
 }
 
--(void)clearForms
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    
+    if(searchText.length > 0)
+    {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"Name contains[c] %@",searchText];
+        NSArray *results = [self.CustomerList filteredArrayUsingPredicate:predicate];
+        self.CustomerList = results;
+        [self.collectionView reloadData];
+        NSLog(@"%@",self.CustomerList);
+    }
+    
+}
+-(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
 {
-    
-    
-    [self.vwAdCtrl removeFromSuperview];
-    
+    [self getDataList];
+    if ([_SelType isEqualToString:@"D"]) {
+        [self filterDoctorList];
+    }
+    else
+        [self filterChemistList];
+}
+-(void)addForm
+{
+    if(_selSurvery.length >0 && _txtSelCus.text.length >0 && self.DataSF.length >0)
+    {
+        [self.vwAdCtrl setHidden:NO];
+        [self generateCtrls];
+
+    }
+    else
+        [self.vwAdCtrl setHidden:YES];
 }
 @end

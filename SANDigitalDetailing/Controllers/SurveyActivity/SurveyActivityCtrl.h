@@ -37,6 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,weak) IBOutlet UILabel* lblSrvyNm;
 @property (nonatomic, weak) IBOutlet UICollectionView* collectionView;
 @property (nonatomic, weak) IBOutlet UICollectionViewFlowLayout* layout;
+@property (weak, nonatomic) IBOutlet UISearchBar *txtfldSearchBar;
 
 @end
 
