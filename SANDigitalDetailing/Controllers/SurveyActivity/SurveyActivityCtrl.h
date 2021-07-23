@@ -21,7 +21,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) IBOutlet UITableView* tbSurveyLst;
 @property (nonatomic,retain) IBOutlet UIButton* btnFilter;
 @property (nonatomic,retain) IBOutlet UIButton* btnSubmit;
+@property (weak, nonatomic) IBOutlet UIButton *btnSelectHeadQtr;
+
 @property (nonatomic,retain) IBOutlet UIScrollView* vwCtrlArea;
+- (IBAction)btnSelectHdQtr:(id)sender;
+
 
 @property (nonatomic,retain) IBOutlet UIView* vwCusList;
 @property (nonatomic,retain) IBOutlet UIView* vwCusSel;
@@ -33,6 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,weak) IBOutlet UILabel* lblSrvyNm;
 @property (nonatomic, weak) IBOutlet UICollectionView* collectionView;
 @property (nonatomic, weak) IBOutlet UICollectionViewFlowLayout* layout;
+@property (weak, nonatomic) IBOutlet UISearchBar *txtfldSearchBar;
 
 @end
 
