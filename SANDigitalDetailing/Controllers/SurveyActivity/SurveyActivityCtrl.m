@@ -141,6 +141,7 @@
     [self getDataList];
     [WBService SendServerRequest:@"GET/Survey" withParameter:pram withImages:nil DataSF:nil completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage) {
         _objSurveyList=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
+        _objSurveyList = [[self filterSurvay:_objSurveyList] mutableCopy];
         [self.tbSurveyLst reloadData];
     } error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage) {
     }];
@@ -586,6 +587,24 @@
 - (IBAction)btnSelectHdQtr:(id)sender{
     
     [self updateHQData];
+}
+-(NSArray* )filterSurvay:(NSArray* )surveryList
+{
+    NSMutableArray *arrFilteredDate = [[NSMutableArray alloc] init];
+
+    for (int i =0; i<surveryList.count; i++) {
+        NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+        
+        NSDate *fromDate = [dateFormatter dateFromString:[surveryList[i] objectForKey:@"from_date"]];
+        NSDate *toDate =  [dateFormatter dateFromString:[surveryList[i] objectForKey:@"to_date"]];
+                
+        if (([fromDate compare:[NSDate date]] == NSOrderedAscending) && ([toDate compare:[NSDate date]] == NSOrderedDescending)) {
+            [arrFilteredDate addObject:surveryList[i]];
+        }
+    }
+    return arrFilteredDate;
+    
 }
 -(void)filterChemistList
 {
