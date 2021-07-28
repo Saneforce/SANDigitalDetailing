@@ -48,7 +48,10 @@
 @property(nonatomic,strong) NSString* selChemist;
 @property(nonatomic,strong) NSString* selSurvery;
 @property(nonatomic,strong) NSString* selMode;
+@property(nonatomic,strong) NSString* selSurveryID;
 @property(nonatomic,strong) NSString* selHQName;
+@property(nonatomic,strong) NSString* fromDate;
+@property(nonatomic,strong) NSString* toDate;
 
 
 @end
@@ -72,7 +75,7 @@
     
     self.txtfldSearchBar.showsCancelButton = YES;
     
-//    [self.vwAdCtrl setBackgroundColor:[UIColor yellowColor]];
+    //    [self.vwAdCtrl setBackgroundColor:[UIColor yellowColor]];
     UIImageView* btnImg=[[UIImageView alloc] initWithFrame:CGRectMake(_btnFilter.frame.size.width-18, (_btnFilter.frame.size.height-10)/2,10, 10)];
     btnImg.image=[[UIImage imageNamed:@"DwnArrw"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     btnImg.tintColor=[UIColor colorWithRed:255.0f/255 green:255.0f/255 blue:255.0f/255 alpha:1.0f];
@@ -118,9 +121,9 @@
         }
         
     }
-
+    
     self.TdayPl=[TdayPlDetail sharedTdayPlDetail];
-
+    
     if([_UserDet.Desig isEqualToString:@"MR"]){
         _btnSelectHeadQtr.enabled=NO;
         self.DataSF = self.UserDet.SFName;
@@ -138,6 +141,7 @@
     [self getDataList];
     [WBService SendServerRequest:@"GET/Survey" withParameter:pram withImages:nil DataSF:nil completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage) {
         _objSurveyList=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
+        _objSurveyList = [[self filterSurvay:_objSurveyList] mutableCopy];
         [self.tbSurveyLst reloadData];
     } error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage) {
     }];
@@ -186,7 +190,7 @@
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-   
+    
     if(tableView==self.tbSurveyLst){
         
         NSDictionary *objItem = self.objSurveyList[indexPath.row];
@@ -200,14 +204,16 @@
         _selSpec=[_ObjCtrlList[0] valueForKey:@"DrSpl"];
         _selChemist=[_ObjCtrlList[0] valueForKey:@"ChmCat"];
         _selSurvery = [objItem valueForKey:@"name"];
+        _selSurveryID = [objItem valueForKey:@"id"];
+
         
-//        if(_meetData.CustCode!=nil){
-//            self.vwAdCtrl.hidden = NO;
-//            _arrControlsDets=[_ObjCtrlList mutableCopy];
-//            [self generateCtrls];
-//        }
-//        else
-//            self.vwAdCtrl.hidden = YES;
+        //        if(_meetData.CustCode!=nil){
+        //            self.vwAdCtrl.hidden = NO;
+        //            _arrControlsDets=[_ObjCtrlList mutableCopy];
+        //            [self generateCtrls];
+        //        }
+        //        else
+        //            self.vwAdCtrl.hidden = YES;
         
         [self getDataList];
         
@@ -250,7 +256,7 @@
         
         [self getDataList];
         
-    
+        
         if([self.SelType isEqualToString:@"D"])
         {
             [self filterDoctorList];
@@ -263,7 +269,7 @@
         //[self.collectionView reloadData];
         [_vwModeModal removeFromSuperview];
         [self addForm];
-
+        
         
     }
     if(tableView == self.tblHQList){
@@ -396,9 +402,9 @@
     }
     if ([_SelType isEqualToString:@"C"]){
         DataKey=[[NSString alloc] initWithFormat:@"ChemistDetails_%@.SANAPP",self.DataSF];
-//        NSMutableArray *arrChemist = [[NSMutableArray alloc] initWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:DataKey]];
-//        NSLog(@"%@", arrChemist);
-//        NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
+        //        NSMutableArray *arrChemist = [[NSMutableArray alloc] initWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:DataKey]];
+        //        NSLog(@"%@", arrChemist);
+        //        NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
         
     }
     if ([_SelType isEqualToString:@"S"]){
@@ -470,7 +476,7 @@
     long inc=0;long PrvScroll=0;
     
     for (int il=0; il<[_arrControlsDets count]; il++) {
-       
+        
         NSString* QSType=[NSString stringWithFormat:@",%@",[_arrControlsDets[il] valueForKey:@"Stype"]];
         Boolean Flg=NO;
         if ([_SelType isEqualToString:@"D"] && [QSType rangeOfString:@",D,"].length>0){
@@ -483,7 +489,7 @@
         }
         if ([_SelType isEqualToString:@"C"] && [QSType rangeOfString:@",C,"].length>0){
             _selCat=[NSString stringWithFormat:@",%@,",[_arrControlsDets[il] valueForKey:@"ChmCat"]];
-           // _selSpec=[NSString stringWithFormat:@",%@,",[_arrControlsDets[il] valueForKey:@"DrSpl"]];
+            // _selSpec=[NSString stringWithFormat:@",%@,",[_arrControlsDets[il] valueForKey:@"DrSpl"]];
             
             if([_selCat rangeOfString:[NSString stringWithFormat:@",%@,",self.CateCode]].length>0)
                 Flg=YES;
@@ -581,6 +587,24 @@
 - (IBAction)btnSelectHdQtr:(id)sender{
     
     [self updateHQData];
+}
+-(NSArray* )filterSurvay:(NSArray* )surveryList
+{
+    NSMutableArray *arrFilteredDate = [[NSMutableArray alloc] init];
+
+    for (int i =0; i<surveryList.count; i++) {
+        NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+        
+        NSDate *fromDate = [dateFormatter dateFromString:[surveryList[i] objectForKey:@"from_date"]];
+        NSDate *toDate =  [dateFormatter dateFromString:[surveryList[i] objectForKey:@"to_date"]];
+                
+        if (([fromDate compare:[NSDate date]] == NSOrderedAscending) && ([toDate compare:[NSDate date]] == NSOrderedDescending)) {
+            [arrFilteredDate addObject:surveryList[i]];
+        }
+    }
+    return arrFilteredDate;
+    
 }
 -(void)filterChemistList
 {
@@ -689,9 +713,91 @@
     {
         [self.vwAdCtrl setHidden:NO];
         [self generateCtrls];
-
+        
     }
     else
         [self.vwAdCtrl setHidden:YES];
+}
+- (void)didClick:(id)Control{
+    
+    
+    _eCtrl=(SANControlsBox*) Control;
+    NSLog(@"%@", _eCtrl);
+}
+
+- (IBAction)btnSubmitSurvey:(id)Control {
+    
+    
+    NSMutableArray *datas=[[NSMutableArray alloc]init];
+    for(int il=0;il<[_FormsCtrls count];il++)
+    {
+        
+        SANControlsBox* cCtrl = (SANControlsBox*) _FormsCtrls[il];
+        NSMutableDictionary *dictSurveyData = [[NSMutableDictionary alloc] init];
+        
+        if(cCtrl.ControlType<3){
+            cCtrl.selectedValue=cCtrl.txtField.text;
+            cCtrl.selectedText=cCtrl.txtField.text;
+        }else if(cCtrl.ControlType<4){
+            cCtrl.selectedValue=cCtrl.txtView.text;
+            cCtrl.selectedText=cCtrl.txtView.text;
+        }
+        if(cCtrl.isMandate==YES){
+            if([cCtrl.selectedValue isEqualToString:@""] || cCtrl.selectedValue==nil){
+                [BaseViewController Toast:[NSString stringWithFormat:@"Kindly Fill the %@",cCtrl.Caption]];
+                return;
+            }
+        }
+        if(cCtrl.ControlType == 31)
+        {
+            NSLog(@"%lu",(unsigned long)cCtrl.ControlType);
+            cCtrl.selectedText = cCtrl.selectedValue;
+        }
+    
+        NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+        NSLog(@"%@",[dateFormatter stringFromDate:[NSDate date]]);
+        
+        NSArray *data = [self.ObjCtrlList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Qname contains[c] %@",cCtrl.Caption]];
+        NSString *QC_ID;
+        if(data.count == 1)
+        {
+            QC_ID =[NSString stringWithFormat:@"%@", [data[0] objectForKey:@"Qc_id"]];
+        }
+        
+        [dictSurveyData setValue:_SelType forKey:@"CustType"];
+        [dictSurveyData setValue:_CustCode forKey:@"CustCode"];
+        [dictSurveyData setValue:_selSurveryID forKey:@"Survey_Id"];
+        [dictSurveyData setValue:QC_ID forKey:@"Question_Id"];
+        [dictSurveyData setValue:[dateFormatter stringFromDate:[NSDate date]] forKey:@"SurveyDate"];
+        [dictSurveyData setValue:cCtrl.selectedText forKey:@"Answer"];
+
+        [datas addObject:dictSurveyData];
+    
+    }
+    
+    NSMutableDictionary *Param=[[NSMutableDictionary alloc]init];
+    [Param setObject:datas forKey:@"val"];
+    
+    [SVProgressHUD showWithStatus:@"sending..."];
+    [WBService SendServerRequest:@"SAVE/survey" withParameter:Param withImages:nil
+                          DataSF:nil
+                      completion:^(BOOL success, id respData,NSMutableDictionary *uData)
+     {
+        NSMutableDictionary *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
+        bool Success=[[receivedDta valueForKey:@"success"] boolValue];
+        if(Success==YES){
+            [BaseViewController Toast:@"Survey Submitting Successfully"];
+        }
+        else{
+            [BaseViewController Toast:@"Survey Submitting Failed."];
+        }
+        [SVProgressHUD dismiss];
+    }
+                           error:^(NSString *errorMsg,NSMutableDictionary *uData){
+        [BaseViewController Toast:[NSString stringWithFormat:@"Survey Submitting.\n %@",errorMsg.description]];
+        [SVProgressHUD dismiss];
+    }];
+
 }
 @end

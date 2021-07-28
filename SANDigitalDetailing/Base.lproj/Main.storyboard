@@ -1189,7 +1189,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexBackgroundColor" red="0.94901960780000005" green="0.95686274510000002" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="dE8-bH-jW9" customClass="TBSelectionBxCell">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="dE8-bH-jW9" customClass="TBSelectionBxCell">
                                                 <rect key="frame" x="0.0" y="24.5" width="323" height="64"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dE8-bH-jW9" id="R0f-AM-mcx">
@@ -6069,6 +6069,9 @@
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnSubmitSurvey:" destination="Mgq-s9-ahq" eventType="touchUpInside" id="Fl3-DU-IvY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -16423,7 +16426,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="UXC-ok-dTZ"/>
         <segue reference="6I3-oL-otJ"/>
-        <segue reference="Z7m-0V-gdX"/>
+        <segue reference="edl-MT-6ln"/>
         <segue reference="Gkr-7g-6Yc"/>
         <segue reference="odS-nd-Mm4"/>
         <segue reference="QwF-zN-mAL"/>
