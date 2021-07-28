@@ -205,7 +205,7 @@
         _selChemist=[_ObjCtrlList[0] valueForKey:@"ChmCat"];
         _selSurvery = [objItem valueForKey:@"name"];
         _selSurveryID = [objItem valueForKey:@"id"];
-
+        
         
         //        if(_meetData.CustCode!=nil){
         //            self.vwAdCtrl.hidden = NO;
@@ -276,8 +276,11 @@
         //[self clearForms];
         NSDictionary *objItem = self.objHQList[indexPath.row];
         
-        if(_selMode != nil && ![self.vwAdCtrl isHidden] && ![_selHQName isEqualToString:[NSString stringWithFormat:@"%@",[objItem objectForKey:@"Name"]]])
+        if(_selMode != nil && ![self.vwAdCtrl isHidden] && ![_selHQName isEqualToString:[NSString stringWithFormat:@"%@",[objItem objectForKey:@"Name"]]] && _objSurveyList.count > 0)
         {
+            _selCat=[_ObjCtrlList[0] valueForKey:@"DrCat"];
+            _selSpec=[_ObjCtrlList[0] valueForKey:@"DrSpl"];
+            _selChemist=[_ObjCtrlList[0] valueForKey:@"ChmCat"];
             [self.vwAdCtrl setHidden:YES];
         }
         
@@ -300,7 +303,7 @@
         self.txtSelCus.text=@"";
         //[self.collectionView reloadData];
         [self addForm];
-
+        
         
     }
 }
@@ -322,25 +325,30 @@
     mCustomerCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath] ;
     
     cell.layer.cornerRadius=4.0f;
-    cell.lCustName.text = [self.CustomerList[indexPath.row] objectForKey:@"Name"];
-    cell.lTownName.text = [self.CustomerList[indexPath.row] objectForKey:@"Town_Name"];
-    cell.lCategory.text = [self.CustomerList[indexPath.row] objectForKey:@"Category"];
-    cell.lSpeciality.text = [self.CustomerList[indexPath.row] objectForKey:@"Specialty"];
-    
+    if(self.CustomerList.count > 0)
+    {
+        cell.lCustName.text = [self.CustomerList[indexPath.row] objectForKey:@"Name"];
+        cell.lTownName.text = [self.CustomerList[indexPath.row] objectForKey:@"Town_Name"];
+        cell.lCategory.text = [self.CustomerList[indexPath.row] objectForKey:@"Category"];
+        cell.lSpeciality.text = [self.CustomerList[indexPath.row] objectForKey:@"Specialty"];
+    }
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSMutableDictionary* SelItem= self.CustomerList[indexPath.row];
-    self.txtSelCus.text=[SelItem objectForKey:@"Name"];
-    self.CustCode=[SelItem objectForKey:@"Code"];
-    self.SpecCode=[SelItem objectForKey:@"SpecialtyCode"];
-    self.CateCode=[SelItem objectForKey:@"CategoryCode"];
-    _arrControlsDets=[_ObjCtrlList mutableCopy];
-    // _arrControlsDets=[[_ObjCtrlList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Type==%@ and Cat_code == %ld",Typ,CatID]] mutableCopy];
-    [self generateCtrls];
-    [self addForm];
-    _vwCusList.hidden=YES;
+    if(self.CustomerList.count >0)
+    {
+        NSMutableDictionary* SelItem= self.CustomerList[indexPath.row];
+        self.txtSelCus.text=[SelItem objectForKey:@"Name"];
+        self.CustCode=[SelItem objectForKey:@"Code"];
+        self.SpecCode=[SelItem objectForKey:@"SpecialtyCode"];
+        self.CateCode=[SelItem objectForKey:@"CategoryCode"];
+        _arrControlsDets=[_ObjCtrlList mutableCopy];
+        // _arrControlsDets=[[_ObjCtrlList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Type==%@ and Cat_code == %ld",Typ,CatID]] mutableCopy];
+        [self generateCtrls];
+        [self addForm];
+        _vwCusList.hidden=YES;
+    }
 }
 
 -(IBAction) gotoHome:(id)sender{
@@ -591,14 +599,14 @@
 -(NSArray* )filterSurvay:(NSArray* )surveryList
 {
     NSMutableArray *arrFilteredDate = [[NSMutableArray alloc] init];
-
+    
     for (int i =0; i<surveryList.count; i++) {
         NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"yyyy-MM-dd"];
         
         NSDate *fromDate = [dateFormatter dateFromString:[surveryList[i] objectForKey:@"from_date"]];
         NSDate *toDate =  [dateFormatter dateFromString:[surveryList[i] objectForKey:@"to_date"]];
-                
+        
         if (([fromDate compare:[NSDate date]] == NSOrderedAscending) && ([toDate compare:[NSDate date]] == NSOrderedDescending)) {
             [arrFilteredDate addObject:surveryList[i]];
         }
@@ -718,12 +726,6 @@
     else
         [self.vwAdCtrl setHidden:YES];
 }
-- (void)didClick:(id)Control{
-    
-    
-    _eCtrl=(SANControlsBox*) Control;
-    NSLog(@"%@", _eCtrl);
-}
 
 - (IBAction)btnSubmitSurvey:(id)Control {
     
@@ -753,7 +755,7 @@
             NSLog(@"%lu",(unsigned long)cCtrl.ControlType);
             cCtrl.selectedText = cCtrl.selectedValue;
         }
-    
+        
         NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"yyyy-MM-dd"];
         NSLog(@"%@",[dateFormatter stringFromDate:[NSDate date]]);
@@ -771,9 +773,9 @@
         [dictSurveyData setValue:QC_ID forKey:@"Question_Id"];
         [dictSurveyData setValue:[dateFormatter stringFromDate:[NSDate date]] forKey:@"SurveyDate"];
         [dictSurveyData setValue:cCtrl.selectedText forKey:@"Answer"];
-
+        
         [datas addObject:dictSurveyData];
-    
+        
     }
     
     NSMutableDictionary *Param=[[NSMutableDictionary alloc]init];
@@ -788,6 +790,13 @@
         bool Success=[[receivedDta valueForKey:@"success"] boolValue];
         if(Success==YES){
             [BaseViewController Toast:@"Survey Submitting Successfully"];
+            for(int il=0;il<[_FormsCtrls count];il++)
+            {
+                SANControlsBox* cCtrl = (SANControlsBox*) _FormsCtrls[il];
+                cCtrl.selectedText = @"";
+                cCtrl.selectedValue = @"";
+            }
+            [self generateCtrls];
         }
         else{
             [BaseViewController Toast:@"Survey Submitting Failed."];
@@ -798,6 +807,6 @@
         [BaseViewController Toast:[NSString stringWithFormat:@"Survey Submitting.\n %@",errorMsg.description]];
         [SVProgressHUD dismiss];
     }];
-
+    
 }
 @end
