@@ -197,6 +197,7 @@
         if(_selSurvery != nil && ![self.vwAdCtrl isHidden] && ![_selSurvery isEqualToString:[NSString stringWithFormat:@"%@",[objItem objectForKey:@"name"]]])
         {
             [self.vwAdCtrl setHidden:YES];
+            self.txtSelCus.text = @"";
         }
         _ObjCtrlList=[objItem objectForKey:@"survey_for"];
         _lblSrvyNm.text=[objItem objectForKey:@"name"];
@@ -650,14 +651,16 @@
             }
         }
         NSMutableArray *arrSpl = [[_selSpec componentsSeparatedByString:@","] mutableCopy];
+        NSMutableArray *arrfilterDr =[NSMutableArray new];
         for (id dID in arrSpl) {
             if(![dID isEqualToString:@""] )
             {
-                filteredCustomerList = [[filteredCustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SpecialtyCode contains[c] %@",dID]] mutableCopy];
+                NSArray *data = [[filteredCustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SpecialtyCode contains[c] %@",dID]] mutableCopy];
+                [arrfilterDr addObjectsFromArray:data];
             }
         }
-        NSLog(@"HERE %@",filteredCustomerList);
-        self.CustomerList = filteredCustomerList;
+        NSLog(@"HERE %@",arrfilterDr);
+        self.CustomerList = arrfilterDr;
         [_collectionView reloadData];
         
     }
@@ -704,10 +707,20 @@
         [self.collectionView reloadData];
         NSLog(@"%@",self.CustomerList);
     }
+    else
+    {
+        [self getDataList];
+        if ([_SelType isEqualToString:@"D"]) {
+            [self filterDoctorList];
+        }
+        else
+            [self filterChemistList];
+    }
     
 }
 -(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
 {
+    searchBar.text = @"";
     [self getDataList];
     if ([_SelType isEqualToString:@"D"]) {
         [self filterDoctorList];
