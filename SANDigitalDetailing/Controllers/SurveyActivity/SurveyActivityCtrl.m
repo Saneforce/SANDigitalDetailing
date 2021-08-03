@@ -197,8 +197,14 @@
         if(_selSurvery != nil && ![self.vwAdCtrl isHidden] && ![_selSurvery isEqualToString:[NSString stringWithFormat:@"%@",[objItem objectForKey:@"name"]]])
         {
             [self.vwAdCtrl setHidden:YES];
-            self.txtSelCus.text = @"";
+
         }
+        self.txtSelCus.text = @"";
+        self.CustomerList = [NSMutableArray new];
+        [_btnFilter setTitle:@"-- Select --" forState:UIControlStateNormal];
+        _txtSelCus.placeholder=[NSString stringWithFormat:@"Select the doctor "];
+        _selMode = @"";
+        [self.collectionView reloadData];
         _ObjCtrlList=[objItem objectForKey:@"survey_for"];
         _lblSrvyNm.text=[objItem objectForKey:@"name"];
         _selCat=[_ObjCtrlList[0] valueForKey:@"DrCat"];
@@ -217,17 +223,17 @@
         //            self.vwAdCtrl.hidden = YES;
         
         [self getDataList];
-        
-        if([self.SelType isEqualToString:@"D"])
-        {
-            [self filterDoctorList];
-        }
-        else if ([self.SelType isEqualToString:@"C"])
-        {
-            [self filterChemistList];
-        }
-        
-        [self addForm];
+//
+//        if([self.SelType isEqualToString:@"D"])
+//        {
+//            [self filterDoctorList];
+//        }
+//        else if ([self.SelType isEqualToString:@"C"])
+//        {
+//            [self filterChemistList];
+//        }
+//
+//        [self addForm];
     }
     if(tableView==self.selTypeMode) {
         //[self clearForms];
@@ -235,12 +241,13 @@
         
         if(_selMode != nil && ![self.vwAdCtrl isHidden] && ![_selMode isEqualToString:[NSString stringWithFormat:@"%@",[item objectForKey:@"Name"]]] && _ObjCtrlList.count > 0)
         {
-            _selCat=[_ObjCtrlList[0] valueForKey:@"DrCat"];
-            _selSpec=[_ObjCtrlList[0] valueForKey:@"DrSpl"];
-            _selChemist=[_ObjCtrlList[0] valueForKey:@"ChmCat"];
+
             self.txtSelCus.text=@"";
             [self.vwAdCtrl setHidden:YES];
         }
+        _selCat=[_ObjCtrlList[0] valueForKey:@"DrCat"];
+        _selSpec=[_ObjCtrlList[0] valueForKey:@"DrSpl"];
+        _selChemist=[_ObjCtrlList[0] valueForKey:@"ChmCat"];
         
         [_btnFilter setTitle:NSLocalizedString([item objectForKey:@"Name"], [item objectForKey:@"Name"]) forState:UIControlStateNormal];
         _txtSelCus.placeholder=[NSString stringWithFormat:@"Search %@", NSLocalizedString([item objectForKey:@"Name"], [item objectForKey:@"Name"])];
@@ -277,18 +284,17 @@
         //[self clearForms];
         NSDictionary *objItem = self.objHQList[indexPath.row];
         
-        if(_selMode != nil && ![self.vwAdCtrl isHidden] && ![_selHQName isEqualToString:[NSString stringWithFormat:@"%@",[objItem objectForKey:@"Name"]]] && _objSurveyList.count > 0)
+        if(_selMode != nil && ![_selHQName isEqualToString:[NSString stringWithFormat:@"%@",[objItem objectForKey:@"name"]]] && _objSurveyList.count > 0)
         {
             _selCat=[_ObjCtrlList[0] valueForKey:@"DrCat"];
             _selSpec=[_ObjCtrlList[0] valueForKey:@"DrSpl"];
             _selChemist=[_ObjCtrlList[0] valueForKey:@"ChmCat"];
-            [self.vwAdCtrl setHidden:YES];
         }
         
         [self.btnSelectHeadQtr setTitle:[objItem objectForKey:@"name"]  forState:UIControlStateNormal];
         [_vwHQListModel removeFromSuperview];
         self.DataSF = [objItem objectForKey:@"id"];
-        _selHQName = [objItem objectForKey:@"Name"];
+        _selHQName = [objItem objectForKey:@"name"];
         self.meetData.DataSF=[objItem objectForKey:@"id"];
         [self getDataList];
         if([self.SelType isEqualToString:@"D"])
@@ -340,6 +346,7 @@
     if(self.CustomerList.count >0)
     {
         NSMutableDictionary* SelItem= self.CustomerList[indexPath.row];
+        [_btnSubmitSurvey setUserInteractionEnabled:TRUE];
         self.txtSelCus.text=[SelItem objectForKey:@"Name"];
         self.CustCode=[SelItem objectForKey:@"Code"];
         self.SpecCode=[SelItem objectForKey:@"SpecialtyCode"];
@@ -404,6 +411,27 @@
 }
 
 -(void) getDataList{
+    
+    if(_selSurvery.length == 0)
+    {
+        [_btnSubmitSurvey setUserInteractionEnabled:FALSE];
+        [_btnFilter setUserInteractionEnabled:FALSE];
+        _vwCusList.hidden=YES;
+        return;
+        
+    }
+    else
+    {
+        [_btnFilter setUserInteractionEnabled:TRUE];
+
+        if(self.CustCode.length == 0)
+        {
+            [_btnSubmitSurvey setUserInteractionEnabled:FALSE];
+
+        }
+
+    }
+    
     NSString *DataKey=[[NSString alloc] initWithFormat:@"DoctorDetails_%@.SANAPP",self.DataSF];
     self.CustomerList = [[NSArray alloc] init];
     if ([_SelType isEqualToString:@"D"]){
@@ -630,9 +658,13 @@
                 [filteredCustomerList addObjectsFromArray:data];
             }
         }
-        [_collectionView reloadData];
+        self.CustomerList = filteredCustomerList;
     }
+    else
+        self.CustomerList = [NSMutableArray new];
     
+    [_collectionView reloadData];
+
 }
 -(void)filterDoctorList
 {
@@ -661,9 +693,11 @@
         }
         NSLog(@"HERE %@",arrfilterDr);
         self.CustomerList = arrfilterDr;
-        [_collectionView reloadData];
-        
     }
+    else
+        self.CustomerList = [NSMutableArray new];
+    [_collectionView reloadData];
+
 }
 
 -(void)updateHQData
