@@ -350,10 +350,15 @@
         self.txtSelCus.text=[SelItem objectForKey:@"Name"];
         self.CustCode=[SelItem objectForKey:@"Code"];
         self.SpecCode=[SelItem objectForKey:@"SpecialtyCode"];
-        self.CateCode=[SelItem objectForKey:@"CategoryCode"];
         _arrControlsDets=[_ObjCtrlList mutableCopy];
+        
+        if([_SelType isEqualToString:@"D"])
+            self.CateCode=[SelItem objectForKey:@"CategoryCode"];
+        else if ([_SelType isEqualToString:@"C"])
+            self.CateCode=[SelItem objectForKey:@"Chm_cat"];
+        
         // _arrControlsDets=[[_ObjCtrlList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Type==%@ and Cat_code == %ld",Typ,CatID]] mutableCopy];
-        [self generateCtrls];
+       // [self generateCtrls];
         [self addForm];
         _vwCusList.hidden=YES;
     }
@@ -427,8 +432,9 @@
         if(self.CustCode.length == 0)
         {
             [_btnSubmitSurvey setUserInteractionEnabled:FALSE];
-
         }
+        else
+            [_btnSubmitSurvey setUserInteractionEnabled:TRUE];
 
     }
     
@@ -514,9 +520,11 @@
     
     for (int il=0; il<[_arrControlsDets count]; il++) {
         
-        NSString* QSType=[NSString stringWithFormat:@",%@",[_arrControlsDets[il] valueForKey:@"Stype"]];
+        NSString* QSType = [[_arrControlsDets[il] valueForKey:@"Stype"] stringByReplacingOccurrencesOfString:@"," withString:@""];
+
+        //NSString* QSType=[NSString stringWithFormat:@",%@",[_arrControlsDets[il] valueForKey:@"Stype"]];
         Boolean Flg=NO;
-        if ([_SelType isEqualToString:@"D"] && [QSType rangeOfString:@",D,"].length>0){
+        if ([_SelType isEqualToString:@"D"] && [QSType rangeOfString:@"D"].length>0){
             _selCat=[NSString stringWithFormat:@",%@,",[_arrControlsDets[il] valueForKey:@"DrCat"]];
             _selSpec=[NSString stringWithFormat:@",%@,",[_arrControlsDets[il] valueForKey:@"DrSpl"]];
             if([_selCat rangeOfString:[NSString stringWithFormat:@",%@,",self.CateCode]].length>0 &&
@@ -524,20 +532,20 @@
                )
                 Flg=YES;
         }
-        if ([_SelType isEqualToString:@"C"] && [QSType rangeOfString:@",C,"].length>0){
+        if ([_SelType isEqualToString:@"C"] && [QSType rangeOfString:@"C"].length>0){
             _selCat=[NSString stringWithFormat:@",%@,",[_arrControlsDets[il] valueForKey:@"ChmCat"]];
             // _selSpec=[NSString stringWithFormat:@",%@,",[_arrControlsDets[il] valueForKey:@"DrSpl"]];
             
             if([_selCat rangeOfString:[NSString stringWithFormat:@",%@,",self.CateCode]].length>0)
                 Flg=YES;
         }
-        if ([_SelType isEqualToString:@"S"] && [QSType rangeOfString:@",S,"].length>0){
+        if ([_SelType isEqualToString:@"S"] && [QSType rangeOfString:@"S"].length>0){
             if([_selCat rangeOfString:[NSString stringWithFormat:@",%@,",self.CateCode]].length>0 &&
                [_selSpec rangeOfString:[NSString stringWithFormat:@",%@,",self.SpecCode]].length>0
                )
                 Flg=YES;
         }
-        if ([_SelType isEqualToString:@"H"] && [QSType rangeOfString:@",H,"].length>0){
+        if ([_SelType isEqualToString:@"H"] && [QSType rangeOfString:@"H"].length>0){
             if([_selCat rangeOfString:[NSString stringWithFormat:@",%@,",self.CateCode]].length>0 &&
                [_selSpec rangeOfString:[NSString stringWithFormat:@",%@,",self.SpecCode]].length>0
                )
@@ -653,7 +661,7 @@
         for (id dID in arrChemist) {
             if(![dID isEqualToString:@""] )
             {
-                NSArray *data = [self.CustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"CategoryCode contains[c] %@",dID]];
+                NSArray *data = [self.CustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Chm_cat contains[c] %@",dID]];
                 
                 [filteredCustomerList addObjectsFromArray:data];
             }
