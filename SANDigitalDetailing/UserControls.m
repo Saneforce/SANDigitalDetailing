@@ -387,12 +387,27 @@
 }
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     // Prevent crashing undo bug – see note below.
+    
+    if(textField.keyboardType == UIKeyboardTypeNumberPad)
+    {
+        NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+                NSString *expression = @"^[0-9]+$";
+                NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:expression
+                                                                                       options:NSRegularExpressionCaseInsensitive
+                                                                                         error:nil];
+                NSUInteger numberOfMatches = [regex numberOfMatchesInString:newString
+                                                                    options:0
+                                                                      range:NSMakeRange(0, [newString length])];
+                if (numberOfMatches == 0)
+                    return NO;
+        
+    }
     if (_MaxLength==nil) return YES;
     if(range.length + range.location > textField.text.length)
     {
         return NO;
     }
-        
+    
     NSUInteger newLength = [textField.text length] + [string length] - range.length;
     return newLength <= _MaxLength;
 }
