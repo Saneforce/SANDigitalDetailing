@@ -204,6 +204,8 @@
         [_btnFilter setTitle:@"-- Select --" forState:UIControlStateNormal];
         _txtSelCus.placeholder=[NSString stringWithFormat:@"Select the doctor "];
         _selMode = @"";
+        [_btnSubmitSurvey setUserInteractionEnabled:NO];
+
         [self.collectionView reloadData];
         _ObjCtrlList=[objItem objectForKey:@"survey_for"];
         _lblSrvyNm.text=[objItem objectForKey:@"name"];
@@ -375,7 +377,19 @@
     //[self.navigationController popToViewController:[viewControllers objectAtIndex:viewControllers.count-2] animated:NO];
 }
 -(IBAction) showCustList:(id)sender{
-    _vwCusList.hidden=NO;
+    
+    _txtfldSearchBar.text = @"";
+    [self getDataList];
+    if ([_SelType isEqualToString:@"D"]) {
+        [self filterDoctorList];
+    }
+    else
+        [self filterChemistList];
+    
+    if(_selMode.length == 0)
+        [BaseViewController Toast:@"Please select customer type."];
+    else
+        _vwCusList.hidden=NO;
     
 }
 -(IBAction) hideCustList:(id)sender{
@@ -678,7 +692,7 @@
 {
     NSMutableArray *filteredCustomerList = [[NSMutableArray alloc] init];
     
-    if(_selCat!= nil && _selCat.length >0 && self.CustomerList.count > 0 )
+    if((_selSpec.length >0 || _selCat.length >0) && self.CustomerList.count > 0 )
     {
         //hq code(done in didselect), dr code = CategoryCode, speciality = SpecialtyCode, survey = name
         NSMutableArray *arrCust = [[_selCat componentsSeparatedByString:@","] mutableCopy];
@@ -690,6 +704,8 @@
                 [filteredCustomerList addObjectsFromArray:data];
             }
         }
+        if(filteredCustomerList.count == 0)
+            filteredCustomerList = [self.CustomerList mutableCopy];
         NSMutableArray *arrSpl = [[_selSpec componentsSeparatedByString:@","] mutableCopy];
         NSMutableArray *arrfilterDr =[NSMutableArray new];
         for (id dID in arrSpl) {
@@ -805,9 +821,8 @@
                 return;
             }
         }
-        if(cCtrl.ControlType == 31)
+        if(cCtrl.ControlType == 31 || cCtrl.ControlType == 32)
         {
-            NSLog(@"%lu",(unsigned long)cCtrl.ControlType);
             cCtrl.selectedText = cCtrl.selectedValue;
         }
         
@@ -833,35 +848,38 @@
         
     }
     
-    NSMutableDictionary *Param=[[NSMutableDictionary alloc]init];
-    [Param setObject:datas forKey:@"val"];
-    
-    [SVProgressHUD showWithStatus:@"sending..."];
-    [WBService SendServerRequest:@"SAVE/survey" withParameter:Param withImages:nil
-                          DataSF:nil
-                      completion:^(BOOL success, id respData,NSMutableDictionary *uData)
-     {
-        NSMutableDictionary *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
-        bool Success=[[receivedDta valueForKey:@"success"] boolValue];
-        if(Success==YES){
-            [BaseViewController Toast:@"Survey Submitting Successfully"];
-            for(int il=0;il<[_FormsCtrls count];il++)
-            {
-                SANControlsBox* cCtrl = (SANControlsBox*) _FormsCtrls[il];
-                cCtrl.selectedText = @"";
-                cCtrl.selectedValue = @"";
+    if(datas.count > 0)
+    {
+        
+        NSMutableDictionary *Param=[[NSMutableDictionary alloc]init];
+        [Param setObject:datas forKey:@"val"];
+        
+        [SVProgressHUD showWithStatus:@"sending..."];
+        [WBService SendServerRequest:@"SAVE/survey" withParameter:Param withImages:nil
+                              DataSF:nil
+                          completion:^(BOOL success, id respData,NSMutableDictionary *uData)
+         {
+            NSMutableDictionary *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
+            bool Success=[[receivedDta valueForKey:@"success"] boolValue];
+            if(Success==YES){
+                [BaseViewController Toast:@"Survey Submitting Successfully"];
+                for(int il=0;il<[_FormsCtrls count];il++)
+                {
+                    SANControlsBox* cCtrl = (SANControlsBox*) _FormsCtrls[il];
+                    cCtrl.selectedText = @"";
+                    cCtrl.selectedValue = @"";
+                }
+                [self generateCtrls];
             }
-            [self generateCtrls];
+            else{
+                [BaseViewController Toast:@"Survey Submitting Failed."];
+            }
+            [SVProgressHUD dismiss];
         }
-        else{
-            [BaseViewController Toast:@"Survey Submitting Failed."];
-        }
-        [SVProgressHUD dismiss];
+                               error:^(NSString *errorMsg,NSMutableDictionary *uData){
+            [BaseViewController Toast:[NSString stringWithFormat:@"Survey Submitting.\n %@",errorMsg.description]];
+            [SVProgressHUD dismiss];
+        }];
     }
-                           error:^(NSString *errorMsg,NSMutableDictionary *uData){
-        [BaseViewController Toast:[NSString stringWithFormat:@"Survey Submitting.\n %@",errorMsg.description]];
-        [SVProgressHUD dismiss];
-    }];
-    
 }
 @end
