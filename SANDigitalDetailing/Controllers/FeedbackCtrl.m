@@ -581,6 +581,11 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
     
     NSIndexPath *indexPath = [tbView indexPathForCell:Icell];
     NSInteger MaxSamp=0;
+
+    BOOL stringIsValid = [self validateNumber:txtSampField.text];
+    if(!stringIsValid)
+        txtSampField.text = [txtSampField.text substringToIndex:[txtSampField.text length] - 1];
+    
     if(_AdrDetsWin.tag>-1){
         MaxSamp=[[_AdSelProductList[indexPath.row] valueForKey:@"NoofSamples"] integerValue];
     }else{
@@ -588,12 +593,12 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
     }
     NSInteger SampQty=[txtSampField.text integerValue];
     if([_meetData.CallType isEqualToString:@"2"]){
-        [BaseViewController Toast:[NSString stringWithFormat:@"Can't Enter Samples"]];
+        [BaseViewController Toast:[NSString stringWithFormat:NSLocalizedString(@"Can'tEnterSamples", @"Can't Enter Samples")]];
         txtSampField.text=@"";
         // return;
     }
     if(SampQty>MaxSamp && MaxSamp>0){
-        [BaseViewController Toast:[NSString stringWithFormat:@"%@ %li",NSLocalizedString(@"Sample Qty Exceed. Can Enter Maximum", @"Sample Qty Exceed. Can Enter Maximum"),(long)MaxSamp] ];
+        [BaseViewController Toast:[NSString stringWithFormat:@"%@ %li",NSLocalizedString(@"QtyExceededMSG", @"Sample Qty Exceed. Can Enter Maximum"),(long)MaxSamp] ];
         txtSampField.text=@"";
        // return;
     }
@@ -606,12 +611,24 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
 
 -(void)txtIQtyDidChange :(UITextField *)txtIQtyField{
     
+    BOOL stringIsValid = [self validateNumber:txtIQtyField.text];
+    if(!stringIsValid)
+        txtIQtyField.text = [txtIQtyField.text substringToIndex:[txtIQtyField.text length] - 1];
+    
     UITableViewCell *Icell=[self getTableViewCell:txtIQtyField];
     UITableView *tbView=[self getTableView:txtIQtyField];
     
     NSIndexPath *indexPath = [tbView indexPathForCell:Icell];
     [self.SelInputList[indexPath.row] setValue:txtIQtyField.text forKey:@"IQty"];
 }
+
+-(BOOL)validateNumber:(NSString *)text
+{
+    NSCharacterSet *numbersOnly = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
+    NSCharacterSet *characterSetFromTextField = [NSCharacterSet characterSetWithCharactersInString:text];
+    return [numbersOnly isSupersetOfSet:characterSetFromTextField];
+}
+
 
 -(void) didSetRating:(StarRatingView *)starRating andIndexPath:(NSIndexPath *)indexPath andUserEvent:(BOOL) userEvent{
     UITableView *tableView=[self getTableView:starRating];
@@ -788,7 +805,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
 -(IBAction) saveCallMeet:(id)sender{
     if([self.meetData.CusType isEqual:@"1"] && [self.UserDet.Desig isEqualToString:@"MR"]){
         if([_SelProductList count]<1){
-            [BaseViewController Toast:@"Select the Product"];
+            [BaseViewController Toast:NSLocalizedString(@"SelecttheProduct", @"Select the Product")];
             return;
         }
         for (int il=0; il<[_SelProductList count]; il++) {
@@ -797,7 +814,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
             NSInteger Rating=[[_SelProductList[il] valueForKey:@"Rating"] integerValue];
 
             if([_SelProductList[il] valueForKey:@"SmpQty"]== nil   && _SetupData.SmplQtyMnd==1){
-                [BaseViewController Toast:[NSString stringWithFormat:@"%@ ",NSLocalizedString(@"Enter the Sample Qty", @"Enter the Sample Qty")] ];
+                [BaseViewController Toast:[NSString stringWithFormat:@"%@ ",NSLocalizedString(@"EntertheSampleQty", @"Enter the Sample Qty")] ];
                 return;
             }
             if(SampQty>MaxSamp && MaxSamp>0){
@@ -811,11 +828,11 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
             }
         }
         if([_SelInputList count]<1 && _SetupData.inputMandate ==1){
-            [BaseViewController Toast:@"Select the Input"];
+            [BaseViewController Toast:NSLocalizedString(@"Select the Input", @"Select the Input")];
             return;
         }
         if([_meetData.RCPAEntry count]<1 && _SetupData.RCPAMandate ==1){
-            [BaseViewController Toast:@"RCPA Details Missing"];
+            [BaseViewController Toast:NSLocalizedString(@"RCPA Details Missing", @"RCPA Details Missing")];
             [self openRCPAEntry:self];
             return;
         }
@@ -823,7 +840,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
     [self SaveCallMeetDet:0];
 }
 -(void) SaveCallMeetDet:(int) Mode{
-    [SVProgressHUD showWithStatus:@"Submitting Please Wait..."];
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Submitting Status", @"Submitting Please Wait...")];
     NSMutableDictionary *imgData=nil;
     NSData *imageData = UIImagePNGRepresentation(self.signatureView.mySignatureImage.image);
     
@@ -904,11 +921,11 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
                        NSLog(@"%@",errorMsg);
                    }
              ];
-             [BaseViewController Toast:@"Call Submitted Successfully"];
+             [BaseViewController Toast:NSLocalizedString(@"Call Submitted Successfully", @"Call Submitted Successfully")];
              [self ClearandCloseView];
          }
          else{
-             [BaseViewController Toast:[NSString stringWithFormat:@"Call Submission Failed. %@",sMsg]];
+             [BaseViewController Toast:[NSString stringWithFormat:@"%@. %@",NSLocalizedString(@"Call Submission Failed", @"Call Submission Failed"),sMsg]];
              if([sMsg isEqualToString:@""] || receivedDta==nil){
                  [uData setValue:[NSNumber numberWithBool:NO] forKey:@"Drft"];
                  [uData setValue:[NSNumber numberWithBool:NO] forKey:@"Synced"];
@@ -924,7 +941,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
                                [self.SubmittedCallList addObject:[uData mutableCopy]];
                                [WBService saveArrayData:self.SubmittedCallList forKey:@"SubmittedCalls.SANAPP"];
                                
-                               [BaseViewController Toast:[NSString stringWithFormat:@"Call Submission Failed.\n %@",errorMsg.description]];
+                               [BaseViewController Toast:[NSString stringWithFormat:@"%@.\n %@",NSLocalizedString(@"CallSubmissionFailedERR", @"Call Submission Failed"),errorMsg.description]];
                                [SVProgressHUD dismiss];
                                [self ClearandCloseView];
                            }];
@@ -980,7 +997,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
 }
 -(IBAction) closePFeedbkMndt:(id)sender{
     if([_txtRatingFeed1.text isEqualToString:@""]){
-        [BaseViewController Toast:@"Select / Enter the Feedback"];
+        [BaseViewController Toast:NSLocalizedString(@"Select / Enter the Feedback", @"Select / Enter the Feedback")];
         return;
     }
     [self.view layoutIfNeeded];
@@ -1178,17 +1195,17 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
          NSMutableDictionary *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
          bool Success=[[receivedDta valueForKey:@"success"] boolValue];
          if(Success==YES){
-             [BaseViewController Toast:@"Query Sent Successfully"];
+             [BaseViewController Toast:NSLocalizedString(@"Query Sent Successfully", @"Query Sent Successfully")];
          }
          else{
-             [BaseViewController Toast:@"Query Sending Failed."];
+             [BaseViewController Toast:NSLocalizedString(@"Query Sending Failed.", @"Query Sending Failed.")];
              [uData setValue:[NSNumber numberWithBool:NO] forKey:@"Synced"];
              
          }
          [SVProgressHUD dismiss];
      }
        error:^(NSString *errorMsg,NSMutableDictionary *uData){
-           [BaseViewController Toast:[NSString stringWithFormat:@"Query Sending Failed.\n %@",errorMsg.description]];
+           [BaseViewController Toast:[NSString stringWithFormat:@"%@.\n %@",NSLocalizedString(@"Query Sending Failed ERR", @"Query Sending Failed"),errorMsg.description]];
            [SVProgressHUD dismiss];
        }];
 }

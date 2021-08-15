@@ -125,7 +125,7 @@ CGImageRef UIGetScreenImage(void);
 -(IBAction)gotoLoginPg:(id)sender{
     
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
-    [SVProgressHUD showWithStatus:@"Connection Server..."];
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Connection Server...", @"Connection Server...")];
     NSMutableDictionary *configFile=[[NSMutableDictionary alloc] init];
     [configFile setValue:self.txtWebUrl.text forKey:@"WebURL"];
     [configFile setValue:self.txtCmpLKey.text forKey:@"LicKey"];
@@ -174,7 +174,7 @@ CGImageRef UIGetScreenImage(void);
                                                [self dismissViewControllerAnimated:YES completion:nil];
                                                [self performSegueWithIdentifier:@"MovetoLogin" sender:self];
                                            } else{
-                                               [BaseViewController Toast:@"Check your internet connection and try again"];
+                                               [BaseViewController Toast:NSLocalizedString(@"Check your internet connection and try again", @"Check your internet connection and try again")];
                                            }
                                        }];
                 [SVProgressHUD dismiss];
@@ -182,11 +182,11 @@ CGImageRef UIGetScreenImage(void);
         }
         if(flConfig==0)
         {
-            [BaseViewController Toast:@"Invalid Licence Key..."];
+            [BaseViewController Toast:NSLocalizedString(@"Invalid Licence Key", @"Invalid Licence Key")];
             [SVProgressHUD dismiss];
         }
     }else{
-        [BaseViewController Toast:@"Invalid Access Configuration Url / Connection Failed..."];
+        [BaseViewController Toast:NSLocalizedString(@"Invalid Access Configuration Url / Connection Failed", @"Invalid Access Configuration Url / Connection Failed")];
         [SVProgressHUD dismiss];
     }
 //    }
@@ -306,7 +306,7 @@ CGImageRef UIGetScreenImage(void);
 -(IBAction) setProfileImg:(id)sender{
     if(CapturedImage!=nil){
         [self.BaseCtrlr saveImageAsJPG:CapturedImage andWithFileName:@"profile" andDirectory:@"images"];
-        [BaseViewController Toast:@"Profile Picture has been updated..."];
+        [BaseViewController Toast:NSLocalizedString(@"Profile Picture has been updated", @"Profile Picture has been updated")];
     }
 }
 -(IBAction)CloseChangePWD:(id)sender{
@@ -325,28 +325,28 @@ CGImageRef UIGetScreenImage(void);
 -(IBAction)svChangePW:(id)sender{
     NSMutableDictionary *UserDet = [[[NSUserDefaults standardUserDefaults] objectForKey:@"UserDetails.SANAPP"] mutableCopy];
     if([self.txtOPW.text isEqualToString:@""]){
-        [BaseViewController Toast:@"Enter the Old Password"];
+        [BaseViewController Toast:NSLocalizedString(@"Enter the Old Password", @"Enter the Old Password")];
         return;
     }
     if([self.txtNPW.text isEqualToString:@""]){
-        [BaseViewController Toast:@"Enter the New Password"];
+        [BaseViewController Toast:NSLocalizedString(@"Enter the New Password", @"Enter the New Password")];
         return;
     }
     if([self.txtCPW.text isEqualToString:@""]){
-        [BaseViewController Toast:@"Enter the Confirm Password"];
+        [BaseViewController Toast:NSLocalizedString(@"Enter the Confirm Password", @"Enter the Confirm Password")];
         return;
     }
     NSString* sOPW=[UserDet valueForKey:@"SF_Password"];
     if(![self.txtOPW.text isEqualToString:sOPW]){
-        [BaseViewController Toast:@"Incorrect Old Password"];
+        [BaseViewController Toast:NSLocalizedString(@"Incorrect Old Password", @"Incorrect Old Password")];
         return;
     }
     if(![self.txtNPW.text isEqualToString:self.txtCPW.text]){
-        [BaseViewController Toast:@"Password Not Matched"];
+        [BaseViewController Toast:NSLocalizedString(@"Password Not Matched", @"Password Not Matched")];
         return;
     }
     NSLog(@"%@",UserDet);
-    [SVProgressHUD showWithStatus:@"Creating Please Wait..."];
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Creating Please Wait", @"Creating Please Wait...")];
     NSMutableDictionary* Data=[[NSMutableDictionary alloc] init];
     [Data setValue:self.txtOPW.text forKey:@"txOPW"];
     [Data setValue:self.txtNPW.text forKey:@"txNPW"];
@@ -359,20 +359,20 @@ CGImageRef UIGetScreenImage(void);
          NSMutableDictionary *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
          bool Success=[[receivedDta valueForKey:@"success"] boolValue];
          if(Success==YES){
-             [BaseViewController Toast:@"Password has been Changed Successfully...."];
+             [BaseViewController Toast:NSLocalizedString(@"Password has been Changed Successfully", @"Password has been Changed Successfully....")];
              [UserDet setValue:self.txtNPW.text forKey:@"SF_Password"];
              
              [WBService saveData:UserDet forKey:@"UserDetails.SANAPP"];
              [self CloseChangePWD:self];
          }
          else{
-             [BaseViewController Toast:@"Changing Failed."];
+             [BaseViewController Toast:NSLocalizedString(@"Changing Failed.", @"Changing Failed.")];
              
          }
          [SVProgressHUD dismiss];
      }
                            error:^(NSString *errorMsg,NSMutableDictionary *uData){
-                               [BaseViewController Toast:[NSString stringWithFormat:@"Changing Failed.\n %@",errorMsg.description]];
+                               [BaseViewController Toast:[NSString stringWithFormat:@"%@\n %@",NSLocalizedString(@"Changing FailedERR", @"Changing Failed."),errorMsg.description]];
                                [SVProgressHUD dismiss];
                            }];
     

@@ -443,12 +443,12 @@
 }
 -(IBAction) SaveNwUnlistedDr:(id)sender{
     if([self.nwDrName.text isEqualToString:@""]){
-        [BaseViewController Toast:@"Enter the Doctor Name"];
+        [BaseViewController Toast:NSLocalizedString(@"EnterDoctorName", @"Enter the Doctor Name")];
         return;
     }
     
     if([[NSString stringWithFormat:@"%@",self.CmbQual.tCmbCode]  isEqualToString:@""] || self.CmbQual.tCmbCode==nil){
-        [BaseViewController Toast:@"Select the Qualification"];
+        [BaseViewController Toast:NSLocalizedString(@"SelectQualification", @"Select the Qualification")];
         return;
     }
    /* if([self.CmbClass.tCmbCode isEqualToString:@""] || self.CmbClass.tCmbCode==nil){
@@ -468,7 +468,7 @@
         return;
     }*/
     if([self.CmbTerr.tCmbCode isEqualToString:@""] || self.CmbTerr.tCmbCode==nil){
-        [BaseViewController Toast:@"Select the Territory"];
+        [BaseViewController Toast:NSLocalizedString(@"SelectTerritory", @"Select the Territory")];
         return;
     }
     /*if([self.nwDrMobile.text isEqualToString:@""]){
@@ -476,7 +476,7 @@
         return;
     }*/
     
-    [SVProgressHUD showWithStatus:@"Creating Please Wait..."];
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Creating Status", @"Creating Please Wait...")];
     NSMutableDictionary* NWDRData=[[NSMutableDictionary alloc] init];
     [NWDRData setValue:self.nwDrName.text forKey:@"DrName"];
     [NWDRData setValue:self.CmbQual.tCmbCode forKey:@"DrQCd"];
@@ -501,7 +501,7 @@
          NSMutableDictionary *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
          bool Success=[[receivedDta valueForKey:@"success"] boolValue];
          if(Success==YES){
-             [BaseViewController Toast:@"New Unlisted Doctor Created Successfully...."];
+             [BaseViewController Toast:NSLocalizedString(@"UnlistedDrSuccessMSG", @"New Unlisted Doctor Created Successfully....")];
              [WBService SendServerRequest:@"GET/UnlistedDR" withParameter:nil withImages:nil DataSF:self.meetData.DataSF completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage){
                  
                  NSMutableDictionary *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
@@ -518,13 +518,13 @@
             ];
          }
          else{
-             [BaseViewController Toast:@"New Unlisted Doctor Creation Failed."];
+             [BaseViewController Toast:NSLocalizedString(@"UnlistedDrFaliedMSG", @"New Unlisted Doctor Creation Failed.")];
              
          }
          [SVProgressHUD dismiss];
      }
     error:^(NSString *errorMsg,NSMutableDictionary *uData){
-       [BaseViewController Toast:[NSString stringWithFormat:@"New Unlisted Doctor Creation Failed.\n %@",errorMsg.description]];
+       [BaseViewController Toast:[NSString stringWithFormat:@"%@ .\n %@",NSLocalizedString(@"UnlistedDrFaliedERRMSG", @"New Unlisted Doctor Creation Failed"),errorMsg.description]];
        [SVProgressHUD dismiss];
     }];
 }

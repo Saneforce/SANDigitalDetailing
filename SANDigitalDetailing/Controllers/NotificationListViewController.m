@@ -475,7 +475,7 @@ bool LoadASFilter=NO;
         
      }
                            error:^(NSString *errorMsg,NSMutableDictionary *uData){
-         [BaseViewController Toast:[NSString stringWithFormat:@"Message not sent.\n %@",errorMsg.description]];
+         [BaseViewController Toast:[NSString stringWithFormat:@"%@.\n %@",NSLocalizedString(@"Message not sent", @"Message not sent"),errorMsg.description]];
          [SVProgressHUD dismiss];
          //[self ClearandCloseView];
     }];

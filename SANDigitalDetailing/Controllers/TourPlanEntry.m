@@ -1062,22 +1062,22 @@
 }
 -(IBAction)SaveDayTP:(id)sender{
     if([self.SelWTCode isEqualToString:@""]){
-        [BaseViewController Toast:@"Select the worktype"];
+        [BaseViewController Toast:NSLocalizedString(@"Select the worktype", @"Select the worktype")];
         return;
     }
     if([self.WTFlw isEqualToString:@"F"]){
         if([self.SelHQList count]<1){
-            [BaseViewController Toast:@"Select the Headquaters"];
+            [BaseViewController Toast:NSLocalizedString(@"Select the Headquaters", @"Select the Headquaters")];
             return;
         }
         if(self.SetupData.HospBased==1){
             if([self.SelHospList count]<1){
-                [BaseViewController Toast:[NSString stringWithFormat:@"Select the %@",_SetupData.CapHos]];
+                [BaseViewController Toast:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Select the", @"Select the"),_SetupData.CapHos]];
                 return;
             }
         }else{
             if([self.SelClusterList count]<1){
-                [BaseViewController Toast:@"Select the Clusters"];
+                [BaseViewController Toast:NSLocalizedString(@"Select the Clusters", @"Select the Clusters")];
                 return;
             }
         }
@@ -1215,17 +1215,17 @@
         }
     }
     if(EFlag==NO){
-        [BaseViewController Toast:@"Few Days TP Entry Missing"];
+        [BaseViewController Toast:NSLocalizedString(@"Few Days TP Entry Missing", @"Few Days TP Entry Missing")];
         return;
     }
     
-    [SVProgressHUD showWithStatus:@"Submitting Please Wait..."];
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Submitting Please Wait...", @"Submitting Please Wait...")];
     
     [WBService SendServerRequest:@"SAVE/TourPlan" withParameter:[_TPData mutableCopy] withImages:nil
                           DataSF:nil
                       completion:^(BOOL success, id respData,NSMutableDictionary *uData)
              {
-                 [BaseViewController Toast:@"Tourplan Submitted For Approval Successfully...."];
+                 [BaseViewController Toast:NSLocalizedString(@"Tourplan Submitted For Approval Successfully....", @"Tourplan Submitted For Approval Successfully....")];
                  
                  [_TPData setValue:@"1" forKey:@"TPFlag"];
                  self.submitTP.hidden=YES;
@@ -1235,7 +1235,7 @@
                  //[self ClearandCloseView];
              }
        error:^(NSString *errorMsg,NSMutableDictionary *uData){
-           [BaseViewController Toast:[NSString stringWithFormat:@"Tourplan Submission Failed.\n %@",errorMsg.description]];
+           [BaseViewController Toast:[NSString stringWithFormat:@"%@.\n %@",NSLocalizedString(@"Tourplan Submission Failed", @"Tourplan Submission Failed"),errorMsg.description]];
            [SVProgressHUD dismiss];
            //[self ClearandCloseView];
        }];
@@ -1254,24 +1254,24 @@
         }
     }
     if(EFlag==NO){
-        [BaseViewController Toast:@"Few Days TP Entry Missing"];
+        [BaseViewController Toast:NSLocalizedString(@"Few Days TP Entry Missing", @"Few Days TP Entry Missing")];
         return;
     }
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"SAN Digital Detailing"
-                                                        message:@"Do you want to Approve the Tour Plan ?"
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SAN Digital Detailing", @"SAN Digital Detailing")
+                                                        message:NSLocalizedString(@"Do you want to Approve the Tour Plan ?", @"Do you want to Approve the Tour Plan ?")
                                                        delegate:self
-                                              cancelButtonTitle:@"Yes"
-                                              otherButtonTitles:@"No", nil];
+                                              cancelButtonTitle:NSLocalizedString(@"Yes", @"Yes")
+                                              otherButtonTitles:NSLocalizedString(@"No", @"No"), nil];
     alertView.tag=1;
     [alertView show];
 }
 -(IBAction) svRejectTourPlan:(id)sender
 {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"SAN Digital Detailing"
-                                                        message:@"Do you want to Reject the Tour Plan ?"
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SAN Digital Detailing", @"SAN Digital Detailing")
+                                                        message:NSLocalizedString(@"Do you want to Reject the Tour Plan ?", @"Do you want to Reject the Tour Plan ?")
                                                        delegate:self
-                                              cancelButtonTitle:@"Yes"
-                                              otherButtonTitles:@"No", nil];
+                                              cancelButtonTitle:NSLocalizedString(@"Yes", @"Yes")
+                                              otherButtonTitles:NSLocalizedString(@"No", @"No"), nil];
     alertView.tag=2;
     [alertView show];
 }
@@ -1281,38 +1281,38 @@
 {
     if(buttonIndex == 0 && alertView.tag==2)
     {
-    [SVProgressHUD showWithStatus:@"Rejecting Please Wait..."];
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Rejecting Please Wait...", @"Rejecting Please Wait...")];
     
     [WBService SendServerRequest:@"SAVE/TPReject" withParameter:[_TPData mutableCopy] withImages:nil
                           DataSF:_TPEntryDet.SF
                       completion:^(BOOL success, id respData,NSMutableDictionary *uData)
         {
-             [BaseViewController Toast:@"Tourplan Rejected Successfully...."];
+             [BaseViewController Toast:NSLocalizedString(@"Tourplan Rejected Successfully....", @"Tourplan Rejected Successfully....")];
              [SVProgressHUD dismiss];
              [self.TPEntryDet clearTPData];
              NSArray *viewControllers = [self.navigationController viewControllers];
              [self.navigationController popToViewController:[viewControllers objectAtIndex:viewControllers.count-2] animated:NO];
         }
         error:^(NSString *errorMsg,NSMutableDictionary *uData){
-           [BaseViewController Toast:[NSString stringWithFormat:@"Tourplan Rejection Failed.\n %@",errorMsg.description]];
+           [BaseViewController Toast:[NSString stringWithFormat:@"%@.\n %@",NSLocalizedString(@"Tourplan Rejection FailedERR", @"Tourplan Rejection Failed"),errorMsg.description]];
            [SVProgressHUD dismiss];
         }];
     }
     else if(buttonIndex == 0 && alertView.tag==1){
-        [SVProgressHUD showWithStatus:@"Approving Please Wait..."];
+        [SVProgressHUD showWithStatus:NSLocalizedString(@"Approving Please Wait...", @"Approving Please Wait...")];
         
         [WBService SendServerRequest:@"SAVE/TPApproval" withParameter:[_TPData mutableCopy] withImages:nil
                               DataSF:_TPEntryDet.SF
                           completion:^(BOOL success, id respData,NSMutableDictionary *uData)
          {
-             [BaseViewController Toast:@"Tourplan Approved Successfully...."];
+             [BaseViewController Toast:NSLocalizedString(@"Tourplan Approved Successfully....", @"Tourplan Approved Successfully....")];
              [SVProgressHUD dismiss];
              [self.TPEntryDet clearTPData];
              NSArray *viewControllers = [self.navigationController viewControllers];
              [self.navigationController popToViewController:[viewControllers objectAtIndex:viewControllers.count-2] animated:NO];
          }
                                error:^(NSString *errorMsg,NSMutableDictionary *uData){
-                                   [BaseViewController Toast:[NSString stringWithFormat:@"Tourplan Submission Failed.\n %@",errorMsg.description]];
+                                   [BaseViewController Toast:[NSString stringWithFormat:@"%@\n %@",NSLocalizedString(@"Tourplan Submission FailedERR.", @"Tourplan Submission Failed."),errorMsg.description]];
                                    [SVProgressHUD dismiss];
                                    //[self ClearandCloseView];
                                }];

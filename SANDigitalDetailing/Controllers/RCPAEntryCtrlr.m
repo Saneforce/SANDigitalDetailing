@@ -543,43 +543,43 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
 }
 -(BOOL) validateForm{
     if([self.meetData.CustCode isEqualToString:@""] || self.meetData.CustCode==nil ){
-        [BaseViewController Toast:@"Select the Doctor Name"];
+        [BaseViewController Toast:NSLocalizedString(@"Select the Doctor Name", @"Select the Doctor Name")];
         return NO;
     }
     if([self.SelChemistList count]<1){
-        [BaseViewController Toast:@"Select the Chemist Name"];
+        [BaseViewController Toast:NSLocalizedString(@"Select the Chemist Name", @"Select the Chemist Name")];
         return NO;
     }
     if([self.SelPCode isEqualToString:@""] || self.SelPCode==nil ){
-        [BaseViewController Toast:@"Select the Our Product Brand"];
+        [BaseViewController Toast:NSLocalizedString(@"Select the Our Product Brand", @"Select the Our Product Brand")];
         return NO;
     }
     NSString *Qty=self.txtOPQty.text;
     if([Qty isEqualToString:@""]){
-        [BaseViewController Toast:@"Enter the Our Product Brand Qty"];
+        [BaseViewController Toast:NSLocalizedString(@"Enter the Our Product Brand Qty", @"Enter the Our Product Brand Qty")];
         return NO;
     }
     if(![self isNumeric:Qty] || [Qty length]>3){
-        [BaseViewController Toast:@"Enter Numbers only and lessthen 1000"];
+        [BaseViewController Toast:NSLocalizedString(@"Enter Numbers only and lessthen 1000", @"Enter Numbers only and lessthen 1000")];
         return NO;
     }
     
     NSString *Rate=self.txtOPRate.text;
     if([Rate isEqualToString:@""]){
-        [BaseViewController Toast:@"Enter the Our Product Brand Rate"];
+        [BaseViewController Toast:NSLocalizedString(@"Enter the Our Product Brand Rate", @"Enter the Our Product Brand Rate")];
         return NO;
     }
     if(![self isFloat:Rate]){
-        [BaseViewController Toast:@"Enter Numbers with Amount format."];
+        [BaseViewController Toast:NSLocalizedString(@"Enter Numbers with Amount format.", @"Enter Numbers with Amount format.")];
         return NO;
     }
     NSString *Value=self.txtOPValue.text;
     if([Value isEqualToString:@""]){
-        [BaseViewController Toast:@"Enter the Our Product Brand Value"];
+        [BaseViewController Toast:NSLocalizedString(@"Enter the Our Product Brand Value", @"Enter the Our Product Brand Value")];
         return NO;
     }
     if(![self isFloat:Value]){
-        [BaseViewController Toast:@"Enter Numbers with Amount format."];
+        [BaseViewController Toast:NSLocalizedString(@"Enter Numbers with Amount format.", @"Enter Numbers with Amount format.")];
         return NO;
     }
     for(int il=0;il<[_CompetitorList count];il++)
@@ -588,39 +588,39 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
         if((![[iCmpt valueForKey:@"CompName"] isEqualToString:@""] || ![[iCmpt valueForKey:@"CompPName"] isEqualToString:@""]))
         {
             if([[iCmpt valueForKey:@"CompName"] isEqualToString:@""] || [iCmpt valueForKey:@"CompName"]==nil){
-                [BaseViewController Toast:@"Enter the Competitor Name"];
+                [BaseViewController Toast:NSLocalizedString(@"Enter the Competitor Name", @"Enter the Competitor Name")];
                 return NO;
             }
             if([[iCmpt valueForKey:@"CompPName"] isEqualToString:@""] || [iCmpt valueForKey:@"CompPName"]==nil){
-                [BaseViewController Toast:@"Enter the Competitor Product Brand"];
+                [BaseViewController Toast:NSLocalizedString(@"Enter the Competitor Product Brand", @"Enter the Competitor Product Brand")];
                 return NO;
             }
             
             NSString *Qty=[iCmpt valueForKey:@"CPQty"];
             if([Qty isEqualToString:@""] ||[Qty isEqualToString:@"0"] || [iCmpt valueForKey:@"CPQty"]==nil){
-                [BaseViewController Toast:@"Enter the Competitor Qty"];
+                [BaseViewController Toast:NSLocalizedString(@"Enter the Competitor Qty", @"Enter the Competitor Qty")];
                 return NO;
             }
             if(![self isNumeric:Qty] || [Qty length]>3){
-                [BaseViewController Toast:@"Enter Numbers only and lessthen 1000"];
+                [BaseViewController Toast:NSLocalizedString(@"Enter Numbers only and lessthen 1000", @"Enter Numbers only and lessthen 1000")];
                 return NO;
             }
             NSString *Rate=[iCmpt valueForKey:@"CPRate"];
             if([Rate isEqualToString:@""] || [iCmpt valueForKey:@"CPRate"]==nil){
-                [BaseViewController Toast:@"Enter the Competitor Rate"];
+                [BaseViewController Toast:NSLocalizedString(@"Enter the Competitor Rate", @"Enter the Competitor Rate")];
                 return NO;
             }
             if(![self isFloat:Rate]){
-                [BaseViewController Toast:@"Enter Numbers with Amount format."];
+                [BaseViewController Toast:NSLocalizedString(@"Enter Numbers with Amount format.", @"Enter Numbers with Amount format.")];
                 return NO;
             }
             NSString *Value=[iCmpt valueForKey:@"CPValue"];
             if([Value isEqualToString:@""] || [iCmpt valueForKey:@"CPValue"]==nil){
-                [BaseViewController Toast:@"Enter the Competitor Value"];
+                [BaseViewController Toast:NSLocalizedString(@"Enter the Competitor Value", @"Enter the Competitor Value")];
                 return NO;
             }
             if(![self isFloat:Value]){
-                [BaseViewController Toast:@"Enter Numbers with Amount format."];
+                [BaseViewController Toast:NSLocalizedString(@"Enter Numbers with Amount format.", @"Enter Numbers with Amount format.")];
                 return NO;
             }
         }

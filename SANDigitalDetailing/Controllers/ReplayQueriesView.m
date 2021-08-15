@@ -90,13 +90,13 @@
             [self loadDrQueries];
          }
          else{
-             [BaseViewController Toast:@"Query Sending  Failed."];
+             [BaseViewController Toast:NSLocalizedString(@"Query Sending  Failed.", @"Query Sending  Failed.")];
              
          }
          [SVProgressHUD dismiss];
      }
        error:^(NSString *errorMsg,NSMutableDictionary *uData){
-           [BaseViewController Toast:[NSString stringWithFormat:@"Query Sending Failed.\n %@",errorMsg.description]];
+           [BaseViewController Toast:[NSString stringWithFormat:@"%@\n %@",NSLocalizedString(@"Query Sending FailedERR", @"Query Sending Failed."),errorMsg.description]];
            [SVProgressHUD dismiss];
        }];
 }

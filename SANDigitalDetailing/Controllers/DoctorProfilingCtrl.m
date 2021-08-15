@@ -897,7 +897,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
     self.tbHQ.hidden=upState;
 }
 -(void) generateCtrls:(long)CatID{
-    [SVProgressHUD showWithStatus:@"Loading..."];
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"LoadinStatus", @"Loading..")];
     NSString* Typ=@"CU";
     if([_SelType isEqualToString:@"H"]) Typ=@"HO";
     _arrControlsDets=[[_ObjCtrlList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Type==%@ and Cat_code == %ld",Typ,CatID]] mutableCopy];
@@ -1098,7 +1098,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
     
     NSData *ScribData =[NSData dataWithContentsOfFile:[NSURL URLWithString:sFilePath]];
     if(ScribData==nil){
-        [BaseViewController Toast:@"Invalid File or Filename"];
+        [BaseViewController Toast:NSLocalizedString(@"Invalid File or Filename", @"Invalid File or Filename")];
     }else{
         NSMutableDictionary *fileData=[[NSMutableDictionary alloc] init];
         [fileData setObject:ScribData forKey:@"File"];
@@ -1133,7 +1133,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
     if(_eCtrl.ControlType==TimePicker || _eCtrl.ControlType==TimePickerRange){
         if(_selectedDate==nil)
         {
-            [BaseViewController Toast:@"Date Not Seleted..."];
+            [BaseViewController Toast:NSLocalizedString(@"Date Not Seleted...", @"Date Not Seleted...")];
             return;
         }
         if (_selectedHour==nil) _selectedHour=@"00";
@@ -1205,12 +1205,12 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
         }
         if(cCtrl.isMandate==YES){
             if([cCtrl.selectedValue isEqualToString:@""] || cCtrl.selectedValue==nil){
-                [BaseViewController Toast:[NSString stringWithFormat:@"Kindly Fill the %@",cCtrl.Caption]];
+                [BaseViewController Toast:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Kindly Fill the ValidationErrMSG", @"Kindly Fill the"),cCtrl.Caption]];
                 return nil;
             }
             if(cCtrl.ControlType==DatePickerRange || cCtrl.ControlType==TimePickerRange){
                 if([cCtrl.selectedToValue isEqualToString:@""] || cCtrl.selectedToValue==nil){
-                    [BaseViewController Toast:[NSString stringWithFormat:@"Kindly Fill the to Range of %@",cCtrl.Caption]];
+                    [BaseViewController Toast:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Kindly Fill the to Range of ValidationErrMSG", @"Kindly Fill the to Range of "),cCtrl.Caption]];
                     return nil;
                 }
             }
@@ -1227,7 +1227,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
                     endDate=[BaseViewController str2date:cCtrl.selectedToValue];
                 }
                 if([endDate compare:startDate]==NSOrderedAscending){
-                    [BaseViewController Toast:[NSString stringWithFormat:@"To Range Must be greater then From Seletion of %@",cCtrl.Caption]];
+                    [BaseViewController Toast:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"To Range Must be greater then From Seletion of", @"To Range Must be greater then From Seletion of"),cCtrl.Caption]];
                     return nil;
                 }
             }
@@ -1275,15 +1275,15 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
          NSMutableDictionary *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
          bool Success=[[receivedDta valueForKey:@"success"] boolValue];
          if(Success==YES){
-             [BaseViewController Toast:[NSString stringWithFormat:@"%@ Profile Saved Successfully",Type]];
+             [BaseViewController Toast:[NSString stringWithFormat:@"%@ %@",Type,NSLocalizedString(@"Profile Saved Successfully", @"Profile Saved Successfully")]];
          }
          else{
-             [BaseViewController Toast:[NSString stringWithFormat:@"%@ Profiling Failed.",Type]];
+             [BaseViewController Toast:[NSString stringWithFormat:@"%@ %@",Type,NSLocalizedString(@"Profiling Failed.", @"Profiling Failed.")]];
          }
          [SVProgressHUD dismiss];
      }
        error:^(NSString *errorMsg,NSMutableDictionary *uData){
-           [BaseViewController Toast:[NSString stringWithFormat:@"%@ Profiling Failed.\n %@",Type,errorMsg.description]];
+           [BaseViewController Toast:[NSString stringWithFormat:@"%@ .\n %@",Type,errorMsg.description,NSLocalizedString(@"Profiling FailedERR", @"Profiling Failed")]];
            [SVProgressHUD dismiss];
        }];
 }

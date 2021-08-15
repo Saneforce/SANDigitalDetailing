@@ -1087,7 +1087,7 @@
         [self presentViewController:currentViewController animated:YES completion:nil];
     }
     else{
-        [BaseViewController Toast:@"Master Data Not Loaded Properly. Kindly Sycn Again."];
+        [BaseViewController Toast:NSLocalizedString(@"Master Data Not Loaded Properly. Kindly Sycn Again.", @"Master Data Not Loaded Properly. Kindly Sycn Again.")];
     }
     
     [SVProgressHUD dismiss];
@@ -1156,7 +1156,7 @@
         {
             [self.CallsSectionsList[_cIndexPath.section] removeObjectAtIndex:_cIndexPath.row];
             [self saveSubmitCalls];
-            [BaseViewController Toast:@"Call Deleted Successfully"];
+            [BaseViewController Toast:NSLocalizedString(@"Call Deleted Successfully", @"Call Deleted Successfully")];
             [self reloadCalls];
         }
         else
@@ -1166,7 +1166,7 @@
                 {
                     [self.CallsSectionsList[_cIndexPath.section] removeObjectAtIndex:_cIndexPath.row];
                     [self saveSubmitCalls];
-                    [BaseViewController Toast:@"Call Deleted Successfully"];
+                    [BaseViewController Toast:NSLocalizedString(@"Call Deleted SuccessfullyMSG", @"Call Deleted Successfully")];
                     [self reloadCalls];
                 }
                 error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage,NSIndexPath *indexPath){
@@ -1210,14 +1210,14 @@
                 if(![rMsg isEqualToString:@""]){
                     [BaseViewController Toast:rMsg];
                 }else{
-                    [BaseViewController Toast:@"Today Work Plan Synced"];
+                    [BaseViewController Toast:NSLocalizedString(@"Today Work Plan Synced", @"Today Work Plan Synced")];
                 }
             }
             else{
                 if(![rMsg isEqualToString:@""]){
                     [BaseViewController Toast:rMsg];
                 }else{
-                    [BaseViewController Toast:@"Today Work Plan not Synced. Something went to wrong.\n Try Again!."];
+                    [BaseViewController Toast:NSLocalizedString(@"Today Work Plan not Synced. Something went to wrong.\n Try Again!.", @"Today Work Plan not Synced. Something went to wrong.\n Try Again!.")];
                 }
             }
         }
@@ -1271,7 +1271,7 @@
                     long indx= [ilCalls indexOfObject:lPCalls[0]];
                     [ilCalls removeObjectAtIndex:indx];
                     [WBService saveArrayData:[ilCalls mutableCopy] forKey:@"SubmittedCalls.SANAPP"];
-                    [BaseViewController Toast:@"Call Synced Successfully"];
+                    [BaseViewController Toast:NSLocalizedString(@"Call Synced Successfully", @"Call Synced Successfully")];
                     [self reloadSubCalls];
                     NSString *CustCode=[lPCalls[0] valueForKey:@"CustCode"];
                     [WBService SendServerRequest:@"GET/CusLVst" withParameter:[@{@"CusCode":CustCode,@"typ":@"D"} mutableCopy] withImages:nil DataSF:nil
@@ -1360,7 +1360,7 @@
                 [self.CallsSectionsList[indxPath.section] removeObjectAtIndex:indxPath.row];
                 [self.CallsSectionsList[indxPath.section] insertObject:sCall atIndex:indxPath.row];
                 */
-                [BaseViewController Toast:@"Call Synced Successfully"];
+                [BaseViewController Toast:NSLocalizedString(@"Call Synced SuccessfullyMSG", @"Call Synced Successfully")];
                 //[self saveSubmitCalls];
                 [self reloadSubCalls];
             }

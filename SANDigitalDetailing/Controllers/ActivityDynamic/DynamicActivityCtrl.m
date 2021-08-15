@@ -237,7 +237,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
     
     NSData *ScribData =[NSData dataWithContentsOfFile:[NSURL URLWithString:sFilePath]];
     if(ScribData==nil){
-        [BaseViewController Toast:@"Invalid File or Filename"];
+        [BaseViewController Toast:NSLocalizedString(@"Invalid File or Filename", @"Invalid File or Filename")];
     }else{
         NSMutableDictionary *fileData=[[NSMutableDictionary alloc] init];
         [fileData setObject:ScribData forKey:@"File"];
@@ -263,7 +263,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
     if(eCtrl.ControlType==TimePicker || eCtrl.ControlType==TimePickerRange){
         if(selectedDate==nil)
         {
-            [BaseViewController Toast:@"Date Not Seleted..."];
+            [BaseViewController Toast:NSLocalizedString(@"Date Not Seleted...", @"Date Not Seleted...")];
             return;
         }
         if(selectedHour==nil) selectedHour=@"00";
@@ -328,7 +328,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
     
    if(tableView==self.selTableView) {
        
-       [SVProgressHUD showWithStatus:@"Loading..."];
+       [SVProgressHUD showWithStatus:NSLocalizedString(@"LoadinStatus", @"Loading..")];
        cell =[tableView cellForRowAtIndexPath:indexPath];
        ActvityCode=[_arrMainActivity[indexPath.row] objectForKey:@"Activity_SlNo"];
        NSMutableDictionary* Param=[[NSMutableDictionary alloc] init];
@@ -464,12 +464,12 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
         }
         if(cCtrl.isMandate==YES){
             if([cCtrl.selectedValue isEqualToString:@""] || cCtrl.selectedValue==nil){
-                [BaseViewController Toast:[NSString stringWithFormat:@"Kindly Fill the %@",cCtrl.Caption]];
+                [BaseViewController Toast:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Kindly Fill the Validation_Message", @"Kindly Fill the"),cCtrl.Caption]];
                 return;
             }
             if(cCtrl.ControlType==DatePickerRange || cCtrl.ControlType==TimePickerRange){
                 if([cCtrl.selectedToValue isEqualToString:@""] || cCtrl.selectedToValue==nil){
-                    [BaseViewController Toast:[NSString stringWithFormat:@"Kindly Fill the to Range of %@",cCtrl.Caption]];
+                    [BaseViewController Toast:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Kindly Fill the to Range of", @"Kindly Fill the to Range of"),cCtrl.Caption]];
                     return;
                 }
             }
@@ -486,7 +486,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
                     endDate=[BaseViewController str2date:cCtrl.selectedToValue];
                 }
                 if([endDate compare:startDate]==NSOrderedAscending){
-                    [BaseViewController Toast:[NSString stringWithFormat:@"To Range Must be greater then From Seletion of %@",cCtrl.Caption]];
+                    [BaseViewController Toast:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"To Range Must be greater then From Seletion of", @"To Range Must be greater then From Seletion of") ,cCtrl.Caption]];
                     return;
                 }
             }
@@ -501,7 +501,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
         [Param setObject:datas forKey:@"val"];
         [WBService SendServerRequest:@"save/dcract" withParameter:Param withImages:nil DataSF:self.UserDet.SF completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage){
                 
-                [BaseViewController Toast:@"Submitted Successfully"];
+                [BaseViewController Toast:NSLocalizedString(@"Submitted Successfully", @"Submitted Successfully")];
             }
             error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage){
               NSLog(@"%@",errorMsg);

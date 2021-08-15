@@ -251,15 +251,15 @@
          NSMutableDictionary *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
          bool Success=[[receivedDta valueForKey:@"success"] boolValue];
          if(Success==YES){
-             [BaseViewController Toast:@"Chemist Profile Saved Successfully"];
+             [BaseViewController Toast:NSLocalizedString(@"Chemist Profile Saved Successfully", @"Chemist Profile Saved Successfully")];
          }
          else{
-             [BaseViewController Toast:@"Chemist Profiling Failed."];
+             [BaseViewController Toast:NSLocalizedString(@"Chemist Profiling Failed.", @"Chemist Profiling Failed.")];
          }
          [SVProgressHUD dismiss];
      }
                            error:^(NSString *errorMsg,NSMutableDictionary *uData){
-                               [BaseViewController Toast:[NSString stringWithFormat:@"Chemist Profiling Failed.\n %@",errorMsg.description]];
+                               [BaseViewController Toast:[NSString stringWithFormat:@"%@.\n %@",NSLocalizedString( @"Chemist Profiling FailedERR", @"Chemist Profiling Failed"),errorMsg.description]];
                                [SVProgressHUD dismiss];
                            }];
 }
