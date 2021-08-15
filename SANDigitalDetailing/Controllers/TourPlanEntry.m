@@ -593,7 +593,7 @@
             cell.lblDynText.font=[UIFont fontWithName:@"Poppins-Regular" size:13.0];
             cell.btnDynJoin=[[UIButton alloc] initWithFrame:CGRectMake(cell.frame.size.width-38, 0, 38, cell.frame.size.height)];
             
-            [cell.btnDynJoin setTitle:@"-" forState:UIControlStateNormal];
+            [cell.btnDynJoin setTitle:NSLocalizedString(@"-", @"-") forState:UIControlStateNormal];
             [cell.btnDynJoin.titleLabel setFont:[UIFont fontWithName:@"Poppins-Regular" size:13.0]];
             cell.btnDynJoin.backgroundColor=[UIColor colorWithRed:255.0f/255 green:29.0f/255 blue:37.0f/255 alpha:1.0f];
             [cell addSubview:cell.lblDynText];

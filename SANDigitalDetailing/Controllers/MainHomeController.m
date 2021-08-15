@@ -1768,7 +1768,7 @@
         
             cell.btnDynJoin=[[UIButton alloc] initWithFrame:CGRectMake(cell.frame.size.width-110, 40, 100, 20)];
             cell.btnDynJoin.layer.cornerRadius=5;
-            [cell.btnDynJoin setTitle:@"Start Meeting" forState:UIControlStateNormal];
+            [cell.btnDynJoin setTitle:NSLocalizedString(@"StartMeetingBTN", @"Start Meeting") forState:UIControlStateNormal];
             cell.btnDynJoin.backgroundColor=[UIColor colorWithRed:255.0f/255 green:29.0f/255 blue:37.0f/255 alpha:1.0f];
             [cell.btnDynJoin.titleLabel setFont:[UIFont fontWithName:@"Poppins-Regular" size:11.0]];
             [cell addSubview:cell.btnDynJoin];
@@ -1804,10 +1804,10 @@
         NSDate* Dt=[BaseViewController str2date:Dtstr];
         NSDate* Dt1=[NSDate date];
         
-        [cell.btnDynJoin setTitle:@"Start Meeting" forState:UIControlStateNormal];
+        [cell.btnDynJoin setTitle:NSLocalizedString(@"StartMeetingBTN", @"Start Meeting") forState:UIControlStateNormal];
         cell.btnDynJoin.enabled=YES;
         if(Dt.timeIntervalSince1970<Dt1.timeIntervalSince1970){
-            [cell.btnDynJoin setTitle:@"Meeting Ended" forState:UIControlStateNormal];
+            [cell.btnDynJoin setTitle:NSLocalizedString(@"MeetingEndedBTN", @"Meeting Ended") forState:UIControlStateNormal];
             cell.btnDynJoin.backgroundColor=[UIColor colorWithRed:220.0f/255 green:220.0f/255 blue:220.0f/255 alpha:1.0f];
             cell.btnDynJoin.enabled=NO;
         }

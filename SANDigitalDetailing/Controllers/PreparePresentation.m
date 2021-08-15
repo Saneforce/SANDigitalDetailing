@@ -84,7 +84,7 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
     self.btnDelete=[UIButton buttonWithType:UIButtonTypeCustom];
     self.btnDelete.frame=CGRectMake(self.txtGroupName.superview.frame.origin.x-(self.txtGroupName.frame.size.height), self.txtGroupName.frame.origin.y-4, self.txtGroupName.frame.size.height+8, self.txtGroupName.frame.size.height+8);
     [self.btnDelete setImage:[UIImage imageNamed:@"delete"] forState:UIControlStateNormal];
-    [self.btnDelete setTitle:@"Delete" forState:UIControlStateNormal];
+    [self.btnDelete setTitle:NSLocalizedString(@"DeleteBTN", @"Delete") forState:UIControlStateNormal];
     [self.btnDelete addTarget:self action:@selector(deleteSlidesGroup:) forControlEvents:UIControlEventTouchUpInside];
     [self.btnCancelEdit.superview addSubview:self.btnDelete];
     
