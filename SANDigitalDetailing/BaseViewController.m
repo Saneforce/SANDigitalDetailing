@@ -518,7 +518,7 @@ int masil=0;NSString *allErrs=@"";bool Errflag=NO;
 +(void)loadMasterData:(NSString *)DataSF completion:(void (^)())completionBlock
                 error:(void (^)(NSString *errorMsg)) errorBlock{
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
-    [SVProgressHUD showWithStatus:@"Loading Masters..."];
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"LoadingMSG", @"Loading Masters...")];
     NSArray* SFsMaster=@[
                 [[List alloc] initWithName:[[NSString alloc] initWithFormat:@"TerritoryDetails_%@.SANAPP",DataSF] andApiPath:@"GET/Territory" Parameters:nil],
                 [[List alloc] initWithName:[[NSString alloc] initWithFormat:@"DoctorDetails_%@.SANAPP",DataSF] andApiPath:@"GET/Doctors" Parameters:nil],

@@ -113,12 +113,12 @@
     [Param setValue:[_LvlApproval[indx] valueForKey:@"LvID"] forKey:@"LvID"];
     [Param setValue:@"0" forKey:@"LvAPPFlag"];
     [WBService SendServerRequest:@"Save/LvApproval" withParameter:Param withImages:nil DataSF:nil completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage) {
-        [BaseViewController Toast:@"Leave has been Approved Successfully."];
+        [BaseViewController Toast:NSLocalizedString(@"Leave has been Approved Successfully.", @"Leave has been Approved Successfully.")];
         
         [self refreshLvApproval];
     }
    error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage){
-       [BaseViewController Toast:@"Leave has been Approval Failed."];
+       [BaseViewController Toast:NSLocalizedString(@"Leave has been Approval Failed", @"Leave has been Approval Failed.")];
        NSLog(@"%@",errorMsg);
    }];
 }
@@ -134,7 +134,7 @@
 }
 -(IBAction)RejectLeave:(id)sender{
     if([self.txRejRem.text isEqualToString:@""]){
-        [BaseViewController Toast:@"Enter the Reject Reason"];
+        [BaseViewController Toast:NSLocalizedString(@"Enter the Reject Reason", @"Enter the Reject Reason")];
         return;
     }
     long indx=self.txRejRem.tag;
@@ -144,11 +144,11 @@
     [Param setValue:@"1" forKey:@"LvAPPFlag"];
     [Param setValue:self.txRejRem.text forKey:@"RejRem"];
     [WBService SendServerRequest:@"Save/LvReject" withParameter:Param withImages:nil DataSF:nil completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage) {
-        [BaseViewController Toast:@"Leave has been Rejected Successfully."];
+        [BaseViewController Toast:NSLocalizedString(@"Leave has been Rejected Successfully.", @"Leave has been Rejected Successfully.")];
         [self refreshLvApproval];
         }
         error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage){
-            [BaseViewController Toast:@"Leave has been Rejection Failed."];
+            [BaseViewController Toast:NSLocalizedString(@"Leave has been Rejection Failed.", @"Leave has been Rejection Failed.")];
             NSLog(@"%@",errorMsg);
         }];
 }

@@ -857,7 +857,7 @@
     int AcptFlag=0;
     if (self.drPolicy.PolicyAccept==YES && self.drPolicy.PlcyCntMngt==YES && self.drPolicy.PlcyProf==YES) AcptFlag=1;
     if([self.txtEmail.text isEqualToString:@""] && AcptFlag==1){
-        [BaseViewController Toast:@"Enter the Email ID..."];
+        [BaseViewController Toast:NSLocalizedString(@"EmailIDMandate", @"Enter the Email ID...")];
         return;
     }
     [SVProgressHUD showWithStatus:NSLocalizedString(@"Submitting Please Wait...", @"Submitting Please Wait...")];
@@ -883,7 +883,7 @@
          NSMutableDictionary *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
          bool Success=[[receivedDta valueForKey:@"success"] boolValue];
          if(Success==YES){
-             [BaseViewController Toast:@"Policy Accepted Successfully...."];
+             [BaseViewController Toast:NSLocalizedString(@"PolicySuccessMSG", @"Policy Accepted Successfully....")];
              
              NSString *DataKey=[[NSString alloc] initWithFormat:@"DoctorDetails_%@.SANAPP",self.meetData.DataSF];
              self.ObjCustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
@@ -897,7 +897,7 @@
              [_collectionView reloadData];
          }
          else{
-             [BaseViewController Toast:@"Policy Accepted Failed."];
+             [BaseViewController Toast:NSLocalizedString(@"PolicyFailedMSG", @"Policy Accepted Failed.")];
          }
        //  [self.SubmittedCallList addObject:[uData mutableCopy]];
        //  [WBService saveArrayData:self.SubmittedCallList forKey:@"SubmittedCalls.SANAPP"];
@@ -907,7 +907,7 @@
           // [self.SubmittedCallList addObject:[uData mutableCopy]];
           // [WBService saveArrayData:self.SubmittedCallList forKey:@"SubmittedCalls.SANAPP"];
            
-           [BaseViewController Toast:[NSString stringWithFormat:@"Policy Accepted Failed.\n %@",errorMsg.description]];
+        [BaseViewController Toast:[NSString stringWithFormat:@"%@ \n %@",NSLocalizedString(@"PolicyFailedError", @"Policy Accepted Failed."),errorMsg.description]];
            [SVProgressHUD dismiss];
        }
     ];

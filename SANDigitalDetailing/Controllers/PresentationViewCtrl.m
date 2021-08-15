@@ -1232,7 +1232,7 @@ CGFloat lastScale = 1.0;
     [scribbleDet setValue:[NSString stringWithFormat:@"Scribble_%@_%i_%@.jpg",filName,(int)_Slideindex,dtId] forKey:@"ScribbleName"];
     
     [_ScribbleList addObject:scribbleDet];
-    [BaseViewController Toast:@"Scribble Added Successfully..."];
+    [BaseViewController Toast:NSLocalizedString(@"ScribbleAddedSuccess", @"Scribble Added Successfully...")];
     [self CloseScribble];
 }
 -(IBAction)drawSqure:(id)sender{

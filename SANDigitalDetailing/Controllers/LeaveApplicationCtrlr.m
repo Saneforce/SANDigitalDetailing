@@ -98,7 +98,7 @@
 
 -(IBAction) SaveLeaveApp:(id)sender{
     if([self.NODL.text intValue]<1){
-        [BaseViewController Toast:@"Your Leave Period is Invalid"];
+        [BaseViewController Toast:NSLocalizedString(@"Your Leave Period is Invalid", @"Your Leave Period is Invalid")];
         return;
     }
     
@@ -106,11 +106,11 @@
     
     NSMutableArray *Item=[[[MkList[0] objectForKey:@"values"] filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Name contains[c] %@",self.LeaveType]] mutableCopy];
     if([[Item[0] valueForKey:@"Value"] floatValue]<[self.NODL.text floatValue]){
-        [BaseViewController Toast:[NSString stringWithFormat:@"%@ Availability Exceeded.",self.LeaveType]];
+        [BaseViewController Toast:[NSString stringWithFormat:@"%@ %@.",self.LeaveType,NSLocalizedString(@"Availability Exceeded", @"Availability Exceeded")]];
         return;
     }
     if([self.txtRem.text isEqualToString:@""]){
-        [BaseViewController Toast:@"Enter the Reason For Leave."];
+        [BaseViewController Toast:NSLocalizedString(@"Enter the Reason For Leave.", @"Enter the Reason For Leave.")];
         return;
     }
     
@@ -138,19 +138,19 @@
             [LvInfData setValue:self.txtAddOnLv.text forKey:@"LvAdd"];
             
             
-            [SVProgressHUD showWithStatus:@"Submitting Please Wait..."];
+            [SVProgressHUD showWithStatus:NSLocalizedString(@"SubmittingStatus", @"Submitting Please Wait...")];
             
             [WBService SendServerRequest:@"SAVE/Leave" withParameter:[LvInfData mutableCopy] withImages:nil
                                   DataSF:nil
                               completion:^(BOOL success, id respData,NSMutableDictionary *uData)
              {
                  [self RefreshLeaveDetail];
-                 [BaseViewController Toast:@"Leave Application has been Sent For Approval Successfully...."];
+                [BaseViewController Toast:NSLocalizedString(@"Leave Application has been Sent For Approval Successfully", @"Leave Application has been Sent For Approval Successfully....")];
                  [SVProgressHUD dismiss];
                  //[self ClearandCloseView];
              }
                            error:^(NSString *errorMsg,NSMutableDictionary *uData){
-                               [BaseViewController Toast:[NSString stringWithFormat:@"Leave Application Submission Failed.\n %@",errorMsg.description]];
+                               [BaseViewController Toast:[NSString stringWithFormat:@"%@.\n %@",NSLocalizedString(@"Leave Application Submission Failed", @"Leave Application Submission Failed"),errorMsg.description]];
                                [SVProgressHUD dismiss];
                                //[self ClearandCloseView];
                            }];

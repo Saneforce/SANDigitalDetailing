@@ -50,13 +50,13 @@
     [_btnSubmit.layer addSublayer:gradientLayer];
     [_btnSubmit setFont:[UIFont fontWithName:@"Poppins-SemiBold" size:13.0]];
     [_btnSubmit setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [_btnSubmit setTitle:@"Submit" forState:UIControlStateNormal];
+    [_btnSubmit setTitle:NSLocalizedString(@"SubmitBTN", @"Submit") forState:UIControlStateNormal];
     [_btnSubmit addTarget:self action:@selector(SubmitData) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_btnSubmit];
 }
 -(void) SubmitData{
     NSLog(@"Submit Data : %@",[((CallMeetData *) _MissedEntry.MissDatas[0]) toNSDictionary]);
-    [SVProgressHUD showWithStatus:@"Submitting Please Wait..."];
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Submitting Status",  @"Submitting Please Wait...")];
     
     NSMutableArray *CallDatas =[[NSMutableArray alloc] init];
     NSMutableDictionary *MissedData =[[NSMutableDictionary alloc] init];
@@ -74,19 +74,19 @@
          bool Success=[[receivedDta valueForKey:@"success"] boolValue];
          NSString *sMsg=[NSString stringWithFormat:@"%@",[receivedDta valueForKey:@"Msg"]];
          if(Success==YES){
-             [BaseViewController Toast:@"Call Submitted Successfully"];
+             [BaseViewController Toast:NSLocalizedString(@"Call Submitted Successfully", @"Call Submitted Successfully")];
              
              [SVProgressHUD dismiss];
              NSArray *viewControllers = [self.NavCtrl viewControllers];
              [self.NavCtrl popToViewController:[viewControllers objectAtIndex:0] animated:NO];
          }
          else{
-             [BaseViewController Toast:[NSString stringWithFormat:@"Call Submission Failed. %@",sMsg]];
+             [BaseViewController Toast:[NSString stringWithFormat:@"%@. %@",NSLocalizedString(@"Call Submission Failed", @"Call Submission Failed"),sMsg]];
          }
          [SVProgressHUD dismiss];
     }
     error:^(NSString *errorMsg,NSMutableDictionary *uData){
-       [BaseViewController Toast:[NSString stringWithFormat:@"Call Submission Failed.\n %@",errorMsg.description]];
+       [BaseViewController Toast:[NSString stringWithFormat:@"%@ \n %@",NSLocalizedString(@"Call Submission Failed.", @"Call Submission Failed."),errorMsg.description]];
        [SVProgressHUD dismiss];
     }];
 }

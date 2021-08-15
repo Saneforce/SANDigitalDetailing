@@ -127,12 +127,12 @@
     if([_UserDet.Desig isEqualToString:@"MR"]){
         _btnSelectHeadQtr.enabled=NO;
         self.DataSF = self.UserDet.SFName;
-        [_btnSelectHeadQtr setTitle:[NSString stringWithFormat:@"%@",self.UserDet.SFName] forState:UIControlStateNormal];
+        [_btnSelectHeadQtr setTitle:[NSString stringWithFormat:@"%@",NSLocalizedString(self.UserDet.SFName, self.UserDet.SFName) ] forState:UIControlStateNormal];
         //[_btnSelectHeadQtr setHidden:YES];
     }
     else
     {
-        [_btnSelectHeadQtr setTitle:[NSString stringWithFormat:@"%@",self.TdayPl.HQNm] forState:UIControlStateNormal];
+        [_btnSelectHeadQtr setTitle:[NSString stringWithFormat:@"%@",NSLocalizedString(self.TdayPl.HQNm, self.TdayPl.HQNm) ] forState:UIControlStateNormal];
         self.DataSF = self.TdayPl.SFMem;
         _btnSelectHeadQtr.enabled=YES;
         [_btnSelectHeadQtr setHidden:NO];
@@ -201,8 +201,8 @@
         }
         self.txtSelCus.text = @"";
         self.CustomerList = [NSMutableArray new];
-        [_btnFilter setTitle:@"-- Select --" forState:UIControlStateNormal];
-        _txtSelCus.placeholder=[NSString stringWithFormat:@"Select the doctor "];
+        [_btnFilter setTitle:NSLocalizedString(@"SelectDropdown", @"-- Select --") forState:UIControlStateNormal];
+        _txtSelCus.placeholder=[NSString stringWithFormat:@"%@",NSLocalizedString(@"Select the doctor", @"Select the doctor")];
         _selMode = @"";
         [_btnSubmitSurvey setUserInteractionEnabled:NO];
 
@@ -348,7 +348,6 @@
     if(self.CustomerList.count >0)
     {
         NSMutableDictionary* SelItem= self.CustomerList[indexPath.row];
-        [_btnSubmitSurvey setUserInteractionEnabled:TRUE];
         self.txtSelCus.text=[SelItem objectForKey:@"Name"];
         self.CustCode=[SelItem objectForKey:@"Code"];
         self.SpecCode=[SelItem objectForKey:@"SpecialtyCode"];
@@ -387,7 +386,7 @@
         [self filterChemistList];
     
     if(_selMode.length == 0)
-        [BaseViewController Toast:@"Please select customer type."];
+        [BaseViewController Toast:NSLocalizedString(@"Please Select DCR type", @"Please Select DCR type")];
     else
         _vwCusList.hidden=NO;
     
@@ -434,7 +433,7 @@
     if(_selSurvery.length == 0)
     {
         [_btnSubmitSurvey setUserInteractionEnabled:FALSE];
-        [_btnFilter setUserInteractionEnabled:FALSE];
+        //[_btnFilter setUserInteractionEnabled:FALSE];
         _vwCusList.hidden=YES;
         return;
         
@@ -443,12 +442,12 @@
     {
         [_btnFilter setUserInteractionEnabled:TRUE];
 
-        if(self.CustCode.length == 0)
-        {
-            [_btnSubmitSurvey setUserInteractionEnabled:FALSE];
-        }
-        else
-            [_btnSubmitSurvey setUserInteractionEnabled:TRUE];
+//        if(self.CustCode.length == 0)
+//        {
+//            [_btnSubmitSurvey setUserInteractionEnabled:FALSE];
+//        }
+//        else
+//            [_btnSubmitSurvey setUserInteractionEnabled:TRUE];
 
     }
     
@@ -522,8 +521,8 @@
 
 
 -(void) generateCtrls{
-    [SVProgressHUD showWithStatus:@"Loading..."];
-    
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"LoadinStatus", @"Loading..")];
+
     _cyAxis=0;_scrlHeight=0;
     if(self.vwCtrlsView!=nil){
         [self.vwCtrlsView removeFromSuperview];
@@ -533,7 +532,8 @@
     long inc=0;long PrvScroll=0;
     
     for (int il=0; il<[_arrControlsDets count]; il++) {
-        
+        [_btnSubmitSurvey setUserInteractionEnabled:YES];
+
         NSString* QSType = [[_arrControlsDets[il] valueForKey:@"Stype"] stringByReplacingOccurrencesOfString:@"," withString:@""];
 
         //NSString* QSType=[NSString stringWithFormat:@",%@",[_arrControlsDets[il] valueForKey:@"Stype"]];
@@ -541,7 +541,7 @@
         if ([_SelType isEqualToString:@"D"] && [QSType rangeOfString:@"D"].length>0){
             _selCat=[NSString stringWithFormat:@",%@,",[_arrControlsDets[il] valueForKey:@"DrCat"]];
             _selSpec=[NSString stringWithFormat:@",%@,",[_arrControlsDets[il] valueForKey:@"DrSpl"]];
-            if([_selCat rangeOfString:[NSString stringWithFormat:@",%@,",self.CateCode]].length>0 &&
+            if([_selCat rangeOfString:[NSString stringWithFormat:@",%@,",self.CateCode]].length>0 ||
                [_selSpec rangeOfString:[NSString stringWithFormat:@",%@,",self.SpecCode]].length>0
                )
                 Flg=YES;
@@ -554,13 +554,13 @@
                 Flg=YES;
         }
         if ([_SelType isEqualToString:@"S"] && [QSType rangeOfString:@"S"].length>0){
-            if([_selCat rangeOfString:[NSString stringWithFormat:@",%@,",self.CateCode]].length>0 &&
+            if([_selCat rangeOfString:[NSString stringWithFormat:@",%@,",self.CateCode]].length>0 ||
                [_selSpec rangeOfString:[NSString stringWithFormat:@",%@,",self.SpecCode]].length>0
                )
                 Flg=YES;
         }
         if ([_SelType isEqualToString:@"H"] && [QSType rangeOfString:@"H"].length>0){
-            if([_selCat rangeOfString:[NSString stringWithFormat:@",%@,",self.CateCode]].length>0 &&
+            if([_selCat rangeOfString:[NSString stringWithFormat:@",%@,",self.CateCode]].length>0 ||
                [_selSpec rangeOfString:[NSString stringWithFormat:@",%@,",self.SpecCode]].length>0
                )
                 Flg=YES;
@@ -600,7 +600,7 @@
             
             SANControlsBox *CardView=[[SANControlsBox alloc] initWithFrame:CGRectMake(kCtrlStart+inc, _cyAxis, mWidth-((kCtrlStart*2)+4) , height)  title:Caption ControlType:CtrlID ListValues:QAns isRange:isRange];
             CardView.Caption=Caption;
-            CardView.ID=[NSString stringWithFormat:@"Ctrl_%d_%d",CtrlID,il];
+            CardView.ID=[NSString stringWithFormat:@"%@ %d_%d",NSLocalizedString(@"Ctrl_", @"Ctrl_") ,CtrlID,il];
             CardView.index=il;
             CardView.isMandate=YES;
             CardView.HeadColor=[UIColor colorWithRed:255.0f/255.0f green:29.0f/255.0f blue:37.0f/255.0f alpha:1.0f];
@@ -817,7 +817,7 @@
         }
         if(cCtrl.isMandate==YES){
             if([cCtrl.selectedValue isEqualToString:@""] || cCtrl.selectedValue==nil){
-                [BaseViewController Toast:[NSString stringWithFormat:@"Kindly Fill the %@",cCtrl.Caption]];
+                [BaseViewController Toast:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Kindly Fill the ValidationMessage", @"Kindly Fill the " ),cCtrl.Caption]];
                 return;
             }
         }
@@ -854,7 +854,7 @@
         NSMutableDictionary *Param=[[NSMutableDictionary alloc]init];
         [Param setObject:datas forKey:@"val"];
         
-        [SVProgressHUD showWithStatus:@"sending..."];
+        [SVProgressHUD showWithStatus:NSLocalizedString(@"SendingStatus", @"Sending..")];
         [WBService SendServerRequest:@"SAVE/survey" withParameter:Param withImages:nil
                               DataSF:nil
                           completion:^(BOOL success, id respData,NSMutableDictionary *uData)
@@ -862,7 +862,7 @@
             NSMutableDictionary *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
             bool Success=[[receivedDta valueForKey:@"success"] boolValue];
             if(Success==YES){
-                [BaseViewController Toast:@"Survey Submitting Successfully"];
+                [BaseViewController Toast:NSLocalizedString(@"Survey Submitting Successfully", @"Survey Submitting Successfully") ];
                 for(int il=0;il<[_FormsCtrls count];il++)
                 {
                     SANControlsBox* cCtrl = (SANControlsBox*) _FormsCtrls[il];
@@ -872,12 +872,12 @@
                 [self generateCtrls];
             }
             else{
-                [BaseViewController Toast:@"Survey Submitting Failed."];
+                [BaseViewController Toast:NSLocalizedString(@"Survey Submitting Failed.", @"Survey Submitting Failed.")];
             }
             [SVProgressHUD dismiss];
         }
                                error:^(NSString *errorMsg,NSMutableDictionary *uData){
-            [BaseViewController Toast:[NSString stringWithFormat:@"Survey Submitting.\n %@",errorMsg.description]];
+            [BaseViewController Toast:[NSString stringWithFormat:@"%@\n %@.",NSLocalizedString(@"Survey Submitting ErrorMessage", @"Survey Submitting"),errorMsg.description]];
             [SVProgressHUD dismiss];
         }];
     }

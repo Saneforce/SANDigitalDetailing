@@ -206,7 +206,7 @@
 -(void)saveTodayPlan:(id)sender{
     NSLog(@"%@:%@", self.locationData.latitude,self.locationData.longitude);
     if(![self validateForm]) return;
-    [SVProgressHUD showWithStatus:@"Submitting Please Wait..."];
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Submitting Status", @"Submitting Please Wait...")];
     self.TdayPl.Rem=self.tRemarks.text;
     
     self.TdayPl.location=@"";
@@ -241,7 +241,7 @@
             if(![rMsg isEqualToString:@""]){
                 [BaseViewController Toast:rMsg];
             }else{
-                [BaseViewController Toast:@"Today Work Plan Submitted Successfully"];
+                [BaseViewController Toast:NSLocalizedString(@"Today Work Plan Submitted Successfully", @"Today Work Plan Submitted Successfully")];
             }
             
             [self.objAppSvData removeAllObjects];
@@ -251,7 +251,7 @@
             if(![rMsg isEqualToString:@""]){
                 [BaseViewController Toast:rMsg];
             }else{
-                [BaseViewController Toast:@"Something went to wrong.\n Try Again!."];
+                [BaseViewController Toast:NSLocalizedString(@"Something went to wrong.\n Try Again!.", @"Something went to wrong.\n Try Again!.")];
                 [self.objAppSvData setValue:@"1" forKey:@"drfMode"];
                 [WBService saveData:self.objAppSvData forKey:@"MyTodayplan.SANAPP"];
                 NSMutableArray *Arry=[[WBService getDataByKey:@"offMyTdypl.SANAPP"] mutableCopy];
@@ -264,7 +264,7 @@
         }
     }
     error:^(NSString *errorMsg, NSMutableDictionary* uData){
-        [BaseViewController Toast:[NSString stringWithFormat:@"Today Work Plan Submission Failed.\n %@",errorMsg.description]];
+        [BaseViewController Toast:[NSString stringWithFormat:@"%@ \n %@",NSLocalizedString(@"Today Work Plan Submission Failed.", @"Today Work Plan Submission Failed.") ,errorMsg.description]];
         [SVProgressHUD dismiss];
         [self.objAppSvData setValue:@"1" forKey:@"drfMode"];
         [WBService saveData:self.objAppSvData forKey:@"MyTodayplan.SANAPP"];

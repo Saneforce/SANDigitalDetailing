@@ -570,7 +570,7 @@ MKPlacemark *marker;
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if([[self.CustomerList[indexPath.row] objectForKey:@"GEOTagCnt"] integerValue]>=[[self.CustomerList[indexPath.row] objectForKey:@"MaxGeoMap"] integerValue]){
-        [BaseViewController Toast:@"Can't Select Maximum Tagging Reached..."];
+        [BaseViewController Toast:NSLocalizedString(@"Can't Select Maximum Tagging Reached", @"Can't Select Maximum Tagging Reached")];
     }else{
         self.CustCd=[self.CustomerList[indexPath.row] objectForKey:@"Code"];
         self.CustNm=[self.CustomerList[indexPath.row] objectForKey:@"Name"];
