@@ -259,7 +259,7 @@
          [SVProgressHUD dismiss];
      }
                            error:^(NSString *errorMsg,NSMutableDictionary *uData){
-                               [BaseViewController Toast:[NSString stringWithFormat:@"%@.\n %@",NSLocalizedString( @"Chemist Profiling FailedERR", @"Chemist Profiling Failed"),errorMsg.description]];
+                               [BaseViewController Toast:[NSString stringWithFormat:@"%@.\n %@",NSLocalizedString( @"Chemist Profiling Failed", @"Chemist Profiling Failed"),errorMsg.description]];
                                [SVProgressHUD dismiss];
                            }];
 }

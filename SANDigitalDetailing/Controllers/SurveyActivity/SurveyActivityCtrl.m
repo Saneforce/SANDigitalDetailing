@@ -201,7 +201,7 @@
         }
         self.txtSelCus.text = @"";
         self.CustomerList = [NSMutableArray new];
-        [_btnFilter setTitle:NSLocalizedString(@"SelectDropdown", @"-- Select --") forState:UIControlStateNormal];
+        [_btnFilter setTitle:NSLocalizedString( @"-- Select --",@"SelectDropdown") forState:UIControlStateNormal];
         _txtSelCus.placeholder=[NSString stringWithFormat:@"%@",NSLocalizedString(@"Select the doctor", @"Select the doctor")];
         _selMode = @"";
         [_btnSubmitSurvey setUserInteractionEnabled:NO];
@@ -385,7 +385,10 @@
     else
         [self filterChemistList];
     
-    if(_selMode.length == 0)
+    
+    if (_selSurvery.length == 0)
+        [BaseViewController Toast:NSLocalizedString(@"Please Select Survey", @"Please Select Survey")];
+    else if(_selMode.length == 0)
         [BaseViewController Toast:NSLocalizedString(@"Please Select DCR type", @"Please Select DCR type")];
     else
         _vwCusList.hidden=NO;
@@ -817,7 +820,7 @@
         }
         if(cCtrl.isMandate==YES){
             if([cCtrl.selectedValue isEqualToString:@""] || cCtrl.selectedValue==nil){
-                [BaseViewController Toast:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Kindly Fill the ValidationMessage", @"Kindly Fill the " ),cCtrl.Caption]];
+                [BaseViewController Toast:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Kindly Fill the ", @"Kindly Fill the " ),cCtrl.Caption]];
                 return;
             }
         }
@@ -877,7 +880,7 @@
             [SVProgressHUD dismiss];
         }
                                error:^(NSString *errorMsg,NSMutableDictionary *uData){
-            [BaseViewController Toast:[NSString stringWithFormat:@"%@\n %@.",NSLocalizedString(@"Survey Submitting ErrorMessage", @"Survey Submitting"),errorMsg.description]];
+            [BaseViewController Toast:[NSString stringWithFormat:@"%@\n %@.",NSLocalizedString(@"Survey Submitting", @"Survey Submitting"),errorMsg.description]];
             [SVProgressHUD dismiss];
         }];
     }
