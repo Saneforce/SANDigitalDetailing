@@ -96,7 +96,7 @@
          [SVProgressHUD dismiss];
      }
        error:^(NSString *errorMsg,NSMutableDictionary *uData){
-           [BaseViewController Toast:[NSString stringWithFormat:@"%@\n %@",NSLocalizedString(@"Query Sending FailedERR", @"Query Sending Failed."),errorMsg.description]];
+           [BaseViewController Toast:[NSString stringWithFormat:@"%@\n %@",NSLocalizedString(@"Query Sending Failed", @"Query Sending Failed"),errorMsg.description]];
            [SVProgressHUD dismiss];
        }];
 }

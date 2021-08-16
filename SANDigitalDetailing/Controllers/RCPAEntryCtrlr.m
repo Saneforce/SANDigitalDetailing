@@ -68,10 +68,10 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
     self.tvRCPAList.delegate=self;
     self.DCREntryMode=@"1";
     
-    [self.btnSubmit setTitle:NSLocalizedString(@"SaveBTN",@"Save") forState:UIControlStateNormal];
+    [self.btnSubmit setTitle:NSLocalizedString(@"Save",@"Save") forState:UIControlStateNormal];
     if (self.meetData.CustCode==nil) {
         self.DCREntryMode=@"0";
-        [self.btnSubmit setTitle:NSLocalizedString(@"FinalSubmitBTN", @"Final Submit") forState:UIControlStateNormal];
+        [self.btnSubmit setTitle:NSLocalizedString(@"Final Submit", @"Final Submit") forState:UIControlStateNormal];
     }
     
     self.tvOptList.sectionHeaderHeight=0.0f;

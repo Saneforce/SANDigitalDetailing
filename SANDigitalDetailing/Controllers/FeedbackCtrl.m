@@ -593,12 +593,12 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
     }
     NSInteger SampQty=[txtSampField.text integerValue];
     if([_meetData.CallType isEqualToString:@"2"]){
-        [BaseViewController Toast:[NSString stringWithFormat:NSLocalizedString(@"Can'tEnterSamples", @"Can't Enter Samples")]];
+        [BaseViewController Toast:[NSString stringWithFormat:NSLocalizedString(@"Can't Enter Samples", @"Can't Enter Samples")]];
         txtSampField.text=@"";
         // return;
     }
     if(SampQty>MaxSamp && MaxSamp>0){
-        [BaseViewController Toast:[NSString stringWithFormat:@"%@ %li",NSLocalizedString(@"QtyExceededMSG", @"Sample Qty Exceed. Can Enter Maximum"),(long)MaxSamp] ];
+        [BaseViewController Toast:[NSString stringWithFormat:@"%@ %li",NSLocalizedString(@"Sample Qty Exceed. Can Enter Maximum", @"Sample Qty Exceed. Can Enter Maximum"),(long)MaxSamp] ];
         txtSampField.text=@"";
        // return;
     }
@@ -805,7 +805,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
 -(IBAction) saveCallMeet:(id)sender{
     if([self.meetData.CusType isEqual:@"1"] && [self.UserDet.Desig isEqualToString:@"MR"]){
         if([_SelProductList count]<1){
-            [BaseViewController Toast:NSLocalizedString(@"SelecttheProduct", @"Select the Product")];
+            [BaseViewController Toast:NSLocalizedString(@"Select the Product", @"Select the Product")];
             return;
         }
         for (int il=0; il<[_SelProductList count]; il++) {
@@ -814,7 +814,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
             NSInteger Rating=[[_SelProductList[il] valueForKey:@"Rating"] integerValue];
 
             if([_SelProductList[il] valueForKey:@"SmpQty"]== nil   && _SetupData.SmplQtyMnd==1){
-                [BaseViewController Toast:[NSString stringWithFormat:@"%@ ",NSLocalizedString(@"EntertheSampleQty", @"Enter the Sample Qty")] ];
+                [BaseViewController Toast:[NSString stringWithFormat:@"%@ ",NSLocalizedString(@"Enter the Sample Qty", @"Enter the Sample Qty")] ];
                 return;
             }
             if(SampQty>MaxSamp && MaxSamp>0){
@@ -941,7 +941,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
                                [self.SubmittedCallList addObject:[uData mutableCopy]];
                                [WBService saveArrayData:self.SubmittedCallList forKey:@"SubmittedCalls.SANAPP"];
                                
-                               [BaseViewController Toast:[NSString stringWithFormat:@"%@.\n %@",NSLocalizedString(@"CallSubmissionFailedERR", @"Call Submission Failed"),errorMsg.description]];
+                               [BaseViewController Toast:[NSString stringWithFormat:@"%@.\n %@",NSLocalizedString(@"Call Submission Failed", @"Call Submission Failed"),errorMsg.description]];
                                [SVProgressHUD dismiss];
                                [self ClearandCloseView];
                            }];
@@ -1198,14 +1198,14 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
              [BaseViewController Toast:NSLocalizedString(@"Query Sent Successfully", @"Query Sent Successfully")];
          }
          else{
-             [BaseViewController Toast:NSLocalizedString(@"Query Sending Failed.", @"Query Sending Failed.")];
+             [BaseViewController Toast:NSLocalizedString(@"Query Sending Failed", @"Query Sending Failed")];
              [uData setValue:[NSNumber numberWithBool:NO] forKey:@"Synced"];
              
          }
          [SVProgressHUD dismiss];
      }
        error:^(NSString *errorMsg,NSMutableDictionary *uData){
-           [BaseViewController Toast:[NSString stringWithFormat:@"%@.\n %@",NSLocalizedString(@"Query Sending Failed ERR", @"Query Sending Failed"),errorMsg.description]];
+           [BaseViewController Toast:[NSString stringWithFormat:@"%@.\n %@",NSLocalizedString(@"Query Sending Failed", @"Query Sending Failed"),errorMsg.description]];
            [SVProgressHUD dismiss];
        }];
 }

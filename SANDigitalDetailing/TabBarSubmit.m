@@ -50,7 +50,7 @@
     [_btnSubmit.layer addSublayer:gradientLayer];
     [_btnSubmit setFont:[UIFont fontWithName:@"Poppins-SemiBold" size:13.0]];
     [_btnSubmit setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [_btnSubmit setTitle:NSLocalizedString(@"SubmitBTN", @"Submit") forState:UIControlStateNormal];
+    [_btnSubmit setTitle:NSLocalizedString(@"Submit", @"Submit") forState:UIControlStateNormal];
     [_btnSubmit addTarget:self action:@selector(SubmitData) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_btnSubmit];
 }

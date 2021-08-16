@@ -27,7 +27,7 @@ CGImageRef UIGetScreenImage(void);
         btnTeams.titleLabel.font=[UIFont fontWithName:@"Poppins-SemiBold" size:14.0];
         btnTeams.backgroundColor=[UIColor colorWithRed:255.0f/255 green:29.0f/255 blue:37.0f/255 alpha:1.0f];
         [btnTeams setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [btnTeams setTitle:NSLocalizedString(@"LoginTeamsBTN", @"Login Teams") forState:UIControlStateNormal];
+        [btnTeams setTitle:NSLocalizedString(@"Login Teams", @"Login Teams") forState:UIControlStateNormal];
         [btnTeams addTarget:self action:@selector(signInTeams:) forControlEvents:UIControlEventTouchUpInside];
         
         [_lblDivID.superview addSubview:btnTeams];
@@ -366,13 +366,13 @@ CGImageRef UIGetScreenImage(void);
              [self CloseChangePWD:self];
          }
          else{
-             [BaseViewController Toast:NSLocalizedString(@"Changing Failed.", @"Changing Failed.")];
+             [BaseViewController Toast:NSLocalizedString(@"Changing Failed", @"Changing Failed")];
              
          }
          [SVProgressHUD dismiss];
      }
                            error:^(NSString *errorMsg,NSMutableDictionary *uData){
-                               [BaseViewController Toast:[NSString stringWithFormat:@"%@\n %@",NSLocalizedString(@"Changing FailedERR", @"Changing Failed."),errorMsg.description]];
+                               [BaseViewController Toast:[NSString stringWithFormat:@"%@\n %@",NSLocalizedString(@"Changing Failed", @"Changing Failed"),errorMsg.description]];
                                [SVProgressHUD dismiss];
                            }];
     

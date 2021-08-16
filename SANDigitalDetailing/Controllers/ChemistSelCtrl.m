@@ -67,7 +67,7 @@
     if(![_UserDet.Desig isEqualToString:@"MR"]) _btnSelHQ.hidden=NO;
     
     [_btnSelHQ setTitle:self.meetData.DataSFHQ forState:UIControlStateNormal];
-    if([self.meetData.DataSFHQ  isEqual:@""]) [_btnSelHQ setTitle:NSLocalizedString(@"SelectHeadquatersBTN", @"Select the Headquaters") forState:UIControlStateNormal];
+    if([self.meetData.DataSFHQ  isEqual:@""]) [_btnSelHQ setTitle:NSLocalizedString(@"Select tht Headquaters", @"Select the Headquaters") forState:UIControlStateNormal];
     DataKey=[[NSString alloc] initWithFormat:@"DRVstDetails_%@.SANAPP",self.meetData.DataSF];
     self.VstDetList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
 }

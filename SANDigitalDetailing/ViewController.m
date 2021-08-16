@@ -105,7 +105,7 @@
     
     self.forgotButton.backgroundColor = [UIColor clearColor];
     self.forgotButton.titleLabel.font = [UIFont fontWithName:fontName size:17.0f];
-    [self.forgotButton setTitle:NSLocalizedString(@"ForgotPasswordBTN", @"Forgot Password?") forState:UIControlStateNormal];
+    [self.forgotButton setTitle:NSLocalizedString(@"Forgot Password", @"Forgot Password?") forState:UIControlStateNormal];
     [self.forgotButton setTitleColor:[UIColor colorWithWhite:1.0 alpha:0.5] forState:UIControlStateHighlighted];
     [self validGPSSetting];
     //self.logingVw.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.5];
