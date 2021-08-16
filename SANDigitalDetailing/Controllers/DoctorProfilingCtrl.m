@@ -1205,12 +1205,12 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
         }
         if(cCtrl.isMandate==YES){
             if([cCtrl.selectedValue isEqualToString:@""] || cCtrl.selectedValue==nil){
-                [BaseViewController Toast:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Kindly Fill the ValidationErrMSG", @"Kindly Fill the"),cCtrl.Caption]];
+                [BaseViewController Toast:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Kindly Fill the ", @"Kindly Fill the"),cCtrl.Caption]];
                 return nil;
             }
             if(cCtrl.ControlType==DatePickerRange || cCtrl.ControlType==TimePickerRange){
                 if([cCtrl.selectedToValue isEqualToString:@""] || cCtrl.selectedToValue==nil){
-                    [BaseViewController Toast:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Kindly Fill the to Range of ValidationErrMSG", @"Kindly Fill the to Range of "),cCtrl.Caption]];
+                    [BaseViewController Toast:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Kindly Fill the to Range of ", @"Kindly Fill the to Range of "),cCtrl.Caption]];
                     return nil;
                 }
             }
@@ -1283,7 +1283,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
          [SVProgressHUD dismiss];
      }
        error:^(NSString *errorMsg,NSMutableDictionary *uData){
-           [BaseViewController Toast:[NSString stringWithFormat:@"%@ .\n %@",Type,errorMsg.description,NSLocalizedString(@"Profiling FailedERR", @"Profiling Failed")]];
+           [BaseViewController Toast:[NSString stringWithFormat:@"%@ .\n %@",Type,errorMsg.description,NSLocalizedString(@"Profiling Failed", @"Profiling Failed")]];
            [SVProgressHUD dismiss];
        }];
 }

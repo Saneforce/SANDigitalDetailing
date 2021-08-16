@@ -464,7 +464,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
         }
         if(cCtrl.isMandate==YES){
             if([cCtrl.selectedValue isEqualToString:@""] || cCtrl.selectedValue==nil){
-                [BaseViewController Toast:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Kindly Fill the Validation_Message", @"Kindly Fill the"),cCtrl.Caption]];
+                [BaseViewController Toast:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Kindly Fill the ", @"Kindly Fill the"),cCtrl.Caption]];
                 return;
             }
             if(cCtrl.ControlType==DatePickerRange || cCtrl.ControlType==TimePickerRange){

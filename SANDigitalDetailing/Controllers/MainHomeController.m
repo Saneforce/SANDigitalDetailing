@@ -1166,7 +1166,7 @@
                 {
                     [self.CallsSectionsList[_cIndexPath.section] removeObjectAtIndex:_cIndexPath.row];
                     [self saveSubmitCalls];
-                    [BaseViewController Toast:NSLocalizedString(@"Call Deleted SuccessfullyMSG", @"Call Deleted Successfully")];
+                    [BaseViewController Toast:NSLocalizedString(@"Call Deleted Successfully", @"Call Deleted Successfully")];
                     [self reloadCalls];
                 }
                 error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage,NSIndexPath *indexPath){
