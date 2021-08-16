@@ -66,7 +66,7 @@
     if(![_UserDet.Desig isEqualToString:@"MR"]) _btnSelHQ.hidden=NO;
     
     [_btnSelHQ setTitle:self.meetData.DataSFHQ forState:UIControlStateNormal];
-    if([self.meetData.DataSFHQ  isEqual:@""]) [_btnSelHQ setTitle:NSLocalizedString(@"SelectHeadquatersBTN", @"Select the Headquaters") forState:UIControlStateNormal];
+    if([self.meetData.DataSFHQ  isEqual:@""]) [_btnSelHQ setTitle:NSLocalizedString(@"Select the Headquaters", @"Select the Headquaters") forState:UIControlStateNormal];
     DataKey=[[NSString alloc] initWithFormat:@"DRVstDetails_%@.SANAPP",self.meetData.DataSF];
     self.VstDetList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
     
@@ -443,12 +443,12 @@
 }
 -(IBAction) SaveNwUnlistedDr:(id)sender{
     if([self.nwDrName.text isEqualToString:@""]){
-        [BaseViewController Toast:NSLocalizedString(@"EnterDoctorName", @"Enter the Doctor Name")];
+        [BaseViewController Toast:NSLocalizedString(@"Enter the Doctor Name", @"Enter the Doctor Name")];
         return;
     }
     
     if([[NSString stringWithFormat:@"%@",self.CmbQual.tCmbCode]  isEqualToString:@""] || self.CmbQual.tCmbCode==nil){
-        [BaseViewController Toast:NSLocalizedString(@"SelectQualification", @"Select the Qualification")];
+        [BaseViewController Toast:NSLocalizedString(@"Select the Qualification", @"Select the Qualification")];
         return;
     }
    /* if([self.CmbClass.tCmbCode isEqualToString:@""] || self.CmbClass.tCmbCode==nil){
@@ -468,7 +468,7 @@
         return;
     }*/
     if([self.CmbTerr.tCmbCode isEqualToString:@""] || self.CmbTerr.tCmbCode==nil){
-        [BaseViewController Toast:NSLocalizedString(@"SelectTerritory", @"Select the Territory")];
+        [BaseViewController Toast:NSLocalizedString(@"Select the Territory", @"Select the Territory")];
         return;
     }
     /*if([self.nwDrMobile.text isEqualToString:@""]){
@@ -476,7 +476,7 @@
         return;
     }*/
     
-    [SVProgressHUD showWithStatus:NSLocalizedString(@"Creating Status", @"Creating Please Wait...")];
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Creating Please Wait..", @"Creating Please Wait...")];
     NSMutableDictionary* NWDRData=[[NSMutableDictionary alloc] init];
     [NWDRData setValue:self.nwDrName.text forKey:@"DrName"];
     [NWDRData setValue:self.CmbQual.tCmbCode forKey:@"DrQCd"];
@@ -501,7 +501,7 @@
          NSMutableDictionary *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
          bool Success=[[receivedDta valueForKey:@"success"] boolValue];
          if(Success==YES){
-             [BaseViewController Toast:NSLocalizedString(@"UnlistedDrSuccessMSG", @"New Unlisted Doctor Created Successfully....")];
+             [BaseViewController Toast:NSLocalizedString(@"New Unlisted Doctor Created Successfully.", @"New Unlisted Doctor Created Successfully....")];
              [WBService SendServerRequest:@"GET/UnlistedDR" withParameter:nil withImages:nil DataSF:self.meetData.DataSF completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage){
                  
                  NSMutableDictionary *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
@@ -518,13 +518,13 @@
             ];
          }
          else{
-             [BaseViewController Toast:NSLocalizedString(@"UnlistedDrFaliedMSG", @"New Unlisted Doctor Creation Failed.")];
+             [BaseViewController Toast:NSLocalizedString(@"New Unlisted Doctor Creation Failed.", @"New Unlisted Doctor Creation Failed.")];
              
          }
          [SVProgressHUD dismiss];
      }
     error:^(NSString *errorMsg,NSMutableDictionary *uData){
-       [BaseViewController Toast:[NSString stringWithFormat:@"%@ .\n %@",NSLocalizedString(@"UnlistedDrFaliedERRMSG", @"New Unlisted Doctor Creation Failed"),errorMsg.description]];
+       [BaseViewController Toast:[NSString stringWithFormat:@"%@ .\n %@",NSLocalizedString(@"New Unlisted Doctor Creation Failed", @"New Unlisted Doctor Creation Failed"),errorMsg.description]];
        [SVProgressHUD dismiss];
     }];
 }

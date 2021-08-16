@@ -254,7 +254,7 @@
              [BaseViewController Toast:NSLocalizedString(@"Chemist Profile Saved Successfully", @"Chemist Profile Saved Successfully")];
          }
          else{
-             [BaseViewController Toast:NSLocalizedString(@"Chemist Profiling Failed.", @"Chemist Profiling Failed.")];
+             [BaseViewController Toast:NSLocalizedString(@"Chemist Profiling Failed", @"Chemist Profiling Failed")];
          }
          [SVProgressHUD dismiss];
      }

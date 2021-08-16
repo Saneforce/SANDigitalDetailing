@@ -344,7 +344,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
     NSDate* Dt=[BaseViewController str2date:Dtstr];
     NSDate* Dt1=[NSDate date];
     if(Dt<Dt1){
-        [btn setTitle:NSLocalizedString(@"MeetingEndedBTN", @"Meeting Ended") forState:UIControlStateNormal];
+        [btn setTitle:NSLocalizedString(@"Meeting Ended", @"Meeting Ended") forState:UIControlStateNormal];
         btn.backgroundColor=[UIColor colorWithRed:220.0f/255 green:220.0f/255 blue:220.0f/255 alpha:1.0f];
         btn.enabled=NO;
         [BaseViewController Toast:NSLocalizedString(@"You can't Start this Meeting...", @"You can't Start this Meeting...")];
@@ -835,10 +835,10 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
         cell.lOptImg.layer.borderWidth=1.0f;
         cell.lOptImg.layer.borderColor=[[UIColor colorWithRed:223.0f/255 green:225.0f/255 blue:229.0f/255 alpha:1.0f] CGColor];
         //}
-        [cell.btnSync setTitle:NSLocalizedString(@"StartMeetingBTN", @"Start Meeting") forState:UIControlStateNormal];
+        [cell.btnSync setTitle:NSLocalizedString(@"Start Meeting", @"Start Meeting") forState:UIControlStateNormal];
         cell.btnSync.backgroundColor=[UIColor colorWithRed:74.0f/255 green:85.0f/255 blue:115.0f/255 alpha:1.0f];
         if(Dt.timeIntervalSince1970<Dt1.timeIntervalSince1970){
-            [cell.btnSync setTitle:NSLocalizedString(@"MeetingEndedBTN", @"Meeting Ended") forState:UIControlStateNormal];
+            [cell.btnSync setTitle:NSLocalizedString(@"Meeting Ended", @"Meeting Ended") forState:UIControlStateNormal];
             cell.btnSync.backgroundColor=[UIColor colorWithRed:220.0f/255 green:220.0f/255 blue:220.0f/255 alpha:1.0f];
             cell.btnSync.enabled=NO;
             cell.btnEdit.hidden=YES;

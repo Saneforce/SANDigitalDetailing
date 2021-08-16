@@ -1294,7 +1294,7 @@
              [self.navigationController popToViewController:[viewControllers objectAtIndex:viewControllers.count-2] animated:NO];
         }
         error:^(NSString *errorMsg,NSMutableDictionary *uData){
-           [BaseViewController Toast:[NSString stringWithFormat:@"%@.\n %@",NSLocalizedString(@"Tourplan Rejection FailedERR", @"Tourplan Rejection Failed"),errorMsg.description]];
+           [BaseViewController Toast:[NSString stringWithFormat:@"%@.\n %@",NSLocalizedString(@"Tourplan Rejection Failed", @"Tourplan Rejection Failed"),errorMsg.description]];
            [SVProgressHUD dismiss];
         }];
     }
@@ -1312,7 +1312,7 @@
              [self.navigationController popToViewController:[viewControllers objectAtIndex:viewControllers.count-2] animated:NO];
          }
                                error:^(NSString *errorMsg,NSMutableDictionary *uData){
-                                   [BaseViewController Toast:[NSString stringWithFormat:@"%@\n %@",NSLocalizedString(@"Tourplan Submission FailedERR.", @"Tourplan Submission Failed."),errorMsg.description]];
+                                   [BaseViewController Toast:[NSString stringWithFormat:@"%@\n %@",NSLocalizedString(@"Tourplan Submission Failed", @"Tourplan Submission Failed"),errorMsg.description]];
                                    [SVProgressHUD dismiss];
                                    //[self ClearandCloseView];
                                }];

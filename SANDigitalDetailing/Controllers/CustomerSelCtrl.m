@@ -143,7 +143,7 @@
     }
     
     [_btnSelHQ setTitle:self.meetData.DataSFHQ forState:UIControlStateNormal];
-    if([self.meetData.DataSFHQ  isEqual:@""]) [_btnSelHQ setTitle:NSLocalizedString(@"SelectHeadquatersBTN", @"Select the Headquaters") forState:UIControlStateNormal];
+    if([self.meetData.DataSFHQ  isEqual:@""]) [_btnSelHQ setTitle:NSLocalizedString(@"Select the Headquaters", @"Select the Headquaters") forState:UIControlStateNormal];
     
     DataKey=[[NSString alloc] initWithFormat:@"DRVstDetails_%@.SANAPP",self.meetData.DataSF];
     self.VstDetList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
@@ -883,7 +883,7 @@
          NSMutableDictionary *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
          bool Success=[[receivedDta valueForKey:@"success"] boolValue];
          if(Success==YES){
-             [BaseViewController Toast:NSLocalizedString(@"PolicySuccessMSG", @"Policy Accepted Successfully....")];
+             [BaseViewController Toast:NSLocalizedString(@"Policy Accepted Successfully", @"Policy Accepted Successfully....")];
              
              NSString *DataKey=[[NSString alloc] initWithFormat:@"DoctorDetails_%@.SANAPP",self.meetData.DataSF];
              self.ObjCustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
@@ -897,7 +897,7 @@
              [_collectionView reloadData];
          }
          else{
-             [BaseViewController Toast:NSLocalizedString(@"PolicyFailedMSG", @"Policy Accepted Failed.")];
+             [BaseViewController Toast:NSLocalizedString(@"Policy Accepted Failed", @"Policy Accepted Failed.")];
          }
        //  [self.SubmittedCallList addObject:[uData mutableCopy]];
        //  [WBService saveArrayData:self.SubmittedCallList forKey:@"SubmittedCalls.SANAPP"];
@@ -907,7 +907,7 @@
           // [self.SubmittedCallList addObject:[uData mutableCopy]];
           // [WBService saveArrayData:self.SubmittedCallList forKey:@"SubmittedCalls.SANAPP"];
            
-        [BaseViewController Toast:[NSString stringWithFormat:@"%@ \n %@",NSLocalizedString(@"PolicyFailedError", @"Policy Accepted Failed."),errorMsg.description]];
+        [BaseViewController Toast:[NSString stringWithFormat:@"%@ \n %@",NSLocalizedString(@"Policy Accepted Failed", @"Policy Accepted Failed."),errorMsg.description]];
            [SVProgressHUD dismiss];
        }
     ];
