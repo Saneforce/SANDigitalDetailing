@@ -448,41 +448,38 @@
     {
         [_btnFilter setUserInteractionEnabled:TRUE];
     }
-    
+    NSString *apiKey =[[NSString alloc] init];
     NSString *DataKey=[[NSString alloc] initWithFormat:@"DoctorDetails_%@.SANAPP",self.DataSF];
     self.CustomerList = [[NSArray alloc] init];
     if ([_SelType isEqualToString:@"D"]){
         DataKey=[[NSString alloc] initWithFormat:@"DoctorDetails_%@.SANAPP",self.DataSF];
+        apiKey= NSLocalizedString(@"Doctor", @"Doctor");
     }
     if ([_SelType isEqualToString:@"C"]){
         DataKey=[[NSString alloc] initWithFormat:@"ChemistDetails_%@.SANAPP",self.DataSF];
+        apiKey= NSLocalizedString(@"Chemist", @"Chemist");
+
 //        NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
         
     }
     if ([_SelType isEqualToString:@"S"]){
         DataKey=[[NSString alloc] initWithFormat:@"StockistDetails_%@.SANAPP",self.DataSF];
+
     }
     if ([_SelType isEqualToString:@"U"]){
         DataKey=[[NSString alloc] initWithFormat:@"UnlistedDR_%@.SANAPP",self.DataSF];
+
     }
     if ([_SelType isEqualToString:@"H"]){
         DataKey=[[NSString alloc] initWithFormat:@"Hospital_%@.SANAPP",self.DataSF];
+
     }
     self.CustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
-    
+     
     if(self.CustomerList.count == 0 || self.CustomerList == nil)
     {
-        [WBService SendServerRequest:DataKey withParameter:nil withImages:nil DataSF:self.DataSF completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage){
-                NSMutableDictionary *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
-//                [WBService saveData:receivedDta forKey:list.name];
-                NSLog(@"%@ Reloaded Successfully...",receivedDta);
-            NSLog(@"data");
-        
-            }
-            error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage){
-               NSLog(@"%@",errorMsg);
-            }
-         ];
+        [self LoadData:[NSString  stringWithFormat:@"GET/%@",apiKey] withParam:nil andDataFor:self.DataSF andkey:[NSString  stringWithFormat:@"%@",DataKey]];
+
     }
     
     self.CustomerList =[self FilterUnique:self.CustomerList andKey:@"Code"];
@@ -900,5 +897,28 @@
             [SVProgressHUD dismiss];
         }];
     }
+}
+
+-(void) LoadData:(NSString *) apiPath withParam:(NSMutableDictionary *) param andDataFor:(NSString *)dataSF andkey:(NSString *) key{
+           [WBService SendServerRequest:apiPath withParameter:param withImages:nil DataSF:dataSF completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage){
+               NSMutableDictionary *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
+               [WBService saveData:receivedDta forKey:key];
+               if(receivedDta.count > 0)
+               {
+                   [self getDataList];
+                   if([self.SelType isEqualToString:@"D"])
+                   {
+                       [self filterDoctorList];
+                   }
+                   else if ([self.SelType isEqualToString:@"C"])
+                   {
+                       [self filterChemistList];
+                   }
+               }
+           }
+           error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage){
+               NSLog(@"%@",errorMsg);
+           }
+     ];
 }
 @end
