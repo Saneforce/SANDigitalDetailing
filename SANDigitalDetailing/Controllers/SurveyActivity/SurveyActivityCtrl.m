@@ -126,7 +126,7 @@
     
     if([_UserDet.Desig isEqualToString:@"MR"]){
         _btnSelectHeadQtr.enabled=NO;
-        self.DataSF = self.UserDet.SFName;
+        self.DataSF = self.UserDet.SF;
         [_btnSelectHeadQtr setTitle:[NSString stringWithFormat:@"%@",NSLocalizedString(self.UserDet.SFName, self.UserDet.SFName) ] forState:UIControlStateNormal];
         //[_btnSelectHeadQtr setHidden:YES];
     }
@@ -321,7 +321,12 @@
                   layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake((CGRectGetWidth(collectionView.bounds)/3)-7, 125);
+    if(self.CustomerList.count == 1)
+        return CGSizeMake((CGRectGetWidth(collectionView.bounds))-7, 125);
+    else
+        return CGSizeMake((CGRectGetWidth(collectionView.bounds)/3)-7, 125);
+
+        
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -436,22 +441,12 @@
     if(_selSurvery.length == 0)
     {
         [_btnSubmitSurvey setUserInteractionEnabled:FALSE];
-        //[_btnFilter setUserInteractionEnabled:FALSE];
         _vwCusList.hidden=YES;
         return;
-        
     }
     else
     {
         [_btnFilter setUserInteractionEnabled:TRUE];
-
-//        if(self.CustCode.length == 0)
-//        {
-//            [_btnSubmitSurvey setUserInteractionEnabled:FALSE];
-//        }
-//        else
-//            [_btnSubmitSurvey setUserInteractionEnabled:TRUE];
-
     }
     
     NSString *DataKey=[[NSString alloc] initWithFormat:@"DoctorDetails_%@.SANAPP",self.DataSF];
@@ -461,9 +456,7 @@
     }
     if ([_SelType isEqualToString:@"C"]){
         DataKey=[[NSString alloc] initWithFormat:@"ChemistDetails_%@.SANAPP",self.DataSF];
-        //        NSMutableArray *arrChemist = [[NSMutableArray alloc] initWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:DataKey]];
-        //        NSLog(@"%@", arrChemist);
-        //        NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
+//        NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
         
     }
     if ([_SelType isEqualToString:@"S"]){
@@ -476,6 +469,22 @@
         DataKey=[[NSString alloc] initWithFormat:@"Hospital_%@.SANAPP",self.DataSF];
     }
     self.CustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
+    
+    if(self.CustomerList.count == 0 || self.CustomerList == nil)
+    {
+        [WBService SendServerRequest:DataKey withParameter:nil withImages:nil DataSF:self.DataSF completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage){
+                NSMutableDictionary *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
+//                [WBService saveData:receivedDta forKey:list.name];
+                NSLog(@"%@ Reloaded Successfully...",receivedDta);
+            NSLog(@"data");
+        
+            }
+            error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage){
+               NSLog(@"%@",errorMsg);
+            }
+         ];
+    }
+    
     self.CustomerList =[self FilterUnique:self.CustomerList andKey:@"Code"];
     if ([_SelType isEqualToString:@"D"]){
         if(![_selCat isEqualToString:@""]){
@@ -762,6 +771,13 @@
     
     if(searchText.length > 0)
     {
+        [self getDataList];
+        if ([_SelType isEqualToString:@"D"]) {
+            [self filterDoctorList];
+        }
+        else
+            [self filterChemistList];
+        
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"Name contains[c] %@",searchText];
         NSArray *results = [self.CustomerList filteredArrayUsingPredicate:predicate];
         self.CustomerList = results;
