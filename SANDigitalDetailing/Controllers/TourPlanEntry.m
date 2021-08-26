@@ -811,7 +811,7 @@
     UIButton *btn=(UIButton *) sender;
     tagIndex=(int)btn.tag;
     if(btn.tag==1){
-        self.lblTit.text=@"Jointwork Selection";
+        self.lblTit.text=NSLocalizedString(@"Jointwork Selection", @"Jointwork Selection");
         self.SelListData= [[NSMutableArray alloc] init];
        
         if([self.SelHQList count]>0){
@@ -827,7 +827,7 @@
         }
     }
     else if(btn.tag==2){
-        self.lblTit.text=[NSString stringWithFormat:@"%@ Selection",_SetupData.CapDr];
+        self.lblTit.text=[NSString stringWithFormat:@"%@ %@",_SetupData.CapDr,NSLocalizedString(@"Selection", @"Selection")];
         self.SelListData= [[NSMutableArray alloc] init];
         if([self.SelHQList count]>0){
             for(int il=0;il<[self.SelHQList count];il++){
@@ -861,7 +861,7 @@
         }
     }
     else if(btn.tag==3){
-        self.lblTit.text=[NSString stringWithFormat:@"%@ Selection",_SetupData.CapChm];
+        self.lblTit.text=[NSString stringWithFormat:@"%@ %@",_SetupData.CapChm,NSLocalizedString(@"Selection", @"Selection")];
         self.SelListData= [[NSMutableArray alloc] init];
         if([self.SelHQList count]>0){
             for(int il=0;il<[self.SelHQList count];il++){

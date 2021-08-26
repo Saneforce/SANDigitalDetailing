@@ -201,7 +201,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
     _ObjAllSelData=[[NSMutableArray alloc] init];
     if(tx==_txEventCust)
     {
-        _selWinCaption.text=@"Select the Customer";
+        _selWinCaption.text=NSLocalizedString(@"Select the Customer", @"Select the Customer");
         SelItmsID=_SelDrIDs;
         SelItmsNm=_txEventCust.text;
         SelItmsMails=_SelDrMails;
@@ -211,7 +211,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
     }
     if(tx==_txEventParticipants)
     {
-        _selWinCaption.text=@"Select the Participants";
+        _selWinCaption.text=NSLocalizedString(@"Select the Participants", @"Select the Participants");
         SelItmsID=_SelPartIDs;
         SelItmsNm=_txEventParticipants.text;
         SelItmsMails=_SelPartMails;
@@ -221,7 +221,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
     }
     if(tx==_txEventDur)
     {
-        _selWinCaption.text=@"Select the Duration";
+        _selWinCaption.text=NSLocalizedString(@"Select the Duration", @"Select the Duration");
         _ObjSelData=[self.Durations mutableCopy];
         _ObjAllSelData=[self.Durations mutableCopy];
         
@@ -697,7 +697,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
             cell.titleLabel.text=[item objectForKey:@"Meeting_Sub"];
             if([[item objectForKey:@"meetCnt"] longValue]>0)
             {
-                cell.lblSubTitle.text=[NSString stringWithFormat:@"+%ld more",[[item objectForKey:@"meetCnt"] longValue]];
+                cell.lblSubTitle.text=[NSString stringWithFormat:@"+%ld %@",[[item objectForKey:@"meetCnt"] longValue],NSLocalizedString(@"more", @"more")];
                 cell.lblSubTitle.hidden=NO;
             }
             
@@ -758,7 +758,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
     NSMutableDictionary* Item=_CalnDates[indexPath.row];
     NSString* DyNo=[Item objectForKey:@"dayno"];
     
-    self.lblTitleDets.text= [NSString stringWithFormat:@"Event Details For  %@/%d/%d",DyNo,SelMonth,SelYear];
+    self.lblTitleDets.text= [NSString stringWithFormat:@"%@  %@/%d/%d",NSLocalizedString(@"Event Details For", @"Event Details For"),DyNo,SelMonth,SelYear];
     NSMutableDictionary* itmParm=[[NSMutableDictionary alloc] init];
     [itmParm setValue:[NSString stringWithFormat:@"%d-%d-%@",SelYear,SelMonth,DyNo] forKey:@"RptDt"];
     [WBService SendServerRequest:@"GET/Meetings" withParameter:itmParm withImages:nil DataSF:nil completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage) {
@@ -848,8 +848,8 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
         [cell.btnSync addTarget:self action:@selector(openMeeting:) forControlEvents:UIControlEventTouchUpInside];
         [cell.btnEdit addTarget:self action:@selector(editMeeting:) forControlEvents:UIControlEventTouchUpInside];
         
-        cell.lOptDrCnt.text=[NSString stringWithFormat:@"%i Customers",[[_MeetDatas[indexPath.row] objectForKey:@"PartiCnt"] intValue]];
-        cell.lOptParti.text=[NSString stringWithFormat:@"%i Participants",[[_MeetDatas[indexPath.row] objectForKey:@"PartiCnt"] intValue]];
+        cell.lOptDrCnt.text=[NSString stringWithFormat:@"%i %@",[[_MeetDatas[indexPath.row] objectForKey:@"PartiCnt"] intValue],NSLocalizedString(@"Customers", @"Customers")];
+        cell.lOptParti.text=[NSString stringWithFormat:@"%i %@",[[_MeetDatas[indexPath.row] objectForKey:@"PartiCnt"] intValue],NSLocalizedString(@"Participants", @"Participants")];
         
     }
     if(tableView==self.selTableView) {

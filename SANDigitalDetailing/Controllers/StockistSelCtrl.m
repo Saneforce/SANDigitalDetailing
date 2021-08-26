@@ -46,8 +46,8 @@
     if([self.UserDet.Desig isEqualToString:@"MR"]) self.meetData.DataSF=self.UserDet.SF;
     
     
-    _lblHeadTitle.text=[NSString stringWithFormat:@"%@ Selection",_SetupData.CapStk];
-    _searchBox.placeholder=[NSString stringWithFormat:@"Search %@",_SetupData.CapStk];
+    _lblHeadTitle.text=[NSString stringWithFormat:@"%@ %@",_SetupData.CapStk,NSLocalizedString(@"Selection", @"Selection")];
+    _searchBox.placeholder=[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Search", @"Search"),_SetupData.CapStk];
     
     NSString *DataKey=[[NSString alloc] initWithFormat:@"StockistDetails_%@.SANAPP",self.meetData.DataSF];
     self.ObjStockistList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];

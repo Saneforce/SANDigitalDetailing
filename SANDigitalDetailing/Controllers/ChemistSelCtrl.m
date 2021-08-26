@@ -46,8 +46,8 @@
     if([self.UserDet.Desig isEqualToString:@"MR"]) self.meetData.DataSF=self.UserDet.SF;
     
     
-    _lblHeadTitle.text=[NSString stringWithFormat:@"%@ Selection",_SetupData.CapChm];
-    _searchBox.placeholder=[NSString stringWithFormat:@"Search %@",_SetupData.CapChm];
+    _lblHeadTitle.text=[NSString stringWithFormat:@"%@ %@",_SetupData.CapChm,NSLocalizedString(@"Selection", @"Selection")];
+    _searchBox.placeholder=[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Search", @"Search"),_SetupData.CapChm];
     NSString *DataKey=[[NSString alloc] initWithFormat:@"ChemistDetails_%@.SANAPP",self.meetData.DataSF];
     self.ObjChemistList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
     

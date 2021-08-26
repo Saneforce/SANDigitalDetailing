@@ -55,9 +55,9 @@
     self.meetData.DataSF=[self.TP valueForKey:@"SFMem"];
     if([self.UserDet.Desig isEqualToString:@"MR"]) self.meetData.DataSF=self.UserDet.SF;
     
-    _lblNewDrCap.text=[NSString stringWithFormat:@"Add New %@",_SetupData.CapUdr];
-    _lblHeadTitle.text=[NSString stringWithFormat:@"%@ Selection",_SetupData.CapUdr];
-    _searchBox.placeholder=[NSString stringWithFormat:@"Search %@",_SetupData.CapUdr];
+    _lblNewDrCap.text=[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Add New", @"Add New"),_SetupData.CapUdr];
+    _lblHeadTitle.text=[NSString stringWithFormat:@"%@ %@",_SetupData.CapUdr,NSLocalizedString(@"Selection", @"Selection")];
+    _searchBox.placeholder=[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Search", @"Search"),_SetupData.CapUdr];
     
     NSString *DataKey=[[NSString alloc] initWithFormat:@"UnlistedDR_%@.SANAPP",self.meetData.DataSF];
     self.NwCustList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];

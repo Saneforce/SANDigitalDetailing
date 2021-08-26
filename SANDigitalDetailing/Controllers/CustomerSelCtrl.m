@@ -99,8 +99,8 @@
         NSLog(@"%f %d",cDis,(cDis>0 && cDis <= dis));
         return cDis>0 && cDis <= dis;
     }];
-    _lblHeadTitle.text=[NSString stringWithFormat:@"%@ Selection",_SetupData.CapDr];
-    _searchBox.placeholder=[NSString stringWithFormat:@"Search %@",_SetupData.CapDr];
+    _lblHeadTitle.text=[NSString stringWithFormat:@"%@ %@",_SetupData.CapDr,NSLocalizedString(@"Selection", @"Selection")];
+    _searchBox.placeholder=[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Search", @"Search"),_SetupData.CapDr];
     _HospitalsList=[[[NSUserDefaults standardUserDefaults] objectForKey:[[NSString alloc] initWithFormat:@"Hospital_%@.SANAPP",self.meetData.DataSF]] mutableCopy];
     NSString *DataKey=[[NSString alloc] initWithFormat:@"DoctorDetails_%@.SANAPP",self.meetData.DataSF];
     self.ObjCustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];

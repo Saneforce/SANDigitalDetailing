@@ -64,14 +64,14 @@
 }
 
 -(IBAction)SegmentChangeViewValueChanged:(UISegmentedControl *)SControl{
-    _lblDrCap.text=@"Speaker Name";
-    _lblOthCap.text=@"Speaker From Other Zone";
+    _lblDrCap.text=NSLocalizedString(@"Speaker Name", @"Speaker Name");
+    _lblOthCap.text=NSLocalizedString(@"Speaker From Other Zone", @"Speaker From Other Zone");
     _lblIndic.hidden=YES;
     _txtIndic.hidden=YES;
     self.vwSelWin.alpha=0;
     self.vwSelWin.hidden=NO;
     
-    _lblNofVol.text=@"No. Of. Volunteers";
+    _lblNofVol.text=NSLocalizedString(@"No. Of. Volunteers", @"No. Of. Volunteers");
     _lblNofVol.hidden=YES;
     _txtNoOfVolunteer.hidden=YES;
     _vwInputDet.hidden=YES;
@@ -91,8 +91,8 @@
            self.vwSTPWin.alpha=1;
            self.vwOneToOneWin.alpha=1;
     if(SControl.selectedSegmentIndex == 0) {
-        _lblTitle.text=@"SGT [ Small Group Training Programme]";
-        self.eType=@"SGT";
+        _lblTitle.text=NSLocalizedString(@"SGT [ Small Group Training Programme]", @"SGT [ Small Group Training Programme]");
+        self.eType=NSLocalizedString(@"SGT", @"SGT");
         _lblIndic.hidden=NO;
         _txtIndic.hidden=NO;
         _lblNofVol.hidden=NO;
@@ -112,18 +112,18 @@
         self.vwProductDet.hidden=NO;
     }
     if(SControl.selectedSegmentIndex == 1){
-        _lblTitle.text=@"STP";
-        self.eType=@"STP";
+        _lblTitle.text=NSLocalizedString(@"STP", @"STP");
+        self.eType=NSLocalizedString(@"STP", @"STP");
         self.vwSTPWin.hidden=NO;
     }
     if(SControl.selectedSegmentIndex == 2){
-        _lblTitle.text=@"CEP";
-        self.eType=@"CEP";
-        _lblDrCap.text=@"Doctor Name";
-        _lblOthCap.text=@"Topic";
+        _lblTitle.text=NSLocalizedString(@"CEP", @"CEP");
+        self.eType=NSLocalizedString(@"CEP", @"CEP");
+        _lblDrCap.text=NSLocalizedString(@"Doctor Name", @"Doctor Name");
+        _lblOthCap.text=NSLocalizedString(@"Topic", @"Topic");
         _lblNofVol.hidden=NO;
         _txtNoOfVolunteer.hidden=NO;
-        _lblNofVol.text=@"No. Of. Client";
+        _lblNofVol.text=NSLocalizedString(@"No. Of. Client", @"No. Of. Client");
         self.lblNofVol.frame=CGRectMake(self.lblNofVol.frame.origin.x, 196, self.lblNofVol.frame.size.width, self.lblNofVol.frame.size.height);
         self.txtNoOfVolunteer.frame=CGRectMake(301, 196, self.txtNoOfVolunteer.frame.size.width, self.txtNoOfVolunteer.frame.size.height);
         self.vwDtDet.frame=CGRectMake(0, 240, self.vwDtDet.frame.size.width, self.vwDtDet.frame.size.height);
@@ -136,14 +136,14 @@
         
     }
     if(SControl.selectedSegmentIndex == 3){
-        _lblTitle.text=@"ONE To ONE";
-        self.eType=@"OTO";
+        _lblTitle.text=NSLocalizedString(@"ONE To ONE", @"ONE To ONE");
+        self.eType=NSLocalizedString(@"OTO", @"OTO");
 
         self.vwOneToOneWin.hidden=NO;
     }
     if(SControl.selectedSegmentIndex == 4){
-        _lblTitle.text=@"CME";
-        self.eType=@"CME";
+        _lblTitle.text=NSLocalizedString(@"CME", @"CME");
+        self.eType=NSLocalizedString(@"CME", @"CME");
         _lblIndic.hidden=YES;
         self.vwProductDet.hidden=YES;
         self.vwSGTCMEWin.hidden=NO;
