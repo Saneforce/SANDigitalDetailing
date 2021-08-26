@@ -285,7 +285,8 @@
     if(tableView == self.tblHQList){
         //[self clearForms];
         NSDictionary *objItem = self.objHQList[indexPath.row];
-        
+        self.CustomerList = nil;
+        self.txtfldSearchBar.text = @"";
         if(_selMode != nil && ![_selHQName isEqualToString:[NSString stringWithFormat:@"%@",[objItem objectForKey:@"name"]]] && _objSurveyList.count > 0)
         {
             _selCat=[_ObjCtrlList[0] valueForKey:@"DrCat"];
@@ -453,11 +454,11 @@
     self.CustomerList = [[NSArray alloc] init];
     if ([_SelType isEqualToString:@"D"]){
         DataKey=[[NSString alloc] initWithFormat:@"DoctorDetails_%@.SANAPP",self.DataSF];
-        apiKey= NSLocalizedString(@"Doctor", @"Doctor");
+        apiKey= [NSString stringWithFormat: @"Doctor"];
     }
     if ([_SelType isEqualToString:@"C"]){
         DataKey=[[NSString alloc] initWithFormat:@"ChemistDetails_%@.SANAPP",self.DataSF];
-        apiKey= NSLocalizedString(@"Chemist", @"Chemist");
+        apiKey= [NSString stringWithFormat:@"Chemist"];
 
 //        NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
         
@@ -476,9 +477,15 @@
     }
     self.CustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
      
-    if(self.CustomerList.count == 0 || self.CustomerList == nil)
+    if((self.CustomerList.count == 0 || self.CustomerList == nil) && apiKey.length > 0)
     {
-        [self LoadData:[NSString  stringWithFormat:@"GET/%@",apiKey] withParam:nil andDataFor:self.DataSF andkey:[NSString  stringWithFormat:@"%@",DataKey]];
+        [BaseViewController loadMasterData:_DataSF completion:^{
+            self.CustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
+        } error:^(NSString *errorMsg) {
+            
+        }];
+        
+        //[self LoadData:[NSString  stringWithFormat:@"GET/%@",apiKey] withParam:nil andDataFor:self.DataSF andkey:[NSString  stringWithFormat:@"%@",DataKey]];
 
     }
     
@@ -899,26 +906,5 @@
     }
 }
 
--(void) LoadData:(NSString *) apiPath withParam:(NSMutableDictionary *) param andDataFor:(NSString *)dataSF andkey:(NSString *) key{
-           [WBService SendServerRequest:apiPath withParameter:param withImages:nil DataSF:dataSF completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage){
-               NSMutableDictionary *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
-               [WBService saveData:receivedDta forKey:key];
-               if(receivedDta.count > 0)
-               {
-                   [self getDataList];
-                   if([self.SelType isEqualToString:@"D"])
-                   {
-                       [self filterDoctorList];
-                   }
-                   else if ([self.SelType isEqualToString:@"C"])
-                   {
-                       [self filterChemistList];
-                   }
-               }
-           }
-           error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage){
-               NSLog(@"%@",errorMsg);
-           }
-     ];
-}
+
 @end
