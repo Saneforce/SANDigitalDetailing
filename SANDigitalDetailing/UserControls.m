@@ -44,13 +44,13 @@
             
             if(isRng==YES){
                 _lblHead=[[UILabel alloc] initWithFrame:CGRectMake(2, 2, CtrlWidth-4,25)];
-                _lblHead.text=[NSString stringWithFormat:@"From %@",caption];
+                _lblHead.text=[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"From", @"From"),caption];
                 _lblHead.font=[UIFont fontWithName:@"Poppins-SemiBold" size:13.0];
                 [_lblHead setClipsToBounds:YES];
                 [uContainer addSubview:_lblHead];
                 
                 _lblToHead=[[UILabel alloc] initWithFrame:CGRectMake(CtrlWidth+2, 2, CtrlWidth-4,25)];
-                _lblToHead.text=[NSString stringWithFormat:@"To %@",caption];
+                _lblToHead.text=[NSString stringWithFormat:@"%@ %@",@"To",caption];
                 _lblToHead.font=[UIFont fontWithName:@"Poppins-SemiBold" size:13.0];
                 [_lblToHead setClipsToBounds:YES];
                 [uContainer addSubview:_lblToHead];
@@ -280,8 +280,8 @@
 -(void)setCaption:(NSString *)Caption{
     _Caption=Caption;
     if(_isRange==YES){
-        _lblHead.text=[NSString stringWithFormat:@"From %@",Caption];
-        _lblToHead.text=[NSString stringWithFormat:@"To %@",Caption];
+        _lblHead.text=[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"From", @"From"),Caption];
+        _lblToHead.text=[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"To", @"To"),Caption];
     }else{
         _lblHead.text=Caption;
     }
@@ -303,7 +303,7 @@
 -(void)setIsMandate:(BOOL)isMandate{
     _isMandate=isMandate;
     if (isMandate==YES) {
-        _lblHead.text=[NSString stringWithFormat:@"%@ *",_lblHead.text];
+        _lblHead.text=[NSString stringWithFormat:@"%@ ",_lblHead.text],NSLocalizedString(@"*", @"*");
     }
 }
 -(void)setHeadColor:(UIColor *)HeadColor{

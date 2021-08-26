@@ -536,9 +536,9 @@ bool LoadASFilter=NO;
 }
 -(IBAction) ClearmFilter:(id)sender
 {
-    self.cmbMsgHead.text=@"----All Headers----";
+    self.cmbMsgHead.text=NSLocalizedString(@"----All Headers----", @"----All Headers----");
     self.FiltrMsgHead=@"";
-    self.cmbMsgFor.text=@"----All Headers----";
+    self.cmbMsgFor.text=NSLocalizedString(@"----All Headers----", @"----All Headers----");
     self.FiltrMsgFor=@"";
     [self setFilter];
     LoadASFilter=NO;

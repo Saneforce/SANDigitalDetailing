@@ -249,7 +249,7 @@
     if(_SetupData.MeetEventNeed==1 && _tbvwMeetings==nil){
         [_clViewCalls setFrame:CGRectMake(0, 0, _vwCallsList.frame.size.width, _vwCallsList.frame.size.height/2-4)];
         userLabel* lblMeet=[[userLabel alloc] initWithFrame:CGRectMake(0, (_vwCallsList.frame.size.height/2)+14, _vwCallsList.frame.size.width, 42)];
-        lblMeet.text=@"Today Meetings";
+        lblMeet.text=NSLocalizedString(@"Today Meetings", @"Today Meetings");
         lblMeet.font=[UIFont fontWithName:@"Poppins-SemiBold" size:13.0];
         lblMeet.backgroundColor=[UIColor colorWithRed:92.0f/255 green:92.0f/255 blue:92.0f/255 alpha:1.0f];
         lblMeet.textColor=[UIColor whiteColor];
@@ -874,8 +874,8 @@
     else{
         self.btnLocIndic.imageView.image=[UIImage imageNamed:@"locationDB"];
     }
-    self.lblLat.text= [NSString stringWithFormat:@"Lat  : %@",self.locationData.latitude];
-    self.lblLng.text= [NSString stringWithFormat:@"Lng : %@", self.locationData.longitude];
+    self.lblLat.text= [NSString stringWithFormat:@"%@  : %@",NSLocalizedString(@"Lat", @"Lat"),self.locationData.latitude];
+    self.lblLng.text= [NSString stringWithFormat:@"%@ : %@",NSLocalizedString(@"Lng", @"Lng") ,self.locationData.longitude];
     [NSTimer scheduledTimerWithTimeInterval:0.10 target:self selector:@selector(startLatLngUpd) userInfo:nil repeats:NO] ;
 }
 -(void) startNotifyTimer:(NSTimeInterval) intrvl{

@@ -195,8 +195,8 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
     
     eCtrl=(SANControlsBox*) Control;
     //SANContolType ControlType=eCtrl.ControlType;
-    _lblSelHead.text=[NSString stringWithFormat:@"Select the %@",eCtrl.Caption];
-    _lblSelHead1.text=[NSString stringWithFormat:@"Select the %@",eCtrl.Caption];
+    _lblSelHead.text=[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Select the", @"Select the"),eCtrl.Caption];
+    _lblSelHead1.text=[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Select the", @"Select the"),eCtrl.Caption];
     selectedText=@"";
     selectedValue=@"";
     if(!([eCtrl.selectedValue isEqualToString:@""] || eCtrl.selectedValue==nil)){
