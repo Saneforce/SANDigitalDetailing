@@ -197,7 +197,7 @@
         if(_selSurvery != nil && ![self.vwAdCtrl isHidden] && ![_selSurvery isEqualToString:[NSString stringWithFormat:@"%@",[objItem objectForKey:@"name"]]])
         {
             [self.vwAdCtrl setHidden:YES];
-
+            
         }
         self.txtSelCus.text = @"";
         self.CustomerList = [NSMutableArray new];
@@ -205,7 +205,7 @@
         _txtSelCus.placeholder=[NSString stringWithFormat:@"%@",NSLocalizedString(@"Select the doctor", @"Select the doctor")];
         _selMode = @"";
         [_btnSubmitSurvey setUserInteractionEnabled:NO];
-
+        
         [self.collectionView reloadData];
         _ObjCtrlList=[objItem objectForKey:@"survey_for"];
         _lblSrvyNm.text=[objItem objectForKey:@"name"];
@@ -225,17 +225,17 @@
         //            self.vwAdCtrl.hidden = YES;
         
         [self getDataList];
-//
-//        if([self.SelType isEqualToString:@"D"])
-//        {
-//            [self filterDoctorList];
-//        }
-//        else if ([self.SelType isEqualToString:@"C"])
-//        {
-//            [self filterChemistList];
-//        }
-//
-//        [self addForm];
+        //
+        //        if([self.SelType isEqualToString:@"D"])
+        //        {
+        //            [self filterDoctorList];
+        //        }
+        //        else if ([self.SelType isEqualToString:@"C"])
+        //        {
+        //            [self filterChemistList];
+        //        }
+        //
+        //        [self addForm];
     }
     if(tableView==self.selTypeMode) {
         //[self clearForms];
@@ -243,7 +243,7 @@
         
         if(_selMode != nil && ![self.vwAdCtrl isHidden] && ![_selMode isEqualToString:[NSString stringWithFormat:@"%@",[item objectForKey:@"Name"]]] && _ObjCtrlList.count > 0)
         {
-
+            
             self.txtSelCus.text=@"";
             [self.vwAdCtrl setHidden:YES];
         }
@@ -300,11 +300,11 @@
         _selHQName = [objItem objectForKey:@"name"];
         self.meetData.DataSF=[objItem objectForKey:@"id"];
         [self getDataList];
-        if([self.SelType isEqualToString:@"D"])
+        if([self.SelType isEqualToString:@"D"] && self.CustomerList.count > 0)
         {
             [self filterDoctorList];
         }
-        else if ([self.SelType isEqualToString:@"C"])
+        else if ([self.SelType isEqualToString:@"C"] && self.CustomerList.count > 0)
         {
             [self filterChemistList];
         }
@@ -326,8 +326,8 @@
         return CGSizeMake((CGRectGetWidth(collectionView.bounds))-7, 125);
     else
         return CGSizeMake((CGRectGetWidth(collectionView.bounds)/3)-7, 125);
-
-        
+    
+    
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -365,7 +365,7 @@
             self.CateCode=[SelItem objectForKey:@"Chm_cat"];
         
         // _arrControlsDets=[[_ObjCtrlList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Type==%@ and Cat_code == %ld",Typ,CatID]] mutableCopy];
-       // [self generateCtrls];
+        // [self generateCtrls];
         [self addForm];
         _vwCusList.hidden=YES;
     }
@@ -383,6 +383,11 @@
 }
 -(IBAction) showCustList:(id)sender{
     
+    if(_selSurvery.length != 0 && self.selMode.length!= 0 && self.DataSF.length ==0)
+    {
+        [BaseViewController Toast:[NSString stringWithFormat:@"%@",NSLocalizedString(@"Kindly Select the HQ", @"Kindly Select the HQ")]];
+        return;
+    }
     _txtfldSearchBar.text = @"";
     [self getDataList];
     if ([_SelType isEqualToString:@"D"]) {
@@ -439,6 +444,12 @@
 
 -(void) getDataList{
     
+    if(_selSurvery.length != 0 && self.selMode.length!= 0 && self.DataSF.length ==0)
+    {
+        return;
+    }
+    
+
     if(_selSurvery.length == 0)
     {
         [_btnSubmitSurvey setUserInteractionEnabled:FALSE];
@@ -459,58 +470,72 @@
     if ([_SelType isEqualToString:@"C"]){
         DataKey=[[NSString alloc] initWithFormat:@"ChemistDetails_%@.SANAPP",self.DataSF];
         apiKey= [NSString stringWithFormat:@"Chemist"];
-
-//        NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
+        
+        //        NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
         
     }
     if ([_SelType isEqualToString:@"S"]){
         DataKey=[[NSString alloc] initWithFormat:@"StockistDetails_%@.SANAPP",self.DataSF];
-
+        
     }
     if ([_SelType isEqualToString:@"U"]){
         DataKey=[[NSString alloc] initWithFormat:@"UnlistedDR_%@.SANAPP",self.DataSF];
-
+        
     }
     if ([_SelType isEqualToString:@"H"]){
         DataKey=[[NSString alloc] initWithFormat:@"Hospital_%@.SANAPP",self.DataSF];
-
+        
     }
     self.CustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
-     
+    
     if((self.CustomerList.count == 0 || self.CustomerList == nil) && apiKey.length > 0)
     {
         [BaseViewController loadMasterData:_DataSF completion:^{
             self.CustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
+            self.CustomerList =[self FilterUnique:self.CustomerList andKey:@"Code"];
+            NSSortDescriptor *NameField = [NSSortDescriptor sortDescriptorWithKey:@"Name" ascending:YES];
+            NSArray *sortDescriptors = [NSArray arrayWithObjects:NameField, nil];
+            
+            self.CustomerList = [[self.CustomerList sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
+            if ([_SelType isEqualToString:@"D"])
+                [self filterDoctorList];
+            else if ([_SelType isEqualToString:@"C"])
+                [self filterChemistList];
+                
         } error:^(NSString *errorMsg) {
             
         }];
         
-        //[self LoadData:[NSString  stringWithFormat:@"GET/%@",apiKey] withParam:nil andDataFor:self.DataSF andkey:[NSString  stringWithFormat:@"%@",DataKey]];
-
+       
+        
+    }
+    else
+    {
+        self.CustomerList =[self FilterUnique:self.CustomerList andKey:@"Code"];
+        if ([_SelType isEqualToString:@"D"]){
+            if(![_selCat isEqualToString:@""]){
+                self.CustomerList =[self FilterRevUnique:self.CustomerList andKey:@"Code"];
+                
+                //            self.meetData.DataSF=[HQ objectForKey:@"id"];
+                //            NSString *DataKey=[[NSString alloc] initWithFormat:@"DoctorDetails_%@.SANAPP",self.meetData.DataSF];
+                //
+                //            self.CustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
+            }
+            if(![_selSpec isEqualToString:@""]){
+                self.CustomerList =[self FilterRevUnique:self.CustomerList andKey:@"Code"];
+            }
+        }
+        
+        /*int flag=1;
+         self.ObjCustomerList=[[_ObjCustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"PlcyAcptFl.intValue == %d",flag]] mutableCopy];*/
+        
+        NSSortDescriptor *NameField = [NSSortDescriptor sortDescriptorWithKey:@"Name" ascending:YES];
+        NSArray *sortDescriptors = [NSArray arrayWithObjects:NameField, nil];
+        
+        self.CustomerList = [[self.CustomerList sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
     }
     
-    self.CustomerList =[self FilterUnique:self.CustomerList andKey:@"Code"];
-    if ([_SelType isEqualToString:@"D"]){
-        if(![_selCat isEqualToString:@""]){
-            self.CustomerList =[self FilterRevUnique:self.CustomerList andKey:@"Code"];
-            
-            //            self.meetData.DataSF=[HQ objectForKey:@"id"];
-            //            NSString *DataKey=[[NSString alloc] initWithFormat:@"DoctorDetails_%@.SANAPP",self.meetData.DataSF];
-            //
-            //            self.CustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
-        }
-        if(![_selSpec isEqualToString:@""]){
-            self.CustomerList =[self FilterRevUnique:self.CustomerList andKey:@"Code"];
-        }
-    }
     
-    /*int flag=1;
-     self.ObjCustomerList=[[_ObjCustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"PlcyAcptFl.intValue == %d",flag]] mutableCopy];*/
-    
-    NSSortDescriptor *NameField = [NSSortDescriptor sortDescriptorWithKey:@"Name" ascending:YES];
-    NSArray *sortDescriptors = [NSArray arrayWithObjects:NameField, nil];
-    
-    self.CustomerList = [[self.CustomerList sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
     
 }
 -(NSArray *) FilterUnique:(NSArray*) srcArray andKey:(NSString*) key {
@@ -538,7 +563,7 @@
 
 -(void) generateCtrls{
     [SVProgressHUD showWithStatus:NSLocalizedString(@"LoadinStatus", @"Loading..")];
-
+    
     _cyAxis=0;_scrlHeight=0;
     if(self.vwCtrlsView!=nil){
         [self.vwCtrlsView removeFromSuperview];
@@ -549,9 +574,9 @@
     
     for (int il=0; il<[_arrControlsDets count]; il++) {
         [_btnSubmitSurvey setUserInteractionEnabled:YES];
-
+        
         NSString* QSType = [[_arrControlsDets[il] valueForKey:@"Stype"] stringByReplacingOccurrencesOfString:@"," withString:@""];
-
+        
         //NSString* QSType=[NSString stringWithFormat:@",%@",[_arrControlsDets[il] valueForKey:@"Stype"]];
         Boolean Flg=NO;
         if ([_SelType isEqualToString:@"D"] && [QSType rangeOfString:@"D"].length>0){
@@ -701,8 +726,13 @@
     else
         self.CustomerList = [NSMutableArray new];
     
-    [_collectionView reloadData];
-
+    if(_selMode.length >0 && _selSurvery.length>0 & self.CustomerList.count !=0)
+    {
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_collectionView reloadData];
+        });
+    }
 }
 -(void)filterDoctorList
 {
@@ -736,8 +766,13 @@
     }
     else
         self.CustomerList = [NSMutableArray new];
-    [_collectionView reloadData];
-
+    
+    if(_selMode.length >0 && _selSurvery.length>0 & self.CustomerList.count !=0)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_collectionView reloadData];
+        });
+    }
 }
 
 -(void)updateHQData
