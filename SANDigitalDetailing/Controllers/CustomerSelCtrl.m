@@ -99,8 +99,8 @@
         NSLog(@"%f %d",cDis,(cDis>0 && cDis <= dis));
         return cDis>0 && cDis <= dis;
     }];
-    _lblHeadTitle.text=[NSString stringWithFormat:@"%@ %@",_SetupData.CapDr,NSLocalizedString(@"Selection", @"Selection")];
-    _searchBox.placeholder=[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Search", @"Search"),_SetupData.CapDr];
+    _lblHeadTitle.text=[NSString stringWithFormat:@"%@ %@",NSLocalizedString(_SetupData.CapDr, _SetupData.CapDr) ,NSLocalizedString(@"Selection", @"Selection")];
+    _searchBox.placeholder=[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Search", @"Search"),NSLocalizedString(_SetupData.CapDr, _SetupData.CapDr)];
     _HospitalsList=[[[NSUserDefaults standardUserDefaults] objectForKey:[[NSString alloc] initWithFormat:@"Hospital_%@.SANAPP",self.meetData.DataSF]] mutableCopy];
     NSString *DataKey=[[NSString alloc] initWithFormat:@"DoctorDetails_%@.SANAPP",self.meetData.DataSF];
     self.ObjCustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
@@ -165,7 +165,7 @@
     
     _searchBox.layer.mask = maskTLayer;
     _btnFilter=[[UIButton alloc] initWithFrame:CGRectMake(eW*3, self.searchBox.frame.origin.y,eW+18, self.searchBox.frame.size.height)];
-    [_btnFilter setTitle:[NSString stringWithFormat:@"All %@", NSLocalizedString(self.SetupData.CapHos, self.SetupData.CapHos)] forState:UIControlStateNormal];
+    [_btnFilter setTitle:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"All", @"All"), NSLocalizedString(self.SetupData.CapHos, self.SetupData.CapHos)] forState:UIControlStateNormal];
     _btnFilter.titleLabel.font=[UIFont fontWithName:@"Poppins-SemiBold" size:14.0];
     _btnFilter.backgroundColor=[UIColor colorWithRed:255.0f/255 green:29.0f/255 blue:37.0f/255 alpha:1.0f];//[UIColor colorWithRed:89.0f/255 green:89.0f/255 blue:89.0f/255 alpha:1.0f];
     _btnFilter.contentHorizontalAlignment=UIControlContentHorizontalAlignmentLeft;
@@ -217,7 +217,7 @@
     [vwMode addSubview:self.selHospFltr];
     [_vwModeModal addSubview:vwMode];
     _btnAllHosp=[[UIButton alloc] initWithFrame:CGRectMake(0, 240,_btnFilter.frame.size.width, 30)];
-    [_btnAllHosp setTitle:[NSString stringWithFormat:@"Show All %@",_SetupData.CapDr] forState:UIControlStateNormal];
+    [_btnAllHosp setTitle:[NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Show All", @"Show All"),_SetupData.CapDr] forState:UIControlStateNormal];
     _btnAllHosp.titleLabel.font=[UIFont fontWithName:@"Poppins-Regular" size:12.0];
     _btnAllHosp.backgroundColor=[UIColor grayColor];
     [_btnAllHosp addTarget:self action:@selector(showAllHospDr:) forControlEvents:UIControlEventTouchUpInside];
@@ -230,7 +230,7 @@
 }
 -(IBAction) showAllHospDr:(id)sender{
     _selHospitalID=nil;
-    [_btnFilter setTitle:[NSString stringWithFormat:@"All %@", NSLocalizedString(self.SetupData.CapHos, self.SetupData.CapHos)] forState:UIControlStateNormal];
+    [_btnFilter setTitle:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"All", @"All"), NSLocalizedString(self.SetupData.CapHos, self.SetupData.CapHos)] forState:UIControlStateNormal];
     [self SearchAndFilterCustomer];
     [_vwModeModal removeFromSuperview];
 }
