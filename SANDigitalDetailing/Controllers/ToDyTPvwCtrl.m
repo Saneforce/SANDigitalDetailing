@@ -85,7 +85,7 @@
         self.objWTList=[self.objWTList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"FWFlg!='F'"]];
         [_lblTitle setText:@"Missed Entry - Other Work"];
     }
-    
+    [self.vwTitle setText:[NSString stringWithFormat:@"%@",NSLocalizedString(@"TODAY WORK PLAN", "TODAY WORK PLAN")]];
     [_lblEDt setText:[dateFormatter stringFromDate:[BaseViewController str2date:self.TdayPl.TPDt]]];
     [self closeTableViews];
 }

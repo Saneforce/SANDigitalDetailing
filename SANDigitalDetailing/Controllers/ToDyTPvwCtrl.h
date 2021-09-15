@@ -36,6 +36,7 @@
 @property (nonatomic,weak) IBOutlet UILabel *lblEDt;
 
 @property (nonatomic,strong) NSMutableDictionary *objAppSvData;
+@property (weak, nonatomic) IBOutlet UILabel *vwTitle;
 
 -(IBAction)saveTodayPlan:(id)sender;
 -(IBAction) openSelWorkType:(id)sender;

@@ -284,7 +284,7 @@
     if(![self.UserDet.Desig isEqualToString:@"MR"]){
         [self AddMenuItem:@"Approvals" id:@9 image:@"Approval"];
     }
-    [self AddMenuItem:@"Profiling" id:@10 image:@"sMnuDrProf"];
+    [self AddMenuItem:NSLocalizedString(@"Profiling", @"Profiling")  id:@10 image:@"sMnuDrProf"];
     //[self AddMenuItem:@"Chemist Profiling" id:@11 image:@"sMnuDrProf"];
     
     if(self.SetupData.GeoNeed==0 || self.SetupData.GeoFencing==1){

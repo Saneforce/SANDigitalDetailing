@@ -87,7 +87,7 @@
         cell.lOptText.text=[_objOptList[indexPath.row] valueForKey:@"name"];
     else{
         List* list=_MasterList[indexPath.row];
-        cell.lOptText.text=list.label;
+        cell.lOptText.text= NSLocalizedString(list.label, list.label);
         
         cell.lOptVal.text= [NSString stringWithFormat:@"( %ld )", [[[NSUserDefaults standardUserDefaults] objectForKey:list.name] count]];
     }
