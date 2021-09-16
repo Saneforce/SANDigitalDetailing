@@ -1,0 +1,171 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "0Nt-HQ-ZrD"; */
+"0Nt-HQ-ZrD.text" = "标签";
+
+/* Class = "UILabel"; text = "Tue"; ObjectID = "2FG-sZ-oji"; */
+"2FG-sZ-oji.text" = "周二";
+
+/* Class = "UILabel"; text = "Event Title"; ObjectID = "2wd-U2-S3M"; */
+"2wd-U2-S3M.text" = "活动标题";
+
+/* Class = "UILabel"; text = "November 2020"; ObjectID = "3lC-QN-2jf"; */
+"3lC-QN-2jf.text" = "2020 年 11 月";
+
+/* Class = "UILabel"; text = "Event Description"; ObjectID = "4Da-nR-Nfe"; */
+"4Da-nR-Nfe.text" = "事件描述";
+
+/* Class = "UILabel"; text = "Customer"; ObjectID = "5FR-aJ-VKD"; */
+"5FR-aJ-VKD.text" = "顾客";
+
+/* Class = "UIButton"; normalTitle = "MONTH"; ObjectID = "5mm-fm-hGQ"; */
+"5mm-fm-hGQ.normalTitle" = "月";
+
+/* Class = "UILabel"; text = "Mon"; ObjectID = "6JL-RU-zyI"; */
+"6JL-RU-zyI.text" = "星期一";
+
+/* Class = "UILabel"; text = "SELECTION"; ObjectID = "6lV-N1-zud"; */
+"6lV-N1-zud.text" = "选择";
+
+/* Class = "UILabel"; text = "Participants"; ObjectID = "7KW-wq-ULY"; */
+"7KW-wq-ULY.text" = "参与者";
+
+/* Class = "UILabel"; text = "12"; ObjectID = "902-sO-c8A"; */
+"902-sO-c8A.text" = "12";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "9M0-Sv-ehZ"; */
+"9M0-Sv-ehZ.text" = "标签";
+
+/* Class = "UISegmentedControl"; BGJ-Xd-xei.segmentTitles[0] = "Event"; ObjectID = "BGJ-Xd-xei"; */
+"BGJ-Xd-xei.segmentTitles[0]" = "事件";
+
+/* Class = "UISegmentedControl"; BGJ-Xd-xei.segmentTitles[1] = "Request Form"; ObjectID = "BGJ-Xd-xei"; */
+"BGJ-Xd-xei.segmentTitles[1]" = "申请表";
+
+/* Class = "UILabel"; text = "Cluster"; ObjectID = "EGp-Oc-DYv"; */
+"EGp-Oc-DYv.text" = "簇";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "F1X-Ux-HVh"; */
+"F1X-Ux-HVh.text" = "标签";
+
+/* Class = "UITextField"; placeholder = "Search Customer"; ObjectID = "FSF-Ez-jc8"; */
+"FSF-Ez-jc8.placeholder" = "搜索客户";
+
+/* Class = "UIButton"; normalTitle = "DAY"; ObjectID = "GQp-bn-Ndx"; */
+"GQp-bn-Ndx.normalTitle" = "天";
+
+/* Class = "UIButton"; normalTitle = "Start Meeting"; ObjectID = "Hei-9r-5dt"; */
+"Hei-9r-5dt.normalTitle" = "开始会议";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "IM6-jH-r9j"; */
+"IM6-jH-r9j.text" = "标签";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "L1P-6b-8ny"; */
+"L1P-6b-8ny.text" = "标签";
+
+/* Class = "UILabel"; text = "+1 more"; ObjectID = "LRT-tA-6Dp"; */
+"LRT-tA-6Dp.text" = "+1 更多";
+
+/* Class = "UILabel"; text = "Date Of Event"; ObjectID = "M9p-MX-gqn"; */
+"M9p-MX-gqn.text" = "活动日期";
+
+/* Class = "UILabel"; text = "Wed"; ObjectID = "N3h-r1-bfB"; */
+"N3h-r1-bfB.text" = "星期三";
+
+/* Class = "UILabel"; text = "Customers"; ObjectID = "NlI-cW-Be9"; */
+"NlI-cW-Be9.text" = "顾客";
+
+/* Class = "UILabel"; text = "Participants"; ObjectID = "P8v-D6-rf3"; */
+"P8v-D6-rf3.text" = "参与者";
+
+/* Class = "UILabel"; text = "Thu"; ObjectID = "RwP-fu-LZm"; */
+"RwP-fu-LZm.text" = "周四";
+
+/* Class = "UILabel"; text = "Sun"; ObjectID = "UfT-Lj-Kd9"; */
+"UfT-Lj-Kd9.text" = "太阳";
+
+/* Class = "UIButton"; normalTitle = "WEEK"; ObjectID = "VMN-tt-eXC"; */
+"VMN-tt-eXC.normalTitle" = "星期";
+
+/* Class = "UIButton"; normalTitle = "SCHEDULE"; ObjectID = "XWC-MP-MdX"; */
+"XWC-MP-MdX.normalTitle" = "日程";
+
+/* Class = "UIButton"; normalTitle = "CANCEL"; ObjectID = "Y4c-D2-cKs"; */
+"Y4c-D2-cKs.normalTitle" = "取消";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ydq-IP-v7P"; */
+"Ydq-IP-v7P.text" = "标签";
+
+/* Class = "UILabel"; text = "Work Type"; ObjectID = "YpT-DL-CLu"; */
+"YpT-DL-CLu.text" = "工作类型";
+
+/* Class = "UILabel"; text = "Event Description"; ObjectID = "ZOl-Tl-ajk"; */
+"ZOl-Tl-ajk.text" = "事件描述";
+
+/* Class = "UILabel"; text = "Duration"; ObjectID = "ZsD-KB-YeD"; */
+"ZsD-KB-YeD.text" = "期间";
+
+/* Class = "UILabel"; text = "ANIL ASHOL SHINDE"; ObjectID = "bL9-q4-LfU"; */
+"bL9-q4-LfU.text" = "阿尼尔·阿肖尔·辛德";
+
+/* Class = "UILabel"; text = "Email Setup"; ObjectID = "eTi-4g-1jZ"; */
+"eTi-4g-1jZ.text" = "电子邮件设置";
+
+/* Class = "UIButton"; normalTitle = "Ok"; ObjectID = "eXK-VB-0XM"; */
+"eXK-VB-0XM.normalTitle" = "行";
+
+/* Class = "UITextField"; placeholder = "Search"; ObjectID = "fwF-Yu-KOl"; */
+"fwF-Yu-KOl.placeholder" = "搜索";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gAA-pu-kkG"; */
+"gAA-pu-kkG.text" = "标签";
+
+/* Class = "UIButton"; normalTitle = "SEND REQUEST"; ObjectID = "hJU-G4-Qg0"; */
+"hJU-G4-Qg0.normalTitle" = "发送请求";
+
+/* Class = "UILabel"; text = "Fri"; ObjectID = "hKS-xw-XeD"; */
+"hKS-xw-XeD.text" = "周五";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "k9W-oc-f9m"; */
+"k9W-oc-f9m.text" = "标签";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "kpF-4J-OQS"; */
+"kpF-4J-OQS.text" = "标签";
+
+/* Class = "UILabel"; text = "Customer"; ObjectID = "l0H-cf-6rK"; */
+"l0H-cf-6rK.text" = "顾客";
+
+/* Class = "UILabel"; text = "Event Date & Time"; ObjectID = "lHJ-gW-TCu"; */
+"lHJ-gW-TCu.text" = "活动日期和时间";
+
+/* Class = "UIButton"; normalTitle = "ADD EVENT"; ObjectID = "lPj-QM-VKc"; */
+"lPj-QM-VKc.normalTitle" = "添加事件";
+
+/* Class = "UILabel"; text = "To"; ObjectID = "lx3-H6-ULC"; */
+"lx3-H6-ULC.text" = "到";
+
+/* Class = "UILabel"; text = "Event Duration"; ObjectID = "lx5-2y-gZa"; */
+"lx5-2y-gZa.text" = "活动持续时间";
+
+/* Class = "UILabel"; text = "From"; ObjectID = "naR-Jp-Vh8"; */
+"naR-Jp-Vh8.text" = "从";
+
+/* Class = "UIButton"; normalTitle = "CANCEL"; ObjectID = "pcR-gg-Htw"; */
+"pcR-gg-Htw.normalTitle" = "取消";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "puW-du-HvH"; */
+"puW-du-HvH.text" = "标签";
+
+/* Class = "UILabel"; text = "Add Event"; ObjectID = "qor-jL-AdJ"; */
+"qor-jL-AdJ.text" = "添加事件";
+
+/* Class = "UIButton"; normalTitle = "TODAY"; ObjectID = "rdV-Zb-Tl0"; */
+"rdV-Zb-Tl0.normalTitle" = "今天";
+
+/* Class = "UILabel"; text = "Event Title"; ObjectID = "sOx-QU-Gc7"; */
+"sOx-QU-Gc7.text" = "活动标题";
+
+/* Class = "UILabel"; text = "Event Name"; ObjectID = "umT-Qw-wvg"; */
+"umT-Qw-wvg.text" = "事件名称";
+
+/* Class = "UILabel"; text = "Sat"; ObjectID = "x6t-Of-WLD"; */
+"x6t-Of-WLD.text" = "星期六";

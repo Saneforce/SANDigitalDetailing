@@ -1,0 +1,171 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "0Nt-HQ-ZrD"; */
+"0Nt-HQ-ZrD.text" = "Etiqueta";
+
+/* Class = "UILabel"; text = "Tue"; ObjectID = "2FG-sZ-oji"; */
+"2FG-sZ-oji.text" = "ter";
+
+/* Class = "UILabel"; text = "Event Title"; ObjectID = "2wd-U2-S3M"; */
+"2wd-U2-S3M.text" = "Título do evento";
+
+/* Class = "UILabel"; text = "November 2020"; ObjectID = "3lC-QN-2jf"; */
+"3lC-QN-2jf.text" = "Novembro de 2020";
+
+/* Class = "UILabel"; text = "Event Description"; ObjectID = "4Da-nR-Nfe"; */
+"4Da-nR-Nfe.text" = "Descrição do Evento";
+
+/* Class = "UILabel"; text = "Customer"; ObjectID = "5FR-aJ-VKD"; */
+"5FR-aJ-VKD.text" = "Cliente";
+
+/* Class = "UIButton"; normalTitle = "MONTH"; ObjectID = "5mm-fm-hGQ"; */
+"5mm-fm-hGQ.normalTitle" = "Mês";
+
+/* Class = "UILabel"; text = "Mon"; ObjectID = "6JL-RU-zyI"; */
+"6JL-RU-zyI.text" = "seg";
+
+/* Class = "UILabel"; text = "SELECTION"; ObjectID = "6lV-N1-zud"; */
+"6lV-N1-zud.text" = "SELEÇÃO";
+
+/* Class = "UILabel"; text = "Participants"; ObjectID = "7KW-wq-ULY"; */
+"7KW-wq-ULY.text" = "Participantes";
+
+/* Class = "UILabel"; text = "12"; ObjectID = "902-sO-c8A"; */
+"902-sO-c8A.text" = "12";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "9M0-Sv-ehZ"; */
+"9M0-Sv-ehZ.text" = "Etiqueta";
+
+/* Class = "UISegmentedControl"; BGJ-Xd-xei.segmentTitles[0] = "Event"; ObjectID = "BGJ-Xd-xei"; */
+"BGJ-Xd-xei.segmentTitles[0]" = "Evento";
+
+/* Class = "UISegmentedControl"; BGJ-Xd-xei.segmentTitles[1] = "Request Form"; ObjectID = "BGJ-Xd-xei"; */
+"BGJ-Xd-xei.segmentTitles[1]" = "Formulário de Solicitação";
+
+/* Class = "UILabel"; text = "Cluster"; ObjectID = "EGp-Oc-DYv"; */
+"EGp-Oc-DYv.text" = "Agrupar";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "F1X-Ux-HVh"; */
+"F1X-Ux-HVh.text" = "Etiqueta";
+
+/* Class = "UITextField"; placeholder = "Search Customer"; ObjectID = "FSF-Ez-jc8"; */
+"FSF-Ez-jc8.placeholder" = "Cliente de Pesquisa";
+
+/* Class = "UIButton"; normalTitle = "DAY"; ObjectID = "GQp-bn-Ndx"; */
+"GQp-bn-Ndx.normalTitle" = "DIA";
+
+/* Class = "UIButton"; normalTitle = "Start Meeting"; ObjectID = "Hei-9r-5dt"; */
+"Hei-9r-5dt.normalTitle" = "Iniciar reunião";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "IM6-jH-r9j"; */
+"IM6-jH-r9j.text" = "Etiqueta";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "L1P-6b-8ny"; */
+"L1P-6b-8ny.text" = "Etiqueta";
+
+/* Class = "UILabel"; text = "+1 more"; ObjectID = "LRT-tA-6Dp"; */
+"LRT-tA-6Dp.text" = "Mais 1";
+
+/* Class = "UILabel"; text = "Date Of Event"; ObjectID = "M9p-MX-gqn"; */
+"M9p-MX-gqn.text" = "Data do evento";
+
+/* Class = "UILabel"; text = "Wed"; ObjectID = "N3h-r1-bfB"; */
+"N3h-r1-bfB.text" = "Casar";
+
+/* Class = "UILabel"; text = "Customers"; ObjectID = "NlI-cW-Be9"; */
+"NlI-cW-Be9.text" = "Clientes";
+
+/* Class = "UILabel"; text = "Participants"; ObjectID = "P8v-D6-rf3"; */
+"P8v-D6-rf3.text" = "Participantes";
+
+/* Class = "UILabel"; text = "Thu"; ObjectID = "RwP-fu-LZm"; */
+"RwP-fu-LZm.text" = "qui";
+
+/* Class = "UILabel"; text = "Sun"; ObjectID = "UfT-Lj-Kd9"; */
+"UfT-Lj-Kd9.text" = "sol";
+
+/* Class = "UIButton"; normalTitle = "WEEK"; ObjectID = "VMN-tt-eXC"; */
+"VMN-tt-eXC.normalTitle" = "SEMANA";
+
+/* Class = "UIButton"; normalTitle = "SCHEDULE"; ObjectID = "XWC-MP-MdX"; */
+"XWC-MP-MdX.normalTitle" = "CRONOGRAMA";
+
+/* Class = "UIButton"; normalTitle = "CANCEL"; ObjectID = "Y4c-D2-cKs"; */
+"Y4c-D2-cKs.normalTitle" = "Cancelar";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ydq-IP-v7P"; */
+"Ydq-IP-v7P.text" = "Etiqueta";
+
+/* Class = "UILabel"; text = "Work Type"; ObjectID = "YpT-DL-CLu"; */
+"YpT-DL-CLu.text" = "Tipo de trabalho";
+
+/* Class = "UILabel"; text = "Event Description"; ObjectID = "ZOl-Tl-ajk"; */
+"ZOl-Tl-ajk.text" = "Descrição do Evento";
+
+/* Class = "UILabel"; text = "Duration"; ObjectID = "ZsD-KB-YeD"; */
+"ZsD-KB-YeD.text" = "Duração";
+
+/* Class = "UILabel"; text = "ANIL ASHOL SHINDE"; ObjectID = "bL9-q4-LfU"; */
+"bL9-q4-LfU.text" = "ANIL ASHOL SHINDE";
+
+/* Class = "UILabel"; text = "Email Setup"; ObjectID = "eTi-4g-1jZ"; */
+"eTi-4g-1jZ.text" = "Configuração de e-mail";
+
+/* Class = "UIButton"; normalTitle = "Ok"; ObjectID = "eXK-VB-0XM"; */
+"eXK-VB-0XM.normalTitle" = "OK";
+
+/* Class = "UITextField"; placeholder = "Search"; ObjectID = "fwF-Yu-KOl"; */
+"fwF-Yu-KOl.placeholder" = "Procurar";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gAA-pu-kkG"; */
+"gAA-pu-kkG.text" = "Etiqueta";
+
+/* Class = "UIButton"; normalTitle = "SEND REQUEST"; ObjectID = "hJU-G4-Qg0"; */
+"hJU-G4-Qg0.normalTitle" = "ENVIAR PEDIDO";
+
+/* Class = "UILabel"; text = "Fri"; ObjectID = "hKS-xw-XeD"; */
+"hKS-xw-XeD.text" = "Sex";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "k9W-oc-f9m"; */
+"k9W-oc-f9m.text" = "Etiqueta";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "kpF-4J-OQS"; */
+"kpF-4J-OQS.text" = "Etiqueta";
+
+/* Class = "UILabel"; text = "Customer"; ObjectID = "l0H-cf-6rK"; */
+"l0H-cf-6rK.text" = "Cliente";
+
+/* Class = "UILabel"; text = "Event Date & Time"; ObjectID = "lHJ-gW-TCu"; */
+"lHJ-gW-TCu.text" = "Data e hora do evento";
+
+/* Class = "UIButton"; normalTitle = "ADD EVENT"; ObjectID = "lPj-QM-VKc"; */
+"lPj-QM-VKc.normalTitle" = "ADICIONAR EVENTO";
+
+/* Class = "UILabel"; text = "To"; ObjectID = "lx3-H6-ULC"; */
+"lx3-H6-ULC.text" = "Para";
+
+/* Class = "UILabel"; text = "Event Duration"; ObjectID = "lx5-2y-gZa"; */
+"lx5-2y-gZa.text" = "Duração do Evento";
+
+/* Class = "UILabel"; text = "From"; ObjectID = "naR-Jp-Vh8"; */
+"naR-Jp-Vh8.text" = "A partir de";
+
+/* Class = "UIButton"; normalTitle = "CANCEL"; ObjectID = "pcR-gg-Htw"; */
+"pcR-gg-Htw.normalTitle" = "Cancelar";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "puW-du-HvH"; */
+"puW-du-HvH.text" = "Etiqueta";
+
+/* Class = "UILabel"; text = "Add Event"; ObjectID = "qor-jL-AdJ"; */
+"qor-jL-AdJ.text" = "ADICIONAR EVENTO";
+
+/* Class = "UIButton"; normalTitle = "TODAY"; ObjectID = "rdV-Zb-Tl0"; */
+"rdV-Zb-Tl0.normalTitle" = "HOJE";
+
+/* Class = "UILabel"; text = "Event Title"; ObjectID = "sOx-QU-Gc7"; */
+"sOx-QU-Gc7.text" = "Título do evento";
+
+/* Class = "UILabel"; text = "Event Name"; ObjectID = "umT-Qw-wvg"; */
+"umT-Qw-wvg.text" = "Nome do evento";
+
+/* Class = "UILabel"; text = "Sat"; ObjectID = "x6t-Of-WLD"; */
+"x6t-Of-WLD.text" = "Sentou";
