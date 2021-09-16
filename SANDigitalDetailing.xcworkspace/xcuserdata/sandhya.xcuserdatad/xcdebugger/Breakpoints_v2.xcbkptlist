@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "464E3CDD-87B6-4A03-9967-795F405BE3D4"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B715EA22-E85E-4A2D-9941-EF989FE2ABE9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SANDigitalDetailing/Controllers/MainHomeController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1915"
+            endingLineNumber = "1915"
+            landmarkName = "-setSetupValues"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F2FF093C-784B-401F-B49F-54DC046A38CF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SANDigitalDetailing/Controllers/SurveyActivity/SurveyActivityCtrl.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "350"
+            endingLineNumber = "350"
+            landmarkName = "-collectionView:cellForItemAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E7E934D3-BDF6-414F-8F9D-578F37CC6200"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SANDigitalDetailing/Controllers/SurveyActivity/SurveyActivityCtrl.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "772"
+            endingLineNumber = "772"
+            landmarkName = "-filterDoctorList"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E7E934D3-BDF6-414F-8F9D-578F37CC6200 - e81cd0573c53dd9e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SurveyActivityCtrl filterDoctorList]"
+                  moduleName = "SANDigitalDetailing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sandhya/Documents/SANDigitalDetailing/SANDigitalDetailing/Controllers/SurveyActivity/SurveyActivityCtrl.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "772"
+                  endingLineNumber = "772"
+                  offsetFromSymbolStart = "1828">
+               </Location>
+               <Location
+                  uuid = "E7E934D3-BDF6-414F-8F9D-578F37CC6200 - 923f851a28e10e0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__38-[SurveyActivityCtrl filterDoctorList]_block_invoke"
+                  moduleName = "SANDigitalDetailing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sandhya/Documents/SANDigitalDetailing/SANDigitalDetailing/Controllers/SurveyActivity/SurveyActivityCtrl.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "773"
+                  endingLineNumber = "773"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6EE463FA-B9DF-4F64-B5CE-65CC9905924D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SANDigitalDetailing/Controllers/SurveyActivity/SurveyActivityCtrl.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "500"
+            endingLineNumber = "500"
+            landmarkName = "-getDataList"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C1B75111-BAF2-4379-9208-8BEC45A97F83"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SANDigitalDetailing/Controllers/MasterDownloader.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B870AA39-5DEA-438C-AD89-B270A2CFCBCE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SANDigitalDetailing/Controllers/ToDyTPvwCtrl.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "-tableView:numberOfRowsInSection:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

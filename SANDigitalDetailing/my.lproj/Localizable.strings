@@ -1,0 +1,74 @@
+/*
+  Localizable.strings
+  SANDigitalDetailing
+
+  Created by SANeForce.com on 09/09/18.
+  Copyright © 2018 SANeForce.com. All rights reserved.
+*/
+"InvalidUser"="Invalid User ID / Password";
+
+"Calls"="Calls";
+"Create Presentation"="Create Presentation";
+"Reports"="Reports";
+
+"Change Cluster"="Change Cluster";
+"Tour Plan"="Tour Plan";
+"Leave Application"="Leave Application";
+"Settings"="Settings";
+"Logout"="Logout";
+
+"Pending Calls"="Pending Calls";
+"Today Calls"="Today Calls";
+"Total"="Total";
+
+"CheckTPMsg"="Checking Master TP...";
+"CheckDyTPMsg"="Getting Today Tour Plan...";
+"MasDownlMsg"="Master List Downloading...";
+
+"TPSuccess"="Today Work Plan Submitted Successfully";
+"TPError"="Something went to wrong.\n Try Again!.";
+"TPFail"="Today Work Plan Submission Failed";
+"NotifyHead"="Notification Message";
+"NextVstMandate"="Select The Next Visit Date";
+"CallTypeMandate"="Select The Call Type";
+
+"Drug"="Drug";
+"Non Drug"="Non Drug";
+
+"Morning"="Morning";
+"Afternoon"="Afternoon";
+"Evening"="Evening";
+"Day"="Day";
+
+"High"="High";
+"Medium High"="Medium High";
+"Medium Low"="Medium Low";
+"Low"="Low";
+
+"Targeting (New Patients / Month)"="Targeting (New Patients / Month)";
+"Average number of patients per day (approximately)"="Average number of patients per day (approximately)";
+"Sessions"="Session";
+"Economic class of patients"="Economic class of patients";
+
+"Doctor Profiling"="Doctor Profiling";
+"Private Clinic"="Private Clinic";
+"Public Surgery"="Public Surgery";
+"Intramoenia Surgery"="Intramoenia Surgery";
+"Hospital"="Hospital";
+"Clinic"="Clinic";
+"Profiling"="ကိုယ်ရေးမှတ်တမ်း";
+"Approvals"="ထောက်ခံချက်";
+"Activity"="လုပ်ဆောင်ချက်";
+"Missed Date Entry"="လွဲချော်သည့်ရက်စွဲစာရင်း";
+"GEO Tag / Explore"="GEO Tag/စူးစမ်းပါ";
+"Survey"="စစ်တမ်း";
+"TODAY WORK PLAN"="ယနေ့အလုပ်အစီအစဉ်";
+"Work Types"="အလုပ်အမျိုးအစားများ";
+"Headquters"="ဌာနချုပ်";
+"All"="အားလုံး";
+"Show All"="အားလုံးကိုပြပါ";
+"Selection"="ရွေးချယ်ရေး";
+"Customer"="ဖောက်သည်";
+"Search"="ရှာဖွေပါ";
+"institutions"="အဖွဲ့အစည်းများ";
+"Chemist"="Nhà hóa học";
