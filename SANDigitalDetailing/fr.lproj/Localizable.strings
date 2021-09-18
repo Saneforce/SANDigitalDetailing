@@ -19,7 +19,7 @@
 
 "Pending Calls" = "Appels en attente";
 "Today Calls" = "Appels d'aujourd'hui";
-"Total" = "Total";
+"Total" = "Le total";
 
 "CheckTPMsg" = "Vérification du TP maître...";
 "CheckDyTPMsg" = "Obtenir le plan de visite d'aujourd'hui...";
@@ -201,3 +201,33 @@
 "Search"="Chercher";
 "institutions"="établissements";
 "Chemist"="Chimiste";
+"Cluster"="Grappe";
+"SFE KPI"="KPI SFE";
+"Training KPI"="KPI de formation";
+"Samples Detail"="Détail des échantillons";
+"No chart data available."="Aucune donnée graphique disponible.";
+"Field Work"="Travail sur le terrain";
+"Weekly Off"="Hebdomadaire de repos";
+"Competitors"="Concurrentes";
+"Products"="Des produits";
+"Slides"="Diapositives";
+"Brands"="Marques";
+"Departments"="Départements";
+"Speciality"="Spécialité";
+"Category"="Catégorie";
+"Qualifications"="Qualifications";
+"Rating Details"="Détails de l'évaluation";
+"Rating Feedbacks"="Évaluations";
+"Speaker List"="Liste des orateurs";
+"Participant List"="Liste des participants";
+"Indication List"="Liste des indications";
+"Class"="Classer";
+"Types"="Les types";
+"Clusters"="Groupes";
+"Chemists"="Chimistes";
+"Doctors"="Médecins";
+"Stockists"="Revendeuses";
+"Unlisted Doctors"="Médecins non répertoriés";
+"Institutions"="Établissements";
+"Jointworks"="Jointworks";
+"Input"="Saisir";

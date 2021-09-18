@@ -69,6 +69,7 @@
 
 @property (nonatomic, weak) IBOutlet UITableView* tvSideMenu;
 
+@property (weak, nonatomic) IBOutlet UILabel *lblCLuster;
 
 
 

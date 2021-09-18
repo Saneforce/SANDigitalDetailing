@@ -14,8 +14,8 @@
             filePath = "SANDigitalDetailing/Controllers/MainHomeController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1915"
-            endingLineNumber = "1915"
+            startingLineNumber = "1917"
+            endingLineNumber = "1917"
             landmarkName = "-setSetupValues"
             landmarkType = "7">
          </BreakpointContent>

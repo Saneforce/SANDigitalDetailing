@@ -215,8 +215,8 @@
     [chartCntr addSubview: _SFEKPIChart];
     [chartCntr addSubview: _TRKPIChart];
     
-    [self setBarChartProperty:_SFEKPIChart andTitle:@"SFE KPI"];
-    [self setBarChartProperty:_TRKPIChart andTitle:@"Training KPI"];
+    [self setBarChartProperty:_SFEKPIChart andTitle:NSLocalizedString(@"SFE KPI", @"SFE KPI")];
+    [self setBarChartProperty:_TRKPIChart andTitle:NSLocalizedString(@"Training KPI", @"Training KPI")];
     
     [self.vwDashboard addSubview: chartCntr];
     float x=scrlViewWidth+10;
@@ -229,8 +229,9 @@
     [SampleChart addSubview: _SmpProdChart];
     //[chartCntr addSubview: _TRKPIChart];
     
-    [self setBarChartProperty:_SmpProdChart andTitle:@"Samples Detail"];
+    [self setBarChartProperty:_SmpProdChart andTitle:NSLocalizedString(@"Samples Detail", @"Samples Detail")];
     //[self setBarChartProperty:_TRKPIChart andTitle:@"Training KPI"];
+    [self.lblCLuster setText:NSLocalizedString(@"Cluster", @"Cluster")];
     
     [self.vwDashboard addSubview: SampleChart];
     x=x+scrlViewWidth+10;
@@ -1059,8 +1060,9 @@
     
     NSDictionary *MyTP = [[NSDictionary alloc] init];
     MyTP = [[[NSUserDefaults standardUserDefaults] objectForKey:@"MyTodayplan.SANAPP"] mutableCopy];
-    self.lblWTType.text=[MyTP valueForKey:@"WTNm"];
-    self.lblClust.text=[MyTP valueForKey:@"PlNm"];
+    NSString *text = [[MyTP valueForKey:@"WTNm"] stringByReplacingOccurrencesOfString:@"," withString:@""];
+    self.lblWTType.text= NSLocalizedString(text, text);
+    self.lblClust.text=NSLocalizedString([MyTP valueForKey:@"PlNm"], [MyTP valueForKey:@"PlNm"]);
     
 }
 -(void) showMissDtWindow{
