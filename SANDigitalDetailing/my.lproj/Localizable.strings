@@ -19,7 +19,7 @@
 
 "Pending Calls"="Pending Calls";
 "Today Calls"="Today Calls";
-"Total"="Total";
+"Total"="စုစုပေါင်း";
 
 "CheckTPMsg"="Checking Master TP...";
 "CheckDyTPMsg"="Getting Today Tour Plan...";
@@ -72,3 +72,33 @@
 "Search"="ရှာဖွေပါ";
 "institutions"="အဖွဲ့အစည်းများ";
 "Chemist"="Nhà hóa học";
+"Cluster"="အစုလိုက်";
+"SFE KPI"="SFE KPI";
+"Training KPI"="KPI သင်တန်း";
+"Samples Detail"="နမူနာအသေးစိတ်";
+"No chart data available."="ဇယားအချက်အလက်မရှိပါ။";
+"Field Work"="ကွင်းဆင်းလုပ်ငန်း";
+"Weekly Off"="အပတ်စဉ်ပိတ်သည်";
+"Competitors"="ပြိုင်ဘက်";
+"Products"="ထုတ်ကုန်များ";
+"Slides"="ဆလိုက်များ";
+"Brands"="အမှတ်တံဆိပ်များ";
+"Departments"="ဌာနဆိုင်ရာများ";
+"Speciality"="အထူး";
+"Category"="အမျိုးအစား";
+"Qualifications"="အရည်အချင်းများ";
+"Rating Details"="အဆင့်သတ်မှတ်ချက်အသေးစိတ်";
+"Rating Feedbacks"="တုံ့ပြန်ချက်များအဆင့်သတ်မှတ်ခြင်း";
+"Speaker List"="စပီကာစာရင်း";
+"Participant List"="ပါဝင်သူစာရင်း";
+"Indication List"="အချက်ပြစာရင်း";
+"Class"="အတန်းထဲမှာ";
+"Types"="အမျိုးအစားများ";
+"Clusters"="ပြွတ်";
+"Chemists"="ဓာတုဗေဒပညာရှင်";
+"Doctors"="ဆရာဝန်များ";
+"Stockists"="စတော့ရှယ်ယာများ";
+"Unlisted Doctors"="စာရင်းမသွင်းသောဆရာဝန်များ";
+"Institutions"="အင်စတီကျူးရှင်းများ";
+"Jointworks"="ပူးတွဲလုပ်ငန်းများ";
+"Input"="ထည့်သွင်းသည်";
