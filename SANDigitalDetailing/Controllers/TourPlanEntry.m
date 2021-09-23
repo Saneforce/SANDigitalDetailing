@@ -1191,7 +1191,7 @@
                 _PrevDates=[[NSMutableArray alloc]init];
                 self.CalnDates=[[mDatas[0] objectForKey:@"TPDatas"] mutableCopy];
                 _PrevDates=[[mDatas[0] objectForKey:@"TPDatas"] mutableCopy];
-                [_TPData setValue:@"1" forKey:@"TPFlag"];
+                [_TPData setValue:[mDatas[0] objectForKey:@"TPFlag"] forKey:@"TPFlag"];
                 [self SaveTPtoLocal];
                 [self renderCalender:[self.SelMonth intValue] year:[self.SelYear intValue]];
                 
@@ -1202,6 +1202,35 @@
          
          }
 }
+- (IBAction)syncCalander:(id)sender {
+   
+    [BaseViewController Toast:NSLocalizedString(@"Syncing Calendar",@"Syncing Calendar")];
+
+    NSMutableDictionary* TPParam=[[NSMutableDictionary alloc] init];
+    [TPParam setValue:self.SelMonth forKey:@"Month"];
+    [TPParam setValue:self.SelYear forKey:@"Year"];
+    [WBService SendServerRequest:@"GET/TPDetails" withParameter:TPParam withImages:nil DataSF:nil completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage) {
+        NSMutableArray *mDatas=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
+        if([mDatas count]>0)
+        {
+            _PrevDates=[[NSMutableArray alloc]init];
+            self.CalnDates=[[mDatas[0] objectForKey:@"TPDatas"] mutableCopy];
+            _PrevDates=[[mDatas[0] objectForKey:@"TPDatas"] mutableCopy];
+            if([[mDatas[0] objectForKey:@"status"] integerValue] == 1)
+                [_TPData setValue:@"1" forKey:@"TPFlag"];
+            else if([[mDatas[0] objectForKey:@"status"] integerValue] == 2)
+                [_TPData setValue:@"0" forKey:@"TPFlag"];
+
+            [self SaveTPtoLocal];
+            [self renderCalender:[self.SelMonth intValue] year:[self.SelYear intValue]];
+            
+        }
+    } error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage) {
+     
+    }];
+     
+}
+
 -(IBAction) sendToApproval:(id)sender
 {
     BOOL EFlag=YES;

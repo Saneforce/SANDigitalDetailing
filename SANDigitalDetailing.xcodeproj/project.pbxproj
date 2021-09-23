@@ -480,6 +480,7 @@
 		763383533AABC9A0673227CA /* Pods_SANDigitalDetailing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SANDigitalDetailing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		921AF01CA7946E3B7A6B312A /* Pods-SANDigitalDetailing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SANDigitalDetailing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SANDigitalDetailing/Pods-SANDigitalDetailing.debug.xcconfig"; sourceTree = "<group>"; };
 		A9541E89AC9315810EC023AB /* Pods-SANDigitalDetailing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SANDigitalDetailing.release.xcconfig"; path = "Pods/Target Support Files/Pods-SANDigitalDetailing/Pods-SANDigitalDetailing.release.xcconfig"; sourceTree = "<group>"; };
+		E7077A3D26FC8BA00019107F /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Main.strings; sourceTree = "<group>"; };
 		E717169C26F0C1AC00B3173C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Meeting.storyboard; sourceTree = "<group>"; };
 		E717169E26F0C31400B3173C /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
 		E717169F26F0C31400B3173C /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -1434,6 +1435,7 @@
 				E71716A726F0C44800B3173C /* my */,
 				E71716AA26F0C4A300B3173C /* es */,
 				E71716AD26F0C4B100B3173C /* es-419 */,
+				E7077A3D26FC8BA00019107F /* English */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
