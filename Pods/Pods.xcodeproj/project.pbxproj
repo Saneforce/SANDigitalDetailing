@@ -2996,7 +2996,7 @@
 		07877D7DA88BED2DC0810702ECA29139 /* MSGraphFollowupFlag.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphFollowupFlag.m; path = GeneratedModels/MSGraphFollowupFlag.m; sourceTree = "<group>"; };
 		07CE05541C5CEB6F9E4D263A34304F03 /* MSIDTokenResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDTokenResult.m; path = MSAL/IdentityCore/IdentityCore/src/requests/result/MSIDTokenResult.m; sourceTree = "<group>"; };
 		07E635C8684FFCAC95DE37CB3FE9624B /* MSGraphWorkbookFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphWorkbookFilter.h; path = GeneratedModels/MSGraphWorkbookFilter.h; sourceTree = "<group>"; };
-		07FF532D124FFF8567F6B7C7585EB6E6 /* MSAL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MSAL.framework; path = MSAL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07FF532D124FFF8567F6B7C7585EB6E6 /* MSAL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MSAL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		084DFFF8EE76FBEED1CAE9B8CD38F71F /* MSGraphManagedDeviceOwnerType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphManagedDeviceOwnerType.m; path = GeneratedModels/MSGraphManagedDeviceOwnerType.m; sourceTree = "<group>"; };
 		085FA3375FA6CC42F9AB15B1F55FC4A8 /* MSGraphExchangeIdFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphExchangeIdFormat.m; path = GeneratedModels/MSGraphExchangeIdFormat.m; sourceTree = "<group>"; };
 		086F936C2FF3DF8D51636FC1AE1AE56B /* FSCalendarCollectionViewLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCollectionViewLayout.m; path = FSCalendar/FSCalendarCollectionViewLayout.m; sourceTree = "<group>"; };
@@ -3086,7 +3086,7 @@
 		0F82E8A373B0384AFF55CC2F73785173 /* MSIDOauth2Factory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDOauth2Factory.m; path = MSAL/IdentityCore/IdentityCore/src/oauth2/MSIDOauth2Factory.m; sourceTree = "<group>"; };
 		0F877EBED803F09E2FF66579BE489786 /* MSIDExternalAADCacheSeeder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDExternalAADCacheSeeder.h; path = MSAL/IdentityCore/IdentityCore/src/MSIDExternalAADCacheSeeder.h; sourceTree = "<group>"; };
 		0F8AEF8227F50726988AC84962D369AD /* MSIDSSOTokenResponseHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDSSOTokenResponseHandler.m; path = MSAL/IdentityCore/IdentityCore/src/requests/broker/MSIDSSOTokenResponseHandler.m; sourceTree = "<group>"; };
-		0F8B350BCF700EF197866DC7B55ECF5A /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = unzip.c; path = SSZipArchive/minizip/unzip.c; sourceTree = "<group>"; };
+		0F8B350BCF700EF197866DC7B55ECF5A /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = unzip.c; path = SSZipArchive/minizip/unzip.c; sourceTree = "<group>"; };
 		0F9F43F80B543CC40B01A32E081A9CEB /* MSIDLocalInteractiveController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDLocalInteractiveController.h; path = MSAL/IdentityCore/IdentityCore/src/controllers/MSIDLocalInteractiveController.h; sourceTree = "<group>"; };
 		0FAEDE87A1FAB79DF4D8287E97B90231 /* MSIDWorkPlaceJoinUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDWorkPlaceJoinUtil.m; path = MSAL/IdentityCore/IdentityCore/src/workplacejoin/ios/MSIDWorkPlaceJoinUtil.m; sourceTree = "<group>"; };
 		0FB15246770760E407978BAD93B6D5C3 /* MSIDBrokerOperationRemoveAccountRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDBrokerOperationRemoveAccountRequest.h; path = MSAL/IdentityCore/IdentityCore/src/broker_operation/request/account_request/MSIDBrokerOperationRemoveAccountRequest.h; sourceTree = "<group>"; };
@@ -3195,7 +3195,7 @@
 		1A3D2792D687710783C5549F80FAF066 /* MSGraphResetPasscodeActionResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphResetPasscodeActionResult.m; path = GeneratedModels/MSGraphResetPasscodeActionResult.m; sourceTree = "<group>"; };
 		1A48B0728C321BC659AA534E4BE2DA61 /* MSGraphImageInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphImageInfo.m; path = GeneratedModels/MSGraphImageInfo.m; sourceTree = "<group>"; };
 		1A87B7A6CD6237020374952DCDA2433D /* MSALLegacySharedAccountsProvider+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MSALLegacySharedAccountsProvider+Internal.h"; path = "MSAL/src/configuration/external/ios/MSALLegacySharedAccountsProvider+Internal.h"; sourceTree = "<group>"; };
-		1A9352861A7A4342DF820A43C62C5882 /* ioapi_mem.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi_mem.c; path = SSZipArchive/minizip/ioapi_mem.c; sourceTree = "<group>"; };
+		1A9352861A7A4342DF820A43C62C5882 /* ioapi_mem.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = ioapi_mem.c; path = SSZipArchive/minizip/ioapi_mem.c; sourceTree = "<group>"; };
 		1A97CDFBAF5F7D86D387C9F623C5420B /* MSGraphMobileThreatDefenseConnector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphMobileThreatDefenseConnector.h; path = GeneratedModels/MSGraphMobileThreatDefenseConnector.h; sourceTree = "<group>"; };
 		1A984B3A3BB207A04C4FA3B3738F4F5A /* MSIDWebResponseBrokerInstallOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDWebResponseBrokerInstallOperation.h; path = MSAL/IdentityCore/IdentityCore/src/webview/operations/MSIDWebResponseBrokerInstallOperation.h; sourceTree = "<group>"; };
 		1ADC86C8FE000F32C2CF50C4BD9EC187 /* MSGraphSizeRange.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphSizeRange.m; path = GeneratedModels/MSGraphSizeRange.m; sourceTree = "<group>"; };
@@ -3228,7 +3228,7 @@
 		1D7100F8989E041600BFA8A421872F71 /* MSIDAADV2BrokerResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDAADV2BrokerResponse.m; path = MSAL/IdentityCore/IdentityCore/src/oauth2/aad_v2/MSIDAADV2BrokerResponse.m; sourceTree = "<group>"; };
 		1D8609B664B8200900C3BC8B29B96F5E /* MSGraphWorkbookFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphWorkbookFilter.m; path = GeneratedModels/MSGraphWorkbookFilter.m; sourceTree = "<group>"; };
 		1DCC74313AF48598C6B33726FA534B07 /* MSIDBrokerInteractiveController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDBrokerInteractiveController.m; path = MSAL/IdentityCore/IdentityCore/src/controllers/broker/ios/MSIDBrokerInteractiveController.m; sourceTree = "<group>"; };
-		1DF4CB446F20B810E68B871A0F569407 /* Pods_SANDigitalDetailing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SANDigitalDetailing.framework; path = "Pods-SANDigitalDetailing.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF4CB446F20B810E68B871A0F569407 /* Pods_SANDigitalDetailing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SANDigitalDetailing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DFF35A3D6543B5FF458A469F96AD524 /* MSGraphDeviceManagementSettings.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphDeviceManagementSettings.m; path = GeneratedModels/MSGraphDeviceManagementSettings.m; sourceTree = "<group>"; };
 		1E21E380171BD38BB7CF97480DBEF90A /* MSAuthenticationHandlerOptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSAuthenticationHandlerOptions.m; path = MSGraphClientSDK/MSGraphClientSDK/Middleware/Options/MSAuthenticationHandlerOptions.m; sourceTree = "<group>"; };
 		1E2BF576D042B9B6828604DC59C60B13 /* MSGraphAndroidManagedAppProtection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphAndroidManagedAppProtection.m; path = GeneratedModels/MSGraphAndroidManagedAppProtection.m; sourceTree = "<group>"; };
@@ -3369,7 +3369,7 @@
 		296F8C7E5E8B2F92FD70A96E6AE57E24 /* MSGraphIosDeviceType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphIosDeviceType.h; path = GeneratedModels/MSGraphIosDeviceType.h; sourceTree = "<group>"; };
 		298195C9155C19EF9BC45718AE82CA8A /* MSGraphDeviceManagement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphDeviceManagement.m; path = GeneratedModels/MSGraphDeviceManagement.m; sourceTree = "<group>"; };
 		298A1A27B2CF99C613728C66CE17F036 /* MSGraphPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphPermission.h; path = GeneratedModels/MSGraphPermission.h; sourceTree = "<group>"; };
-		298A9D8D9DCEF4EAFABC960E56495B41 /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi.c; path = SSZipArchive/minizip/ioapi.c; sourceTree = "<group>"; };
+		298A9D8D9DCEF4EAFABC960E56495B41 /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = ioapi.c; path = SSZipArchive/minizip/ioapi.c; sourceTree = "<group>"; };
 		299A636BCFAC0BF4A0DDCB48251EA071 /* MSGraphAudioConferencing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphAudioConferencing.h; path = GeneratedModels/MSGraphAudioConferencing.h; sourceTree = "<group>"; };
 		299B14CAEAF46C4BDB23D0315DCC9DEC /* MSGraphEducationGender.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphEducationGender.h; path = GeneratedModels/MSGraphEducationGender.h; sourceTree = "<group>"; };
 		29A66B009BB40F323DA2DA57C155E715 /* MSGraphOmaSettingStringXml.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphOmaSettingStringXml.m; path = GeneratedModels/MSGraphOmaSettingStringXml.m; sourceTree = "<group>"; };
@@ -3411,7 +3411,7 @@
 		2CB0AD2378D11250A14FBDD3804781F8 /* MSGraphMediaContentRatingJapan.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphMediaContentRatingJapan.h; path = GeneratedModels/MSGraphMediaContentRatingJapan.h; sourceTree = "<group>"; };
 		2CC758CB3F09FFB63491B581934A215B /* MSGraphWorkbookChartAxisFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphWorkbookChartAxisFormat.h; path = GeneratedModels/MSGraphWorkbookChartAxisFormat.h; sourceTree = "<group>"; };
 		2CCD48A4D9FEFBD472A999A63859FE79 /* MSGraphWeeklySchedule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphWeeklySchedule.m; path = GeneratedModels/MSGraphWeeklySchedule.m; sourceTree = "<group>"; };
-		2D17A4CB98864094B272F487F1D63C44 /* crypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = crypt.c; path = SSZipArchive/minizip/crypt.c; sourceTree = "<group>"; };
+		2D17A4CB98864094B272F487F1D63C44 /* crypt.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = crypt.c; path = SSZipArchive/minizip/crypt.c; sourceTree = "<group>"; };
 		2D48A32E5F20A838B4BE47BC154E74C5 /* MSRedirectHandlerOptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSRedirectHandlerOptions.m; path = MSGraphClientSDK/MSGraphClientSDK/Middleware/Options/MSRedirectHandlerOptions.m; sourceTree = "<group>"; };
 		2D5AFC37FFA363CAEA728B0FA2742489 /* MSGraphRegistryOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphRegistryOperation.h; path = GeneratedModels/MSGraphRegistryOperation.h; sourceTree = "<group>"; };
 		2D6521411207AE43DA67176D58449FA0 /* MSGraphMdmAuthority.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphMdmAuthority.h; path = GeneratedModels/MSGraphMdmAuthority.h; sourceTree = "<group>"; };
@@ -3613,7 +3613,7 @@
 		3D5761BD1C7820B3A2E3BB44202B722D /* MSGraphComplianceInformation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphComplianceInformation.h; path = GeneratedModels/MSGraphComplianceInformation.h; sourceTree = "<group>"; };
 		3D88AFBD7B5589A33EA6D6031F40A51B /* MSGraphManagedAppDataTransferLevel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphManagedAppDataTransferLevel.m; path = GeneratedModels/MSGraphManagedAppDataTransferLevel.m; sourceTree = "<group>"; };
 		3D946A77A6DF785BB184907C7D5CB74D /* MSGraphMobileAppPublishingState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphMobileAppPublishingState.m; path = GeneratedModels/MSGraphMobileAppPublishingState.m; sourceTree = "<group>"; };
-		3DB18322264328680F65D46B59CB48D8 /* zip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = zip.c; path = SSZipArchive/minizip/zip.c; sourceTree = "<group>"; };
+		3DB18322264328680F65D46B59CB48D8 /* zip.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = zip.c; path = SSZipArchive/minizip/zip.c; sourceTree = "<group>"; };
 		3DB20188B09E2009F40B9C596AD60274 /* BarChartDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarChartDataProvider.swift; path = Source/Charts/Interfaces/BarChartDataProvider.swift; sourceTree = "<group>"; };
 		3DB69A373CEF65CF4762B24B652E10D0 /* MSIDSSOExtensionGetAccountsRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDSSOExtensionGetAccountsRequest.m; path = MSAL/IdentityCore/IdentityCore/src/requests/broker/MSIDSSOExtensionGetAccountsRequest.m; sourceTree = "<group>"; };
 		3DC2D6CEC052D2FC527C43347EA6FD76 /* MSGraphSearchResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphSearchResult.h; path = GeneratedModels/MSGraphSearchResult.h; sourceTree = "<group>"; };
@@ -3825,7 +3825,7 @@
 		516E0C8D755C94AC9A0C16F7ECCE7A35 /* MSGraphToneInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphToneInfo.h; path = GeneratedModels/MSGraphToneInfo.h; sourceTree = "<group>"; };
 		517118A58A95B72528641209E16227C5 /* SVProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SVProgressHUD.modulemap; sourceTree = "<group>"; };
 		518F1C9ED9763294E485E998106EF556 /* MSGraphDeviceThreatProtectionLevel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphDeviceThreatProtectionLevel.h; path = GeneratedModels/MSGraphDeviceThreatProtectionLevel.h; sourceTree = "<group>"; };
-		51949E86FDE94999E5E0002045C27E87 /* minishared.c */ = {isa = PBXFileReference; includeInIndex = 1; name = minishared.c; path = SSZipArchive/minizip/minishared.c; sourceTree = "<group>"; };
+		51949E86FDE94999E5E0002045C27E87 /* minishared.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = minishared.c; path = SSZipArchive/minizip/minishared.c; sourceTree = "<group>"; };
 		51D294054C032ECE76D0DEA2BA62ADB0 /* MSGraphSharedDriveItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphSharedDriveItem.m; path = GeneratedModels/MSGraphSharedDriveItem.m; sourceTree = "<group>"; };
 		51E8D2F295026AE82A6478AC2F7EBA6F /* MSGraphDeviceManagementExchangeConnectorSyncType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphDeviceManagementExchangeConnectorSyncType.h; path = GeneratedModels/MSGraphDeviceManagementExchangeConnectorSyncType.h; sourceTree = "<group>"; };
 		51F6312377F4261760BDFF991ADCA7E4 /* MSIDDefaultCredentialCacheKey.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDDefaultCredentialCacheKey.m; path = MSAL/IdentityCore/IdentityCore/src/cache/key/MSIDDefaultCredentialCacheKey.m; sourceTree = "<group>"; };
@@ -3906,7 +3906,7 @@
 		5827CFFDC9D4F3DEB5E44B95987F9260 /* MSIDBasicContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDBasicContext.m; path = MSAL/IdentityCore/IdentityCore/src/MSIDBasicContext.m; sourceTree = "<group>"; };
 		586D6C5EDB1919A10EA1673C2F8F628F /* MSIDAuthority+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MSIDAuthority+Internal.h"; path = "MSAL/IdentityCore/IdentityCore/src/validation/MSIDAuthority+Internal.h"; sourceTree = "<group>"; };
 		589164B5E68CD7CD1AED00BB34FDA239 /* MSIDTelemetryAuthorityValidationEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDTelemetryAuthorityValidationEvent.h; path = MSAL/IdentityCore/IdentityCore/src/telemetry/MSIDTelemetryAuthorityValidationEvent.h; sourceTree = "<group>"; };
-		589A3C2C0D80C7E61BD628415B1C5A82 /* fileenc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fileenc.c; path = SSZipArchive/minizip/aes/fileenc.c; sourceTree = "<group>"; };
+		589A3C2C0D80C7E61BD628415B1C5A82 /* fileenc.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = fileenc.c; path = SSZipArchive/minizip/aes/fileenc.c; sourceTree = "<group>"; };
 		58B22B5BDBC4C69D10F37A3F4B793524 /* MSGraphVisibilitySetting.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphVisibilitySetting.m; path = GeneratedModels/MSGraphVisibilitySetting.m; sourceTree = "<group>"; };
 		58BAFFDAC9D480B5EA4FE99DAF55FF20 /* MSIDLegacyRefreshToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDLegacyRefreshToken.m; path = MSAL/IdentityCore/IdentityCore/src/oauth2/token/MSIDLegacyRefreshToken.m; sourceTree = "<group>"; };
 		58C6EF6AAD01705E57E5EB0A59DB8826 /* MSGraphWorkbookApplication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphWorkbookApplication.h; path = GeneratedModels/MSGraphWorkbookApplication.h; sourceTree = "<group>"; };
@@ -3973,7 +3973,7 @@
 		5D80C0B7290D6B9B0074AF6063CECE95 /* MSIDAADEndpointProviding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDAADEndpointProviding.h; path = MSAL/IdentityCore/IdentityCore/src/network/MSIDAADEndpointProviding.h; sourceTree = "<group>"; };
 		5DC48443AA4407F01849DAE4E5714282 /* MSGraphTone.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphTone.m; path = GeneratedModels/MSGraphTone.m; sourceTree = "<group>"; };
 		5DD04F4CDCF43E02FCD25AAFC40091F0 /* AnimatedMoveViewJob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedMoveViewJob.swift; path = Source/Charts/Jobs/AnimatedMoveViewJob.swift; sourceTree = "<group>"; };
-		5DD060BA36FBE399B3453A9E6C383036 /* pwd2key.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pwd2key.c; path = SSZipArchive/minizip/aes/pwd2key.c; sourceTree = "<group>"; };
+		5DD060BA36FBE399B3453A9E6C383036 /* pwd2key.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pwd2key.c; path = SSZipArchive/minizip/aes/pwd2key.c; sourceTree = "<group>"; };
 		5DD233C19ED7D72D99C3C174AE2BB186 /* MSIDChallengeHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDChallengeHandler.m; path = MSAL/IdentityCore/IdentityCore/src/webview/embeddedWebview/challangeHandlers/MSIDChallengeHandler.m; sourceTree = "<group>"; };
 		5DDE181E7C60F8E324542E483F51D8D2 /* MSIDDeviceInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDDeviceInfo.h; path = MSAL/IdentityCore/IdentityCore/src/broker_operation/response/MSIDDeviceInfo.h; sourceTree = "<group>"; };
 		5E0F79ADCA499A60B9305A03AB87C6B2 /* MSALTokenParameters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSALTokenParameters.h; path = MSAL/src/public/MSALTokenParameters.h; sourceTree = "<group>"; };
@@ -4144,8 +4144,8 @@
 		6BD42860A1E853D1AB151830E71CCBD0 /* MSGraphEmailRole.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphEmailRole.m; path = GeneratedModels/MSGraphEmailRole.m; sourceTree = "<group>"; };
 		6BD61A61972A2748E62795A56B8CFF24 /* MSGraphItemActivityStat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphItemActivityStat.m; path = GeneratedModels/MSGraphItemActivityStat.m; sourceTree = "<group>"; };
 		6BDD89D15F7661FA177249EFDCA7C227 /* MSALADFSAuthority.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSALADFSAuthority.m; path = MSAL/src/instance/MSALADFSAuthority.m; sourceTree = "<group>"; };
-		6BE7D70D16EE24E8A87D36B91CE48667 /* MSGraphClientModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MSGraphClientModels.framework; path = MSGraphClientModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C05336C026AB5B1AB2A19C0477A040F /* aes_ni.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aes_ni.c; path = SSZipArchive/minizip/aes/aes_ni.c; sourceTree = "<group>"; };
+		6BE7D70D16EE24E8A87D36B91CE48667 /* MSGraphClientModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MSGraphClientModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C05336C026AB5B1AB2A19C0477A040F /* aes_ni.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = aes_ni.c; path = SSZipArchive/minizip/aes/aes_ni.c; sourceTree = "<group>"; };
 		6C18A8475E5C373552C7281E7FDB8AF7 /* MSIDNotifications.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDNotifications.m; path = MSAL/IdentityCore/IdentityCore/src/MSIDNotifications.m; sourceTree = "<group>"; };
 		6C60EF4DBEC4337129B4EA1F8C7E081B /* MSGraphColumnLink.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphColumnLink.m; path = GeneratedModels/MSGraphColumnLink.m; sourceTree = "<group>"; };
 		6C7839C34631DCF18750D1AE589CC3A0 /* MSIDWorkPlaceJoinUtilBase+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MSIDWorkPlaceJoinUtilBase+Internal.h"; path = "MSAL/IdentityCore/IdentityCore/src/workplacejoin/MSIDWorkPlaceJoinUtilBase+Internal.h"; sourceTree = "<group>"; };
@@ -4544,7 +4544,7 @@
 		8FD85FC111267AAD8D46BB23A37C777F /* NSKeyedUnarchiver+MSIDExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSKeyedUnarchiver+MSIDExtensions.h"; path = "MSAL/IdentityCore/IdentityCore/src/util/NSKeyedUnarchiver+MSIDExtensions.h"; sourceTree = "<group>"; };
 		8FE142B2F792DBEB052D4E886F7999EA /* MSClientFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSClientFactory.m; path = MSGraphClientSDK/MSGraphClientSDK/HTTPClient/MSClientFactory.m; sourceTree = "<group>"; };
 		90032E69A28F8ED094F10E5F37321D0C /* MSALRedirectUri+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MSALRedirectUri+Internal.h"; path = "MSAL/src/util/MSALRedirectUri+Internal.h"; sourceTree = "<group>"; };
-		902892BC532C30B2DF6742DDA221F75C /* aescrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aescrypt.c; path = SSZipArchive/minizip/aes/aescrypt.c; sourceTree = "<group>"; };
+		902892BC532C30B2DF6742DDA221F75C /* aescrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = aescrypt.c; path = SSZipArchive/minizip/aes/aescrypt.c; sourceTree = "<group>"; };
 		903FCD7571C41DE0347493B02AD4000D /* MSGraphFieldValueSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphFieldValueSet.m; path = GeneratedModels/MSGraphFieldValueSet.m; sourceTree = "<group>"; };
 		905627091830AB017A69234C1191A1C0 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
 		9065CF96382B082DC21D2EFFA87E5E0E /* MSGraphPlannerAssignment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphPlannerAssignment.h; path = GeneratedModels/MSGraphPlannerAssignment.h; sourceTree = "<group>"; };
@@ -4567,7 +4567,7 @@
 		9191A81147C7A644D126DDFAE9E4DB4C /* MSGraphSharepointIds.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphSharepointIds.m; path = GeneratedModels/MSGraphSharepointIds.m; sourceTree = "<group>"; };
 		91A53E3439D78D531B38AA444A0321BB /* MSALCacheConfig+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MSALCacheConfig+Internal.h"; path = "MSAL/src/configuration/MSALCacheConfig+Internal.h"; sourceTree = "<group>"; };
 		91AFBF0AE34A68274FD0830340157E2D /* MSGraphWorkbookSessionInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphWorkbookSessionInfo.m; path = GeneratedModels/MSGraphWorkbookSessionInfo.m; sourceTree = "<group>"; };
-		91B23470DEB9A986332BEB5034234BC7 /* SSZipArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SSZipArchive.framework; path = SSZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91B23470DEB9A986332BEB5034234BC7 /* SSZipArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F9C43B0ED206C94AF131387F6FDEEA /* MSGraphIosManagedAppProtection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphIosManagedAppProtection.m; path = GeneratedModels/MSGraphIosManagedAppProtection.m; sourceTree = "<group>"; };
 		921118B175456A99EB2CD4911A413994 /* MSGraphMacOSCustomConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphMacOSCustomConfiguration.m; path = GeneratedModels/MSGraphMacOSCustomConfiguration.m; sourceTree = "<group>"; };
 		921DE0CB0D37EE85F0A2C45E80C44B3E /* NSBundle+MSIDExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+MSIDExtensions.m"; path = "MSAL/IdentityCore/IdentityCore/src/util/NSBundle+MSIDExtensions.m"; sourceTree = "<group>"; };
@@ -4608,7 +4608,7 @@
 		94B2BD0B7D6932DE9705F9E9358F170A /* MSGraphRatingCanadaMoviesType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphRatingCanadaMoviesType.m; path = GeneratedModels/MSGraphRatingCanadaMoviesType.m; sourceTree = "<group>"; };
 		94CA6513897CD6F5FECAE8FA0F199F83 /* MSIDIndividualClaimRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDIndividualClaimRequest.m; path = MSAL/IdentityCore/IdentityCore/src/claims/MSIDIndividualClaimRequest.m; sourceTree = "<group>"; };
 		94D0A943E7BB387C636752214EB0396D /* MSGraphUserSecurityState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphUserSecurityState.m; path = GeneratedModels/MSGraphUserSecurityState.m; sourceTree = "<group>"; };
-		95209B8BB966524BC76543F99C75F5FE /* FSCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FSCalendar.framework; path = FSCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95209B8BB966524BC76543F99C75F5FE /* FSCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FSCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		953348B5635F1D6A841A71CDB6C0463F /* MSGraphDeviceConfigurationAssignment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphDeviceConfigurationAssignment.h; path = GeneratedModels/MSGraphDeviceConfigurationAssignment.h; sourceTree = "<group>"; };
 		956313AF0AC89C06CF9A1C894F49156B /* SSZipCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipCommon.h; path = SSZipArchive/SSZipCommon.h; sourceTree = "<group>"; };
 		956F3E7DB4418F4A2D8AA42C01A2B73A /* MSGraphTargetedManagedAppProtection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphTargetedManagedAppProtection.m; path = GeneratedModels/MSGraphTargetedManagedAppProtection.m; sourceTree = "<group>"; };
@@ -4678,7 +4678,7 @@
 		9B395106FBF41604B4F715130FE048B8 /* MSGraphSharedDriveItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphSharedDriveItem.h; path = GeneratedModels/MSGraphSharedDriveItem.h; sourceTree = "<group>"; };
 		9B420EA61FC4F124B742E5495B1038B3 /* MSGraphInstallState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphInstallState.h; path = GeneratedModels/MSGraphInstallState.h; sourceTree = "<group>"; };
 		9B6A5D5315021763453979E30F6A58BD /* MSGraphAudio.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphAudio.m; path = GeneratedModels/MSGraphAudio.m; sourceTree = "<group>"; };
-		9B768E7476D779152A21647B3150C6F2 /* prng.c */ = {isa = PBXFileReference; includeInIndex = 1; name = prng.c; path = SSZipArchive/minizip/aes/prng.c; sourceTree = "<group>"; };
+		9B768E7476D779152A21647B3150C6F2 /* prng.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = prng.c; path = SSZipArchive/minizip/aes/prng.c; sourceTree = "<group>"; };
 		9B89D758464350FE890C0C4B00EE0664 /* SSZipArchive.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SSZipArchive.modulemap; sourceTree = "<group>"; };
 		9BA01B9147B9EBA50A75E96A56A09FE6 /* MSGraphIosVppEBook.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphIosVppEBook.m; path = GeneratedModels/MSGraphIosVppEBook.m; sourceTree = "<group>"; };
 		9BC5BAB843516F28B6CE21A13052672B /* MSGraphSettingSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphSettingSource.h; path = GeneratedModels/MSGraphSettingSource.h; sourceTree = "<group>"; };
@@ -4699,7 +4699,7 @@
 		9D7D4008F79A08C308E041144BEDB844 /* MSGraphMobileAppCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphMobileAppCategory.h; path = GeneratedModels/MSGraphMobileAppCategory.h; sourceTree = "<group>"; };
 		9D91EED6901006BAF1B16E6DEAF2B062 /* MSIDWorkplaceJoinChallenge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDWorkplaceJoinChallenge.m; path = MSAL/IdentityCore/IdentityCore/src/workplacejoin/MSIDWorkplaceJoinChallenge.m; sourceTree = "<group>"; };
 		9D9310845C1352CEA134CA7E6EE888F2 /* ILineChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ILineChartDataSet.swift; path = Source/Charts/Data/Interfaces/ILineChartDataSet.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D9FA0C9408C79DD9C77241FB7B80377 /* MSGraphUsageDetails.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphUsageDetails.m; path = GeneratedModels/MSGraphUsageDetails.m; sourceTree = "<group>"; };
 		9DA03DA8C1AD840EB68DE695FE0098EB /* MSGraphDomainDnsUnavailableRecord.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphDomainDnsUnavailableRecord.m; path = GeneratedModels/MSGraphDomainDnsUnavailableRecord.m; sourceTree = "<group>"; };
 		9DD81168B689503A699614AFEC7D93D5 /* SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
@@ -4747,7 +4747,7 @@
 		A16784463230159F299D79B45E1270CF /* MSIDPkce.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDPkce.m; path = MSAL/IdentityCore/IdentityCore/src/webview/pkce/MSIDPkce.m; sourceTree = "<group>"; };
 		A18037C133389102544AC574D4023566 /* MSIDOIDCSignoutRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDOIDCSignoutRequest.m; path = MSAL/IdentityCore/IdentityCore/src/requests/MSIDOIDCSignoutRequest.m; sourceTree = "<group>"; };
 		A1984A8E4883C24ADCE2702DF8CE7CA6 /* MSCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSCollection.h; path = BaseModels/MSCollection.h; sourceTree = "<group>"; };
-		A1C1B977ED8804E8AEEC884E7359EE58 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Charts.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1C1B977ED8804E8AEEC884E7359EE58 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C442B736C0F39B955AA54488E52D8D /* MSGraphOnenoteEntityBaseModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphOnenoteEntityBaseModel.h; path = GeneratedModels/MSGraphOnenoteEntityBaseModel.h; sourceTree = "<group>"; };
 		A1F8B7C2F13546972E0FDB18161C0CCD /* MSGraphDeviceAndAppManagementRoleDefinition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphDeviceAndAppManagementRoleDefinition.h; path = GeneratedModels/MSGraphDeviceAndAppManagementRoleDefinition.h; sourceTree = "<group>"; };
 		A1FF14E2AB3AB617F398480A29D789E5 /* MSIDAuthScheme.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDAuthScheme.h; path = MSAL/IdentityCore/IdentityCore/src/util/MSIDAuthScheme.h; sourceTree = "<group>"; };
@@ -4762,7 +4762,7 @@
 		A2999FD7467E6DEC8E6248C35F4E783B /* MSGraphEducationTerm.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphEducationTerm.h; path = GeneratedModels/MSGraphEducationTerm.h; sourceTree = "<group>"; };
 		A29A797B23A1B404D129899A3B1E01D5 /* AFNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.debug.xcconfig; sourceTree = "<group>"; };
 		A2BBECAE98DADFC5E323D1605EBCACAC /* MSALHttpMethod.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSALHttpMethod.m; path = MSAL/src/MSALHttpMethod.m; sourceTree = "<group>"; };
-		A2E011CEBFFC4C59956BD87868C32C4C /* aestab.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aestab.c; path = SSZipArchive/minizip/aes/aestab.c; sourceTree = "<group>"; };
+		A2E011CEBFFC4C59956BD87868C32C4C /* aestab.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = aestab.c; path = SSZipArchive/minizip/aes/aestab.c; sourceTree = "<group>"; };
 		A32307CD14184BB184EC3C1527580BBE /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
 		A356C7DF9C958DE37D4B754A78F7DDA6 /* MSGraphDirectoryRole.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphDirectoryRole.h; path = GeneratedModels/MSGraphDirectoryRole.h; sourceTree = "<group>"; };
 		A37637AC1378F2E9B5CD53B3DE5BDC2F /* MSIDWebResponseOperationConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDWebResponseOperationConstants.h; path = MSAL/IdentityCore/IdentityCore/src/MSIDWebResponseOperationConstants.h; sourceTree = "<group>"; };
@@ -4780,7 +4780,7 @@
 		A4C20B6CD3BF9FE941AFFAC0B218985C /* MSGraphWindows10NetworkProxyServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphWindows10NetworkProxyServer.m; path = GeneratedModels/MSGraphWindows10NetworkProxyServer.m; sourceTree = "<group>"; };
 		A4D35C461E31C9C3DDEC484BAD1D9179 /* MSIDAADV2Oauth2FactoryForV1Request.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDAADV2Oauth2FactoryForV1Request.m; path = MSAL/IdentityCore/IdentityCore/src/oauth2/aad_v2/MSIDAADV2Oauth2FactoryForV1Request.m; sourceTree = "<group>"; };
 		A4EFCEE67DDFADE777DF79A712CB1530 /* MSGraphVppTokenSyncStatus.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphVppTokenSyncStatus.m; path = GeneratedModels/MSGraphVppTokenSyncStatus.m; sourceTree = "<group>"; };
-		A4FA15D44DF6BAC7550EDEED10862AA3 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AFNetworking.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4FA15D44DF6BAC7550EDEED10862AA3 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A519E90BA401D1DEC4A0F85643A25DDD /* MSGraphPublicationFacet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphPublicationFacet.h; path = GeneratedModels/MSGraphPublicationFacet.h; sourceTree = "<group>"; };
 		A53503296DAEA240EF8FFF2B24599A64 /* MSIDAccountMetadataCacheAccessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDAccountMetadataCacheAccessor.h; path = MSAL/IdentityCore/IdentityCore/src/cache/metadata/MSIDAccountMetadataCacheAccessor.h; sourceTree = "<group>"; };
 		A5511BD404866FFD5BE727D6DA1DB727 /* MSALRedirectUriVerifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSALRedirectUriVerifier.m; path = MSAL/src/util/MSALRedirectUriVerifier.m; sourceTree = "<group>"; };
@@ -4958,11 +4958,11 @@
 		B459F857066B1395B021200F6E67D6AF /* MSAuthenticationHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSAuthenticationHandler.m; path = MSGraphClientSDK/MSGraphClientSDK/Middleware/Implementations/Authentication/MSAuthenticationHandler.m; sourceTree = "<group>"; };
 		B45F9F0B7DDAC1F428726B97A0593298 /* MSRedirectHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSRedirectHandler.m; path = MSGraphClientSDK/MSGraphClientSDK/Middleware/Implementations/RedirectHandler/MSRedirectHandler.m; sourceTree = "<group>"; };
 		B47CF407829AB341780E12C44C4B99AC /* MSGraphWindowsInformationProtectionAppLockerFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphWindowsInformationProtectionAppLockerFile.h; path = GeneratedModels/MSGraphWindowsInformationProtectionAppLockerFile.h; sourceTree = "<group>"; };
-		B48D92A2F6E69FDB51253F50BADA8097 /* MSGraphClientSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MSGraphClientSDK.framework; path = MSGraphClientSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B48D92A2F6E69FDB51253F50BADA8097 /* MSGraphClientSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MSGraphClientSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4AC7F59EDAF2077F92396EBFA66015D /* MSGraphClientModels.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphClientModels.h; path = GeneratedModels/MSGraphClientModels.h; sourceTree = "<group>"; };
 		B4DD3E65F0713AA5ABC2252B6F31B4ED /* MSIDAccountMetadataCacheItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDAccountMetadataCacheItem.m; path = MSAL/IdentityCore/IdentityCore/src/cache/metadata/accountMetadata/MSIDAccountMetadataCacheItem.m; sourceTree = "<group>"; };
 		B4E5237C6778B8149C9E0474F1635222 /* MSGraphRecordOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphRecordOperation.h; path = GeneratedModels/MSGraphRecordOperation.h; sourceTree = "<group>"; };
-		B4E92AC08F2BCD867EDCFB0258872262 /* ioapi_buf.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi_buf.c; path = SSZipArchive/minizip/ioapi_buf.c; sourceTree = "<group>"; };
+		B4E92AC08F2BCD867EDCFB0258872262 /* ioapi_buf.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = ioapi_buf.c; path = SSZipArchive/minizip/ioapi_buf.c; sourceTree = "<group>"; };
 		B4FFCADD0A489173135EA902DC75A99F /* RadarHighlighter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarHighlighter.swift; path = Source/Charts/Highlight/RadarHighlighter.swift; sourceTree = "<group>"; };
 		B50F759CF0410AA07724BDF1E08D5882 /* UIAlertView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+AFNetworking.m"; path = "UIKit+AFNetworking/UIAlertView+AFNetworking.m"; sourceTree = "<group>"; };
 		B50F80EF10B25671413C358200EF442A /* MSALSliceConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSALSliceConfig.m; path = MSAL/src/configuration/MSALSliceConfig.m; sourceTree = "<group>"; };
@@ -4995,7 +4995,7 @@
 		B7FEA3FB6510B5EE8FF64EEF037330F6 /* MSGraphLocationType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphLocationType.m; path = GeneratedModels/MSGraphLocationType.m; sourceTree = "<group>"; };
 		B80971E3FA8E63E2F03A0B8716C6FDB1 /* MSGraphIosNetworkUsageRule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphIosNetworkUsageRule.h; path = GeneratedModels/MSGraphIosNetworkUsageRule.h; sourceTree = "<group>"; };
 		B81E7FE4ACC9CE708552B43CDB74D8AB /* MSIDAccessToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDAccessToken.m; path = MSAL/IdentityCore/IdentityCore/src/oauth2/token/MSIDAccessToken.m; sourceTree = "<group>"; };
-		B831DA24132984860204CB77335630A7 /* hmac.c */ = {isa = PBXFileReference; includeInIndex = 1; name = hmac.c; path = SSZipArchive/minizip/aes/hmac.c; sourceTree = "<group>"; };
+		B831DA24132984860204CB77335630A7 /* hmac.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = hmac.c; path = SSZipArchive/minizip/aes/hmac.c; sourceTree = "<group>"; };
 		B8328E2B8A244148E4199F445218E240 /* MSGraphExternalAudienceScope.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphExternalAudienceScope.m; path = GeneratedModels/MSGraphExternalAudienceScope.m; sourceTree = "<group>"; };
 		B84E7262C2DF398B4099028FDFD67120 /* MSIDOAuthRequestConfigurator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDOAuthRequestConfigurator.m; path = MSAL/IdentityCore/IdentityCore/src/network/request_configurator/MSIDOAuthRequestConfigurator.m; sourceTree = "<group>"; };
 		B856C777EE88A4BFA5118346A3F77A61 /* MSGraphTokenMeetingInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphTokenMeetingInfo.m; path = GeneratedModels/MSGraphTokenMeetingInfo.m; sourceTree = "<group>"; };
@@ -5501,7 +5501,7 @@
 		E44F1CCB6E043AF4117C9216128E6CAC /* MSGraphManagedAppDataEncryptionType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphManagedAppDataEncryptionType.m; path = GeneratedModels/MSGraphManagedAppDataEncryptionType.m; sourceTree = "<group>"; };
 		E4536E9C820D61808ADAC33DBCD0D18D /* MSALParameters.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSALParameters.m; path = MSAL/src/MSALParameters.m; sourceTree = "<group>"; };
 		E465C4334B5E06D373C498A7AB725785 /* MSIDAADAuthorizationCodeRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDAADAuthorizationCodeRequest.m; path = MSAL/IdentityCore/IdentityCore/src/network/request/MSIDAADAuthorizationCodeRequest.m; sourceTree = "<group>"; };
-		E48BE081ED8CEEF570CADCFC4C1B894C /* sha1.c */ = {isa = PBXFileReference; includeInIndex = 1; name = sha1.c; path = SSZipArchive/minizip/aes/sha1.c; sourceTree = "<group>"; };
+		E48BE081ED8CEEF570CADCFC4C1B894C /* sha1.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = sha1.c; path = SSZipArchive/minizip/aes/sha1.c; sourceTree = "<group>"; };
 		E4A6CE5BAB5E3AB369F5CB703FB6D8AE /* MSGraphChoiceColumn.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphChoiceColumn.m; path = GeneratedModels/MSGraphChoiceColumn.m; sourceTree = "<group>"; };
 		E4CEF7B09170BF7BB5D98DF1D6A1F6A4 /* MSGraphInstallState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphInstallState.m; path = GeneratedModels/MSGraphInstallState.m; sourceTree = "<group>"; };
 		E4D3054D74F0954A64D1B68462DA37DE /* MSAuthenticationProviderOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSAuthenticationProviderOptions.h; path = MSGraphClientSDK/MSGraphClientSDK/Authentication/MSAuthenticationProviderOptions.h; sourceTree = "<group>"; };
@@ -5547,7 +5547,7 @@
 		E968E9AB1DCE2751219C23447069C6F7 /* MSGraphPlannerAssignedToTaskBoardTaskFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphPlannerAssignedToTaskBoardTaskFormat.h; path = GeneratedModels/MSGraphPlannerAssignedToTaskBoardTaskFormat.h; sourceTree = "<group>"; };
 		E96C719D2546A89CA5A8A343E28D65FB /* MSGraphAndroidMobileAppIdentifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphAndroidMobileAppIdentifier.h; path = GeneratedModels/MSGraphAndroidMobileAppIdentifier.h; sourceTree = "<group>"; };
 		E97898738305B7F129B009A6C034BA6B /* MSGraphMobileAppContentFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphMobileAppContentFile.h; path = GeneratedModels/MSGraphMobileAppContentFile.h; sourceTree = "<group>"; };
-		E97D43C46A45EE515A4DA3AF94398441 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SVProgressHUD.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E97D43C46A45EE515A4DA3AF94398441 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E98940318FDFD933B103E99BE9BFAE63 /* MSGraphDefenderPromptForSampleSubmission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphDefenderPromptForSampleSubmission.m; path = GeneratedModels/MSGraphDefenderPromptForSampleSubmission.m; sourceTree = "<group>"; };
 		E99818FF63F1805C5B287F475EC5735B /* MSALLegacySharedADALAccount.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSALLegacySharedADALAccount.m; path = MSAL/src/configuration/external/ios/MSALLegacySharedADALAccount.m; sourceTree = "<group>"; };
 		E9A9EE3BC5BAF3B48A9840D703477298 /* MSGraphComplianceStatus.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphComplianceStatus.m; path = GeneratedModels/MSGraphComplianceStatus.m; sourceTree = "<group>"; };
@@ -5599,7 +5599,7 @@
 		ED7268F2F066A9F3AB39DA9F16E76720 /* FSCalendarConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarConstants.m; path = FSCalendar/FSCalendarConstants.m; sourceTree = "<group>"; };
 		ED73EE9C86C8E017DD1CDD747FE5B326 /* MSGraphOneDriveLargeFileUploadTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphOneDriveLargeFileUploadTask.m; path = MSGraphClientSDK/MSGraphClientSDK/GraphTasks/MSGraphOneDriveLargeFileUploadTask.m; sourceTree = "<group>"; };
 		ED87BCA6878FFEC7FD2C7639E9775C10 /* MSGraphIosNotificationSettings.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSGraphIosNotificationSettings.m; path = GeneratedModels/MSGraphIosNotificationSettings.m; sourceTree = "<group>"; };
-		ED9F7ECF8B16CC52E5402060851BC70F /* aeskey.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aeskey.c; path = SSZipArchive/minizip/aes/aeskey.c; sourceTree = "<group>"; };
+		ED9F7ECF8B16CC52E5402060851BC70F /* aeskey.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = aeskey.c; path = SSZipArchive/minizip/aes/aeskey.c; sourceTree = "<group>"; };
 		EDAD8D9096E17FFE63A042EBF3D25A28 /* MSIDCredentialType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDCredentialType.h; path = MSAL/IdentityCore/IdentityCore/src/oauth2/token/MSIDCredentialType.h; sourceTree = "<group>"; };
 		EDAEC3441D36CD357282697DED1E1621 /* NSDate+MSSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+MSSerialization.h"; path = "BaseModels/NSDate+MSSerialization.h"; sourceTree = "<group>"; };
 		EDB56959714C79F934954B66A846D144 /* MSGraphMediaContentRatingUnitedStates.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSGraphMediaContentRatingUnitedStates.h; path = GeneratedModels/MSGraphMediaContentRatingUnitedStates.h; sourceTree = "<group>"; };
@@ -5921,7 +5921,6 @@
 				6FFF0F2B8C027479BC36CAA8CD52738A /* Support Files */,
 				48C2129CE0342882608DD8CC42AD9527 /* UIKit */,
 			);
-			name = AFNetworking;
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
@@ -5944,7 +5943,6 @@
 				F1F3DC309F353394639836A9131BA1D2 /* Common */,
 				EA8209A0195A0C3C43FB3CF49A0C8F47 /* Support Files */,
 			);
-			name = MSGraphClientSDK;
 			path = MSGraphClientSDK;
 			sourceTree = "<group>";
 		};
@@ -6013,7 +6011,6 @@
 				D55BBEA25C3F27C7AE45BA7C65542D82 /* app-lib */,
 				C0428D82983A7FFCBB3AC1765C61E4FE /* Support Files */,
 			);
-			name = MSAL;
 			path = MSAL;
 			sourceTree = "<group>";
 		};
@@ -6068,7 +6065,6 @@
 				538E8FC77DD07274928DBEC042D456D4 /* FSCalendarWeekdayView.m */,
 				876A078F5C94BA0B2CF5B2D200AFE1B1 /* Support Files */,
 			);
-			name = FSCalendar;
 			path = FSCalendar;
 			sourceTree = "<group>";
 		};
@@ -7797,7 +7793,6 @@
 				5A634016F436B49298E386AE67C8EDE8 /* NSDate+MSSerialization.m */,
 				855ED22E6381AA9F30FC78841FAC6746 /* Support Files */,
 			);
-			name = MSGraphClientModels;
 			path = MSGraphClientModels;
 			sourceTree = "<group>";
 		};
@@ -7829,7 +7824,6 @@
 				ED0266B832C8BE9411ECDE6E10CD9674 /* Core */,
 				545E36E7A34160975F25699D4BD1BD0F /* Support Files */,
 			);
-			name = Charts;
 			path = Charts;
 			sourceTree = "<group>";
 		};
@@ -7901,7 +7895,6 @@
 				14A17F8ACAC4841F25C931BB36F50239 /* ZipArchive.h */,
 				05D1CDAD88BDEB7FFE820B1AEF2C6FA9 /* Support Files */,
 			);
-			name = SSZipArchive;
 			path = SSZipArchive;
 			sourceTree = "<group>";
 		};
@@ -7919,7 +7912,6 @@
 				D57DB5DF51182B706AC7251E9A3103BF /* Resources */,
 				75294D8AF1AAE45CA04BB3694BB9D8EF /* Support Files */,
 			);
-			name = SVProgressHUD;
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -10721,7 +10713,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -12367,7 +12359,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C4138B2E801215B760F6C6AD98653988 /* Charts.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -12380,7 +12371,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Charts/Charts-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Charts/Charts-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Charts/Charts.modulemap";
 				PRODUCT_MODULE_NAME = Charts;
@@ -12399,7 +12390,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5328EDF2B037ECECB27994D0CB3DF469 /* SVProgressHUD.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -12412,7 +12402,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
 				PRODUCT_MODULE_NAME = SVProgressHUD;
@@ -12453,6 +12443,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -12475,13 +12466,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -12491,7 +12481,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F99B0F7F1F06120EB541C20504185C55 /* MSAL.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -12505,7 +12494,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MSAL/MSAL-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MSAL/MSAL-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MSAL/MSAL.modulemap";
 				PRODUCT_MODULE_NAME = MSAL;
@@ -12523,7 +12512,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5C70C3863D5F8BE8F572A497B049B21D /* FSCalendar.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -12536,7 +12524,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FSCalendar/FSCalendar-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FSCalendar/FSCalendar-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FSCalendar/FSCalendar.modulemap";
 				PRODUCT_MODULE_NAME = FSCalendar;
@@ -12555,7 +12543,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 39D803700AB8A6985A61BA329270DD59 /* SSZipArchive.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -12567,7 +12554,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SSZipArchive/SSZipArchive-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SSZipArchive/SSZipArchive-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SSZipArchive/SSZipArchive.modulemap";
 				PRODUCT_MODULE_NAME = SSZipArchive;
@@ -12585,8 +12572,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E7B29B9751875AE070CEC62C26A7362C /* Pods-SANDigitalDetailing.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -12599,7 +12585,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SANDigitalDetailing/Pods-SANDigitalDetailing-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SANDigitalDetailing/Pods-SANDigitalDetailing.modulemap";
@@ -12621,7 +12607,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 43B0AC6132DFD1A3D16457B08B6878BE /* AFNetworking.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -12634,7 +12619,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/AFNetworking/AFNetworking-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AFNetworking/AFNetworking.modulemap";
 				PRODUCT_MODULE_NAME = AFNetworking;
@@ -12653,7 +12638,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1FA8A01DF2E78D0F7601D8D43126071D /* MSAL.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -12667,7 +12651,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MSAL/MSAL-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MSAL/MSAL-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MSAL/MSAL.modulemap";
 				PRODUCT_MODULE_NAME = MSAL;
@@ -12686,7 +12670,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8E76F4B0AFE38CD92985FFBA5E5D1847 /* MSGraphClientModels.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -12699,7 +12682,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MSGraphClientModels/MSGraphClientModels-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MSGraphClientModels/MSGraphClientModels-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MSGraphClientModels/MSGraphClientModels.modulemap";
 				PRODUCT_MODULE_NAME = MSGraphClientModels;
@@ -12718,8 +12701,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 48AE5AC79554F3559313A825F49744B1 /* Pods-SANDigitalDetailing.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -12732,7 +12714,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SANDigitalDetailing/Pods-SANDigitalDetailing-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SANDigitalDetailing/Pods-SANDigitalDetailing.modulemap";
@@ -12753,7 +12735,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0CCAA2B58CCAA279F667C1C856628E62 /* MSGraphClientSDK.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -12766,7 +12747,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MSGraphClientSDK/MSGraphClientSDK-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MSGraphClientSDK/MSGraphClientSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MSGraphClientSDK/MSGraphClientSDK.modulemap";
 				PRODUCT_MODULE_NAME = MSGraphClientSDK;
@@ -12784,7 +12765,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A29A797B23A1B404D129899A3B1E01D5 /* AFNetworking.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -12797,7 +12777,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/AFNetworking/AFNetworking-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AFNetworking/AFNetworking.modulemap";
 				PRODUCT_MODULE_NAME = AFNetworking;
@@ -12815,7 +12795,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 167F9795670AD317AE2F138A36E273B0 /* MSGraphClientSDK.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -12828,7 +12807,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MSGraphClientSDK/MSGraphClientSDK-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MSGraphClientSDK/MSGraphClientSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MSGraphClientSDK/MSGraphClientSDK.modulemap";
 				PRODUCT_MODULE_NAME = MSGraphClientSDK;
@@ -12847,7 +12826,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 04C2DDE1C4B4D32AECC3C5BAF4DD0A5F /* SVProgressHUD.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -12860,7 +12838,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
 				PRODUCT_MODULE_NAME = SVProgressHUD;
@@ -12878,7 +12856,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81E8B98879AEA12BB4B19E3302D25A17 /* FSCalendar.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -12891,7 +12868,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FSCalendar/FSCalendar-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FSCalendar/FSCalendar-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FSCalendar/FSCalendar.modulemap";
 				PRODUCT_MODULE_NAME = FSCalendar;
@@ -12931,6 +12908,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -12956,7 +12934,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -12973,7 +12951,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 10261C54E478A84AD3A786D6D5289DDB /* SSZipArchive.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -12985,7 +12962,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SSZipArchive/SSZipArchive-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SSZipArchive/SSZipArchive-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SSZipArchive/SSZipArchive.modulemap";
 				PRODUCT_MODULE_NAME = SSZipArchive;
@@ -13004,7 +12981,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1B164DE526F8159410E9F2C7B5907D35 /* Charts.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -13017,7 +12993,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Charts/Charts-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Charts/Charts-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Charts/Charts.modulemap";
 				PRODUCT_MODULE_NAME = Charts;
@@ -13037,7 +13013,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F24C7B72A84F6477D30F1CF1D7EDAAFC /* MSGraphClientModels.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -13050,7 +13025,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MSGraphClientModels/MSGraphClientModels-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MSGraphClientModels/MSGraphClientModels-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MSGraphClientModels/MSGraphClientModels.modulemap";
 				PRODUCT_MODULE_NAME = MSGraphClientModels;
