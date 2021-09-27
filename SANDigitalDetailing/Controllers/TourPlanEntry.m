@@ -47,6 +47,7 @@
 @property (nonatomic, assign) int DrCnt;
 @property (nonatomic, assign) int ChmCnt;
 @property (nonatomic, assign) int JWCnt;
+@property (nonatomic) BOOL isSyncCalled;
 
 @end
 
@@ -329,9 +330,10 @@
     NSDate * ClnDate=[BaseViewController str2date:[NSString stringWithFormat:@"%d-%d-01 00:00:00",Yr,mon]];
     int maxDy=[self getMaxDate:mon andYear:Yr];
     int flg=0;
-    if( [self.CalnDates count]<1 || _TPEntryDet.Flag==1 || [[_TPData valueForKey:@"TPFlag"] intValue]==1)
+    if( [self.CalnDates count]<1 || _isSyncCalled || _TPEntryDet.Flag==1 || [[_TPData valueForKey:@"TPFlag"] intValue]==1)
     {
-        
+        _isSyncCalled= NO;
+            
         _CalnDates=[[NSMutableArray alloc]init];
         NSCalendar* cal = [NSCalendar currentCalendar];
         NSDateComponents* comp = [cal components:NSCalendarUnitWeekday fromDate:ClnDate];
@@ -1175,6 +1177,7 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 -(void) getTPfromLocal{
+    
    NSMutableDictionary *mData=[[[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"TPDetails_%@_%@_%@.SANAPP",_UserDet.SF,self.SelMonth,self.SelYear]] mutableCopy];
     if (mData!=nil){
         _TPData=[mData mutableCopy];
@@ -1192,6 +1195,8 @@
                 self.CalnDates=[[mDatas[0] objectForKey:@"TPDatas"] mutableCopy];
                 _PrevDates=[[mDatas[0] objectForKey:@"TPDatas"] mutableCopy];
                 [_TPData setValue:[mDatas[0] objectForKey:@"TPFlag"] forKey:@"TPFlag"];
+                _isSyncCalled = YES;
+
                 [self SaveTPtoLocal];
                 [self renderCalender:[self.SelMonth intValue] year:[self.SelYear intValue]];
                 
@@ -1213,14 +1218,12 @@
         NSMutableArray *mDatas=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
         if([mDatas count]>0)
         {
+            _isSyncCalled = YES;
             _PrevDates=[[NSMutableArray alloc]init];
             self.CalnDates=[[mDatas[0] objectForKey:@"TPDatas"] mutableCopy];
             _PrevDates=[[mDatas[0] objectForKey:@"TPDatas"] mutableCopy];
-            if([[mDatas[0] objectForKey:@"status"] integerValue] == 1)
-                [_TPData setValue:@"1" forKey:@"TPFlag"];
-            else if([[mDatas[0] objectForKey:@"status"] integerValue] == 2)
-                [_TPData setValue:@"0" forKey:@"TPFlag"];
-
+            _TPEntryDet.Flag=3;
+            [_TPData setValue:[mDatas[0] objectForKey:@"TPFlag"]  forKey:@"TPFlag"];
             [self SaveTPtoLocal];
             [self renderCalender:[self.SelMonth intValue] year:[self.SelYear intValue]];
             
