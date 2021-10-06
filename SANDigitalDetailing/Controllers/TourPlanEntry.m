@@ -9,9 +9,12 @@
 #import "TourPlanEntry.h"
 #import "BaseViewController.h"
 #import "mSlideCell.h"
+#import "Reachability.h"
 
 @interface TourPlanEntry ()
-
+{
+    Reachability *internetReachability;
+}
 @property (nonatomic,strong) NSMutableDictionary* TPData;
 @property (nonatomic,strong) NSMutableArray* CalnDates;
 @property (nonatomic,strong) NSMutableArray* PrevDates;
@@ -213,7 +216,11 @@
         mArry=[[[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"Hospital_%@.SANAPP",SF]] mutableCopy];
         if(mArry!=nil){
             [mItem setValue:SF forKey:@"SFCode"];
-            [mItem setValue:sSFNm forKey:@"SFName"];
+            if(sSFNm!=nil)
+                [mItem setValue:sSFNm forKey:@"SFName"];
+            else
+                [mItem setValue:@"" forKey:@"SFName"];
+
             [mItem setObject:mArry forKey:@"Hosps"];
         
             [self.objHospList addObject:mItem];
@@ -536,7 +543,13 @@
         else if(self.searchBox.tag==5)
             optLst = [self.objOptList[indexPath.section] objectForKey:@"Hosps"][indexPath.row];
         else
-            optLst = self.objOptList[indexPath.row];
+        {
+            if(self.objOptList.count<=indexPath.row)
+                optLst = [self.objOptList[indexPath.section] objectForKey:@"Hosps"][indexPath.row];
+            else
+                optLst = self.objOptList[indexPath.row];
+
+        }
         if(self.searchBox.tag==2)
             cell.lOptText.text = [optLst objectForKey:@"name"];
         else
@@ -754,11 +767,15 @@
                     
                     [cell.btnCheked setImage:[UIImage imageNamed:@"OptChecked"] forState:UIControlStateNormal];
                     cell.Checked=YES;
-                    [itms addObject:item];
+                    NSMutableDictionary * dicAdd= [[NSMutableDictionary alloc] init];
+                    [dicAdd setValue:[item objectForKey:@"Code"] forKey:@"Code"];
+                    [dicAdd setValue:[item objectForKey:@"Hospital_Name"] forKey:@"Name"];
+
+                    [itms addObject:dicAdd];
                 }else{
                     [cell.btnCheked setImage:nil forState:UIControlStateNormal];
                     cell.Checked=NO;
-                    [itms removeObject:item];
+                    [itms removeObject:[SItem objectAtIndex:0]];
                 }
                 
                 [Selitem[0] setObject:itms forKey:@"SelHosps"];
@@ -901,6 +918,18 @@
                      }
                      completion:^(BOOL finished) {   }];
     
+}
+- (IBAction)btnOKMMSelect:(id)sender {
+    [self.view layoutIfNeeded];
+    [UIView animateWithDuration:0.25
+                          delay:0.0
+                        options: 0
+                     animations:^{
+                         self.vwMMultiSel.hidden=YES;
+                         self.vwMMultiSel.alpha=0;
+                         [self.view layoutIfNeeded];
+                     }
+                     completion:^(BOOL finished) {   }];
 }
 
 -(void) openDayPlan:(NSString *) sTpDT andTPDt:(NSString *) sTpDt andIndex:(int) cellIndex
@@ -1246,6 +1275,15 @@
             }
         }
     }
+    internetReachability = [Reachability reachabilityWithHostName:@"www.apple.com"];
+
+    NetworkStatus internetStatus = [internetReachability currentReachabilityStatus];
+    if(internetStatus == NotReachable)
+    {
+        [BaseViewController Toast:NSLocalizedString(@"Approval Cant be send in OFFLINE", @"Approval Cant be send in OFFLINE")];
+        return;
+    }
+    
     if(EFlag==NO){
         [BaseViewController Toast:NSLocalizedString(@"Few Days TP Entry Missing", @"Few Days TP Entry Missing")];
         return;
