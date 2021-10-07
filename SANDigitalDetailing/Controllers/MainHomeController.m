@@ -1613,6 +1613,11 @@
 -(void) NavMenuItem:(int) menuId{
     if(menuId == 1){
         
+        if(![[[NSUserDefaults standardUserDefaults] objectForKey:@"selectedWKType"] isEqualToString:@"321"])
+        {
+            [BaseViewController Toast:NSLocalizedString(@"Cannot submit Calls in Non-Field worktype. Change My Day Plan", @"Cannot submit Calls in Non-Field worktype. Change My Day Plan")];
+            return;
+        }
         if([self.locationData.latitude floatValue]>0)
         {
             self.meetData.Entry_location=[NSString stringWithFormat:@"%@:%@",self.locationData.latitude,self.locationData.longitude];

@@ -158,7 +158,8 @@
         self.TdayPl.WT=[WorkTypes objectForKey:@"Code"];
         self.TdayPl.WTNm=[WorkTypes objectForKey:@"Name"];
         self.TdayPl.FWFlg=[WorkTypes objectForKey:@"FWFlg"];
-        
+        [[NSUserDefaults standardUserDefaults] setObject:[WorkTypes objectForKey:@"Code"] forKey:@"selectedWKType"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         [self.btnSelWT setTitle:[WorkTypes objectForKey:@"Name"] forState:UIControlStateNormal];
         self.TdayPl.Pl=@"";
         self.TdayPl.PlNm=@"";
