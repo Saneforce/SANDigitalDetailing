@@ -276,6 +276,8 @@
     self.Sidemenulist = [[NSMutableArray alloc] init];//WithObjects:
     [self AddMenuItem:@"Change Cluster" id:@7 image:@"sMnuChClstr"];
     [self AddMenuItem:@"Calls" id:@1 image:@"sMnuCalls"];
+    [self AddMenuItem:@"Outbox" id:@17 image:@"sMnuLogout"];
+
     if(_SetupData.MissedEntry==1){
         [self AddMenuItem:@"Missed Date Entry" id:@12 image:@"sMnuDrProf"];
     }
@@ -294,7 +296,6 @@
     if(_SetupData.MeetEventNeed==1){[self AddMenuItem:@"Events" id:@15 image:@"sMnuDrProf"];}
     [self AddMenuItem:@"Reports" id:@3 image:@"sMnuRpts"];
     //[self AddMenuItem:@"Settings" id:@8 image:@"sMnuRpts"];
-    [self AddMenuItem:@"Logout" id:@6 image:@"sMnuLogout"];
     
     self.menulist=[[NSMutableArray alloc] init];
     [self AddMMenuItem:@"Calls" id:@1 image:@"mnuCalls" bgColor:@"#ffffff"];
@@ -313,6 +314,7 @@
     //}
     [self AddMMenuItem:@"Create Presentation" id:@2 image:@"mnuPrsnt" bgColor:@"#ffffff"];
     [self AddMMenuItem:@"Reports" id:@3 image:@"mnuReport" bgColor:@"#ffffff"];
+    [self AddMenuItem:@"Logout" id:@6 image:@"sMnuLogout"];
 
      
     [self.collectionView reloadData];
@@ -1193,6 +1195,11 @@
 }
 -(void)AutoSyncCall{
 
+    NetworkStatus internetStatus = [internetReachability currentReachabilityStatus];
+    if(internetStatus == NotReachable)
+    {
+        return;
+    }
     NSMutableArray *Arry=[[WBService getDataByKey:@"offMyTdypl.SANAPP"] mutableCopy];
     NSMutableArray* lMytp=[[Arry filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"drfMode='1'"]] mutableCopy];
     if ([lMytp count]>0 && self.lsyncTp==NO){
@@ -1611,8 +1618,12 @@
                      }];
 }
 -(void) NavMenuItem:(int) menuId{
-    if(menuId == 1){
-        
+    if(menuId == 1 ){
+        if([[[NSUserDefaults standardUserDefaults] objectForKey:@"MyDAyPlanSubmitted"] isEqualToString:@"NO"])
+        {
+            [BaseViewController Toast:NSLocalizedString(@"Kindly Submit Today Plan.", @"Kindly Submit Today Plan.")];
+            return;
+        }
         if(![[[NSUserDefaults standardUserDefaults] objectForKey:@"selectedWKType"] isEqualToString:@"321"])
         {
             [BaseViewController Toast:NSLocalizedString(@"Cannot submit Calls in Non-Field worktype. Change My Day Plan", @"Cannot submit Calls in Non-Field worktype. Change My Day Plan")];

@@ -174,14 +174,20 @@
     self.tbWorkType.hidden=upState;
 }
 -(IBAction) openSelHQ:(id)sender{
+    if([self.TdayPl.WT isEqualToString:@"321"] ||![_UserDet.Desig isEqualToString:@"MR"])
+    {
     BOOL upState=!self.tbHQ.hidden;
     [self closeTableViews];
     self.tbHQ.hidden=upState;
+    }
 }
 -(IBAction) openSelCluster:(id)sender{
-    BOOL upState=!self.tbCluster.hidden;
-    [self closeTableViews];
-    self.tbCluster.hidden=upState;
+    if([self.TdayPl.WT isEqualToString:@"321"])
+    {
+        BOOL upState=!self.tbCluster.hidden;
+        [self closeTableViews];
+        self.tbCluster.hidden=upState;
+    }
 }
 
 -(void) closeTableViews{
@@ -265,7 +271,7 @@
         }
     }
     error:^(NSString *errorMsg, NSMutableDictionary* uData){
-        [BaseViewController Toast:[NSString stringWithFormat:@"%@ \n %@",NSLocalizedString(@"Today Work Plan Submission Failed.", @"Today Work Plan Submission Failed.") ,errorMsg.description]];
+//        [BaseViewController Toast:[NSString stringWithFormat:@"%@ \n %@",NSLocalizedString(@"Today Work Plan Submission Failed.", @"Today Work Plan Submission Failed.") ,errorMsg.description]];
         [SVProgressHUD dismiss];
         [self.objAppSvData setValue:@"1" forKey:@"drfMode"];
         [WBService saveData:self.objAppSvData forKey:@"MyTodayplan.SANAPP"];
@@ -286,6 +292,8 @@
     }
 }
 -(IBAction) CloseTPEntry:(id)sender{
+    
+    [WBService saveData:@"NO" forKey:@"MyDAyPlanSubmitted"];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
         
