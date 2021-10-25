@@ -1621,7 +1621,7 @@
     if(menuId == 1 ){
         if([[[NSUserDefaults standardUserDefaults] objectForKey:@"MyDAyPlanSubmitted"] isEqualToString:@"NO"])
         {
-            [BaseViewController Toast:NSLocalizedString(@"Kindly Submit Today Plan.", @"Kindly Submit Today Plan.")];
+            [BaseViewController Toast:NSLocalizedString(@"Unable to Submit Call in Non-Fieldwork", @"Unable to Submit Call in Non-Fieldwork")];
             return;
         }
         if(![[[NSUserDefaults standardUserDefaults] objectForKey:@"selectedWKType"] isEqualToString:@"321"])

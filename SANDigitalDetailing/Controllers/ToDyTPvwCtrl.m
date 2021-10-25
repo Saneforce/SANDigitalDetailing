@@ -88,6 +88,14 @@
     [self.vwTitle setText:[NSString stringWithFormat:@"%@",NSLocalizedString(@"TODAY WORK PLAN", "TODAY WORK PLAN")]];
     [_lblEDt setText:[dateFormatter stringFromDate:[BaseViewController str2date:self.TdayPl.TPDt]]];
     [self closeTableViews];
+    
+    
+    if(![self.TdayPl.WT isEqualToString:@"321"])
+    {
+        [_btnSelHQ setTitle:@"" forState:UIControlStateNormal];
+        [_btnSelCluster setTitle:@"" forState:UIControlStateNormal];
+
+    }
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -163,8 +171,25 @@
         [self.btnSelWT setTitle:[WorkTypes objectForKey:@"Name"] forState:UIControlStateNormal];
         self.TdayPl.Pl=@"";
         self.TdayPl.PlNm=@"";
-        
-        [self.btnSelCluster setTitle:@"" forState:UIControlStateNormal];
+        if([self.TdayPl.WT isEqualToString:@"321"])
+        {
+            [self.btnSelCluster setTitle:@"Select" forState:UIControlStateNormal];
+            
+            if(![_UserDet.Desig isEqualToString:@"MR"])
+            {
+                [self.btnSelHQ setEnabled:YES];
+                [self.btnSelHQ setTitle:@"Select" forState:UIControlStateNormal];
+            }
+            
+            [self.btnSelCluster setEnabled:YES];
+        }
+        else
+        {
+            [self.btnSelCluster setTitle:@"" forState:UIControlStateNormal];
+            [self.btnSelHQ setTitle:@"" forState:UIControlStateNormal];
+
+
+        }
     }
     [self closeTableViews];
 }
@@ -174,7 +199,7 @@
     self.tbWorkType.hidden=upState;
 }
 -(IBAction) openSelHQ:(id)sender{
-    if([self.TdayPl.WT isEqualToString:@"321"] ||![_UserDet.Desig isEqualToString:@"MR"])
+    if([self.TdayPl.WT isEqualToString:@"321"] && ![_UserDet.Desig isEqualToString:@"MR"])
     {
     BOOL upState=!self.tbHQ.hidden;
     [self closeTableViews];
