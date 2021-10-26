@@ -309,9 +309,9 @@
     if(_SetupData.NActivityNeed==1){
         [self AddMMenuItem:@"Activity" id:@14 image:@"mnuPrsnt" bgColor:@"#ffffff"];
     }
-    //if(_SetupData.NActivityNeed==1){
+    if(_SetupData.showSurvey==0){
         [self AddMenuItem:@"Survey" id:@16 image:@"mnuPrsnt"];
-    //}
+    }
     [self AddMMenuItem:@"Create Presentation" id:@2 image:@"mnuPrsnt" bgColor:@"#ffffff"];
     [self AddMMenuItem:@"Reports" id:@3 image:@"mnuReport" bgColor:@"#ffffff"];
     [self AddMenuItem:@"Logout" id:@6 image:@"sMnuLogout"];
@@ -1940,7 +1940,8 @@
     self.SetupData.ChmSurveyNeed=[[AppSetups[0] valueForKey:@"ChmSurveyNeed"] intValue];
     self.SetupData.StkSurveyNeed=[[AppSetups[0] valueForKey:@"StkSurveyNeed"] intValue];
     self.SetupData.NdrSurveyNeed=[[AppSetups[0] valueForKey:@"NdrSurveyNeed"] intValue];
-    
+    self.SetupData.showSurvey=[[AppSetups[0] valueForKey:@"SurveyNd"] intValue];
+
     self.SetupData.HospBased=[[AppSetups[0] valueForKey:@"HospBased"] intValue];
     
     self.SetupData.CapSDP=[AppSetups[0] valueForKey:@"CapChm"];
