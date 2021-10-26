@@ -1226,7 +1226,7 @@
                 if(![rMsg isEqualToString:@""]){
                     [BaseViewController Toast:rMsg];
                 }else{
-                    [BaseViewController Toast:NSLocalizedString(@"Today Work Plan not Synced. Something went to wrong.\n Try Again!.", @"Today Work Plan not Synced. Something went to wrong.\n Try Again!.")];
+//                    [BaseViewController Toast:NSLocalizedString(@"Today Work Plan not Synced. Something went to wrong.\n Try Again!.", @"Today Work Plan not Synced. Something went to wrong.\n Try Again!.")];
                 }
             }
         }

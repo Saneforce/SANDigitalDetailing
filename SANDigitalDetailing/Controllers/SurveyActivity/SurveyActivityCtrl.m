@@ -241,7 +241,7 @@
         //[self clearForms];
         NSDictionary *item = _Types[indexPath.row];
         
-        if(_selMode != nil && ![self.vwAdCtrl isHidden] && ![_selMode isEqualToString:[NSString stringWithFormat:@"%@",[item objectForKey:@"Name"]]] && _ObjCtrlList.count > 0)
+        if(_selMode != nil && ![self.vwAdCtrl isHidden] && ![_selMode isEqualToString:[NSString stringWithFormat:@"%@",[item objectForKey:@"Code"]]] && _ObjCtrlList.count > 0)
         {
             
             self.txtSelCus.text=@"";
@@ -256,7 +256,7 @@
         int TyCd=[[_Types[indexPath.row] objectForKey:@"Code"] intValue];
         _btnFilter.tag = [[_Types[indexPath.row] objectForKey:@"Code"] intValue];
         
-        _selMode = [item objectForKey:@"Name"];
+        _selMode = [item objectForKey:@"Code"];
         
         if(TyCd==1) _SelType=@"D";
         if(TyCd==2) _SelType=@"C";
