@@ -44,6 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
     @property (nonatomic,assign) int ChmSurveyNeed;
     @property (nonatomic,assign) int StkSurveyNeed;
     @property (nonatomic,assign) int NdrSurveyNeed;
+    @property (nonatomic,assign) int showSurvey;
 
     @property (nonatomic,assign) int MeetEventNeed;
     @property (nonatomic,assign) int HospBased;

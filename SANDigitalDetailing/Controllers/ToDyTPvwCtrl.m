@@ -90,7 +90,7 @@
     [self closeTableViews];
     
     
-    if(![self.TdayPl.WT isEqualToString:@"321"])
+    if(![self.TdayPl.FWFlg isEqualToString:@"F"])
     {
         [_btnSelHQ setTitle:@"" forState:UIControlStateNormal];
         [_btnSelCluster setTitle:@"" forState:UIControlStateNormal];
@@ -171,7 +171,7 @@
         [self.btnSelWT setTitle:[WorkTypes objectForKey:@"Name"] forState:UIControlStateNormal];
         self.TdayPl.Pl=@"";
         self.TdayPl.PlNm=@"";
-        if([self.TdayPl.WT isEqualToString:@"321"])
+        if([self.TdayPl.FWFlg isEqualToString:@"F"])
         {
             [self.btnSelCluster setTitle:@"Select" forState:UIControlStateNormal];
             
@@ -199,7 +199,7 @@
     self.tbWorkType.hidden=upState;
 }
 -(IBAction) openSelHQ:(id)sender{
-    if([self.TdayPl.WT isEqualToString:@"321"] && ![_UserDet.Desig isEqualToString:@"MR"])
+    if([self.TdayPl.FWFlg isEqualToString:@"F"] && ![_UserDet.Desig isEqualToString:@"MR"])
     {
     BOOL upState=!self.tbHQ.hidden;
     [self closeTableViews];
@@ -207,7 +207,7 @@
     }
 }
 -(IBAction) openSelCluster:(id)sender{
-    if([self.TdayPl.WT isEqualToString:@"321"])
+    if([self.TdayPl.FWFlg isEqualToString:@"F"])
     {
         BOOL upState=!self.tbCluster.hidden;
         [self closeTableViews];
