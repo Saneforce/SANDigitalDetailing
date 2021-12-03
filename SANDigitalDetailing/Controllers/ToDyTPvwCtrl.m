@@ -166,7 +166,7 @@
         self.TdayPl.WT=[WorkTypes objectForKey:@"Code"];
         self.TdayPl.WTNm=[WorkTypes objectForKey:@"Name"];
         self.TdayPl.FWFlg=[WorkTypes objectForKey:@"FWFlg"];
-        [[NSUserDefaults standardUserDefaults] setObject:[WorkTypes objectForKey:@"Code"] forKey:@"selectedWKType"];
+        [[NSUserDefaults standardUserDefaults] setObject:self.TdayPl.FWFlg forKey:@"selectedWKType"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [self.btnSelWT setTitle:[WorkTypes objectForKey:@"Name"] forState:UIControlStateNormal];
         self.TdayPl.Pl=@"";
@@ -256,7 +256,8 @@
 
         NSString* rMsg=[receivedDta valueForKey:@"Msg"];
         if([[receivedDta valueForKey:@"update"] boolValue]==YES){
-            
+            [WBService saveData:@"YES" forKey:@"MyDAyPlanSubmitted"];
+
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"SAN Digital Detailing"
                     message:NSLocalizedString(rMsg,rMsg)
                    delegate:self
@@ -271,9 +272,11 @@
             [WBService saveData:self.objAppSvData forKey:@"MyTodayplan.SANAPP"];
             
             if(![rMsg isEqualToString:@""]){
+                [WBService saveData:@"YES" forKey:@"MyDAyPlanSubmitted"];
                 [BaseViewController Toast:rMsg];
             }else{
                 [BaseViewController Toast:NSLocalizedString(@"Today Work Plan Submitted Successfully", @"Today Work Plan Submitted Successfully")];
+
             }
             
             [self.objAppSvData removeAllObjects];
@@ -290,6 +293,8 @@
                 if(Arry==nil) Arry=[[NSMutableArray alloc] init];
                 [Arry addObject:self.objAppSvData];
                 [WBService saveData:Arry forKey:@"offMyTdypl.SANAPP"];
+                [WBService saveData:@"YES" forKey:@"MyDAyPlanSubmitted"];
+
                 [self.objAppSvData removeAllObjects];
                 [self dismissViewControllerAnimated:YES completion:nil];
             }
@@ -318,8 +323,11 @@
 }
 -(IBAction) CloseTPEntry:(id)sender{
     
-    [WBService saveData:@"NO" forKey:@"MyDAyPlanSubmitted"];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if([[[NSUserDefaults standardUserDefaults] objectForKey:@"selectedWKType"] isEqualToString:@""])
+    {
+        [WBService saveData:@"NO" forKey:@"MyDAyPlanSubmitted"];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
         
         

@@ -1624,7 +1624,7 @@
             [BaseViewController Toast:NSLocalizedString(@"Unable to Submit Call in Non-Fieldwork", @"Unable to Submit Call in Non-Fieldwork")];
             return;
         }
-        if(![[[NSUserDefaults standardUserDefaults] objectForKey:@"selectedWKType"] isEqualToString:@"321"])
+        if(![[[NSUserDefaults standardUserDefaults] objectForKey:@"selectedWKType"] isEqualToString:@"F"])
         {
             [BaseViewController Toast:NSLocalizedString(@"Cannot submit Calls in Non-Field worktype. Change My Day Plan", @"Cannot submit Calls in Non-Field worktype. Change My Day Plan")];
             return;
