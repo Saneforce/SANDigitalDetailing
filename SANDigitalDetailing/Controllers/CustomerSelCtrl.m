@@ -105,6 +105,12 @@
     NSString *DataKey=[[NSString alloc] initWithFormat:@"DoctorDetails_%@.SANAPP",self.meetData.DataSF];
     self.ObjCustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
     
+    if(self.ObjCustomerList.count==0)
+    {
+        [self loadDRList:DataKey];
+        self.ObjCustomerList = [self.CustomerList mutableCopy];
+    }
+    
     NSSortDescriptor *NameField = [NSSortDescriptor sortDescriptorWithKey:@"Name" ascending:YES];
     NSArray *sortDescriptors = [NSArray arrayWithObjects:NameField, nil];
     
@@ -614,88 +620,9 @@
         self.meetData.DataSF=[HQ objectForKey:@"id"];
         NSString *DataKey=[[NSString alloc] initWithFormat:@"DoctorDetails_%@.SANAPP",self.meetData.DataSF];
         self.searchBox.text=@"";
+        [self loadDRList:DataKey];
 
-        [BaseViewController loadMasterData:self.meetData.DataSF completion:^(){
-            
-            CGFloat dis=_UserDet.DistRadius;
-            CLLocationCoordinate2D currentLoction=CLLocationCoordinate2DMake([_locationData.latitude doubleValue], [_locationData.longitude doubleValue]);
-            
-            
-            NSPredicate *findDistance = [NSPredicate predicateWithBlock: ^BOOL(id obj, NSDictionary *bind){
-                
-                CLLocationCoordinate2D CusLoc=CLLocationCoordinate2DMake([[obj valueForKey:@"Lat"] doubleValue], [[obj valueForKey:@"Long"] doubleValue]);
-                CGFloat cDis=[BaseViewController directMetersFromCoordinate:currentLoction toCoordinate:CusLoc];
-                if([[obj valueForKey:@"Long"] doubleValue]>0){
-                    NSLog(@"%@",[obj valueForKey:@"ong"]);
-                }
-                NSLog(@"%f %d",cDis,(cDis>0 && cDis <= dis));
-                return cDis>0 && cDis <= dis;
-            }];
-            
-            self.ObjCustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
-            
-            NSSortDescriptor *NameField = [NSSortDescriptor sortDescriptorWithKey:@"Name" ascending:YES];
-            NSArray *sortDescriptors = [NSArray arrayWithObjects:NameField, nil];
-            
-            NSMutableArray *MkList=[[_ObjCustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Town_Code contains[c] %@", self.TdayPl.Pl]] mutableCopy];
-            if(_UserDet.GEOTagNeed==1){
-                MkList=[[MkList filteredArrayUsingPredicate:findDistance] mutableCopy];
-            }
-            self.CustomerList = [[MkList sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
-            
-            MkList=[[_ObjCustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Town_Code!= %@", self.TdayPl.Pl]] mutableCopy];
-            if(_UserDet.GEOTagNeed==1){
-                MkList=[[MkList filteredArrayUsingPredicate:findDistance] mutableCopy];
-            }
-            self.CustomerList = [[self.CustomerList arrayByAddingObjectsFromArray:[MkList sortedArrayUsingDescriptors:sortDescriptors]] mutableCopy];
-            _HospitalsList=[[[NSUserDefaults standardUserDefaults] objectForKey:[[NSString alloc] initWithFormat:@"Hospital_%@.SANAPP",self.meetData.DataSF]] mutableCopy];
-            [self.selHospFltr reloadData];
-            [self.collectionView reloadData];
-        } error:^(NSString* errMsg){
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Digital Detailing"
-                                                                message:errMsg
-                                                               delegate:self
-                                                      cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alertView show];
-            
-            CGFloat dis=_UserDet.DistRadius;
-            CLLocationCoordinate2D currentLoction=CLLocationCoordinate2DMake([_locationData.latitude doubleValue], [_locationData.longitude doubleValue]);
-            
-            
-            NSPredicate *findDistance = [NSPredicate predicateWithBlock: ^BOOL(id obj, NSDictionary *bind){
-                
-                CLLocationCoordinate2D CusLoc=CLLocationCoordinate2DMake([[obj valueForKey:@"Lat"] doubleValue], [[obj valueForKey:@"Long"] doubleValue]);
-                CGFloat cDis=[BaseViewController directMetersFromCoordinate:currentLoction toCoordinate:CusLoc];
-                if([[obj valueForKey:@"Long"] doubleValue]>0){
-                    NSLog(@"%@",[obj valueForKey:@"Long"]);
-                }
-                NSLog(@"%f %d",cDis,(cDis>0 && cDis <= dis));
-                return cDis>0 && cDis <= dis;
-            }];
-            
-            self.ObjCustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
-            
-            NSSortDescriptor *NameField = [NSSortDescriptor sortDescriptorWithKey:@"Name" ascending:YES];
-            NSArray *sortDescriptors = [NSArray arrayWithObjects:NameField, nil];
-            
-            NSMutableArray *MkList=[[_ObjCustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Town_Code contains[c] %@", self.TdayPl.Pl]] mutableCopy];
-            
-            if(_UserDet.GEOTagNeed==1){
-                MkList=[[MkList filteredArrayUsingPredicate:findDistance] mutableCopy];
-            }
-            self.CustomerList = [[MkList sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
-            
-            MkList=[[_ObjCustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Town_Code!= %@", self.TdayPl.Pl]] mutableCopy];
-            
-            if(_UserDet.GEOTagNeed==1){
-                MkList=[[MkList filteredArrayUsingPredicate:findDistance] mutableCopy];
-            }
-            self.CustomerList = [[self.CustomerList arrayByAddingObjectsFromArray:[MkList sortedArrayUsingDescriptors:sortDescriptors]] mutableCopy];
-            _HospitalsList=[[[NSUserDefaults standardUserDefaults] objectForKey:[[NSString alloc] initWithFormat:@"Hospital_%@.SANAPP",self.meetData.DataSF]] mutableCopy];
-            [self.selHospFltr reloadData];
-            [self.collectionView reloadData];
-        }];
-    }
+        }
     if(tableView==self.tbVstType) {
         self.lblCallType.text=[NSString stringWithFormat:@"  %@",[self.objCallType[indexPath.row] valueForKey:@"name"]];
         _lblCallType.tag=(indexPath.row+1);
@@ -711,6 +638,91 @@
     }else{
         [self closeTableViews];
     }
+}
+
+-(void)loadDRList:(NSString*)DataKey
+{
+    [BaseViewController loadMasterData:self.meetData.DataSF completion:^(){
+        
+        CGFloat dis=_UserDet.DistRadius;
+        CLLocationCoordinate2D currentLoction=CLLocationCoordinate2DMake([_locationData.latitude doubleValue], [_locationData.longitude doubleValue]);
+        
+        
+        NSPredicate *findDistance = [NSPredicate predicateWithBlock: ^BOOL(id obj, NSDictionary *bind){
+            
+            CLLocationCoordinate2D CusLoc=CLLocationCoordinate2DMake([[obj valueForKey:@"Lat"] doubleValue], [[obj valueForKey:@"Long"] doubleValue]);
+            CGFloat cDis=[BaseViewController directMetersFromCoordinate:currentLoction toCoordinate:CusLoc];
+            if([[obj valueForKey:@"Long"] doubleValue]>0){
+                NSLog(@"%@",[obj valueForKey:@"ong"]);
+            }
+            NSLog(@"%f %d",cDis,(cDis>0 && cDis <= dis));
+            return cDis>0 && cDis <= dis;
+        }];
+        
+        self.ObjCustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
+        
+        NSSortDescriptor *NameField = [NSSortDescriptor sortDescriptorWithKey:@"Name" ascending:YES];
+        NSArray *sortDescriptors = [NSArray arrayWithObjects:NameField, nil];
+        
+        NSMutableArray *MkList=[[_ObjCustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Town_Code contains[c] %@", self.TdayPl.Pl]] mutableCopy];
+        if(_UserDet.GEOTagNeed==1){
+            MkList=[[MkList filteredArrayUsingPredicate:findDistance] mutableCopy];
+        }
+        self.CustomerList = [[MkList sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
+        
+        MkList=[[_ObjCustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Town_Code!= %@", self.TdayPl.Pl]] mutableCopy];
+        if(_UserDet.GEOTagNeed==1){
+            MkList=[[MkList filteredArrayUsingPredicate:findDistance] mutableCopy];
+        }
+        self.CustomerList = [[self.CustomerList arrayByAddingObjectsFromArray:[MkList sortedArrayUsingDescriptors:sortDescriptors]] mutableCopy];
+        _HospitalsList=[[[NSUserDefaults standardUserDefaults] objectForKey:[[NSString alloc] initWithFormat:@"Hospital_%@.SANAPP",self.meetData.DataSF]] mutableCopy];
+        [self.selHospFltr reloadData];
+        [self.collectionView reloadData];
+    } error:^(NSString* errMsg){
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Digital Detailing"
+                                                            message:errMsg
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertView show];
+        
+        CGFloat dis=_UserDet.DistRadius;
+        CLLocationCoordinate2D currentLoction=CLLocationCoordinate2DMake([_locationData.latitude doubleValue], [_locationData.longitude doubleValue]);
+        
+        
+        NSPredicate *findDistance = [NSPredicate predicateWithBlock: ^BOOL(id obj, NSDictionary *bind){
+            
+            CLLocationCoordinate2D CusLoc=CLLocationCoordinate2DMake([[obj valueForKey:@"Lat"] doubleValue], [[obj valueForKey:@"Long"] doubleValue]);
+            CGFloat cDis=[BaseViewController directMetersFromCoordinate:currentLoction toCoordinate:CusLoc];
+            if([[obj valueForKey:@"Long"] doubleValue]>0){
+                NSLog(@"%@",[obj valueForKey:@"Long"]);
+            }
+            NSLog(@"%f %d",cDis,(cDis>0 && cDis <= dis));
+            return cDis>0 && cDis <= dis;
+        }];
+        
+        self.ObjCustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
+        
+        NSSortDescriptor *NameField = [NSSortDescriptor sortDescriptorWithKey:@"Name" ascending:YES];
+        NSArray *sortDescriptors = [NSArray arrayWithObjects:NameField, nil];
+        
+        NSMutableArray *MkList=[[_ObjCustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Town_Code contains[c] %@", self.TdayPl.Pl]] mutableCopy];
+        
+        if(_UserDet.GEOTagNeed==1){
+            MkList=[[MkList filteredArrayUsingPredicate:findDistance] mutableCopy];
+        }
+        self.CustomerList = [[MkList sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
+        
+        MkList=[[_ObjCustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Town_Code!= %@", self.TdayPl.Pl]] mutableCopy];
+        
+        if(_UserDet.GEOTagNeed==1){
+            MkList=[[MkList filteredArrayUsingPredicate:findDistance] mutableCopy];
+        }
+        self.CustomerList = [[self.CustomerList arrayByAddingObjectsFromArray:[MkList sortedArrayUsingDescriptors:sortDescriptors]] mutableCopy];
+        _HospitalsList=[[[NSUserDefaults standardUserDefaults] objectForKey:[[NSString alloc] initWithFormat:@"Hospital_%@.SANAPP",self.meetData.DataSF]] mutableCopy];
+        [self.selHospFltr reloadData];
+        [self.collectionView reloadData];
+    }];
+
 }
 
 - (void)didReceiveMemoryWarning {
