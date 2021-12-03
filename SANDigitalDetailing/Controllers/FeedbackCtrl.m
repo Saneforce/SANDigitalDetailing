@@ -925,7 +925,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
              [self ClearandCloseView];
          }
          else{
-             [BaseViewController Toast:[NSString stringWithFormat:@"%@. %@",NSLocalizedString(@"Call Submission Failed", @"Call Submission Failed"),sMsg]];
+             [BaseViewController Toast:[NSString stringWithFormat:@"%@. %@",NSLocalizedString(@"Offline Calls are saved Locally", @"Offline Calls are saved Locally"),sMsg]];
              if([sMsg isEqualToString:@""] || receivedDta==nil){
                  [uData setValue:[NSNumber numberWithBool:NO] forKey:@"Drft"];
                  [uData setValue:[NSNumber numberWithBool:NO] forKey:@"Synced"];
@@ -941,7 +941,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
                                [self.SubmittedCallList addObject:[uData mutableCopy]];
                                [WBService saveArrayData:self.SubmittedCallList forKey:@"SubmittedCalls.SANAPP"];
                                
-                               [BaseViewController Toast:[NSString stringWithFormat:@"%@.\n %@",NSLocalizedString(@"Call Submission Failed", @"Call Submission Failed"),errorMsg.description]];
+                               [BaseViewController Toast:[NSString stringWithFormat:@"%@.\n %@",NSLocalizedString(@"Offline Calls are saved Locally", @"Offline Calls are saved Locally"),errorMsg.description]];
                                [SVProgressHUD dismiss];
                                [self ClearandCloseView];
                            }];
