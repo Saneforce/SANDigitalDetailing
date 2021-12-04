@@ -166,7 +166,7 @@
         self.TdayPl.WT=[WorkTypes objectForKey:@"Code"];
         self.TdayPl.WTNm=[WorkTypes objectForKey:@"Name"];
         self.TdayPl.FWFlg=[WorkTypes objectForKey:@"FWFlg"];
-        [[NSUserDefaults standardUserDefaults] setObject:self.TdayPl.FWFlg forKey:@"selectedWKType"];
+        [WBService saveData:self.TdayPl.FWFlg forKey:@"selectedWKType"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [self.btnSelWT setTitle:[WorkTypes objectForKey:@"Name"] forState:UIControlStateNormal];
         self.TdayPl.Pl=@"";
@@ -187,7 +187,8 @@
         {
             [self.btnSelCluster setTitle:@"" forState:UIControlStateNormal];
             [self.btnSelHQ setTitle:@"" forState:UIControlStateNormal];
-
+            [self.btnSelCluster setEnabled:NO];
+            [self.btnSelHQ setEnabled:NO];
 
         }
     }
