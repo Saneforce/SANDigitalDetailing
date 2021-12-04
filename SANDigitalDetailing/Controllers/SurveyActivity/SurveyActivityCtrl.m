@@ -765,7 +765,12 @@
         self.CustomerList = arrfilterDr;
     }
     else
+    {
         self.CustomerList = [NSMutableArray new];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_collectionView reloadData];
+        });
+    }
     
     if(_selMode.length >0 && _selSurvery.length>0 & self.CustomerList.count !=0)
     {
