@@ -170,6 +170,13 @@
     }
     
 }
+-(void) removeCluster:(NSString *) SF andSFName:(NSString *)sSFNm
+{
+    NSMutableArray *Selitem = [[self.objClusterList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SFCode contains[c] %@", SF]] mutableCopy];
+    if([Selitem count]>0)
+        [self.objClusterList removeObjectsInArray:Selitem];
+
+}
 -(void) setGetClusters:(NSString *) SF andSFName:(NSString *)sSFNm
 {
      NSMutableArray *Selitem = [[self.objClusterList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SFCode contains[c] %@", SF]] mutableCopy];
@@ -804,6 +811,7 @@
                                 c1.Checked = NO;
                             }
                         }
+                        [self removeCluster:[[_SelOptList objectAtIndex:0] objectForKey:@"Code"] andSFName:[[_SelOptList objectAtIndex:0] objectForKey:@"Name"]];
                         [self.SelOptList removeAllObjects];
                     }
                 }
@@ -824,6 +832,17 @@
             self.SelWTName=[item objectForKey:@"Name"];
             self.WTFlw=[item objectForKey:@"FWFlg"];
             [self.btnWTName setTitle:[NSString stringWithFormat:@"   %@",self.SelWTName] forState:UIControlStateNormal];
+            if([self.WTFlw isEqualToString:@"F"])
+            {
+                [self.btnHQList setUserInteractionEnabled:YES];
+                [self.btnCluster setUserInteractionEnabled:YES];
+            }
+            else
+            {
+                [self.btnHQList setUserInteractionEnabled:NO];
+                [self.btnCluster setUserInteractionEnabled:NO];
+            }
+            
             [self closeSelection];
         }
         else if(tag==4){
