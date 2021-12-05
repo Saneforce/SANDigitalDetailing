@@ -127,7 +127,7 @@
     if([_UserDet.Desig isEqualToString:@"MR"]){
         _btnSelectHeadQtr.enabled=NO;
         self.DataSF = self.UserDet.SF;
-        [_btnSelectHeadQtr setTitle:[NSString stringWithFormat:@"%@",NSLocalizedString(self.UserDet.SFName, self.UserDet.SFName) ] forState:UIControlStateNormal];
+        [_btnSelectHeadQtr setTitle:[NSString stringWithFormat:@"%@",self.UserDet.HQName ] forState:UIControlStateNormal];
         //[_btnSelectHeadQtr setHidden:YES];
     }
     else

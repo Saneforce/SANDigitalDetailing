@@ -1095,6 +1095,7 @@
                     <connections>
                         <outlet property="btnBack" destination="fGW-WG-clG" id="EwS-yA-Hmu"/>
                         <outlet property="lblHQName" destination="hJd-Bk-tIj" id="kkM-dx-gWI"/>
+                        <outlet property="lblSelectHQ" destination="OFI-fZ-f7K" id="auQ-ms-mdL"/>
                         <outlet property="lblTitle" destination="TzQ-oJ-BJi" id="HEM-T9-UaG"/>
                         <outlet property="searchBox" destination="hhD-je-fZR" id="XYZ-q1-Ji0"/>
                         <outlet property="tvMasterList" destination="FNk-vK-Xdb" id="6Db-8Y-IGJ"/>
@@ -15007,7 +15008,7 @@
                                                             </tableViewCell>
                                                         </prototypes>
                                                     </tableView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oab-wV-Fi9">
+                                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oab-wV-Fi9">
                                                         <rect key="frame" x="0.0" y="0.0" width="557" height="37"/>
                                                         <connections>
                                                             <action selector="OpenHeadquaters:" destination="iVS-52-ZQG" eventType="touchUpInside" id="DQW-aM-b2x"/>
@@ -15097,7 +15098,7 @@
                                                             </tableViewCell>
                                                         </prototypes>
                                                     </tableView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikV-k5-A6P">
+                                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikV-k5-A6P">
                                                         <rect key="frame" x="0.0" y="7" width="712" height="30"/>
                                                         <connections>
                                                             <action selector="OpenClusters:" destination="iVS-52-ZQG" eventType="touchUpInside" id="WOA-zp-0aR"/>
@@ -15605,6 +15606,7 @@
                         <outlet property="btnBack" destination="hSk-Kr-4T1" id="wBZ-V4-Q3X"/>
                         <outlet property="btnCluster" destination="ikV-k5-A6P" id="DCK-27-Ezt"/>
                         <outlet property="btnCurrMnTP" destination="red-dQ-7Nq" id="5vV-pp-A8Y"/>
+                        <outlet property="btnHQList" destination="Oab-wV-Fi9" id="i7r-JK-IMB"/>
                         <outlet property="btnNxtMnTP" destination="OnT-8B-5wL" id="UBB-Wd-0xg"/>
                         <outlet property="btnWTName" destination="mme-us-7JQ" id="OGq-HM-pSj"/>
                         <outlet property="btnWTName2" destination="gJT-dM-vF6" id="Cx7-5h-9aj"/>
