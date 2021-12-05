@@ -56,6 +56,8 @@
 @property (nonatomic, weak) IBOutlet UIButton* btDoctor;
 @property (nonatomic, weak) IBOutlet UIButton* btChm;
 @property (nonatomic, weak) IBOutlet UIButton* btnCluster;
+@property (nonatomic, weak) IBOutlet UIButton* btnHQList;
+
 @property (nonatomic, retain) UIButton* btnHosp;
 
 @property (nonatomic, weak) IBOutlet UIView* vwMMultiSel;
