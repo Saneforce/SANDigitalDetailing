@@ -13,6 +13,8 @@
 
 @interface MasterDownloader ()
 
+@property (nonatomic, strong) UserDetails* UserDet;
+
 @property (nonatomic,strong) NSMutableArray *MasterList;
 @property (nonatomic, strong) NSArray* objOptList;
 @property (nonatomic,strong) NSArray *objHQList;
@@ -30,7 +32,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self closeSelection];
-    
+    self.UserDet=[UserDetails sharedUserDetails];
+
     self.objHQList= [[[NSUserDefaults standardUserDefaults] objectForKey:@"HQDetails.SANAPP"] mutableCopy];
     [self resetData];
     
@@ -41,6 +44,9 @@
     self.tvMasterList.dataSource=self;
     self.tvOptList.delegate=self;
     self.tvOptList.dataSource=self;
+    
+    [self.lblHQName setText:[NSString stringWithFormat:@"%@",self.UserDet.HQName]];
+
 }
 -(void) resetData
 {
