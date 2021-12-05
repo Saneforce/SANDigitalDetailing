@@ -793,9 +793,21 @@
                     [self setGetHosps:[item objectForKey:@"id"] andSFName:[item objectForKey:@"name"]];
                 }else{
                     [self setGetClusters:[item objectForKey:@"id"] andSFName:[item objectForKey:@"name"]];
+                    if(_SelOptList.count >0)
+                    {
+                        for (NSInteger j = 0; j < [tableView numberOfSections]; ++j)
+                        {
+                            for (NSInteger i = 0; i < [tableView numberOfRowsInSection:j]; ++i)
+                            {
+                                TBSelectionBxCell *c1 =[tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:j]];;
+                                [c1.btnCheked setImage:nil forState:UIControlStateNormal];
+                                c1.Checked = NO;
+                            }
+                        }
+                        [self.SelOptList removeAllObjects];
+                    }
                 }
                 [self.SelOptList addObject:selItem];
-                
                 [cell.btnCheked setImage:[UIImage imageNamed:@"OptChecked"] forState:UIControlStateNormal];
                 cell.Checked=YES;
             }

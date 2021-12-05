@@ -14,6 +14,7 @@
 #import "TBSelectionBxCell.h"
 #import "CVColor.h"
 #import "PresentationSelCtrl.h"
+#import "FeedbackCtrl.h"
 #import "EditDateSelectionCtrl.h"
 #import <QuartzCore/QuartzCore.h>
 #import "UIView+RoudedCorners.h"
@@ -1350,34 +1351,38 @@
                 NSMutableArray* ilCalls=[[[NSUserDefaults standardUserDefaults] objectForKey:@"SubmittedCalls.SANAPP"] mutableCopy];
                 
                 NSArray* lPCalls=[[ilCalls filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"CustCode=%@ and CusType=%@  and Synced=%@",[DatawithImage valueForKey:@"CustCode"],[DatawithImage valueForKey:@"CusType"],[NSNumber numberWithBool:NO]]] mutableCopy];
-                long indx= [ilCalls indexOfObject:lPCalls[0]];
-                [ilCalls removeObjectAtIndex:indx];
-                [WBService saveArrayData:[ilCalls mutableCopy] forKey:@"SubmittedCalls.SANAPP"];
-                NSString *CustCode=[lPCalls[0] valueForKey:@"CustCode"];
-                [WBService SendServerRequest:@"GET/CusLVst" withParameter:[@{@"CusCode":CustCode,@"typ":@"D"} mutableCopy] withImages:nil DataSF:nil
-                  completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage){
+                
+                if(lPCalls.count > 0)
+                {
+                    long indx= [ilCalls indexOfObject:lPCalls[0]];
+                    [ilCalls removeObjectAtIndex:indx];
+                    [WBService saveArrayData:[ilCalls mutableCopy] forKey:@"SubmittedCalls.SANAPP"];
+                    NSString *CustCode=[lPCalls[0] valueForKey:@"CustCode"];
+                    [WBService SendServerRequest:@"GET/CusLVst" withParameter:[@{@"CusCode":CustCode,@"typ":@"D"} mutableCopy] withImages:nil DataSF:nil
+                                      completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage){
                         NSMutableArray *VstData=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
                         [WBService saveData:VstData forKey:[NSString stringWithFormat:@"CLVst_Cus%@D.SANAPP",CustCode]];
-                       
-                      }
-                      error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage){
-                          NSLog(@"%@",errorMsg);
-                      }
-                ];
-               /* NSMutableDictionary* sCall=[self.CallsSectionsList[indxPath.section][indxPath.row] mutableCopy];
-                [sCall setObject:[NSNumber numberWithBool:YES] forKey:@"Synced"];
-                [self.CallsSectionsList[indxPath.section] removeObjectAtIndex:indxPath.row];
-                [self.CallsSectionsList[indxPath.section] insertObject:sCall atIndex:indxPath.row];
-                */
-                [BaseViewController Toast:NSLocalizedString(@"Call Synced Successfully", @"Call Synced Successfully")];
-                //[self saveSubmitCalls];
-                [self reloadSubCalls];
+                        
+                    }
+                                           error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage){
+                        NSLog(@"%@",errorMsg);
+                    }
+                    ];
+                    /* NSMutableDictionary* sCall=[self.CallsSectionsList[indxPath.section][indxPath.row] mutableCopy];
+                     [sCall setObject:[NSNumber numberWithBool:YES] forKey:@"Synced"];
+                     [self.CallsSectionsList[indxPath.section] removeObjectAtIndex:indxPath.row];
+                     [self.CallsSectionsList[indxPath.section] insertObject:sCall atIndex:indxPath.row];
+                     */
+                    [BaseViewController Toast:NSLocalizedString(@"Call Synced Successfully", @"Call Synced Successfully")];
+                    //[self saveSubmitCalls];
+                    [self reloadSubCalls];
+                }
             }
-        }
-        error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage,NSIndexPath *indexPath){
-            NSLog(@"%@",errorMsg);
-        }
-     ];
+    }
+                           error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage,NSIndexPath *indexPath){
+        NSLog(@"%@",errorMsg);
+    }
+    ];
 }
 
 -(IBAction)EditCall:(UIButton *)sender{
@@ -1682,7 +1687,11 @@
         PresentationSelCtrl *vc=[segue destinationViewController];
         //vc.ModeScr=@"Prepare";
     }
-
+    if([[segue identifier] isEqualToString:@"EditFeedback"])
+    {
+        FeedbackCtrl *vc= [segue destinationViewController];
+        vc.isForEdit =YES;
+    }
 }
 -(IBAction) openMeeting:(id)sender{
     UIButton* btn=(UIButton*) sender;
