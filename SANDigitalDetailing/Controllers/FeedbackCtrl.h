@@ -82,6 +82,6 @@
 
 @property (retain, nonatomic) NSString* DeptCode;
 @property (retain, nonatomic) NSString* DeptName;
-
+@property (nonatomic) BOOL isForEdit;
 -(IBAction)hideSelection:(id)sender;
 @end

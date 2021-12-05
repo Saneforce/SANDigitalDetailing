@@ -92,7 +92,7 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
     self.btnCancel.hidden=self.meetData.MissedEntry;
     self.btnSave.hidden=!self.meetData.MissedEntry;
     self.btnRCPA.hidden=YES;
-    
+    self.btnAddAdCus.hidden = YES;
     
     
     CGRect fram=CGRectMake(_btnActivity.frame.origin.x, _btnSurvey.frame.origin.y, _btnSurvey.frame.size.width, _btnSurvey.frame.size.height);
@@ -120,7 +120,14 @@ static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
     if([self.meetData.CusType isEqual:@"2"]) LstType=@"ChemistDetails";
     if([self.meetData.CusType isEqual:@"3"]) LstType=@"StockistDetails";
     if([self.meetData.CusType isEqual:@"4"]) LstType=@"UnlistedDR";
-    if([self.meetData.CusType isEqual:@"1"]) self.btnRCPA.hidden=NO;
+    if([self.meetData.CusType isEqual:@"1"])
+    {
+        self.btnRCPA.hidden=NO;
+        self.btnAddAdCus.hidden = NO;
+    }
+    if([self.meetData.CusType isEqual:@"1"] && _isForEdit)
+        self.btnAddAdCus.hidden = YES;
+    
     NSString *DataKey=[[NSString alloc] initWithFormat:@"%@_%@.SANAPP",LstType,self.meetData.DataSF];
     
     self.CustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
