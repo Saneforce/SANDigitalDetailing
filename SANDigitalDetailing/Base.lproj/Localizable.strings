@@ -1,0 +1,104 @@
+/*
+  Localizable.strings
+  SANDigitalDetailing
+
+  Created by SANeForce.com on 09/09/18.
+  Copyright © 2018 SANeForce.com. All rights reserved.
+*/
+"InvalidUser"="Invalid User ID / Password";
+
+"Calls"="Calls";
+"Create Presentation"="Create Presentation";
+"Reports"="Reports";
+
+"Change Cluster"="Change Cluster";
+"Tour Plan"="Tour Plan";
+"Leave Application"="Leave Application";
+"Settings"="Settings";
+"Logout"="Logout";
+
+"Pending Calls"="Pending Calls";
+"Today Calls"="Today Calls";
+"Total"="Total";
+
+"CheckTPMsg"="Checking Master TP...";
+"CheckDyTPMsg"="Getting Today Tour Plan...";
+"MasDownlMsg"="Master List Downloading...";
+
+"TPSuccess"="Today Work Plan Submitted Successfully";
+"TPError"="Something went to wrong.\n Try Again!.";
+"TPFail"="Today Work Plan Submission Failed";
+"NotifyHead"="Notification Message";
+"NextVstMandate"="Select The Next Visit Date";
+"CallTypeMandate"="Select The Call Type";
+
+"Drug"="Drug";
+"Non Drug"="Non Drug";
+
+"Morning"="Morning";
+"Afternoon"="Afternoon";
+"Evening"="Evening";
+"Day"="Day";
+
+"High"="High";
+"Medium High"="Medium High";
+"Medium Low"="Medium Low";
+"Low"="Low";
+
+"Targeting (New Patients / Month)"="Targeting (New Patients / Month)";
+"Average number of patients per day (approximately)"="Average number of patients per day (approximately)";
+"Sessions"="Session";
+"Economic class of patients"="Economic class of patients";
+
+"Doctor Profiling"="Doctor Profiling";
+"Private Clinic"="Private Clinic";
+"Public Surgery"="Public Surgery";
+"Intramoenia Surgery"="Intramoenia Surgery";
+"Hospital"="Hospital";
+"Clinic"="Clinic";
+"Profiling"="Profiling";
+"Approvals"="Approvals";
+"Activity"="Activity";
+"Missed Date Entry"="Missed Date Entry";
+"GEO Tag / Explore "="GEO Tag / Explore ";
+"Survey"="Survey";
+"TODAY WORK PLAN"="TODAY WORK PLAN";
+"Work Types"="Work Types";
+"Headquters"="Headquters";
+"All"="All";
+"Show All"="Show All";
+"Selection"="Selection";
+"Customer"="Customer";
+"Search"="Search";
+"institutions"="institutions";
+"Chemist"="Chemist";
+"Cluster"="Cluster";
+"SFE KPI"="SFE KPI";
+"Training KPI"="Training KPI";
+"Samples Detail"="Samples Detail";
+"No chart data available."="No chart data available.";
+"Field Work"="Field Work";
+"Weekly Off"="Weekly Off";
+"Competitors"="Competitors";
+"Products"="Products";
+"Slides"="Slides";
+"Brands"="Brands";
+"Departments"="Departments";
+"Speciality"="Speciality";
+"Category"="Category";
+"Qualifications"="Qualifications";
+"Rating Details"="Rating Details";
+"Rating Feedbacks"="Rating Feedbacks";
+"Speaker List"="Speaker List";
+"Participant List"="Participant List";
+"Indication List"="Indication List";
+"Class"="Class";
+"Types"="Types";
+"Clusters"="Clusters";
+"Chemists"="Chemists";
+"Doctors"="Doctors";
+"Stockists"="Stockists";
+"Unlisted Doctors"="Unlisted Doctors";
+"Institutions"="Institutions";
+"Jointworks"="Jointworks";
+"Input"="Input";

@@ -1,0 +1,2430 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "03H-sb-DQA"; */
+"03H-sb-DQA.normalTitle" = "Cái nút";
+
+/* Class = "UILabel"; text = "Understanding of Concepts"; ObjectID = "08m-1o-yrq"; */
+"08m-1o-yrq.text" = "Hiểu biết về các khái niệm";
+
+/* Class = "UILabel"; text = "Sat"; ObjectID = "0Ld-yp-Xgi"; */
+"0Ld-yp-Xgi.text" = "Đã ngồi";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "0Ob-0p-qWR"; */
+"0Ob-0p-qWR.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "0iL-QS-cjz"; */
+"0iL-QS-cjz.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "   Monthly Call Average"; ObjectID = "0jv-Fz-zQM"; */
+"0jv-Fz-zQM.text" = "   Trung bình cuộc gọi hàng tháng";
+
+/* Class = "UILabel"; text = "Rating"; ObjectID = "0lf-8A-33Y"; */
+"0lf-8A-33Y.text" = "Xếp hạng";
+
+/* Class = "UILabel"; text = "Jointwork"; ObjectID = "0qX-el-DNd"; */
+"0qX-el-DNd.text" = "Làm việc";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "0wq-8G-0VY"; */
+"0wq-8G-0VY.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Clinic Place"; ObjectID = "0yP-Ey-96G"; */
+"0yP-Ey-96G.text" = "Nơi khám bệnh";
+
+/* Class = "UILabel"; text = "Territory"; ObjectID = "0ya-Cb-at0"; */
+"0ya-Cb-at0.text" = "Lãnh thổ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "12I-Wh-Uvk"; */
+"12I-Wh-Uvk.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Competitor Company Name"; ObjectID = "13k-TB-Saz"; */
+"13k-TB-Saz.text" = "Đối thủ cạnh tranh Tên công ty";
+
+/* Class = "UILabel"; text = "0.00"; ObjectID = "14p-FO-zGr"; */
+"14p-FO-zGr.text" = "0,00";
+
+/* Class = "UILabel"; text = "Territory"; ObjectID = "16G-n2-VCj"; */
+"16G-n2-VCj.text" = "Lãnh thổ";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "1Fv-Ux-T8R"; */
+"1Fv-Ux-T8R.normalTitle" = "Làm xong";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1N9-8O-alB"; */
+"1N9-8O-alB.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1OQ-wP-gkS"; */
+"1OQ-wP-gkS.normalTitle" = "Cái nút";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1ZQ-hc-Ln3"; */
+"1ZQ-hc-Ln3.normalTitle" = "Cái nút";
+
+/* Class = "UILabel"; text = "Address on Leave"; ObjectID = "1ka-Dx-M1k"; */
+"1ka-Dx-M1k.text" = "Địa chỉ nghỉ";
+
+/* Class = "UIButton"; normalTitle = "Field Work"; ObjectID = "1sq-4a-Q39"; */
+"1sq-4a-Q39.normalTitle" = "Công việc thực địa";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1ud-aH-M1r"; */
+"1ud-aH-M1r.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Remarks"; ObjectID = "20J-tl-Gvt"; */
+"20J-tl-Gvt.text" = "Nhận xét";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "2Ju-bd-caN"; */
+"2Ju-bd-caN.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "2MN-Zm-3IE"; */
+"2MN-Zm-3IE.normalTitle" = "Cứu";
+
+/* Class = "UILabel"; text = "Feedback"; ObjectID = "2Ng-aR-LzI"; */
+"2Ng-aR-LzI.text" = "Nhận xét";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "2XF-SV-Sht"; */
+"2XF-SV-Sht.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UILabel"; text = "Available :"; ObjectID = "2br-nr-EvC"; */
+"2br-nr-EvC.text" = "Có sẵn :";
+
+/* Class = "UILabel"; text = "Visit Type"; ObjectID = "2hz-CK-tzK"; */
+"2hz-CK-tzK.text" = "Loại lượt truy cập";
+
+/* Class = "UIButton"; normalTitle = "Re-Select"; ObjectID = "2iZ-ta-Mgd"; */
+"2iZ-ta-Mgd.normalTitle" = "Chọn lại";
+
+/* Class = "UIButton"; normalTitle = "Detail"; ObjectID = "2nz-GE-Qs0"; */
+"2nz-GE-Qs0.normalTitle" = "Chi tiết";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2pb-Cr-S81"; */
+"2pb-Cr-S81.normalTitle" = "Cái nút";
+
+/* Class = "UILabel"; text = "Licence Key"; ObjectID = "2xm-n5-6oX"; */
+"2xm-n5-6oX.text" = "Khóa cấp phép";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "30Y-Sq-yFj"; */
+"30Y-Sq-yFj.normalTitle" = "Cái nút";
+
+/* Class = "UILabel"; text = "Product"; ObjectID = "32U-59-zVg"; */
+"32U-59-zVg.text" = "Sản phẩm";
+
+/* Class = "UILabel"; text = "Speaker From Other Zone"; ObjectID = "32l-Rc-Bql"; */
+"32l-Rc-Bql.text" = "Loa từ vùng khác";
+
+/* Class = "UILabel"; text = "Product"; ObjectID = "353-Sy-VhB"; */
+"353-Sy-VhB.text" = "Sản phẩm";
+
+/* Class = "UILabel"; text = "Last Visit Date"; ObjectID = "36v-dF-nPx"; */
+"36v-dF-nPx.text" = "Ngày ghé thăm cuối cùng";
+
+/* Class = "UILabel"; text = "Notification Center"; ObjectID = "3GC-rz-ZdD"; */
+"3GC-rz-ZdD.text" = "Trung tâm Thông báo";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "3QJ-gZ-V4l"; */
+"3QJ-gZ-V4l.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "3Wg-O2-vPM"; */
+"3Wg-O2-vPM.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Multiselect Window"; ObjectID = "3Xz-wP-gY1"; */
+"3Xz-wP-gY1.text" = "Cửa sổ nhiều lựa chọn";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "3kX-tB-DQI"; */
+"3kX-tB-DQI.text" = "Nhãn";
+
+/* Class = "UITextField"; text = "77:9"; ObjectID = "3tA-4D-Wbw"; */
+"3tA-4D-Wbw.text" = "3.21458333333333";
+
+/* Class = "UILabel"; text = "SGT [ Small Group Training Programme]"; ObjectID = "3wi-lB-3Nc"; */
+"3wi-lB-3Nc.text" = "SGT [Chương trình đào tạo nhóm nhỏ]";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "3xu-jA-vUq"; */
+"3xu-jA-vUq.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Discussion Topic"; ObjectID = "3xv-BB-z0z"; */
+"3xv-BB-z0z.text" = "Đề tài thảo luận";
+
+/* Class = "UILabel"; text = "Cluster"; ObjectID = "41A-qz-jnf"; */
+"41A-qz-jnf.text" = "Cluster";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "46p-tZ-qGV"; */
+"46p-tZ-qGV.text" = "Loại";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4PL-P1-aCd"; */
+"4PL-P1-aCd.text" = "Nhãn";
+
+/* Class = "UISegmentedControl"; 4Ph-SK-HCZ.segmentTitles[0] = "SGT"; ObjectID = "4Ph-SK-HCZ"; */
+"4Ph-SK-HCZ.segmentTitles[0]" = "SGT";
+
+/* Class = "UISegmentedControl"; 4Ph-SK-HCZ.segmentTitles[1] = "STP"; ObjectID = "4Ph-SK-HCZ"; */
+"4Ph-SK-HCZ.segmentTitles[1]" = "STP";
+
+/* Class = "UISegmentedControl"; 4Ph-SK-HCZ.segmentTitles[2] = "CEP"; ObjectID = "4Ph-SK-HCZ"; */
+"4Ph-SK-HCZ.segmentTitles[2]" = "CEP";
+
+/* Class = "UISegmentedControl"; 4Ph-SK-HCZ.segmentTitles[3] = "ONE To ONE"; ObjectID = "4Ph-SK-HCZ"; */
+"4Ph-SK-HCZ.segmentTitles[3]" = "MỘT đến MỘT";
+
+/* Class = "UISegmentedControl"; 4Ph-SK-HCZ.segmentTitles[4] = "CME"; ObjectID = "4Ph-SK-HCZ"; */
+"4Ph-SK-HCZ.segmentTitles[4]" = "CME";
+
+/* Class = "UILabel"; text = "Group "; ObjectID = "4Tc-uz-7cO"; */
+"4Tc-uz-7cO.text" = "Tập đoàn";
+
+/* Class = "UITextField"; text = "1"; ObjectID = "4VV-OZ-rdV"; */
+"4VV-OZ-rdV.text" = "1";
+
+/* Class = "UILabel"; text = "Duration :"; ObjectID = "4f2-At-0wr"; */
+"4f2-At-0wr.text" = "Khoảng thời gian :";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "4i9-gu-Ui8"; */
+"4i9-gu-Ui8.normalTitle" = "Cái nút";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "4jb-pU-kjL"; */
+"4jb-pU-kjL.text" = "Địa điểm";
+
+/* Class = "UIButton"; normalTitle = "Select the Speciality"; ObjectID = "4kG-KH-CBM"; */
+"4kG-KH-CBM.normalTitle" = "Chọn Chuyên ngành";
+
+/* Class = "UILabel"; text = "Mobile"; ObjectID = "4mO-tx-6k4"; */
+"4mO-tx-6k4.text" = "Di động";
+
+/* Class = "UILabel"; text = "Survey"; ObjectID = "4vp-CC-ldE"; */
+"4vp-CC-ldE.text" = "Sự khảo sát";
+
+/* Class = "UILabel"; text = "End Time"; ObjectID = "4yO-8r-1W0"; */
+"4yO-8r-1W0.text" = "Thời gian kết thúc";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "52d-GH-TuF"; */
+"52d-GH-TuF.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "56t-YX-9vk"; */
+"56t-YX-9vk.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "  Select Visit Type"; ObjectID = "58t-mf-EvS"; */
+"58t-mf-EvS.text" = "  Chọn loại truy cập";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "5EV-5Q-vvd"; */
+"5EV-5Q-vvd.normalTitle" = "Cứu";
+
+/* Class = "UITextView"; text = "-"; ObjectID = "5Fi-uf-YzE"; */
+"5Fi-uf-YzE.text" = "-";
+
+/* Class = "UIButton"; normalTitle = "Detail"; ObjectID = "5In-u3-4PE"; */
+"5In-u3-4PE.normalTitle" = "Chi tiết";
+
+/* Class = "UILabel"; text = "XXXXXXXXXXX"; ObjectID = "5MB-g2-YXq"; */
+"5MB-g2-YXq.text" = "XXXXXXXXXXX";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "5Ny-zM-h8N"; */
+"5Ny-zM-h8N.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "-"; ObjectID = "5ST-da-R4V"; */
+"5ST-da-R4V.normalTitle" = "-";
+
+/* Class = "UILabel"; text = "Product"; ObjectID = "5Wf-DS-lsf"; */
+"5Wf-DS-lsf.text" = "Sản phẩm";
+
+/* Class = "UILabel"; text = "Speciality"; ObjectID = "5aO-nO-sTQ"; */
+"5aO-nO-sTQ.text" = "Chuyên môn";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "5aa-Wp-vSe"; */
+"5aa-Wp-vSe.text" = "Điện thoại";
+
+/* Class = "UILabel"; text = "E-Mail"; ObjectID = "5b2-3i-ffH"; */
+"5b2-3i-ffH.text" = "E-mail";
+
+/* Class = "UILabel"; text = "Understanding of Concepts"; ObjectID = "5bR-au-yst"; */
+"5bR-au-yst.text" = "Hiểu biết về các khái niệm";
+
+/* Class = "UILabel"; text = "Inputs"; ObjectID = "5dV-hU-aD9"; */
+"5dV-hU-aD9.text" = "Đầu vào";
+
+/* Class = "UIButton"; normalTitle = "Save Presentation"; ObjectID = "5fD-Lt-IAp"; */
+"5fD-Lt-IAp.normalTitle" = "Lưu bản trình bày";
+
+/* Class = "UILabel"; text = "Territory"; ObjectID = "5iK-HP-Byj"; */
+"5iK-HP-Byj.text" = "Lãnh thổ";
+
+/* Class = "UILabel"; text = "Lng :"; ObjectID = "5jK-ed-JYF"; */
+"5jK-ed-JYF.text" = "Lng:";
+
+/* Class = "UILabel"; text = "SF Name"; ObjectID = "5kL-Ec-G1n"; */
+"5kL-Ec-G1n.text" = "Tên SF";
+
+/* Class = "UIButton"; normalTitle = "Survey"; ObjectID = "5xY-nY-2G1"; */
+"5xY-nY-2G1.normalTitle" = "Sự khảo sát";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "5xy-bZ-KY0"; */
+"5xy-bZ-KY0.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UILabel"; text = "Contact Person"; ObjectID = "5yc-Md-NQS"; */
+"5yc-Md-NQS.text" = "Người liên hệ";
+
+/* Class = "UILabel"; text = "Product"; ObjectID = "60d-Qr-nx7"; */
+"60d-Qr-nx7.text" = "Sản phẩm";
+
+/* Class = "UIButton"; normalTitle = "Yes to Reject"; ObjectID = "653-xY-96x"; */
+"653-xY-96x.normalTitle" = "Có để từ chối";
+
+/* Class = "UITextView"; text = "Address"; ObjectID = "65M-os-Cwb"; */
+"65M-os-Cwb.text" = "Địa chỉ nhà";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "66U-XM-weq"; */
+"66U-XM-weq.normalTitle" = "VÂNG";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "67e-B0-Ur2"; */
+"67e-B0-Ur2.text" = "-";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "6Cs-5b-eOk"; */
+"6Cs-5b-eOk.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Headquarters"; ObjectID = "6Cy-id-rnI"; */
+"6Cy-id-rnI.text" = "Trụ sở chính";
+
+/* Class = "UILabel"; text = "Qty : 000"; ObjectID = "6Nk-W5-W7C"; */
+"6Nk-W5-W7C.text" = "Số lượng: 000";
+
+/* Class = "UIButton"; normalTitle = "View"; ObjectID = "6QM-8i-32w"; */
+"6QM-8i-32w.normalTitle" = "Quang cảnh";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "6WF-mQ-RJg"; */
+"6WF-mQ-RJg.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "6ZC-cD-WJ6"; */
+"6ZC-cD-WJ6.text" = "-";
+
+/* Class = "UILabel"; text = "Qty"; ObjectID = "6cN-U6-kVU"; */
+"6cN-U6-kVU.text" = "Qty";
+
+/* Class = "UILabel"; text = ":"; ObjectID = "6eG-ub-jYr"; */
+"6eG-ub-jYr.text" = ":";
+
+/* Class = "UILabel"; text = "Address On Leave"; ObjectID = "6gc-KI-7O6"; */
+"6gc-KI-7O6.text" = "Địa chỉ nghỉ";
+
+/* Class = "UILabel"; text = "Nov 2019"; ObjectID = "6kp-RJ-bbP"; */
+"6kp-RJ-bbP.text" = "Tháng 11 năm 2019";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "6la-dU-R1M"; */
+"6la-dU-R1M.normalTitle" = "Cái nút";
+
+/* Class = "UILabel"; text = "Gender"; ObjectID = "6zs-hc-8um"; */
+"6zs-hc-8um.text" = "Giới tính";
+
+/* Class = "UILabel"; text = "Queries"; ObjectID = "74L-Io-Uqq"; */
+"74L-Io-Uqq.text" = "Truy vấn";
+
+/* Class = "UIButton"; normalTitle = "Select the Qualification"; ObjectID = "77B-XF-wob"; */
+"77B-XF-wob.normalTitle" = "Chọn chứng chỉ";
+
+/* Class = "UILabel"; text = "Select the Option"; ObjectID = "7HF-Ep-Lmw"; */
+"7HF-Ep-Lmw.text" = "Chọn tùy chọn";
+
+/* Class = "UIButton"; normalTitle = "Doctorwise Products"; ObjectID = "7LX-IP-jJX"; */
+"7LX-IP-jJX.normalTitle" = "Sản phẩm Doctorwise";
+
+/* Class = "UILabel"; text = "2020-12-30"; ObjectID = "7Ms-sP-Psu"; */
+"7Ms-sP-Psu.text" = "44195";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "7bb-Rm-xGc"; */
+"7bb-Rm-xGc.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Remarks"; ObjectID = "7dI-YM-UNc"; */
+"7dI-YM-UNc.text" = "Nhận xét";
+
+/* Class = "UILabel"; text = "Products"; ObjectID = "7jw-ml-iIA"; */
+"7jw-ml-iIA.text" = "Các sản phẩm";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "7lM-Od-Bq3"; */
+"7lM-Od-Bq3.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "7rQ-8J-fIb"; */
+"7rQ-8J-fIb.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UILabel"; text = "Data Protection Policy"; ObjectID = "84N-L1-F1H"; */
+"84N-L1-F1H.text" = "Chính sách bảo vệ dữ liệu";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "85k-7g-pHP"; */
+"85k-7g-pHP.normalTitle" = "+";
+
+/* Class = "UILabel"; text = "Inputs"; ObjectID = "8Aa-9j-JBx"; */
+"8Aa-9j-JBx.text" = "Đầu vào";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "8Fi-ww-N4d"; */
+"8Fi-ww-N4d.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Understanding of Concepts"; ObjectID = "8R6-A7-hKw"; */
+"8R6-A7-hKw.text" = "Hiểu biết về các khái niệm";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "8Y8-Cl-hju"; */
+"8Y8-Cl-hju.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "No of Days :"; ObjectID = "8gH-2L-EbQ"; */
+"8gH-2L-EbQ.text" = "Không ngày:";
+
+/* Class = "UIButton"; normalTitle = "Add Another Brand"; ObjectID = "8h5-5r-hBa"; */
+"8h5-5r-hBa.normalTitle" = "Thêm một thương hiệu khác";
+
+/* Class = "UILabel"; text = "Headquaters"; ObjectID = "8iC-YG-IMg"; */
+"8iC-YG-IMg.text" = "Trụ sở chính";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "8nB-H7-qaa"; */
+"8nB-H7-qaa.text" = "-";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "8r3-8r-xJc"; */
+"8r3-8r-xJc.normalTitle" = "Cái nút";
+
+/* Class = "UILabel"; text = "Doctor Name"; ObjectID = "8sc-s6-wVQ"; */
+"8sc-s6-wVQ.text" = "Tên bác sĩ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "8uw-61-3B2"; */
+"8uw-61-3B2.normalTitle" = "Cái nút";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "90L-DJ-d1e"; */
+"90L-DJ-d1e.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UIButton"; normalTitle = "Send Queries"; ObjectID = "90k-AB-nhT"; */
+"90k-AB-nhT.normalTitle" = "Gửi truy vấn";
+
+/* Class = "UILabel"; text = "Old Password"; ObjectID = "9Ce-p1-PLf"; */
+"9Ce-p1-PLf.text" = "Mật khẩu cũ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "9Ka-mQ-dQf"; */
+"9Ka-mQ-dQf.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Timeline"; ObjectID = "9LR-Hj-0eK"; */
+"9LR-Hj-0eK.text" = "Mốc thời gian";
+
+/* Class = "UILabel"; text = "Mobile"; ObjectID = "9Tc-9h-HFZ"; */
+"9Tc-9h-HFZ.text" = "Di động";
+
+/* Class = "UILabel"; text = "Territory"; ObjectID = "9Xi-g9-6eS"; */
+"9Xi-g9-6eS.text" = "Lãnh thổ";
+
+/* Class = "UIButton"; normalTitle = "-"; ObjectID = "9dN-QW-a3d"; */
+"9dN-QW-a3d.normalTitle" = "-";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "9dt-k3-DOr"; */
+"9dt-k3-DOr.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "9gx-r6-4TM"; */
+"9gx-r6-4TM.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Feedback"; ObjectID = "9jW-1l-ALq"; */
+"9jW-1l-ALq.text" = "Nhận xét";
+
+/* Class = "UILabel"; text = "Main Address"; ObjectID = "9kJ-oZ-bTo"; */
+"9kJ-oZ-bTo.text" = "Địa chỉ chính";
+
+/* Class = "UILabel"; text = "From : "; ObjectID = "9pf-4p-53z"; */
+"9pf-4p-53z.text" = "Từ :";
+
+/* Class = "UILabel"; text = "Input"; ObjectID = "9qy-IC-Ywg"; */
+"9qy-IC-Ywg.text" = "Đầu vào";
+
+/* Class = "UILabel"; text = "Venue"; ObjectID = "9sR-S0-VU9"; */
+"9sR-S0-VU9.text" = "Địa điểm";
+
+/* Class = "UILabel"; text = "Speaker Name"; ObjectID = "A2M-KD-96u"; */
+"A2M-KD-96u.text" = "Tên diễn giả";
+
+/* Class = "UILabel"; text = "3 ( < 10% )"; ObjectID = "A5V-Bi-wbt"; */
+"A5V-Bi-wbt.text" = "3 (<10%)";
+
+/* Class = "UILabel"; text = "Group "; ObjectID = "AIU-Fl-pld"; */
+"AIU-Fl-pld.text" = "Tập đoàn";
+
+/* Class = "UILabel"; text = ":"; ObjectID = "ALD-TJ-1xE"; */
+"ALD-TJ-1xE.text" = ":";
+
+/* Class = "UIButton"; normalTitle = "Select the Territory"; ObjectID = "ANc-UF-rUS"; */
+"ANc-UF-rUS.normalTitle" = "Chọn lãnh thổ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "AOb-DU-04h"; */
+"AOb-DU-04h.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Feedback"; ObjectID = "AQh-Ji-QvC"; */
+"AQh-Ji-QvC.text" = "Nhận xét";
+
+/* Class = "UILabel"; text = "Speciality"; ObjectID = "AUO-2B-jHi"; */
+"AUO-2B-jHi.text" = "Chuyên môn";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "AWQ-El-wSd"; */
+"AWQ-El-wSd.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UILabel"; text = "Listed Chemist Selection"; ObjectID = "AWu-k6-Jkd"; */
+"AWu-k6-Jkd.text" = "Lựa chọn nhà hóa học được liệt kê";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "AZL-TF-MuO"; */
+"AZL-TF-MuO.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "AcL-88-bi3"; */
+"AcL-88-bi3.normalTitle" = "Cứu";
+
+/* Class = "UITextView"; text = "-"; ObjectID = "AdQ-uD-Bit"; */
+"AdQ-uD-Bit.text" = "-";
+
+/* Class = "UILabel"; text = "Inclinic conversion"; ObjectID = "AfB-ox-8EJ"; */
+"AfB-ox-8EJ.text" = "Chuyển đổi nghiêng";
+
+/* Class = "UIButton"; normalTitle = "Friday"; ObjectID = "AmR-Cp-kZm"; */
+"AmR-Cp-kZm.normalTitle" = "Thứ sáu";
+
+/* Class = "UILabel"; text = "E-mail"; ObjectID = "Aoe-Kh-eYj"; */
+"Aoe-Kh-eYj.text" = "E-mail";
+
+/* Class = "UITextField"; placeholder = "Search Listed Doctor"; ObjectID = "AqL-rG-DUy"; */
+"AqL-rG-DUy.placeholder" = "Tìm kiếm bác sĩ được liệt kê";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "B1A-5q-nrg"; */
+"B1A-5q-nrg.text" = "Loại";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "B1M-Nx-zNX"; */
+"B1M-Nx-zNX.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "B1d-al-9jD"; */
+"B1d-al-9jD.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Product List"; ObjectID = "BGX-EP-xIN"; */
+"BGX-EP-xIN.text" = "Danh sách sản phẩm";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "BMW-tD-qEC"; */
+"BMW-tD-qEC.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Speaker Name"; ObjectID = "BOP-sL-56h"; */
+"BOP-sL-56h.text" = "Tên diễn giả";
+
+/* Class = "UILabel"; text = "By means of this authorization, he gives his explicit consent to the Company Exeltis Italia s.r.l. to collect personal data in accordance with the terms and conditions described in the Data Protection Policy"; ObjectID = "BQY-J9-zIt"; */
+"BQY-J9-zIt.text" = "Bằng cách ủy quyền này, anh ta đồng ý rõ ràng với Công ty Exeltis Italia s.r.l. để thu thập dữ liệu cá nhân theo các điều khoản và điều kiện được mô tả trong Chính sách bảo vệ dữ liệu";
+
+/* Class = "UILabel"; text = "Products"; ObjectID = "BVf-sq-hQy"; */
+"BVf-sq-hQy.text" = "Các sản phẩm";
+
+/* Class = "UITextField"; placeholder = "Search"; ObjectID = "BXa-kd-vFM"; */
+"BXa-kd-vFM.placeholder" = "Tìm kiếm";
+
+/* Class = "UILabel"; text = "E-mail"; ObjectID = "BYZ-LW-Rvf"; */
+"BYZ-LW-Rvf.text" = "E-mail";
+
+/* Class = "UILabel"; text = "Speciality"; ObjectID = "Ba6-Pv-woV"; */
+"Ba6-Pv-woV.text" = "Chuyên môn";
+
+/* Class = "UILabel"; text = "Last Visit Date"; ObjectID = "Be5-au-ren"; */
+"Be5-au-ren.text" = "Ngày ghé thăm cuối cùng";
+
+/* Class = "UITextView"; text = "-"; ObjectID = "Bgm-XE-c12"; */
+"Bgm-XE-c12.text" = "-";
+
+/* Class = "UILabel"; text = "12:00:00 - 12:20:02    20 sec"; ObjectID = "BiG-CN-KtY"; */
+"BiG-CN-KtY.text" = "12:00:00 - 12:20:02 20 giây";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "Bqr-GH-ZXX"; */
+"Bqr-GH-ZXX.normalTitle" = "+";
+
+/* Class = "UILabel"; text = "Doctor Name"; ObjectID = "BzX-34-npY"; */
+"BzX-34-npY.text" = "Tên bác sĩ";
+
+/* Class = "UILabel"; text = "Message Type"; ObjectID = "C15-wC-xsE"; */
+"C15-wC-xsE.text" = "Loại tin nhắn";
+
+/* Class = "UIButton"; normalTitle = "-"; ObjectID = "C1O-yH-LJU"; */
+"C1O-yH-LJU.normalTitle" = "-";
+
+/* Class = "UILabel"; text = "Product Feedback Template"; ObjectID = "C5d-Wn-i7o"; */
+"C5d-Wn-i7o.text" = "Mẫu phản hồi về sản phẩm";
+
+/* Class = "UILabel"; text = "Total 0 Calls"; ObjectID = "C8g-8D-cqx"; */
+"C8g-8D-cqx.text" = "Tổng số 0 cuộc gọi";
+
+/* Class = "UILabel"; text = "Web Url ( eg: www.yoururl.com )"; ObjectID = "CEY-KU-efJ"; */
+"CEY-KU-efJ.text" = "Url web (ví dụ: www.yoururl.com)";
+
+/* Class = "UILabel"; text = "Name :"; ObjectID = "CQW-Tw-XeV"; */
+"CQW-Tw-XeV.text" = "Tên :";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "CYp-fd-ySw"; */
+"CYp-fd-ySw.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Reason For Leave"; ObjectID = "CiK-kh-Unv"; */
+"CiK-kh-Unv.text" = "Lý do nghỉ việc";
+
+/* Class = "UILabel"; text = "Wed"; ObjectID = "CkW-Sp-clf"; */
+"CkW-Sp-clf.text" = "Thứ Tư";
+
+/* Class = "UILabel"; text = "Qty"; ObjectID = "D0x-dy-m89"; */
+"D0x-dy-m89.text" = "Qty";
+
+/* Class = "UIButton"; normalTitle = "Select the Class"; ObjectID = "D3O-Fm-77a"; */
+"D3O-Fm-77a.normalTitle" = "Chọn lớp";
+
+/* Class = "UILabel"; text = "Territory"; ObjectID = "DBV-WM-IPw"; */
+"DBV-WM-IPw.text" = "Lãnh thổ";
+
+/* Class = "UIButton"; normalTitle = "-"; ObjectID = "DBi-7a-zak"; */
+"DBi-7a-zak.normalTitle" = "-";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "DDu-YU-CWe"; */
+"DDu-YU-CWe.normalTitle" = "Cứu";
+
+/* Class = "UILabel"; text = "Tourplan Entry"; ObjectID = "DEU-ZF-wgZ"; */
+"DEU-ZF-wgZ.text" = "Mục nhập Tourplan";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "DTF-Ng-Yj4"; */
+"DTF-Ng-Yj4.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Inputs"; ObjectID = "DaS-Bk-DJO"; */
+"DaS-Bk-DJO.text" = "Đầu vào";
+
+/* Class = "UILabel"; text = "Change Password"; ObjectID = "DeY-K2-psG"; */
+"DeY-K2-psG.text" = "Đổi mật khẩu";
+
+/* Class = "UITextField"; text = "1"; ObjectID = "Dev-y9-a07"; */
+"Dev-y9-a07.text" = "1";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Dpl-RF-j4Y"; */
+"Dpl-RF-j4Y.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "No.of Staff"; ObjectID = "E1c-SB-YLf"; */
+"E1c-SB-YLf.text" = "Không có nhân viên";
+
+/* Class = "UILabel"; text = "Chemist Name"; ObjectID = "EBO-Dq-dQo"; */
+"EBO-Dq-dQo.text" = "Tên nhà hóa học";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "EFR-wW-hfx"; */
+"EFR-wW-hfx.text" = "Địa chỉ nhà";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "EOG-d5-UVj"; */
+"EOG-d5-UVj.normalTitle" = "Lựa chọn";
+
+/* Class = "UILabel"; text = "DOW"; ObjectID = "ETT-bj-zzd"; */
+"ETT-bj-zzd.text" = "DOW";
+
+/* Class = "UILabel"; text = "Start Time"; ObjectID = "EXy-af-rt6"; */
+"EXy-af-rt6.text" = "Thời gian bắt đầu";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "EeR-IY-kN8"; */
+"EeR-IY-kN8.text" = "Loại";
+
+/* Class = "UILabel"; text = "Fax"; ObjectID = "Ehj-mw-ZgY"; */
+"Ehj-mw-ZgY.text" = "Số fax";
+
+/* Class = "UILabel"; text = "Value"; ObjectID = "F2H-gY-qnh"; */
+"F2H-gY-qnh.text" = "Giá trị";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "FCu-Pu-DDM"; */
+"FCu-Pu-DDM.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Profiling"; ObjectID = "FFZ-kZ-BZP"; */
+"FFZ-kZ-BZP.text" = "Lập hồ sơ";
+
+/* Class = "UILabel"; text = "Clinic Name"; ObjectID = "FJJ-yg-NSg"; */
+"FJJ-yg-NSg.text" = "Tên phòng khám";
+
+/* Class = "UILabel"; text = "Work Type"; ObjectID = "FOm-aC-ShN"; */
+"FOm-aC-ShN.text" = "Loại công việc";
+
+/* Class = "UILabel"; text = "1 ( > 20% )"; ObjectID = "FhY-fT-Zhw"; */
+"FhY-fT-Zhw.text" = "1 (> 20%)";
+
+/* Class = "UITextField"; text = "fsdf"; ObjectID = "Fk5-cs-ZDQ"; */
+"Fk5-cs-ZDQ.text" = "fsdf";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Fta-l8-HlM"; */
+"Fta-l8-HlM.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Last Visit Date"; ObjectID = "G29-Zv-zNy"; */
+"G29-Zv-zNy.text" = "Ngày ghé thăm cuối cùng";
+
+/* Class = "UIButton"; normalTitle = "Save Settings"; ObjectID = "G3a-25-KhS"; */
+"G3a-25-KhS.normalTitle" = "Lưu các thiết lập";
+
+/* Class = "UILabel"; text = "Profile Picture"; ObjectID = "G4J-86-IEJ"; */
+"G4J-86-IEJ.text" = "Ảnh đại diện";
+
+/* Class = "UILabel"; text = "Competitor Brand Name"; ObjectID = "GPQ-pM-LeR"; */
+"GPQ-pM-LeR.text" = "Tên thương hiệu của đối thủ cạnh tranh";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Geg-Au-LnT"; */
+"Geg-Au-LnT.normalTitle" = "Cái nút";
+
+/* Class = "UILabel"; text = "Reject Reason"; ObjectID = "Ggl-58-uNv"; */
+"Ggl-58-uNv.text" = "Từ chối lý do";
+
+/* Class = "UILabel"; text = "Potential"; ObjectID = "Gk2-8i-XaG"; */
+"Gk2-8i-XaG.text" = "Tiềm năng";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "GsE-On-yRL"; */
+"GsE-On-yRL.text" = "1";
+
+/* Class = "UILabel"; text = "Inclinic conversion"; ObjectID = "Gst-6W-wIZ"; */
+"Gst-6W-wIZ.text" = "Chuyển đổi nghiêng";
+
+/* Class = "UILabel"; text = "999"; ObjectID = "GzM-If-LGi"; */
+"GzM-If-LGi.text" = "999";
+
+/* Class = "UILabel"; text = "0.00"; ObjectID = "H2e-7Y-oSR"; */
+"H2e-7Y-oSR.text" = "0,00";
+
+/* Class = "UILabel"; text = "Topic Covered"; ObjectID = "HBC-om-ezN"; */
+"HBC-om-ezN.text" = "Chủ đề được bao phủ";
+
+/* Class = "UIButton"; normalTitle = "-"; ObjectID = "HGV-oq-Jh6"; */
+"HGV-oq-Jh6.normalTitle" = "-";
+
+/* Class = "UITextField"; placeholder = "Type your message"; ObjectID = "HGd-Ws-nBH"; */
+"HGd-Ws-nBH.placeholder" = "Nhập tin nhắn của bạn";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "HNW-Wt-hCM"; */
+"HNW-Wt-hCM.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UILabel"; text = "Leave Application"; ObjectID = "HTT-1v-JsN"; */
+"HTT-1v-JsN.text" = "Để lại ứng dụng";
+
+/* Class = "UILabel"; text = "Product Promoted"; ObjectID = "HVu-Dz-KdR"; */
+"HVu-Dz-KdR.text" = "Sản phẩm được Quảng cáo";
+
+/* Class = "UILabel"; text = "2 ( 10% - 20% )"; ObjectID = "HZo-rp-cKo"; */
+"HZo-rp-cKo.text" = "2 (10% - 20%)";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Hap-8B-GFG"; */
+"Hap-8B-GFG.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "HfD-dk-RHV"; */
+"HfD-dk-RHV.normalTitle" = "Cái nút";
+
+/* Class = "UILabel"; text = "Precall Analysis"; ObjectID = "HgG-AC-obo"; */
+"HgG-AC-obo.text" = "Phân tích cuộc gọi trước";
+
+/* Class = "UITextField"; placeholder = "Search Listed Chemist"; ObjectID = "Hlf-ul-cur"; */
+"Hlf-ul-cur.placeholder" = "Nhà hóa học được liệt kê trong Tìm kiếm";
+
+/* Class = "UIButton"; normalTitle = "Clear Data"; ObjectID = "HrB-W1-nAr"; */
+"HrB-W1-nAr.normalTitle" = "Xóa dữ liệu";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "HuH-40-ZAJ"; */
+"HuH-40-ZAJ.text" = "Địa chỉ nhà";
+
+/* Class = "UIButton"; normalTitle = "Select the Headquaters"; ObjectID = "Huu-9e-Y2e"; */
+"Huu-9e-Y2e.normalTitle" = "Chọn Headquaters";
+
+/* Class = "UILabel"; text = "Indication List"; ObjectID = "I1J-d4-n8i"; */
+"I1J-d4-n8i.text" = "Danh sách chỉ định";
+
+/* Class = "UILabel"; text = "Cluster"; ObjectID = "I4r-Br-wc2"; */
+"I4r-Br-wc2.text" = "Cluster";
+
+/* Class = "UIButton"; normalTitle = "Thursday"; ObjectID = "IKK-Ca-W8j"; */
+"IKK-Ca-W8j.normalTitle" = "Thứ năm";
+
+/* Class = "UILabel"; text = "Segmentation"; ObjectID = "IUW-rl-rqU"; */
+"IUW-rl-rqU.text" = "Phân đoạn";
+
+/* Class = "UITextView"; text = "-"; ObjectID = "Iaj-SO-58g"; */
+"Iaj-SO-58g.text" = "-";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "Id5-do-Tg5"; */
+"Id5-do-Tg5.text" = "Điện thoại";
+
+/* Class = "UIButton"; normalTitle = "Staff Details"; ObjectID = "Iep-PM-YEj"; */
+"Iep-PM-YEj.normalTitle" = "Thông tin chi tiết về nhân viên";
+
+/* Class = "UILabel"; text = "Your Device ID"; ObjectID = "Ij5-LF-wni"; */
+"Ij5-LF-wni.text" = "ID thiết bị của bạn";
+
+/* Class = "UIButton"; normalTitle = "Reject"; ObjectID = "Ikz-7K-EbD"; */
+"Ikz-7K-EbD.normalTitle" = "Từ chối";
+
+/* Class = "UILabel"; text = "Qualification"; ObjectID = "Iqi-7I-SlK"; */
+"Iqi-7I-SlK.text" = "Trình độ chuyên môn";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Iu6-ge-TQq"; */
+"Iu6-ge-TQq.normalTitle" = "Cái nút";
+
+/* Class = "UILabel"; text = "Sun"; ObjectID = "IyQ-yL-SPS"; */
+"IyQ-yL-SPS.text" = "mặt trời";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Iyq-WX-fp4"; */
+"Iyq-WX-fp4.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "Ok"; ObjectID = "J52-Ht-G2v"; */
+"J52-Ht-G2v.normalTitle" = "VÂNG";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "JEj-Fr-mGE"; */
+"JEj-Fr-mGE.text" = "Loại";
+
+/* Class = "UILabel"; text = "Rate"; ObjectID = "JF9-1e-RUZ"; */
+"JF9-1e-RUZ.text" = "Tỷ lệ";
+
+/* Class = "UILabel"; text = "New Password"; ObjectID = "JNO-ue-TfA"; */
+"JNO-ue-TfA.text" = "mật khẩu mới";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "JUo-bn-agl"; */
+"JUo-bn-agl.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Doctor"; ObjectID = "JVq-9H-vag"; */
+"JVq-9H-vag.text" = "Bác sĩ";
+
+/* Class = "UILabel"; text = "Qualification"; ObjectID = "JZN-ls-NVk"; */
+"JZN-ls-NVk.text" = "Trình độ chuyên môn";
+
+/* Class = "UISegmentedControl"; JaR-Hv-dil.segmentTitles[0] = "CL"; ObjectID = "JaR-Hv-dil"; */
+"JaR-Hv-dil.segmentTitles[0]" = "CL";
+
+/* Class = "UISegmentedControl"; JaR-Hv-dil.segmentTitles[1] = "PL"; ObjectID = "JaR-Hv-dil"; */
+"JaR-Hv-dil.segmentTitles[1]" = "PL";
+
+/* Class = "UISegmentedControl"; JaR-Hv-dil.segmentTitles[2] = "SL"; ObjectID = "JaR-Hv-dil"; */
+"JaR-Hv-dil.segmentTitles[2]" = "SL";
+
+/* Class = "UISegmentedControl"; JaR-Hv-dil.segmentTitles[3] = "LOP"; ObjectID = "JaR-Hv-dil"; */
+"JaR-Hv-dil.segmentTitles[3]" = "LOP";
+
+/* Class = "UILabel"; text = "Territory"; ObjectID = "Jc2-yb-E8V"; */
+"Jc2-yb-E8V.text" = "Lãnh thổ";
+
+/* Class = "UILabel"; text = "SF Name"; ObjectID = "Jd0-2v-80t"; */
+"Jd0-2v-80t.text" = "Tên SF";
+
+/* Class = "UILabel"; text = "DOB"; ObjectID = "Jo0-Ao-MZU"; */
+"Jo0-Ao-MZU.text" = "DOB";
+
+/* Class = "UILabel"; text = "To"; ObjectID = "JoF-o2-6uh"; */
+"JoF-o2-6uh.text" = "Đến";
+
+/* Class = "UILabel"; text = "Come espressione del proprio consenso, il sottoscritto firma questa autorizzazione."; ObjectID = "JtQ-gI-OPm"; */
+"JtQ-gI-OPm.text" = "Hãy đến espressione del proprio consenso, il sottoscritto firma questa autorizzazione.";
+
+/* Class = "UILabel"; text = "Year"; ObjectID = "K58-mV-WlB"; */
+"K58-mV-WlB.text" = "Năm";
+
+/* Class = "UILabel"; text = "Feedback"; ObjectID = "K68-Uz-BSb"; */
+"K68-Uz-BSb.text" = "Nhận xét";
+
+/* Class = "UILabel"; text = "Input"; ObjectID = "K6T-za-fxy"; */
+"K6T-za-fxy.text" = "Đầu vào";
+
+/* Class = "UILabel"; text = "Speciality"; ObjectID = "KBh-Oj-fe8"; */
+"KBh-Oj-fe8.text" = "Chuyên môn";
+
+/* Class = "UILabel"; text = "Days : "; ObjectID = "KEN-Dd-KFC"; */
+"KEN-Dd-KFC.text" = "Ngày:";
+
+/* Class = "UILabel"; text = "Product Name"; ObjectID = "KHE-g1-2fJ"; */
+"KHE-g1-2fJ.text" = "tên sản phẩm";
+
+/* Class = "UIButton"; normalTitle = "Skip Detailing"; ObjectID = "KRH-Ah-haI"; */
+"KRH-Ah-haI.normalTitle" = "Bỏ qua chi tiết";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "Kcr-Bz-IEM"; */
+"Kcr-Bz-IEM.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UILabel"; text = "End Time"; ObjectID = "KjS-lD-7R8"; */
+"KjS-lD-7R8.text" = "Thời gian kết thúc";
+
+/* Class = "UILabel"; text = "Contact Person Name"; ObjectID = "Kks-aY-BJ0"; */
+"Kks-aY-BJ0.text" = "Tên người liên lạc";
+
+/* Class = "UILabel"; text = "List Of Survey"; ObjectID = "KpM-i4-P2Q"; */
+"KpM-i4-P2Q.text" = "Danh sách khảo sát";
+
+/* Class = "UIButton"; normalTitle = "Female"; ObjectID = "L3A-q9-rvi"; */
+"L3A-q9-rvi.normalTitle" = "Giống cái";
+
+/* Class = "UILabel"; text = "Entry Selection"; ObjectID = "L7f-mp-b6l"; */
+"L7f-mp-b6l.text" = "Lựa chọn đầu vào";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "L7h-zQ-OSA"; */
+"L7h-zQ-OSA.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "LDa-Af-juF"; */
+"LDa-Af-juF.normalTitle" = "Làm xong";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "LEv-OV-RDa"; */
+"LEv-OV-RDa.text" = "Loại";
+
+/* Class = "UILabel"; text = "User Name"; ObjectID = "LFc-5f-Anv"; */
+"LFc-5f-Anv.text" = "Tên tài khoản";
+
+/* Class = "UIButton"; normalTitle = "    "; ObjectID = "LJj-6I-mwh"; */
+"LJj-6I-mwh.normalTitle" = "";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "LLZ-Fq-cjW"; */
+"LLZ-Fq-cjW.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "LQy-OE-CNv"; */
+"LQy-OE-CNv.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "LR8-ss-8T0"; */
+"LR8-ss-8T0.normalTitle" = "Gửi đi";
+
+/* Class = "UILabel"; text = "SF Name"; ObjectID = "LUT-si-p6v"; */
+"LUT-si-p6v.text" = "Tên SF";
+
+/* Class = "UIButton"; normalTitle = "Close"; ObjectID = "Lar-V6-DXC"; */
+"Lar-V6-DXC.normalTitle" = "Đóng";
+
+/* Class = "UIButton"; normalTitle = "-"; ObjectID = "Lc3-Ly-GCr"; */
+"Lc3-Ly-GCr.normalTitle" = "-";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "LdE-p6-nLU"; */
+"LdE-p6-nLU.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Product"; ObjectID = "Ldv-WB-dWv"; */
+"Ldv-WB-dWv.text" = "Sản phẩm";
+
+/* Class = "UIButton"; normalTitle = "SIGN IN WITH MS-TEAMS"; ObjectID = "LeV-10-ay9"; */
+"LeV-10-ay9.normalTitle" = "ĐĂNG NHẬP VỚI MS-TEAMS";
+
+/* Class = "UIButton"; normalTitle = " Change Password"; ObjectID = "Li4-FA-iH6"; */
+"Li4-FA-iH6.normalTitle" = " Đổi mật khẩu";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "M8m-jt-yP0"; */
+"M8m-jt-yP0.normalTitle" = "+";
+
+/* Class = "UIButton"; normalTitle = "Send For Approval"; ObjectID = "MGq-ns-cYT"; */
+"MGq-ns-cYT.normalTitle" = "Gửi để được phê duyệt";
+
+/* Class = "UIButton"; normalTitle = "Sunday"; ObjectID = "ML4-2Z-NEb"; */
+"ML4-2Z-NEb.normalTitle" = "chủ nhật";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "MNg-QV-ULL"; */
+"MNg-QV-ULL.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "View / Confirm"; ObjectID = "MXf-2t-DbK"; */
+"MXf-2t-DbK.text" = "Xem / Xác nhận";
+
+/* Class = "UITabBarItem"; title = "Stockist"; ObjectID = "Max-cP-Qyq"; */
+"Max-cP-Qyq.title" = "Người dự trữ";
+
+/* Class = "UILabel"; text = "Fax"; ObjectID = "MgH-NW-Fwi"; */
+"MgH-NW-Fwi.text" = "Số fax";
+
+/* Class = "UILabel"; text = "Work Type"; ObjectID = "MgO-m6-uCG"; */
+"MgO-m6-uCG.text" = "Loại công việc";
+
+/* Class = "UILabel"; text = "Start Time"; ObjectID = "MnF-I7-bbN"; */
+"MnF-I7-bbN.text" = "Thời gian bắt đầu";
+
+/* Class = "UILabel"; text = "Product Feedback Template"; ObjectID = "Mrv-TV-0Vk"; */
+"Mrv-TV-0Vk.text" = "Mẫu phản hồi về sản phẩm";
+
+/* Class = "UILabel"; text = "Staff Details Entry"; ObjectID = "Mxf-Uo-FqP"; */
+"Mxf-Uo-FqP.text" = "Mục nhập chi tiết nhân viên";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "N72-9I-qfR"; */
+"N72-9I-qfR.normalTitle" = "Cái nút";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "N79-zV-HMH"; */
+"N79-zV-HMH.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UILabel"; text = "Date Of Birth"; ObjectID = "N7F-BH-bA3"; */
+"N7F-BH-bA3.text" = "Ngày sinh";
+
+/* Class = "UILabel"; text = "Mobile Number"; ObjectID = "NCo-xY-oVe"; */
+"NCo-xY-oVe.text" = "Số điện thoại";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "NGH-ig-a1q"; */
+"NGH-ig-a1q.normalTitle" = "Cái nút";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "NOi-vZ-btC"; */
+"NOi-vZ-btC.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "NPE-dm-N88"; */
+"NPE-dm-N88.normalTitle" = "Hủy bỏ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "NS7-Lc-PUN"; */
+"NS7-Lc-PUN.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Cluster"; ObjectID = "NWA-zQ-pzv"; */
+"NWA-zQ-pzv.text" = "Cluster";
+
+/* Class = "UILabel"; text = "Speaker Name"; ObjectID = "NYw-rV-paZ"; */
+"NYw-rV-paZ.text" = "Tên diễn giả";
+
+/* Class = "UIButton"; normalTitle = "Close"; ObjectID = "Nbi-8s-pnE"; */
+"Nbi-8s-pnE.normalTitle" = "Đóng";
+
+/* Class = "UILabel"; text = "No"; ObjectID = "Nc2-bB-CZ6"; */
+"Nc2-bB-CZ6.text" = "Không";
+
+/* Class = "UILabel"; text = "ONE TO ONE"; ObjectID = "NeB-bf-6Ps"; */
+"NeB-bf-6Ps.text" = "MỘT đến MỘT";
+
+/* Class = "UILabel"; text = "Input"; ObjectID = "Ns2-ht-lni"; */
+"Ns2-ht-lni.text" = "Đầu vào";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Nse-1B-q4Y"; */
+"Nse-1B-q4Y.normalTitle" = "Hủy bỏ";
+
+/* Class = "UILabel"; text = "WORK TYPE"; ObjectID = "NuT-OP-tNI"; */
+"NuT-OP-tNI.text" = "Loại công việc";
+
+/* Class = "UILabel"; text = "Product"; ObjectID = "O1E-iQ-nPn"; */
+"O1E-iQ-nPn.text" = "Sản phẩm";
+
+/* Class = "UILabel"; text = "Territory"; ObjectID = "OB7-sC-k4i"; */
+"OB7-sC-k4i.text" = "Lãnh thổ";
+
+/* Class = "UILabel"; text = "Headquater"; ObjectID = "OFI-fZ-f7K"; */
+"OFI-fZ-f7K.text" = "Trụ sở chính";
+
+/* Class = "UIButton"; normalTitle = "Select the Headquaters"; ObjectID = "OIV-aN-43I"; */
+"OIV-aN-43I.normalTitle" = "Chọn Headquaters";
+
+/* Class = "UIButton"; normalTitle = "SIGN IN"; ObjectID = "OQ5-gb-yql"; */
+"OQ5-gb-yql.normalTitle" = "ĐĂNG NHẬP";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "OcD-dd-8D4"; */
+"OcD-dd-8D4.text" = "Điện thoại";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "Ojv-dh-PMM"; */
+"Ojv-dh-PMM.text" = "Ngày tháng";
+
+/* Class = "UIButton"; normalTitle = "Next Month"; ObjectID = "OnT-8B-5wL"; */
+"OnT-8B-5wL.normalTitle" = "Tháng tiếp theo";
+
+/* Class = "UILabel"; text = "Pincode"; ObjectID = "P0E-rb-0E9"; */
+"P0E-rb-0E9.text" = "Mã PIN";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "P2C-LD-fPy"; */
+"P2C-LD-fPy.text" = "-";
+
+/* Class = "UILabel"; text = "MISSED DATE SELECTION"; ObjectID = "PBb-zf-MtB"; */
+"PBb-zf-MtB.text" = "LỰA CHỌN NGÀY BỊ BỎ LỠ";
+
+/* Class = "UITabBarItem"; title = "Chemist"; ObjectID = "PLi-XC-5cN"; */
+"PLi-XC-5cN.title" = "Nhà hóa học";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "PML-lV-exn"; */
+"PML-lV-exn.text" = "-";
+
+/* Class = "UIButton"; normalTitle = "Detail"; ObjectID = "PNE-rx-4Se"; */
+"PNE-rx-4Se.normalTitle" = "Chi tiết";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "PRs-y6-Qq6"; */
+"PRs-y6-Qq6.text" = "Tên";
+
+/* Class = "UILabel"; text = "Chemist"; ObjectID = "PZ0-x7-ZBC"; */
+"PZ0-x7-ZBC.text" = "Nhà hóa học";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "PZ9-Zv-wCa"; */
+"PZ9-Zv-wCa.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "Staff Details"; ObjectID = "Pam-as-Y0Z"; */
+"Pam-as-Y0Z.normalTitle" = "Thông tin chi tiết về nhân viên";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Ph4-dT-mdX"; */
+"Ph4-dT-mdX.normalTitle" = "Cái nút";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Pj5-4D-GhX"; */
+"Pj5-4D-GhX.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Yes"; ObjectID = "PlH-aG-kPT"; */
+"PlH-aG-kPT.text" = "đúng";
+
+/* Class = "UILabel"; text = "Speciality"; ObjectID = "PqM-hZ-bmK"; */
+"PqM-hZ-bmK.text" = "Chuyên môn";
+
+/* Class = "UIButton"; normalTitle = "-"; ObjectID = "PuV-dt-Uqu"; */
+"PuV-dt-Uqu.normalTitle" = "-";
+
+/* Class = "UIButton"; normalTitle = "Activity"; ObjectID = "PzF-4a-Q4b"; */
+"PzF-4a-Q4b.normalTitle" = "Hoạt động";
+
+/* Class = "UILabel"; text = "Residence"; ObjectID = "QSb-ie-kOg"; */
+"QSb-ie-kOg.text" = "Nơi cư trú";
+
+/* Class = "UILabel"; text = "STP III"; ObjectID = "QUk-FZ-RZf"; */
+"QUk-FZ-RZf.text" = "STP III";
+
+/* Class = "UILabel"; text = "Work Type"; ObjectID = "QYG-7t-apZ"; */
+"QYG-7t-apZ.text" = "Loại công việc";
+
+/* Class = "UILabel"; text = "Precall Analysis"; ObjectID = "QbC-RE-gxg"; */
+"QbC-RE-gxg.text" = "Phân tích cuộc gọi trước";
+
+/* Class = "UIButton"; normalTitle = "Activity"; ObjectID = "Qbw-sc-hfN"; */
+"Qbw-sc-hfN.normalTitle" = "Hoạt động";
+
+/* Class = "UILabel"; text = "2020-12-30"; ObjectID = "Qdf-Nb-bx7"; */
+"Qdf-Nb-bx7.text" = "44195";
+
+/* Class = "UILabel"; text = "Fri"; ObjectID = "QgQ-AU-acX"; */
+"QgQ-AU-acX.text" = "T6";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Qiy-Ln-tEA"; */
+"Qiy-Ln-tEA.text" = "Nhãn";
+
+/* Class = "UITextView"; text = "Address"; ObjectID = "Qlr-ra-524"; */
+"Qlr-ra-524.text" = "Địa chỉ nhà";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "R3z-AH-FNX"; */
+"R3z-AH-FNX.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UILabel"; text = "Remarks"; ObjectID = "RFA-DC-ajl"; */
+"RFA-DC-ajl.text" = "Nhận xét";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "RGm-64-phd"; */
+"RGm-64-phd.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "  - Select the Department -"; ObjectID = "RX7-LM-EU2"; */
+"RX7-LM-EU2.normalTitle" = "  - Chọn Bộ phận -";
+
+/* Class = "UIButton"; normalTitle = "Monday"; ObjectID = "RaS-aU-S8L"; */
+"RaS-aU-S8L.normalTitle" = "Thứ hai";
+
+/* Class = "UILabel"; text = "Value"; ObjectID = "RbS-xO-C1Y"; */
+"RbS-xO-C1Y.text" = "Giá trị";
+
+/* Class = "UITabBarItem"; title = "Doctor"; ObjectID = "RdG-p9-Wne"; */
+"RdG-p9-Wne.title" = "Bác sĩ";
+
+/* Class = "UILabel"; text = "APP CONFIGURATION"; ObjectID = "Ree-by-nLs"; */
+"Ree-by-nLs.text" = "CẤU HÌNH ỨNG DỤNG";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "S1r-CA-aGE"; */
+"S1r-CA-aGE.text" = "-";
+
+/* Class = "UILabel"; text = "- Curr Loc :"; ObjectID = "S1u-Ak-OTD"; */
+"S1u-Ak-OTD.text" = "- Curr Loc:";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "S1w-e9-6KT"; */
+"S1w-e9-6KT.text" = "-";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "S70-Ii-CvQ"; */
+"S70-Ii-CvQ.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UILabel"; text = "Speciality"; ObjectID = "S73-Xz-IzM"; */
+"S73-Xz-IzM.text" = "Chuyên môn";
+
+/* Class = "UILabel"; text = "Class"; ObjectID = "SDM-dc-rLU"; */
+"SDM-dc-rLU.text" = "Lớp học";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "SFD-Ye-iaV"; */
+"SFD-Ye-iaV.text" = "Địa chỉ nhà";
+
+/* Class = "UITextField"; text = "Signature Here"; ObjectID = "SIO-xG-Avt"; */
+"SIO-xG-Avt.text" = "Chữ ký Tại đây";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "SSD-Xj-pKs"; */
+"SSD-Xj-pKs.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "SeH-Aj-rs1"; */
+"SeH-Aj-rs1.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Mobile"; ObjectID = "SeY-mT-Fbn"; */
+"SeY-mT-Fbn.text" = "Di động";
+
+/* Class = "UITextView"; text = "aSa"; ObjectID = "ShO-xM-nzk"; */
+"ShO-xM-nzk.text" = "như một";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "SjM-44-BNj"; */
+"SjM-44-BNj.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "SlC-mf-8uV"; */
+"SlC-mf-8uV.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "No. Of. Volunteers"; ObjectID = "SnD-rY-w6i"; */
+"SnD-rY-w6i.text" = "Không. Tình nguyện viên";
+
+/* Class = "UILabel"; text = "II. Work Type"; ObjectID = "Snj-81-P8L"; */
+"Snj-81-P8L.text" = "II. Loại công việc";
+
+/* Class = "UILabel"; text = "TODAY WORK PLAN"; ObjectID = "So3-XP-ylk"; */
+"So3-XP-ylk.text" = "KẾ HOẠCH LÀM VIỆC HÔM NAY";
+
+/* Class = "UITextField"; placeholder = "Search Listed Doctor"; ObjectID = "SwP-bK-bxz"; */
+"SwP-bK-bxz.placeholder" = "Tìm kiếm bác sĩ được liệt kê";
+
+/* Class = "UILabel"; text = "Rate"; ObjectID = "T2o-mO-RjO"; */
+"T2o-mO-RjO.text" = "Tỷ lệ";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "TQw-y3-VWV"; */
+"TQw-y3-VWV.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UILabel"; text = "Reason For Leave"; ObjectID = "Tal-6t-KkI"; */
+"Tal-6t-KkI.text" = "Lý do nghỉ việc";
+
+/* Class = "UILabel"; text = "Remarks"; ObjectID = "TbL-qA-sdr"; */
+"TbL-qA-sdr.text" = "Nhận xét";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Tda-k4-U2Z"; */
+"Tda-k4-U2Z.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "Send Reply"; ObjectID = "Tig-P2-Ix3"; */
+"Tig-P2-Ix3.normalTitle" = "Gửi trả lời";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Tqi-vr-qkJ"; */
+"Tqi-vr-qkJ.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "End Time"; ObjectID = "TsB-bL-UYZ"; */
+"TsB-bL-UYZ.text" = "Thời gian kết thúc";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "Tx6-zJ-D4L"; */
+"Tx6-zJ-D4L.text" = "Điện thoại";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "TzQ-oJ-BJi"; */
+"TzQ-oJ-BJi.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Speciality"; ObjectID = "U36-sT-Yuu"; */
+"U36-sT-Yuu.text" = "Chuyên môn";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "U9B-Bc-ffJ"; */
+"U9B-Bc-ffJ.text" = "Loại";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "U9V-qx-4bm"; */
+"U9V-qx-4bm.normalTitle" = "Gửi đi";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "UBb-yh-O6D"; */
+"UBb-yh-O6D.normalTitle" = "Cái nút";
+
+/* Class = "UIButton"; normalTitle = "Change"; ObjectID = "UDT-QR-VRA"; */
+"UDT-QR-VRA.normalTitle" = "Biến đổi";
+
+/* Class = "UILabel"; text = "The doctor CONSENT to the processing of personal data for the purpose expressed in point iii) of the information [Conference and seminar invitations]"; ObjectID = "UDZ-4r-Dad"; */
+"UDZ-4r-Dad.text" = "Bác sĩ ĐỒNG Ý với việc xử lý dữ liệu cá nhân cho mục đích nêu tại điểm iii) của thông tin [Thư mời hội nghị và hội thảo]";
+
+/* Class = "UILabel"; text = "Doctor Name"; ObjectID = "UEo-Mg-OnU"; */
+"UEo-Mg-OnU.text" = "Tên bác sĩ";
+
+/* Class = "UILabel"; text = "The doctor agrees to the processing of personal data for the purpose expressed in point ii) of the information [Profiling]"; ObjectID = "UN5-Cq-wkO"; */
+"UN5-Cq-wkO.text" = "Bác sĩ đồng ý với việc xử lý dữ liệu cá nhân cho mục đích được nêu trong điểm ii) của thông tin [Hồ sơ]";
+
+/* Class = "UILabel"; text = "Lat  :"; ObjectID = "UPh-Pc-Cqy"; */
+"UPh-Pc-Cqy.text" = "Lat:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "UUf-6c-cn8"; */
+"UUf-6c-cn8.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "Re-Select"; ObjectID = "UUt-24-oDg"; */
+"UUt-24-oDg.normalTitle" = "Chọn lại";
+
+/* Class = "UILabel"; text = "Mobile"; ObjectID = "UcN-dd-AzB"; */
+"UcN-dd-AzB.text" = "Di động";
+
+/* Class = "UILabel"; text = "name"; ObjectID = "Udv-Qc-mJX"; */
+"Udv-Qc-mJX.text" = "Tên";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "Uek-Km-Q8u"; */
+"Uek-Km-Q8u.normalTitle" = "Gửi đi";
+
+/* Class = "UILabel"; text = "Territory"; ObjectID = "Uif-wJ-7hs"; */
+"Uif-wJ-7hs.text" = "Lãnh thổ";
+
+/* Class = "UILabel"; text = "End Time"; ObjectID = "UvD-HO-dXZ"; */
+"UvD-HO-dXZ.text" = "Thời gian kết thúc";
+
+/* Class = "UILabel"; text = "Tue"; ObjectID = "V0x-bK-ZUc"; */
+"V0x-bK-ZUc.text" = "Thứ ba";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "V8y-or-oDN"; */
+"V8y-or-oDN.normalTitle" = "Cái nút";
+
+/* Class = "UILabel"; text = "Samples"; ObjectID = "V9q-47-RzB"; */
+"V9q-47-RzB.text" = "Mẫu";
+
+/* Class = "UILabel"; text = "Last Visit Date"; ObjectID = "VBM-xD-7rQ"; */
+"VBM-xD-7rQ.text" = "Ngày ghé thăm cuối cùng";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "VHs-1i-ASR"; */
+"VHs-1i-ASR.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Feedback Details"; ObjectID = "VMk-De-pZH"; */
+"VMk-De-pZH.text" = "Thông tin phản hồi";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "VYI-Hj-2fd"; */
+"VYI-Hj-2fd.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "VZI-1n-udC"; */
+"VZI-1n-udC.text" = "Tên";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "VfM-K3-ixa"; */
+"VfM-K3-ixa.normalTitle" = "+";
+
+/* Class = "UILabel"; text = "Clinic Place"; ObjectID = "VuF-vy-z4k"; */
+"VuF-vy-z4k.text" = "Nơi khám bệnh";
+
+/* Class = "UILabel"; text = "Specialty"; ObjectID = "W02-gb-REE"; */
+"W02-gb-REE.text" = "Chuyên môn";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "WAL-oV-nah"; */
+"WAL-oV-nah.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Rate : 000"; ObjectID = "WEp-gM-8rb"; */
+"WEp-gM-8rb.text" = "Tỷ lệ: 000";
+
+/* Class = "UILabel"; text = "Activity Forms"; ObjectID = "WM0-q6-AED"; */
+"WM0-q6-AED.text" = "Hình thức hoạt động";
+
+/* Class = "UISegmentedControl"; WMN-oG-DWP.segmentTitles[0] = "Requests"; ObjectID = "WMN-oG-DWP"; */
+"WMN-oG-DWP.segmentTitles[0]" = "Yêu cầu";
+
+/* Class = "UISegmentedControl"; WMN-oG-DWP.segmentTitles[1] = "Forms"; ObjectID = "WMN-oG-DWP"; */
+"WMN-oG-DWP.segmentTitles[1]" = "Các hình thức";
+
+/* Class = "UISegmentedControl"; WMN-oG-DWP.segmentTitles[2] = "Approvals"; ObjectID = "WMN-oG-DWP"; */
+"WMN-oG-DWP.segmentTitles[2]" = "Phê duyệt";
+
+/* Class = "UILabel"; text = "Pincode"; ObjectID = "WO3-0I-69q"; */
+"WO3-0I-69q.text" = "Mã PIN";
+
+/* Class = "UIButton"; normalTitle = "-"; ObjectID = "WQz-9K-Gl3"; */
+"WQz-9K-Gl3.normalTitle" = "-";
+
+/* Class = "UIButton"; normalTitle = "Details"; ObjectID = "WXF-UG-I0E"; */
+"WXF-UG-I0E.normalTitle" = "Chi tiết";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "WXn-Ih-4s6"; */
+"WXn-Ih-4s6.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "Wa2-VK-KXk"; */
+"Wa2-VK-KXk.normalTitle" = "Cứu";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "Wh5-iA-aNm"; */
+"Wh5-iA-aNm.normalTitle" = "Gửi";
+
+/* Class = "UITextField"; placeholder = "Search"; ObjectID = "Wmo-yg-iEH"; */
+"Wmo-yg-iEH.placeholder" = "Tìm kiếm";
+
+/* Class = "UIButton"; normalTitle = "Apply"; ObjectID = "Wv7-Xr-VbJ"; */
+"Wv7-Xr-VbJ.normalTitle" = "Áp dụng";
+
+/* Class = "UILabel"; text = "name"; ObjectID = "Wwi-Ls-ihr"; */
+"Wwi-Ls-ihr.text" = "Tên";
+
+/* Class = "UIButton"; normalTitle = "Add To Master"; ObjectID = "X0B-Kz-woL"; */
+"X0B-Kz-woL.normalTitle" = "Thêm vào Master";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "X0i-bU-TPk"; */
+"X0i-bU-TPk.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "RCPA Detail List"; ObjectID = "X9k-6j-ir1"; */
+"X9k-6j-ir1.text" = "Danh sách chi tiết RCPA";
+
+/* Class = "UILabel"; text = "Additional Calls"; ObjectID = "XAD-BT-2O1"; */
+"XAD-BT-2O1.text" = "Cuộc gọi bổ sung";
+
+/* Class = "UILabel"; text = "No.of Staff"; ObjectID = "XKU-QA-ic7"; */
+"XKU-QA-ic7.text" = "Không có nhân viên";
+
+/* Class = "UITextField"; placeholder = "Qty"; ObjectID = "XVQ-3p-eIF"; */
+"XVQ-3p-eIF.placeholder" = "Qty";
+
+/* Class = "UIButton"; normalTitle = "-"; ObjectID = "Xgv-Qc-BYW"; */
+"Xgv-Qc-BYW.normalTitle" = "-";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "Xni-d1-Ijh"; */
+"Xni-d1-Ijh.text" = "-";
+
+/* Class = "UIButton"; normalTitle = "v"; ObjectID = "Xrf-l8-27p"; */
+"Xrf-l8-27p.normalTitle" = "v";
+
+/* Class = "UILabel"; text = "Rating"; ObjectID = "Xzg-3b-LSB"; */
+"Xzg-3b-LSB.text" = "Xếp hạng";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Y5f-AI-mFb"; */
+"Y5f-AI-mFb.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "Select the Headquaters"; ObjectID = "Y5o-uC-hPQ"; */
+"Y5o-uC-hPQ.normalTitle" = "Chọn Headquaters";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "Y9w-oE-gfk"; */
+"Y9w-oE-gfk.text" = "Địa chỉ nhà";
+
+/* Class = "UILabel"; text = "Value"; ObjectID = "YBU-za-2gB"; */
+"YBU-za-2gB.text" = "Giá trị";
+
+/* Class = "UIButton"; normalTitle = "Re-Select"; ObjectID = "YEm-YZ-Mac"; */
+"YEm-YZ-Mac.normalTitle" = "Chọn lại";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "YFJ-rl-VFu"; */
+"YFJ-rl-VFu.normalTitle" = "Lựa chọn";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "YFk-3D-Ju6"; */
+"YFk-3D-Ju6.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "YG5-dJ-0K0"; */
+"YG5-dJ-0K0.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "Re-Select"; ObjectID = "YLD-eY-l3T"; */
+"YLD-eY-l3T.normalTitle" = "Chọn lại";
+
+/* Class = "UILabel"; text = "name"; ObjectID = "YLa-RM-MHP"; */
+"YLa-RM-MHP.text" = "Tên";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "YO1-Jb-xzn"; */
+"YO1-Jb-xzn.text" = "-";
+
+/* Class = "UILabel"; text = "Input"; ObjectID = "YQ8-CL-LYn"; */
+"YQ8-CL-LYn.text" = "Đầu vào";
+
+/* Class = "UILabel"; text = "   ---- All Headers ----"; ObjectID = "Yls-do-srz"; */
+"Yls-do-srz.text" = "   ---- Tất cả Tiêu đề ----";
+
+/* Class = "UILabel"; text = "STP II"; ObjectID = "Ylw-sx-DcB"; */
+"Ylw-sx-DcB.text" = "STP II";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "YtE-Od-FUP"; */
+"YtE-Od-FUP.normalTitle" = "+";
+
+/* Class = "UITextField"; placeholder = "Search Unlisted Doctor"; ObjectID = "Yyw-UJ-5gk"; */
+"Yyw-UJ-5gk.placeholder" = "Tìm kiếm bác sĩ không công khai";
+
+/* Class = "UILabel"; text = "Reports"; ObjectID = "ZBQ-sR-Jxi"; */
+"ZBQ-sR-Jxi.text" = "Báo cáo";
+
+/* Class = "UILabel"; text = "   Current Month Call Visit Details"; ObjectID = "ZCk-42-ES2"; */
+"ZCk-42-ES2.text" = "   Chi tiết cuộc gọi tháng hiện tại";
+
+/* Class = "UITextView"; text = "-"; ObjectID = "ZJS-9C-J3b"; */
+"ZJS-9C-J3b.text" = "-";
+
+/* Class = "UILabel"; text = "Visit Details"; ObjectID = "ZOf-wY-jry"; */
+"ZOf-wY-jry.text" = "Xem chi tiết";
+
+/* Class = "UILabel"; text = "Visiting Details"; ObjectID = "ZWV-a9-637"; */
+"ZWV-a9-637.text" = "Xem chi tiết";
+
+/* Class = "UILabel"; text = "Qty"; ObjectID = "ZdO-59-ZHI"; */
+"ZdO-59-ZHI.text" = "Qty";
+
+/* Class = "UILabel"; text = "Doctor Name"; ObjectID = "Zgd-4n-cML"; */
+"Zgd-4n-cML.text" = "Tên bác sĩ";
+
+/* Class = "UILabel"; text = "Doctor Name :"; ObjectID = "ZjS-X5-vkI"; */
+"ZjS-X5-vkI.text" = "Tên bác sĩ:";
+
+/* Class = "UILabel"; text = "About Slide"; ObjectID = "Zob-vf-ME5"; */
+"Zob-vf-ME5.text" = "Giới thiệu về Trang trình bày";
+
+/* Class = "UIButton"; normalTitle = "-"; ObjectID = "Zqw-km-m8X"; */
+"Zqw-km-m8X.normalTitle" = "-";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "Zr3-vw-ISg"; */
+"Zr3-vw-ISg.normalTitle" = "Gửi đi";
+
+/* Class = "UILabel"; text = "Headquarters"; ObjectID = "ZuR-Cf-Soo"; */
+"ZuR-Cf-Soo.text" = "Trụ sở chính";
+
+/* Class = "UILabel"; text = "Inclinic conversion"; ObjectID = "a1j-Ob-jUQ"; */
+"a1j-Ob-jUQ.text" = "Chuyển đổi nghiêng";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "a6x-hj-upf"; */
+"a6x-hj-upf.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "a7r-aF-SkF"; */
+"a7r-aF-SkF.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "aHM-D6-9bO"; */
+"aHM-D6-9bO.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "aHS-lp-ekn"; */
+"aHS-lp-ekn.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "aLn-N0-Ntn"; */
+"aLn-N0-Ntn.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "aUi-4o-E1C"; */
+"aUi-4o-E1C.normalTitle" = "Cái nút";
+
+/* Class = "UILabel"; text = "Remarks"; ObjectID = "aYZ-cs-9g6"; */
+"aYZ-cs-9g6.text" = "Nhận xét";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "adO-MD-xcZ"; */
+"adO-MD-xcZ.text" = "-";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "asl-pq-cy9"; */
+"asl-pq-cy9.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UIButton"; normalTitle = "Clear"; ObjectID = "atG-YZ-v01"; */
+"atG-YZ-v01.normalTitle" = "Thông thoáng";
+
+/* Class = "UILabel"; text = "The doctor accepts the Data Protection Policy"; ObjectID = "av6-EX-zkK"; */
+"av6-EX-zkK.text" = "Bác sĩ chấp nhận Chính sách bảo vệ dữ liệu";
+
+/* Class = "UILabel"; text = "Feedback Details"; ObjectID = "b2Q-IW-Fcg"; */
+"b2Q-IW-Fcg.text" = "Thông tin phản hồi";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "b9t-f9-TYz"; */
+"b9t-f9-TYz.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "bGA-ot-48H"; */
+"bGA-ot-48H.normalTitle" = "Lựa chọn";
+
+/* Class = "UIButton"; normalTitle = "Save Presentation"; ObjectID = "bI0-So-vKD"; */
+"bI0-So-vKD.normalTitle" = "Lưu bản trình bày";
+
+/* Class = "UILabel"; text = "Product"; ObjectID = "bKj-ij-IQG"; */
+"bKj-ij-IQG.text" = "Sản phẩm";
+
+/* Class = "UILabel"; text = "Nov-2017"; ObjectID = "bM3-Zw-AJY"; */
+"bM3-Zw-AJY.text" = "Tháng 11 năm 2017";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "bMh-F0-9Sl"; */
+"bMh-F0-9Sl.text" = "-";
+
+/* Class = "UITabBarItem"; title = "Unlisted Doctor"; ObjectID = "bNk-9b-aQw"; */
+"bNk-9b-aQw.title" = "Bác sĩ không công khai";
+
+/* Class = "UIButton"; normalTitle = "Select the Headquaters"; ObjectID = "bRx-lp-ROi"; */
+"bRx-lp-ROi.normalTitle" = "Chọn Headquaters";
+
+/* Class = "UIButton"; normalTitle = "Accept"; ObjectID = "bTL-xw-f7A"; */
+"bTL-xw-f7A.normalTitle" = "Chấp nhận";
+
+/* Class = "UISegmentedControl"; bTp-Eq-vbl.segmentTitles[0] = "GEO Tagging"; ObjectID = "bTp-Eq-vbl"; */
+"bTp-Eq-vbl.segmentTitles[0]" = "Gắn thẻ GEO";
+
+/* Class = "UISegmentedControl"; bTp-Eq-vbl.segmentTitles[1] = "Near Me"; ObjectID = "bTp-Eq-vbl"; */
+"bTp-Eq-vbl.segmentTitles[1]" = "Gần tôi";
+
+/* Class = "UILabel"; text = "Work Type"; ObjectID = "bVw-bR-V9z"; */
+"bVw-bR-V9z.text" = "Loại công việc";
+
+/* Class = "UILabel"; text = "Visiting days"; ObjectID = "ba2-ST-kBW"; */
+"ba2-ST-kBW.text" = "Những ngày thăm viếng";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "bar-kN-p32"; */
+"bar-kN-p32.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Territory"; ObjectID = "bfP-l8-fzX"; */
+"bfP-l8-fzX.text" = "Lãnh thổ";
+
+/* Class = "UIButton"; normalTitle = "Add Competitor"; ObjectID = "biY-O3-MB7"; */
+"biY-O3-MB7.normalTitle" = "Thêm đối thủ cạnh tranh";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "biv-Jq-lEX"; */
+"biv-Jq-lEX.normalTitle" = "VÂNG";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "brD-S1-gJO"; */
+"brD-S1-gJO.text" = "-";
+
+/* Class = "UIButton"; normalTitle = "Select the Headquaters"; ObjectID = "brh-bv-dgv"; */
+"brh-bv-dgv.normalTitle" = "Chọn Headquaters";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "bvT-Hk-WBe"; */
+"bvT-Hk-WBe.text" = "Nhãn";
+
+/* Class = "UISegmentedControl"; c3Q-tl-Fj4.segmentTitles[0] = "Images"; ObjectID = "c3Q-tl-Fj4"; */
+"c3Q-tl-Fj4.segmentTitles[0]" = "Hình ảnh";
+
+/* Class = "UISegmentedControl"; c3Q-tl-Fj4.segmentTitles[1] = "Videos"; ObjectID = "c3Q-tl-Fj4"; */
+"c3Q-tl-Fj4.segmentTitles[1]" = "Video";
+
+/* Class = "UISegmentedControl"; c3Q-tl-Fj4.segmentTitles[2] = "PDF Files"; ObjectID = "c3Q-tl-Fj4"; */
+"c3Q-tl-Fj4.segmentTitles[2]" = "Tệp PDF";
+
+/* Class = "UISegmentedControl"; c3Q-tl-Fj4.segmentTitles[3] = "DHTML"; ObjectID = "c3Q-tl-Fj4"; */
+"c3Q-tl-Fj4.segmentTitles[3]" = "DHTML";
+
+/* Class = "UILabel"; text = "Injected"; ObjectID = "cAh-Wl-Qfs"; */
+"cAh-Wl-Qfs.text" = "Tiêm";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "cAz-Ib-6wn"; */
+"cAz-Ib-6wn.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Mobile"; ObjectID = "cBf-jM-c22"; */
+"cBf-jM-c22.text" = "Di động";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "cDw-UI-wS0"; */
+"cDw-UI-wS0.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Create Presentation"; ObjectID = "cFH-Uk-zlE"; */
+"cFH-Uk-zlE.text" = "Tạo bản trình bày";
+
+/* Class = "UITextField"; placeholder = "User Name"; ObjectID = "cFu-sx-4FC"; */
+"cFu-sx-4FC.placeholder" = "Tên tài khoản";
+
+/* Class = "UIButton"; normalTitle = "Re-Select"; ObjectID = "cG5-4v-kky"; */
+"cG5-4v-kky.normalTitle" = "Chọn lại";
+
+/* Class = "UILabel"; text = "FDate"; ObjectID = "cM2-Ed-Pkv"; */
+"cM2-Ed-Pkv.text" = "FDate";
+
+/* Class = "UILabel"; text = "Address 4"; ObjectID = "cNB-Q3-rse"; */
+"cNB-Q3-rse.text" = "Địa chỉ 4";
+
+/* Class = "UILabel"; text = "E-Mail"; ObjectID = "cTY-e8-hKM"; */
+"cTY-e8-hKM.text" = "E-mail";
+
+/* Class = "UILabel"; text = "Auto Login"; ObjectID = "cXY-ne-EqZ"; */
+"cXY-ne-EqZ.text" = "Tự động đăng nhập";
+
+/* Class = "UILabel"; text = "Class"; ObjectID = "cb9-99-kLh"; */
+"cb9-99-kLh.text" = "Lớp học";
+
+/* Class = "UILabel"; text = "Start Time"; ObjectID = "cje-wS-Y1P"; */
+"cje-wS-Y1P.text" = "Thời gian bắt đầu";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "cm4-gs-Hpe"; */
+"cm4-gs-Hpe.normalTitle" = "Gửi đi";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "cn6-UX-WkJ"; */
+"cn6-UX-WkJ.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "cnE-NW-oyy"; */
+"cnE-NW-oyy.text" = "Loại";
+
+/* Class = "UIButton"; normalTitle = "Staff Details"; ObjectID = "cr2-gJ-4RK"; */
+"cr2-gJ-4RK.normalTitle" = "Thông tin chi tiết về nhân viên";
+
+/* Class = "UILabel"; text = "Master List Downloader"; ObjectID = "crH-6y-Kne"; */
+"crH-6y-Kne.text" = "Trình tải xuống danh sách chính";
+
+/* Class = "UILabel"; text = "Mon"; ObjectID = "cuw-bY-kek"; */
+"cuw-bY-kek.text" = "Thứ hai";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "d2y-Cv-XQA"; */
+"d2y-Cv-XQA.normalTitle" = "+";
+
+/* Class = "UIButton"; normalTitle = "Activity"; ObjectID = "d5O-Bv-u6r"; */
+"d5O-Bv-u6r.normalTitle" = "Hoạt động";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "d9k-m4-PgI"; */
+"d9k-m4-PgI.text" = "Điện thoại";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dC6-cE-5RD"; */
+"dC6-cE-5RD.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Average number of patients per day (approximately)"; ObjectID = "dJ3-mv-piX"; */
+"dJ3-mv-piX.text" = "Số lượng bệnh nhân trung bình mỗi ngày (ước tính)";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "dgr-MP-N3w"; */
+"dgr-MP-N3w.normalTitle" = "Cái nút";
+
+/* Class = "UILabel"; text = "Rx Qty"; ObjectID = "di2-21-SCC"; */
+"di2-21-SCC.text" = "Rx Qty";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "dne-cv-txP"; */
+"dne-cv-txP.text" = "0";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "drg-ZL-Fmd"; */
+"drg-ZL-Fmd.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dsl-ln-Llc"; */
+"dsl-ln-Llc.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "SF Name"; ObjectID = "dwl-36-0nP"; */
+"dwl-36-0nP.text" = "Tên SF";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "e1z-66-c5F"; */
+"e1z-66-c5F.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "e25-gs-7kh"; */
+"e25-gs-7kh.normalTitle" = "Cái nút";
+
+/* Class = "UILabel"; text = "Speciality"; ObjectID = "e2e-Xp-TUq"; */
+"e2e-Xp-TUq.text" = "Chuyên môn";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "eGo-nG-ikj"; */
+"eGo-nG-ikj.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "eLj-d4-jjO"; */
+"eLj-d4-jjO.text" = "Địa chỉ nhà";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "ePI-p3-b1b"; */
+"ePI-p3-b1b.text" = "0";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "ePY-ba-NUd"; */
+"ePY-ba-NUd.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UILabel"; text = "City"; ObjectID = "eSt-mk-MIs"; */
+"eSt-mk-MIs.text" = "Thành phố";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "eWy-ye-Qer"; */
+"eWy-ye-Qer.normalTitle" = "Gửi đi";
+
+/* Class = "UILabel"; text = "Tour Plan Approval"; ObjectID = "eXh-cL-WCx"; */
+"eXh-cL-WCx.text" = "Phê duyệt kế hoạch tham quan";
+
+/* Class = "UILabel"; text = "Address 2"; ObjectID = "eYt-g5-ozA"; */
+"eYt-g5-ozA.text" = "Địa chỉ 2";
+
+/* Class = "UILabel"; text = "SF Name"; ObjectID = "edd-Tb-uee"; */
+"edd-Tb-uee.text" = "Tên SF";
+
+/* Class = "UIButton"; normalTitle = "Cancel Edit"; ObjectID = "edv-pN-E5C"; */
+"edv-pN-E5C.normalTitle" = "Hủy chỉnh sửa";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "elr-C8-bLj"; */
+"elr-C8-bLj.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Precall Analysis"; ObjectID = "en2-1f-Zye"; */
+"en2-1f-Zye.text" = "Phân tích cuộc gọi trước";
+
+/* Class = "UITextView"; text = "-"; ObjectID = "ep1-jH-ocp"; */
+"ep1-jH-ocp.text" = "-";
+
+/* Class = "UILabel"; text = "Consultant List"; ObjectID = "erq-f9-Xrk"; */
+"erq-f9-Xrk.text" = "Danh sách tư vấn";
+
+/* Class = "UILabel"; text = "Leave Approval"; ObjectID = "f5F-77-pSV"; */
+"f5F-77-pSV.text" = "Rời khỏi sự chấp thuận";
+
+/* Class = "UILabel"; text = "Product Name"; ObjectID = "fEN-N9-pv1"; */
+"fEN-N9-pv1.text" = "tên sản phẩm";
+
+/* Class = "UILabel"; text = "name"; ObjectID = "fNe-Ld-Z8H"; */
+"fNe-Ld-Z8H.text" = "Tên";
+
+/* Class = "UILabel"; text = "Select the Date"; ObjectID = "fXd-y4-l7Y"; */
+"fXd-y4-l7Y.text" = "Chọn ngày";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "fYm-Pu-634"; */
+"fYm-Pu-634.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Topic Covered"; ObjectID = "fk8-Gx-iiM"; */
+"fk8-Gx-iiM.text" = "Chủ đề được bao phủ";
+
+/* Class = "UILabel"; text = "Doctor List"; ObjectID = "fmz-Qd-Wdx"; */
+"fmz-Qd-Wdx.text" = "Danh sách bác sĩ";
+
+/* Class = "UILabel"; text = "Territory"; ObjectID = "foe-rZ-xUp"; */
+"foe-rZ-xUp.text" = "Lãnh thổ";
+
+/* Class = "UIButton"; normalTitle = "Back To List"; ObjectID = "ftw-mO-u4H"; */
+"ftw-mO-u4H.normalTitle" = "Trở lại danh sách";
+
+/* Class = "UITextField"; placeholder = "Search Listed Stockist"; ObjectID = "g2M-N8-55Q"; */
+"g2M-N8-55Q.placeholder" = "Tìm kiếm danh sách kho được liệt kê";
+
+/* Class = "UITextView"; text = "-"; ObjectID = "gA5-uM-bdC"; */
+"gA5-uM-bdC.text" = "-";
+
+/* Class = "UILabel"; text = "name"; ObjectID = "gBi-un-9t0"; */
+"gBi-un-9t0.text" = "Tên";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "gMQ-ze-LP5"; */
+"gMQ-ze-LP5.text" = "-";
+
+/* Class = "UILabel"; text = "Profile Picture"; ObjectID = "gNl-s8-3X1"; */
+"gNl-s8-3X1.text" = "Ảnh đại diện";
+
+/* Class = "UIButton"; normalTitle = "Set Profile Picture"; ObjectID = "gWX-c8-18L"; */
+"gWX-c8-18L.normalTitle" = "Đặt ảnh hồ sơ";
+
+/* Class = "UITextView"; text = "Address"; ObjectID = "gWe-4B-iKb"; */
+"gWe-4B-iKb.text" = "Địa chỉ nhà";
+
+/* Class = "UILabel"; text = "Doctor"; ObjectID = "gbR-vI-7bE"; */
+"gbR-vI-7bE.text" = "Bác sĩ";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "gdD-JD-6yg"; */
+"gdD-JD-6yg.text" = "Ngày tháng";
+
+/* Class = "UILabel"; text = "Activity Entry"; ObjectID = "gi3-zE-wxI"; */
+"gi3-zE-wxI.text" = "Mục nhập Hoạt động";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gki-hO-mTl"; */
+"gki-hO-mTl.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "gq6-YQ-Chc"; */
+"gq6-YQ-Chc.normalTitle" = "+";
+
+/* Class = "UIButton"; normalTitle = "-"; ObjectID = "gse-Cc-Hln"; */
+"gse-Cc-Hln.normalTitle" = "-";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "h2S-ta-KKi"; */
+"h2S-ta-KKi.text" = "Thể loại";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "h3V-7J-9yg"; */
+"h3V-7J-9yg.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Are you sure to reject this Leave ?"; ObjectID = "hAq-3e-UUs"; */
+"hAq-3e-UUs.text" = "Bạn có chắc chắn từ chối Sự ra đi này không?";
+
+/* Class = "UILabel"; text = "ToDate"; ObjectID = "hFa-0I-KFf"; */
+"hFa-0I-KFf.text" = "Ngày đến";
+
+/* Class = "UILabel"; text = "Inputs"; ObjectID = "hG8-7W-YIw"; */
+"hG8-7W-YIw.text" = "Đầu vào";
+
+/* Class = "UILabel"; text = "No.of Staff"; ObjectID = "hGa-t0-Mjd"; */
+"hGa-t0-Mjd.text" = "Không có nhân viên";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "hNo-xM-ggF"; */
+"hNo-xM-ggF.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Territory"; ObjectID = "hQu-uv-brb"; */
+"hQu-uv-brb.text" = "Lãnh thổ";
+
+/* Class = "UITextView"; text = "-"; ObjectID = "hTb-C2-Qci"; */
+"hTb-C2-Qci.text" = "-";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "hfU-Je-8d1"; */
+"hfU-Je-8d1.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Input"; ObjectID = "hhD-Vy-Dou"; */
+"hhD-Vy-Dou.text" = "Đầu vào";
+
+/* Class = "UIButton"; normalTitle = "Go"; ObjectID = "hiw-JC-FXl"; */
+"hiw-JC-FXl.normalTitle" = "Đi";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "hm8-d4-hWs"; */
+"hm8-d4-hWs.normalTitle" = "Cái nút";
+
+/* Class = "UILabel"; text = "District"; ObjectID = "hn6-Lg-aTO"; */
+"hn6-Lg-aTO.text" = "Huyện";
+
+/* Class = "UILabel"; text = "Sun"; ObjectID = "hvl-6m-U3g"; */
+"hvl-6m-U3g.text" = "mặt trời";
+
+/* Class = "UILabel"; text = "Input"; ObjectID = "i6J-Qf-KKW"; */
+"i6J-Qf-KKW.text" = "Đầu vào";
+
+/* Class = "UILabel"; text = "Slides Downloader"; ObjectID = "iMI-am-clC"; */
+"iMI-am-clC.text" = "Trình tải xuống trang trình bày";
+
+/* Class = "UILabel"; text = "Select the Date"; ObjectID = "iMY-yC-N7e"; */
+"iMY-yC-N7e.text" = "Chọn ngày";
+
+/* Class = "UITextView"; text = "-"; ObjectID = "iNm-IL-yb0"; */
+"iNm-IL-yb0.text" = "-";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "iQT-Ar-4Z1"; */
+"iQT-Ar-4Z1.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Chemist Profiling"; ObjectID = "iSB-V0-hQf"; */
+"iSB-V0-hQf.text" = "Hồ sơ nhà hóa học";
+
+/* Class = "UILabel"; text = "Listed Stockist Selection"; ObjectID = "ihx-LX-mYy"; */
+"ihx-LX-mYy.text" = "Lựa chọn danh mục cổ phiếu niêm yết";
+
+/* Class = "UILabel"; text = "Listed Doctor Selection"; ObjectID = "ihz-vL-Ri6"; */
+"ihz-vL-Ri6.text" = "Lựa chọn bác sĩ được niêm yết";
+
+/* Class = "UILabel"; text = "Start Time"; ObjectID = "ii6-Ll-RXm"; */
+"ii6-Ll-RXm.text" = "Thời gian bắt đầu";
+
+/* Class = "UIButton"; normalTitle = "Activity"; ObjectID = "ilH-lJ-dYf"; */
+"ilH-lJ-dYf.normalTitle" = "Hoạt động";
+
+/* Class = "UIButton"; normalTitle = "Ok"; ObjectID = "ilO-9C-9c0"; */
+"ilO-9C-9c0.normalTitle" = "VÂNG";
+
+/* Class = "UILabel"; text = "Details for "; ObjectID = "ist-3H-tx1"; */
+"ist-3H-tx1.text" = "Chi tiết cho";
+
+/* Class = "UIButton"; normalTitle = "Select the Headquaters"; ObjectID = "ivR-Nn-DMi"; */
+"ivR-Nn-DMi.normalTitle" = "Chọn Headquaters";
+
+/* Class = "UIButton"; normalTitle = " Cancel"; ObjectID = "ixR-l5-qKD"; */
+"ixR-l5-qKD.normalTitle" = " Hủy bỏ";
+
+/* Class = "UILabel"; text = "CLUSTER"; ObjectID = "j94-e4-7Ny"; */
+"j94-e4-7Ny.text" = "Cluster";
+
+/* Class = "UILabel"; text = "Doctor Name"; ObjectID = "jB1-7d-Zif"; */
+"jB1-7d-Zif.text" = "Tên bác sĩ";
+
+/* Class = "UITextField"; placeholder = "Rate"; ObjectID = "jPb-9S-uwZ"; */
+"jPb-9S-uwZ.placeholder" = "Tỷ lệ";
+
+/* Class = "UILabel"; text = "Plan For The Day"; ObjectID = "jWw-1y-TJu"; */
+"jWw-1y-TJu.text" = "Lập kế hoạch trong ngày";
+
+/* Class = "UITextView"; text = "asd"; ObjectID = "jZi-ze-8fJ"; */
+"jZi-ze-8fJ.text" = "asd";
+
+/* Class = "UILabel"; text = "Clinic Name"; ObjectID = "jcb-0M-4lG"; */
+"jcb-0M-4lG.text" = "Tên phòng khám";
+
+/* Class = "UILabel"; text = "Visit Details"; ObjectID = "jch-cq-M7u"; */
+"jch-cq-M7u.text" = "Xem chi tiết";
+
+/* Class = "UILabel"; text = "Address 3"; ObjectID = "jfJ-p7-0vI"; */
+"jfJ-p7-0vI.text" = "Địa chỉ 3";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jgt-Jj-67Y"; */
+"jgt-Jj-67Y.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "STP I"; ObjectID = "jjf-Z4-Myh"; */
+"jjf-Z4-Myh.text" = "STP I";
+
+/* Class = "UILabel"; text = "Confirm Password"; ObjectID = "k1V-cu-Sv7"; */
+"k1V-cu-Sv7.text" = "Xác nhận mật khẩu";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "k6L-si-cKY"; */
+"k6L-si-cKY.normalTitle" = "Hủy bỏ";
+
+/* Class = "UIButton"; normalTitle = "-- Select --"; ObjectID = "kEY-ES-CnM"; */
+"kEY-ES-CnM.normalTitle" = "-- Lựa chọn --";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "kH9-Ch-m87"; */
+"kH9-Ch-m87.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Qty"; ObjectID = "kLF-6k-FYg"; */
+"kLF-6k-FYg.text" = "Qty";
+
+/* Class = "UITextField"; placeholder = "Search"; ObjectID = "kN3-67-TWl"; */
+"kN3-67-TWl.placeholder" = "Tìm kiếm";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "kT2-pS-5af"; */
+"kT2-pS-5af.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "List Of Survey"; ObjectID = "kUR-10-KQs"; */
+"kUR-10-KQs.text" = "Danh sách khảo sát";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "kVe-h4-vjq"; */
+"kVe-h4-vjq.text" = "-";
+
+/* Class = "UILabel"; text = "SF Name"; ObjectID = "kXX-HY-XJh"; */
+"kXX-HY-XJh.text" = "Tên SF";
+
+/* Class = "UITextField"; placeholder = "xxxxxxx"; ObjectID = "kaR-0V-R1f"; */
+"kaR-0V-R1f.placeholder" = "xxxxxxx";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "kuu-sS-7lJ"; */
+"kuu-sS-7lJ.text" = "-";
+
+/* Class = "UITextField"; text = "77:99 PM"; ObjectID = "l0h-gN-jPN"; */
+"l0h-gN-jPN.text" = "77:99 chiều";
+
+/* Class = "UILabel"; text = "Wedding Date"; ObjectID = "lBK-Ci-VTq"; */
+"lBK-Ci-VTq.text" = "Ngày cưới";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "lFB-kI-2v9"; */
+"lFB-kI-2v9.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Rx Qty"; ObjectID = "lFX-ln-Hxn"; */
+"lFX-ln-Hxn.text" = "Rx Qty";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "lc6-VZ-Eqm"; */
+"lc6-VZ-Eqm.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "-"; ObjectID = "lci-9f-t2J"; */
+"lci-9f-t2J.normalTitle" = "-";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ld0-2L-8Sx"; */
+"ld0-2L-8Sx.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "lfE-A6-3rA"; */
+"lfE-A6-3rA.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "lfY-DI-Qx9"; */
+"lfY-DI-Qx9.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Visit Details"; ObjectID = "ljE-cY-uSH"; */
+"ljE-cY-uSH.text" = "Xem chi tiết";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "lth-t8-uiq"; */
+"lth-t8-uiq.text" = "-";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "lug-Xg-BrV"; */
+"lug-Xg-BrV.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UIButton"; normalTitle = "Other Work"; ObjectID = "lxC-Sy-d8f"; */
+"lxC-Sy-d8f.normalTitle" = "Công việc khác";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "lzo-Sb-7fP"; */
+"lzo-Sb-7fP.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Product Promoted"; ObjectID = "m2j-qA-Qam"; */
+"m2j-qA-Qam.text" = "Sản phẩm được Quảng cáo";
+
+/* Class = "UILabel"; text = "Qualification"; ObjectID = "m7D-ra-hXP"; */
+"m7D-ra-hXP.text" = "Trình độ chuyên môn";
+
+/* Class = "UILabel"; text = "Qualification"; ObjectID = "mB5-n9-dbE"; */
+"mB5-n9-dbE.text" = "Trình độ chuyên môn";
+
+/* Class = "UILabel"; text = "Powered by"; ObjectID = "mDD-o7-0hN"; */
+"mDD-o7-0hN.text" = "Được cung cấp bởi";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "mGf-SI-OsD"; */
+"mGf-SI-OsD.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UILabel"; text = "ENHANCING  INTERACTION  WITH  PHYSICIAN"; ObjectID = "mRb-8U-QEo"; */
+"mRb-8U-QEo.text" = "NÂNG CAO TƯƠNG TÁC VỚI BÁC SĨ";
+
+/* Class = "UILabel"; text = "Work Type"; ObjectID = "mSd-yx-quU"; */
+"mSd-yx-quU.text" = "Loại công việc";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "mVy-b8-CoX"; */
+"mVy-b8-CoX.text" = "Loại";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "mb2-7e-lHG"; */
+"mb2-7e-lHG.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Samples"; ObjectID = "mfk-vF-hTv"; */
+"mfk-vF-hTv.text" = "Mẫu";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "msj-ni-bkX"; */
+"msj-ni-bkX.normalTitle" = "Hủy bỏ";
+
+/* Class = "UILabel"; text = "Mobile"; ObjectID = "mwE-kE-bdj"; */
+"mwE-kE-bdj.text" = "Di động";
+
+/* Class = "UILabel"; text = "Staff Name"; ObjectID = "mxG-bo-E2H"; */
+"mxG-bo-E2H.text" = "Tên nhân viên";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "myg-ir-JvF"; */
+"myg-ir-JvF.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UILabel"; text = "Scribble"; ObjectID = "n3c-qn-Npa"; */
+"n3c-qn-Npa.text" = "Viết nguệch ngoạc";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "n83-Hm-ajz"; */
+"n83-Hm-ajz.text" = "1";
+
+/* Class = "UIButton"; normalTitle = "Change Profile"; ObjectID = "n84-l3-PjN"; */
+"n84-l3-PjN.normalTitle" = "Thay đổi tài liệu";
+
+/* Class = "UILabel"; text = "Activity Entry"; ObjectID = "nCt-fq-2Fz"; */
+"nCt-fq-2Fz.text" = "Mục nhập Hoạt động";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "nHI-Cv-rex"; */
+"nHI-Cv-rex.normalTitle" = "Cái nút";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "nNQ-6D-op3"; */
+"nNQ-6D-op3.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "ANIL ASHOL SHINDE"; ObjectID = "nPW-rJ-CVr"; */
+"nPW-rJ-CVr.text" = "ANIL ASHOL SHINDE";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "nXx-Ca-IM5"; */
+"nXx-Ca-IM5.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "nYJ-6R-5Cv"; */
+"nYJ-6R-5Cv.normalTitle" = "VÂNG";
+
+/* Class = "UILabel"; text = "Speaker Name"; ObjectID = "nYp-ih-ohb"; */
+"nYp-ih-ohb.text" = "Tên diễn giả";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "nlL-Ln-cjH"; */
+"nlL-Ln-cjH.text" = "Tên";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "nq9-xE-1t2"; */
+"nq9-xE-1t2.text" = "-";
+
+/* Class = "UIButton"; normalTitle = "Feedback"; ObjectID = "nqA-Qu-Ekh"; */
+"nqA-Qu-Ekh.normalTitle" = "Nhận xét";
+
+/* Class = "UILabel"; text = "Brick"; ObjectID = "nvj-8S-PY4"; */
+"nvj-8S-PY4.text" = "Gạch";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "nxc-oJ-OhK"; */
+"nxc-oJ-OhK.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UIButton"; normalTitle = "Wednesday"; ObjectID = "o2R-KO-q2a"; */
+"o2R-KO-q2a.normalTitle" = "thứ tư";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "o48-rv-zyf"; */
+"o48-rv-zyf.normalTitle" = "Cái nút";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "oCk-tu-LCu"; */
+"oCk-tu-LCu.text" = "Nhãn";
+
+/* Class = "UITextField"; placeholder = "Search Listed Doctor"; ObjectID = "oDs-Nl-G2c"; */
+"oDs-Nl-G2c.placeholder" = "Tìm kiếm bác sĩ được liệt kê";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "oFC-aL-Xh3"; */
+"oFC-aL-Xh3.text" = "Địa chỉ nhà";
+
+/* Class = "UILabel"; text = "Leave Type :"; ObjectID = "oK4-JK-m7y"; */
+"oK4-JK-m7y.text" = "Loại bỏ:";
+
+/* Class = "UILabel"; text = "Message Filter"; ObjectID = "oSp-JK-2AU"; */
+"oSp-JK-2AU.text" = "Bộ lọc tin nhắn";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ocR-eh-N1j"; */
+"ocR-eh-N1j.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Doctor Name :"; ObjectID = "oei-J3-L5A"; */
+"oei-J3-L5A.text" = "Tên bác sĩ:";
+
+/* Class = "UILabel"; text = "Postal Code"; ObjectID = "oht-N0-bYX"; */
+"oht-N0-bYX.text" = "Mã bưu điện";
+
+/* Class = "UILabel"; text = "Sunday"; ObjectID = "ohw-qt-Kr1"; */
+"ohw-qt-Kr1.text" = "chủ nhật";
+
+/* Class = "UIButton"; normalTitle = "Approve"; ObjectID = "ooq-hq-VpM"; */
+"ooq-hq-VpM.normalTitle" = "Chấp thuận";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "osp-oX-eoc"; */
+"osp-oX-eoc.text" = "-";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "p4e-pG-izy"; */
+"p4e-pG-izy.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Session"; ObjectID = "p5O-q8-xTs"; */
+"p5O-q8-xTs.text" = "Phiên họp";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "p7G-pq-d9d"; */
+"p7G-pq-d9d.text" = "Địa chỉ nhà";
+
+/* Class = "UILabel"; text = "Feedback"; ObjectID = "pAh-Kd-Rl9"; */
+"pAh-Kd-Rl9.text" = "Nhận xét";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "pH7-iP-fQt"; */
+"pH7-iP-fQt.text" = "Loại";
+
+/* Class = "UIButton"; normalTitle = "Submit STP"; ObjectID = "pXg-jF-jRE"; */
+"pXg-jF-jRE.normalTitle" = "Gửi STP";
+
+/* Class = "UITextView"; text = "-"; ObjectID = "pch-yB-eVq"; */
+"pch-yB-eVq.text" = "-";
+
+/* Class = "UILabel"; text = "Approvals"; ObjectID = "pdp-qz-VYP"; */
+"pdp-qz-VYP.text" = "Phê duyệt";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "pgO-M1-6eX"; */
+"pgO-M1-6eX.normalTitle" = "+";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "pgi-SI-Vpe"; */
+"pgi-SI-Vpe.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Overall Visit Details"; ObjectID = "ph6-ll-5i3"; */
+"ph6-ll-5i3.text" = "Thông tin chi tiết về chuyến thăm tổng thể";
+
+/* Class = "UITextField"; placeholder = "Value"; ObjectID = "phI-a0-pxU"; */
+"phI-a0-pxU.placeholder" = "Giá trị";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "prx-7I-I8w"; */
+"prx-7I-I8w.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "To : "; ObjectID = "q3T-DL-hft"; */
+"q3T-DL-hft.text" = "Đến :";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "qC8-vW-x8j"; */
+"qC8-vW-x8j.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UILabel"; text = "name"; ObjectID = "qJV-qG-4XD"; */
+"qJV-qG-4XD.text" = "Tên";
+
+/* Class = "UILabel"; text = "Remarks"; ObjectID = "qJZ-XS-96b"; */
+"qJZ-XS-96b.text" = "Nhận xét";
+
+/* Class = "UILabel"; text = "Jointwork"; ObjectID = "qLX-nh-bZk"; */
+"qLX-nh-bZk.text" = "Làm việc";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "qNg-Gm-M1H"; */
+"qNg-Gm-M1H.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UITextField"; text = "77:99 AM"; ObjectID = "qOn-8e-rcC"; */
+"qOn-8e-rcC.text" = "77:99 sáng";
+
+/* Class = "UITextView"; text = "-"; ObjectID = "qTe-wM-JQL"; */
+"qTe-wM-JQL.text" = "-";
+
+/* Class = "UILabel"; text = "LOP"; ObjectID = "qUf-5O-1dd"; */
+"qUf-5O-1dd.text" = "LOP";
+
+/* Class = "UILabel"; text = "Next Visit Date :"; ObjectID = "qZc-7q-hll"; */
+"qZc-7q-hll.text" = "Ngày ghé thăm tiếp theo:";
+
+/* Class = "UITextField"; text = "1"; ObjectID = "qbV-Sk-xXV"; */
+"qbV-Sk-xXV.text" = "1";
+
+/* Class = "UITextField"; text = "Signature Here"; ObjectID = "qg2-7y-2Qz"; */
+"qg2-7y-2Qz.text" = "Chữ ký Tại đây";
+
+/* Class = "UILabel"; text = "Value : 000"; ObjectID = "qoX-Wa-nvE"; */
+"qoX-Wa-nvE.text" = "Giá trị: 000";
+
+/* Class = "UITextView"; text = "-"; ObjectID = "qyU-lf-0aj"; */
+"qyU-lf-0aj.text" = "-";
+
+/* Class = "UIButton"; normalTitle = "Final Submit"; ObjectID = "r58-qW-PkZ"; */
+"r58-qW-PkZ.normalTitle" = "Gửi cuối cùng";
+
+/* Class = "UILabel"; text = "Indication List"; ObjectID = "r5p-En-xLg"; */
+"r5p-En-xLg.text" = "Danh sách chỉ định";
+
+/* Class = "UILabel"; text = "Territory"; ObjectID = "r7W-pO-Td8"; */
+"r7W-pO-Td8.text" = "Lãnh thổ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "r8n-y1-878"; */
+"r8n-y1-878.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "Select the Headquaters"; ObjectID = "rDj-S0-TSp"; */
+"rDj-S0-TSp.normalTitle" = "Chọn Headquaters";
+
+/* Class = "UILabel"; text = "Mobile"; ObjectID = "rEl-7H-unt"; */
+"rEl-7H-unt.text" = "Di động";
+
+/* Class = "UILabel"; text = "Precall Analysis"; ObjectID = "rIS-RU-fF9"; */
+"rIS-RU-fF9.text" = "Phân tích cuộc gọi trước";
+
+/* Class = "UILabel"; text = "Qualification"; ObjectID = "rTj-eL-tqG"; */
+"rTj-eL-tqG.text" = "Trình độ chuyên môn";
+
+/* Class = "UIButton"; normalTitle = "Activity"; ObjectID = "rXN-jv-phf"; */
+"rXN-jv-phf.normalTitle" = "Hoạt động";
+
+/* Class = "UILabel"; text = "Month"; ObjectID = "raM-Wi-bBj"; */
+"raM-Wi-bBj.text" = "Tháng";
+
+/* Class = "UIButton"; normalTitle = "Current Month"; ObjectID = "red-dQ-7Nq"; */
+"red-dQ-7Nq.normalTitle" = "Tháng này";
+
+/* Class = "UILabel"; text = "Participant List"; ObjectID = "riH-Fy-YTK"; */
+"riH-Fy-YTK.text" = "Danh sách người tham gia";
+
+/* Class = "UIButton"; normalTitle = "Re-Select"; ObjectID = "rjB-yA-lcE"; */
+"rjB-yA-lcE.normalTitle" = "Chọn lại";
+
+/* Class = "UILabel"; text = "SF Name"; ObjectID = "rta-TH-mBb"; */
+"rta-TH-mBb.text" = "Tên SF";
+
+/* Class = "UILabel"; text = "Select the Customer"; ObjectID = "s1v-Qz-IE7"; */
+"s1v-Qz-IE7.text" = "Chọn khách hàng";
+
+/* Class = "UILabel"; text = "name"; ObjectID = "s2U-tf-4XL"; */
+"s2U-tf-4XL.text" = "Tên";
+
+/* Class = "UILabel"; text = "Address Details"; ObjectID = "s3m-hk-upB"; */
+"s3m-hk-upB.text" = "Chi tiết địa chỉ";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "sF9-SG-ctg"; */
+"sF9-SG-ctg.text" = "-";
+
+/* Class = "UILabel"; text = "End Time"; ObjectID = "sHV-QJ-iFx"; */
+"sHV-QJ-iFx.text" = "Thời gian kết thúc";
+
+/* Class = "UILabel"; text = "Visit Details"; ObjectID = "sai-Pj-sUK"; */
+"sai-Pj-sUK.text" = "Xem chi tiết";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "si0-w4-IEJ"; */
+"si0-w4-IEJ.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "Male"; ObjectID = "slA-md-A6Q"; */
+"slA-md-A6Q.normalTitle" = "Nam giới";
+
+/* Class = "UILabel"; text = "Address Details"; ObjectID = "slc-vi-aNI"; */
+"slc-vi-aNI.text" = "Chi tiết địa chỉ";
+
+/* Class = "UIButton"; normalTitle = "Ok"; ObjectID = "smN-UC-7qx"; */
+"smN-UC-7qx.normalTitle" = "VÂNG";
+
+/* Class = "UILabel"; text = "Our Product Brand"; ObjectID = "son-JD-1tj"; */
+"son-JD-1tj.text" = "Thương hiệu sản phẩm của chúng tôi";
+
+/* Class = "UIButton"; normalTitle = "Tuesday"; ObjectID = "swQ-jb-Vo8"; */
+"swQ-jb-Vo8.normalTitle" = "Thứ ba";
+
+/* Class = "UILabel"; text = "Start Time"; ObjectID = "sxY-y5-Fma"; */
+"sxY-y5-Fma.text" = "Thời gian bắt đầu";
+
+/* Class = "UIButton"; normalTitle = "Clear"; ObjectID = "szi-Ar-lBg"; */
+"szi-Ar-lBg.normalTitle" = "Thông thoáng";
+
+/* Class = "UILabel"; text = "0.00"; ObjectID = "t1R-58-Sg9"; */
+"t1R-58-Sg9.text" = "0,00";
+
+/* Class = "UILabel"; text = "District"; ObjectID = "t1x-nn-cUz"; */
+"t1x-nn-cUz.text" = "Huyện";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "t3A-54-KZa"; */
+"t3A-54-KZa.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "GPS Segment"; ObjectID = "tIr-CM-tzg"; */
+"tIr-CM-tzg.text" = "Phân đoạn GPS";
+
+/* Class = "UILabel"; text = "0.00"; ObjectID = "tLQ-fk-W9J"; */
+"tLQ-fk-W9J.text" = "0,00";
+
+/* Class = "UILabel"; text = "Remarks"; ObjectID = "tPC-kb-MJn"; */
+"tPC-kb-MJn.text" = "Nhận xét";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "tUS-7u-RCl"; */
+"tUS-7u-RCl.placeholder" = "Mật khẩu";
+
+/* Class = "UILabel"; text = "DIGITAL PROMOTION"; ObjectID = "tWA-PE-oNC"; */
+"tWA-PE-oNC.text" = "KHUYẾN MÃI KỸ THUẬT SỐ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "tWe-nI-lLX"; */
+"tWe-nI-lLX.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "tXP-fQ-3lk"; */
+"tXP-fQ-3lk.text" = "E-mail";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "tbv-2N-2UE"; */
+"tbv-2N-2UE.normalTitle" = "Cứu";
+
+/* Class = "UIButton"; normalTitle = "RCPA Entry"; ObjectID = "tdc-5H-PdG"; */
+"tdc-5H-PdG.normalTitle" = "Mục nhập RCPA";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "teR-DF-yCm"; */
+"teR-DF-yCm.normalTitle" = "+";
+
+/* Class = "UITextField"; placeholder = "www.yoururl.com"; ObjectID = "tgw-jP-rIJ"; */
+"tgw-jP-rIJ.placeholder" = "www.yoururl.com";
+
+/* Class = "UILabel"; text = "Today Work Plan View"; ObjectID = "tnU-8n-AhR"; */
+"tnU-8n-AhR.text" = "Chế độ xem kế hoạch làm việc hôm nay";
+
+/* Class = "UILabel"; text = "Select the Date"; ObjectID = "tvR-mc-ICy"; */
+"tvR-mc-ICy.text" = "Chọn ngày";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "u3B-6r-zZ9"; */
+"u3B-6r-zZ9.text" = "-";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "u3c-Il-L8y"; */
+"u3c-Il-L8y.text" = "Nhãn";
+
+/* Class = "UIButton"; normalTitle = "-"; ObjectID = "u6J-9r-Q53"; */
+"u6J-9r-Q53.normalTitle" = "-";
+
+/* Class = "UIButton"; normalTitle = "Re-Select"; ObjectID = "u7k-Gp-Mtd"; */
+"u7k-Gp-Mtd.normalTitle" = "Chọn lại";
+
+/* Class = "UILabel"; text = "Product Promoted"; ObjectID = "u9I-5o-fcT"; */
+"u9I-5o-fcT.text" = "Sản phẩm được Quảng cáo";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "uHB-Gu-j8B"; */
+"uHB-Gu-j8B.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UIButton"; normalTitle = "-"; ObjectID = "uJl-ga-RvX"; */
+"uJl-ga-RvX.normalTitle" = "-";
+
+/* Class = "UILabel"; text = "Unlisted Doctor Selection"; ObjectID = "uMP-yj-cbG"; */
+"uMP-yj-cbG.text" = "Lựa chọn bác sĩ không công khai";
+
+/* Class = "UILabel"; text = "Rate"; ObjectID = "uRq-Mg-QWN"; */
+"uRq-Mg-QWN.text" = "Tỷ lệ";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "uSi-aE-6q0"; */
+"uSi-aE-6q0.normalTitle" = "+";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "uTX-MU-Oxo"; */
+"uTX-MU-Oxo.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Topic Covered"; ObjectID = "ua7-2q-L2w"; */
+"ua7-2q-L2w.text" = "Chủ đề được bao phủ";
+
+/* Class = "UIButton"; normalTitle = "Select the Category"; ObjectID = "udN-2V-N8p"; */
+"udN-2V-N8p.normalTitle" = "Chọn danh mục";
+
+/* Class = "UILabel"; text = "Contact Person"; ObjectID = "uyD-Uc-T1m"; */
+"uyD-Uc-T1m.text" = "Người liên hệ";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "uzd-Vj-AUs"; */
+"uzd-Vj-AUs.normalTitle" = "Cứu";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "v13-bJ-o2g"; */
+"v13-bJ-o2g.normalTitle" = "+";
+
+/* Class = "UILabel"; text = "Headquarters"; ObjectID = "v7q-p3-iyp"; */
+"v7q-p3-iyp.text" = "Trụ sở chính";
+
+/* Class = "UILabel"; text = "name"; ObjectID = "v8B-EN-Vpn"; */
+"v8B-EN-Vpn.text" = "Tên";
+
+/* Class = "UILabel"; text = "Comments"; ObjectID = "vBU-5p-j2Q"; */
+"vBU-5p-j2Q.text" = "Bình luận";
+
+/* Class = "UILabel"; text = "Leave From"; ObjectID = "vMV-pq-17E"; */
+"vMV-pq-17E.text" = "Rời khỏi";
+
+/* Class = "UILabel"; text = "Message For"; ObjectID = "vR5-BH-Y4n"; */
+"vR5-BH-Y4n.text" = "Tin nhắn cho";
+
+/* Class = "UIButton"; normalTitle = "- Select -"; ObjectID = "va3-Ck-MjH"; */
+"va3-Ck-MjH.normalTitle" = "- Lựa chọn -";
+
+/* Class = "UILabel"; text = "City"; ObjectID = "vbY-2T-KTW"; */
+"vbY-2T-KTW.text" = "Thành phố";
+
+/* Class = "UILabel"; text = "The doctor CONSENT to the processing of personal data for the purpose expressed in point i) of the information [Contact Data Management]"; ObjectID = "vds-lc-Afw"; */
+"vds-lc-Afw.text" = "Bác sĩ ĐỒNG Ý với việc xử lý dữ liệu cá nhân cho mục đích được nêu trong điểm i) của thông tin [Quản lý dữ liệu liên hệ]";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "veX-0b-3mQ"; */
+"veX-0b-3mQ.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "E-Mail"; ObjectID = "vjd-79-JtA"; */
+"vjd-79-JtA.text" = "E-mail";
+
+/* Class = "UILabel"; text = "Speciality"; ObjectID = "vw4-Z1-sFy"; */
+"vw4-Z1-sFy.text" = "Chuyên môn";
+
+/* Class = "UIButton"; normalTitle = "Submit Policy"; ObjectID = "w6a-L6-oB5"; */
+"w6a-L6-oB5.normalTitle" = "Gửi chính sách";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "wBf-zW-CKe"; */
+"wBf-zW-CKe.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Add New Unlisted Doctor"; ObjectID = "wDO-G5-OIv"; */
+"wDO-G5-OIv.text" = "Thêm bác sĩ không công khai mới";
+
+/* Class = "UILabel"; text = "I. Work Type"; ObjectID = "wDx-JK-InJ"; */
+"wDx-JK-InJ.text" = "I. Loại công việc";
+
+/* Class = "UILabel"; text = "Clinic Place"; ObjectID = "wGU-J0-OE2"; */
+"wGU-J0-OE2.text" = "Nơi khám bệnh";
+
+/* Class = "UILabel"; text = "Economic class of patients"; ObjectID = "wUD-9i-k3g"; */
+"wUD-9i-k3g.text" = "Tầng lớp kinh tế của bệnh nhân";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "wov-mL-dXZ"; */
+"wov-mL-dXZ.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "Categorywise Visit Details"; ObjectID = "ws1-ev-J4y"; */
+"ws1-ev-J4y.text" = "Chi tiết lượt truy cập theo danh mục";
+
+/* Class = "UILabel"; text = "Address 5"; ObjectID = "wyN-l2-eat"; */
+"wyN-l2-eat.text" = "Địa chỉ 5";
+
+/* Class = "UIButton"; normalTitle = "Saturday"; ObjectID = "x54-IA-dVw"; */
+"x54-IA-dVw.normalTitle" = "ngày thứ bảy";
+
+/* Class = "UITextField"; placeholder = "Select the Doctor"; ObjectID = "xJR-S5-Tjd"; */
+"xJR-S5-Tjd.placeholder" = "Chọn bác sĩ";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "xRH-J9-t61"; */
+"xRH-J9-t61.text" = "Điện thoại";
+
+/* Class = "UILabel"; text = "Feedback"; ObjectID = "xdv-nC-vZR"; */
+"xdv-nC-vZR.text" = "Nhận xét";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "yOx-iF-4E4"; */
+"yOx-iF-4E4.text" = "Loại";
+
+/* Class = "UIButton"; normalTitle = "Detail"; ObjectID = "yPl-kd-bHH"; */
+"yPl-kd-bHH.normalTitle" = "Chi tiết";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "yYT-R1-Vss"; */
+"yYT-R1-Vss.text" = "Nhãn";
+
+/* Class = "UILabel"; text = "   ---- All Headers ----"; ObjectID = "ydZ-BK-V5X"; */
+"ydZ-BK-V5X.text" = "   ---- Tất cả Tiêu đề ----";
+
+/* Class = "UILabel"; text = "Leave Type"; ObjectID = "yyd-L1-hsu"; */
+"yyd-L1-hsu.text" = "Loại bỏ";
+
+/* Class = "UIButton"; normalTitle = "Ok"; ObjectID = "z3t-97-u3O"; */
+"z3t-97-u3O.normalTitle" = "VÂNG";
+
+/* Class = "UILabel"; text = "Feedback"; ObjectID = "zHn-6c-xOP"; */
+"zHn-6c-xOP.text" = "Nhận xét";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "zIl-Vx-WWc"; */
+"zIl-Vx-WWc.text" = "Loại";
+
+/* Class = "UILabel"; text = "Search Product"; ObjectID = "zKb-HI-fEp"; */
+"zKb-HI-fEp.text" = "Tìm kiếm sản phẩm";
+
+/* Class = "UILabel"; text = "Thu"; ObjectID = "zP8-vm-RB1"; */
+"zP8-vm-RB1.text" = "Thu";
+
+/* Class = "UIButton"; normalTitle = "Reject"; ObjectID = "zUI-bh-aPt"; */
+"zUI-bh-aPt.normalTitle" = "Từ chối";
+
+/* Class = "UIButton"; normalTitle = "Cancel Demo"; ObjectID = "zZA-oX-Oze"; */
+"zZA-oX-Oze.normalTitle" = "Hủy Demo";
+
+/* Class = "UILabel"; text = "Clinic Name"; ObjectID = "zcq-0K-lw3"; */
+"zcq-0K-lw3.text" = "Tên phòng khám";
+
+/* Class = "UITextField"; placeholder = "Search"; ObjectID = "zdK-uY-opO"; */
+"zdK-uY-opO.placeholder" = "Tìm kiếm";
+
+/* Class = "UILabel"; text = "Select the Date"; ObjectID = "zhM-0g-U4b"; */
+"zhM-0g-U4b.text" = "Chọn ngày";
+
+/* Class = "UILabel"; text = "Postal Code"; ObjectID = "zwU-U2-6aP"; */
+"zwU-U2-6aP.text" = "Mã bưu điện";
+
+/* Class = "UILabel"; text = "Targeting (New Patients / Month)"; ObjectID = "zz4-BY-CkA"; */
+"zz4-BY-CkA.text" = "Nhắm mục tiêu (Bệnh nhân mới / Tháng)";
+
+/* Class = "UILabel"; text = "Doctor Name"; ObjectID = "zzd-4h-SRM"; */
+"zzd-4h-SRM.text" = "Tên bác sĩ";
