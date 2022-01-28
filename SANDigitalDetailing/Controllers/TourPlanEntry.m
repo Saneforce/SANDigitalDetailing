@@ -344,7 +344,8 @@
     NSDate * ClnDate=[BaseViewController str2date:[NSString stringWithFormat:@"%d-%d-01 00:00:00",Yr,mon]];
     int maxDy=[self getMaxDate:mon andYear:Yr];
     int flg=0;
-    if( [self.CalnDates count]<1 || _isSyncCalled || _TPEntryDet.Flag==1 || [[_TPData valueForKey:@"TPFlag"] intValue]==1)
+    //if( [self.CalnDates count]<1 || _isSyncCalled || _TPEntryDet.Flag==1 || [[_TPData valueForKey:@"TPFlag"] intValue]==1)
+    if(_isSyncCalled==NO ||_isSyncCalled==YES )
     {
         _isSyncCalled= NO;
             
@@ -363,15 +364,16 @@
         NSMutableArray *Datas=[[NSMutableArray alloc] init];
         if(_TPEntryDet.Flag==1){
             Datas=[_TPEntryDet.TPDates[0] objectForKey:@"TPDatas"];
-        }else if([[_TPData valueForKey:@"TPFlag"] intValue]==1){
+        }else if([[_TPData valueForKey:@"TPFlag"] intValue]==1 ||[[_TPData valueForKey:@"TPFlag"] intValue]==0){
             Datas=_PrevDates;
-            flg=1;
+            //if ([_PrevDates count]>0)
+            flg=[[_TPData valueForKey:@"TPFlag"] intValue];
         }
         for(int il=1;il<=maxDy;il++){
             
             NSMutableDictionary* itm=[[NSMutableDictionary alloc] init];
             int Flag=0;
-            if(_TPEntryDet.Flag==1 || [[_TPData valueForKey:@"TPFlag"] intValue]==1){
+            if(_TPEntryDet.Flag==1 || _TPEntryDet.Flag==3 || [[_TPData valueForKey:@"TPFlag"] intValue]==1 || [[_TPData valueForKey:@"TPFlag"] intValue]==0){
                 NSString *sDay=[NSString stringWithFormat:@"%i", il];
                 NSMutableArray* FData=[[Datas filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"dayno==%@",sDay]] mutableCopy];
                 if ([FData count]>0) {
@@ -800,7 +802,7 @@
                     [self setGetHosps:[item objectForKey:@"id"] andSFName:[item objectForKey:@"name"]];
                 }else{
                     [self setGetClusters:[item objectForKey:@"id"] andSFName:[item objectForKey:@"name"]];
-                    if(_SelOptList.count >0)
+                    /*if(_SelOptList.count >0)
                     {
                         for (NSInteger j = 0; j < [tableView numberOfSections]; ++j)
                         {
@@ -813,7 +815,7 @@
                         }
                         [self removeCluster:[[_SelOptList objectAtIndex:0] objectForKey:@"Code"] andSFName:[[_SelOptList objectAtIndex:0] objectForKey:@"Name"]];
                         [self.SelOptList removeAllObjects];
-                    }
+                    }*/
                 }
                 [self.SelOptList addObject:selItem];
                 [cell.btnCheked setImage:[UIImage imageNamed:@"OptChecked"] forState:UIControlStateNormal];
@@ -1282,7 +1284,10 @@
             _PrevDates=[[NSMutableArray alloc]init];
             self.CalnDates=[[mDatas[0] objectForKey:@"TPDatas"] mutableCopy];
             _PrevDates=[[mDatas[0] objectForKey:@"TPDatas"] mutableCopy];
-            _TPEntryDet.Flag=3;
+            if([[mDatas[0] objectForKey:@"TPFlag"] isEqual:@"0"])
+            {
+                _TPEntryDet.Flag=3;
+            }
             [_TPData setValue:[mDatas[0] objectForKey:@"TPFlag"]  forKey:@"TPFlag"];
             [self SaveTPtoLocal];
             [self renderCalender:[self.SelMonth intValue] year:[self.SelYear intValue]];
