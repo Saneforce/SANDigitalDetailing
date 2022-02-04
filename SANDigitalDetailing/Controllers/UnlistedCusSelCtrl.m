@@ -528,6 +528,22 @@
        [SVProgressHUD dismiss];
     }];
 }
+
+ 
+-(void)clearNewDrForm
+{ 
+    self.nwDrName.text = @"";
+    self.CmbQual.titleLabel.text = @"Select the Qualification";
+    self.CmbClass.titleLabel.text = @"Select the Class";
+    self.CmbCate.titleLabel.text = @"Select the Category";
+    self.CmbSpec.titleLabel.text = @"Select the Specality";
+    self.nwDrsAddr.text = @"";
+    self.CmbTerr.titleLabel.text= @"";
+    self.CmbTerr.titleLabel.text = @"";
+    self.nwDrPincd.text = @"";
+    self.nwDrPhone.text = @"";
+    self.nwDrMobile.text = @""; 
+}
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([[segue identifier] isEqualToString:@"ShowNdrActivity"]){
         DynamicActivityCtrl *ActivityCTRL=[segue destinationViewController];
