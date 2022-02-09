@@ -148,8 +148,9 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
     }
     else if(collectionView==self.slideCollectionView)
     {
-        optLst=[self.currSlideList[indexPath.row] mutableCopy];
-    
+        NSMutableArray *arr = [self.currSlideList mutableCopy];
+        arr = [self sortArrayOnPriority:arr ];
+        optLst=[arr[indexPath.row] mutableCopy];
         NSDictionary *effDt=[optLst objectForKey:@"Eff_from"];
         NSDate *dteff=[BaseViewController str2date:[effDt valueForKey:@"date"]];
         NSString *EffDT=[BaseViewController date2str:dteff onlyDate:YES];
@@ -241,7 +242,9 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
         
         self.currSlideList= [[self.AllSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code == %@ and FileTyp!=\"C\"", [self.UniqueSlides[indexPath.row] valueForKey:@"Code"]]] mutableCopy];
         if([Selitem count]<=0)
-            self.SelectedSlides= [[self.SelectedSlides arrayByAddingObjectsFromArray:self.currSlideList] mutableCopy];
+        {
+//            self.SelectedSlides= [[self.SelectedSlides arrayByAddingObjectsFromArray:self.currSlideList] mutableCopy];
+        }
         else if(cell.Selected==false)
         {
             [self.SelectedSlides removeObjectsInArray:Selitem];
@@ -373,6 +376,7 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
 
 -(IBAction)SaveSlideGroup:(id)sender{
     if([self.txtGroupName.text isEqualToString:@""]){
+        [BaseViewController Toast:@"Please Enter Presentation Name!"];
         
     }else{
         
@@ -495,6 +499,13 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
     }
 }
 
+-(NSMutableArray *)sortArrayOnPriority :(NSMutableArray *)arrToSort
+{
+    NSSortDescriptor *sortByName = [NSSortDescriptor sortDescriptorWithKey:@"Priority"
+        ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortByName];
+    return [[arrToSort sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
+}
 -(void)CloseModalPresentation:(UITapGestureRecognizer *) pressRecognizer {
     CGPoint startPoint = [pressRecognizer locationInView:self.view];
     if(!CGRectContainsPoint(_ddrPrsntGrp.frame, startPoint)){
