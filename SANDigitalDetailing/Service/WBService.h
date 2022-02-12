@@ -13,6 +13,7 @@
 
 +(void) saveData:(NSMutableDictionary *)ServerDetail
           forKey:(NSString *)keyString;
++(NSArray*)removeNullValues:(NSArray *)arrData;
 +(void) saveArrayData:(NSMutableArray *)ServerDetail
                forKey:(NSString *)keyString;
 +(NSMutableDictionary *) getDataByKey:(NSString*) KeyString;

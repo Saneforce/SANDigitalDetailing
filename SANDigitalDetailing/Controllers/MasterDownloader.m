@@ -50,11 +50,13 @@
 }
 -(void) resetData
 {
+    NSMutableDictionary *reqData = [[NSMutableDictionary alloc] initWithObjectsAndKeys:_UserDet.SF,@"SF",_UserDet.SF,@"APPUserSF",_UserDet.DivCode,@"div", nil];
     self.MasterList =[[NSMutableArray alloc] init];
     [_MasterList addObject:[[List alloc] initWithName:@"WorktypeDetails.SANAPP" andLabel:@"Work Types" andApiPath:@"GET/WorkType" Parameters:nil]];
     [_MasterList addObject:[[List alloc] initWithName:@"HQDetails.SANAPP" andLabel:@"Headquters" andApiPath:@"GET/HQ" Parameters:nil]];
     [_MasterList addObject:[[List alloc] initWithName:@"CompetitorDetails.SANAPP" andLabel:@"Competitors" andApiPath:@"GET/CompDet" Parameters:nil]];
     [_MasterList addObject:[[List alloc] initWithName:@"Inputs.SANAPP" andLabel:@"Inputs" andApiPath:@"GET/Inputs" Parameters:nil]];
+    [_MasterList addObject:[[List alloc] initWithName:@"SlideBrand.SANAPP" andLabel:@"Slide Brand" andApiPath:@"GET/slidebrand" Parameters:reqData]];
     [_MasterList addObject:[[List alloc] initWithName:@"Products.SANAPP" andLabel:@"Products" andApiPath:@"GET/Products" Parameters:nil]];
     [_MasterList addObject:[[List alloc] initWithName:@"ProdSlides.SANAPP" andLabel:@"Slides" andApiPath:@"GET/ProdSlides" Parameters:nil]];
     [_MasterList addObject:[[List alloc] initWithName:@"Brands.SANAPP" andLabel:@"Brands" andApiPath:@"GET/Brands" Parameters:nil]];
@@ -125,8 +127,10 @@
 }
 -(void) LoadData:(List *) list andDataFor:(NSString *)dataSF andIndexPath:(NSIndexPath *)indexPath{
     [WBService SendServerRequest:list.apiPath withParameter:list.param withImages:nil DataSF:dataSF completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage){
-            NSMutableDictionary *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
+            id jsonData=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
+            id  receivedDta = [WBService removeNullValues:jsonData];
             [WBService saveData:receivedDta forKey:list.name];
+        
             NSLog(@"%@ Reloaded Successfully...",list.name);
             TBSelectionBxCell *cell=[self.tvMasterList cellForRowAtIndexPath:indexPath];
             cell.lOptImg.image= nil;

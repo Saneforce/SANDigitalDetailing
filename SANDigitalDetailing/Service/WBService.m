@@ -325,6 +325,24 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     
 }
++(id)removeNullValues:(NSArray *)arrData
+{
+    NSMutableArray * arrRESP = [[NSMutableArray alloc] initWithArray:arrData];
+    for (int i = 0; i< arrData.count; i++)
+    {
+        for (NSString * key in [[arrData objectAtIndex:i] allKeys])
+        {
+            if ([[[arrData objectAtIndex:i] objectForKey:key] isKindOfClass:[NSNull class]])
+            {
+                NSMutableDictionary * data = [[NSMutableDictionary alloc] initWithDictionary:[arrData objectAtIndex:i]];
+                [data setObject:@"" forKey:key];
+                [arrRESP replaceObjectAtIndex:i withObject:data];
+            }
+        }
+    }
+    
+    return arrRESP;
+}
 +(NSMutableDictionary *) getDataByKey:(NSString*) KeyString
 {
     return  [[[NSUserDefaults standardUserDefaults] objectForKey:KeyString] mutableCopy];

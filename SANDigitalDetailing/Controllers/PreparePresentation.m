@@ -15,6 +15,7 @@
 @property (nonatomic,strong) UIButton* btnDelete;
     @property (nonatomic,strong) NSArray* OrgAllSlides;
     @property (nonatomic,strong) NSMutableArray* AllGroupSlides;
+    @property (nonatomic,strong) NSMutableArray* prodcutSlide;
 
     @property (nonatomic,strong) NSMutableArray* currSlideList;
     @property (nonatomic,strong) NSMutableArray* UniqueSlides;
@@ -54,8 +55,11 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
     
     _tvPrsntGrpList.cellLayoutMarginsFollowReadableWidth = NO;
     
+    self.prodcutSlide = [[[NSUserDefaults standardUserDefaults] objectForKey:@"SlideBrand.SANAPP"] mutableCopy];
     self.OrgAllSlides =[[[NSUserDefaults standardUserDefaults] objectForKey:@"ProdSlides.SANAPP"] mutableCopy];
-    self.UniqueSlides =[[[NSUserDefaults standardUserDefaults] objectForKey:@"UniqueProdSlides.SANAPP"] mutableCopy];
+    //self.UniqueSlides =[[[NSUserDefaults standardUserDefaults] objectForKey:@"UniqueProdSlides.SANAPP"] mutableCopy];
+    self.UniqueSlides = [self filterProductBrand:self.prodcutSlide];
+
     self.AllGroupSlides=[[[NSUserDefaults standardUserDefaults] objectForKey:@"GroupSlides.SANAPP"]     mutableCopy];
     if(self.OrgAllSlides==nil) self.OrgAllSlides=[[[NSMutableArray alloc] init] mutableCopy];
     if(self.UniqueSlides==nil) self.UniqueSlides=[[[NSMutableArray alloc] init] mutableCopy];
@@ -64,7 +68,9 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
     
     self.SelectedSlides=[[[NSArray alloc] init] mutableCopy];
     self.currSlideList=[[[NSMutableArray alloc] init] mutableCopy];
-    if (self.UniqueSlides.count>0) {self.currSlideList= [[self.AllSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code == %@", [self.UniqueSlides[0] valueForKey:@"Code"]]] mutableCopy];
+    if (self.UniqueSlides.count>0)
+    {
+        self.currSlideList= [[self.AllSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code == %@", [self.UniqueSlides[0] valueForKey:@"Code"]]] mutableCopy];
     }
     self.btnBack.layer.cornerRadius=15.0f;
     
@@ -511,5 +517,19 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
     if(!CGRectContainsPoint(_ddrPrsntGrp.frame, startPoint)){
         _ddrPrsntModal.hidden=YES;
     }
+}
+
+-(NSMutableArray *)filterProductBrand:(NSArray *)arrData
+{
+    NSMutableArray *arrResponse = [[NSMutableArray alloc] init];
+    for (int i = 0; i < arrData.count; i++) {
+        
+        
+        self.UniqueSlides = [[self.OrgAllSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code == %@ && Priority == %@", [arrData[i] valueForKey:@"Product_Brd_Code"],@"1"]] mutableCopy];
+        [arrResponse addObjectsFromArray:self.UniqueSlides];
+    }
+
+    return arrResponse;
+    
 }
 @end
