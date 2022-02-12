@@ -197,7 +197,11 @@
         if(_selSurvery != nil && ![self.vwAdCtrl isHidden] && ![_selSurvery isEqualToString:[NSString stringWithFormat:@"%@",[objItem objectForKey:@"name"]]])
         {
             [self.vwAdCtrl setHidden:YES];
+<<<<<<< HEAD
             
+=======
+            self.txtSelCus.text = @"";
+>>>>>>> 6b87a86 ( For Some Survey, Doctor List is not Available (Dr Survey for ENT & Surgeon, B) issue fixed)
         }
         self.txtSelCus.text = @"";
         self.CustomerList = [NSMutableArray new];
@@ -763,6 +767,7 @@
         }
         NSLog(@"HERE %@",arrfilterDr);
         self.CustomerList = arrfilterDr;
+<<<<<<< HEAD
     }
     else
     {
@@ -777,6 +782,10 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [_collectionView reloadData];
         });
+=======
+        [_collectionView reloadData];
+        
+>>>>>>> 6b87a86 ( For Some Survey, Doctor List is not Available (Dr Survey for ENT & Surgeon, B) issue fixed)
     }
 }
 
