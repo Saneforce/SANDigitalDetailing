@@ -197,7 +197,6 @@
         if(_selSurvery != nil && ![self.vwAdCtrl isHidden] && ![_selSurvery isEqualToString:[NSString stringWithFormat:@"%@",[objItem objectForKey:@"name"]]])
         {
             [self.vwAdCtrl setHidden:YES];
-            
         }
         self.txtSelCus.text = @"";
         self.CustomerList = [NSMutableArray new];
@@ -777,6 +776,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [_collectionView reloadData];
         });
+
     }
 }
 

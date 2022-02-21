@@ -154,8 +154,8 @@
     
     self.AllSlides=[self.OrgAllSlides mutableCopy];
     NSMutableArray *resultArr=nil;
-    NSSortDescriptor *NameField = [NSSortDescriptor sortDescriptorWithKey:@"Name" ascending:YES];
-    NSArray *sortDescriptors = [NSArray arrayWithObjects:NameField, nil];
+//    NSSortDescriptor *NameField = [NSSortDescriptor sortDescriptorWithKey:@"Name" ascending:YES];
+    NSArray *sortDescriptors ;//= [NSArray arrayWithObjects:NameField, nil];
     if(_filterType<=3) resultArr = [[self FilterArray:self.UniqueSlides] mutableCopy];
     if(_filterType==1){
         NSArray *mpProds =[self.meetData.mappedProds componentsSeparatedByString:@","];
@@ -178,7 +178,7 @@
         
         NSSortDescriptor *CampField = [NSSortDescriptor sortDescriptorWithKey:@"Camp" ascending:YES];
         NSSortDescriptor *PTypField = [NSSortDescriptor sortDescriptorWithKey:@"PCatTyp" ascending:YES];
-        sortDescriptors = [NSArray arrayWithObjects:CampField, PTypField, NameField, nil];
+        sortDescriptors = [NSArray arrayWithObjects:CampField, PTypField, nil];
     }else if(_filterType>=4 && _filterType<=9){
         resultArr = [self.UniqueSlides mutableCopy];
     }else{

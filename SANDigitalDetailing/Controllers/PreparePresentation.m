@@ -15,6 +15,7 @@
 @property (nonatomic,strong) UIButton* btnDelete;
     @property (nonatomic,strong) NSArray* OrgAllSlides;
     @property (nonatomic,strong) NSMutableArray* AllGroupSlides;
+    @property (nonatomic,strong) NSMutableArray* prodcutSlide;
 
     @property (nonatomic,strong) NSMutableArray* currSlideList;
     @property (nonatomic,strong) NSMutableArray* UniqueSlides;
@@ -54,8 +55,11 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
     
     _tvPrsntGrpList.cellLayoutMarginsFollowReadableWidth = NO;
     
+    self.prodcutSlide = [[[NSUserDefaults standardUserDefaults] objectForKey:@"SlideBrand.SANAPP"] mutableCopy];
     self.OrgAllSlides =[[[NSUserDefaults standardUserDefaults] objectForKey:@"ProdSlides.SANAPP"] mutableCopy];
-    self.UniqueSlides =[[[NSUserDefaults standardUserDefaults] objectForKey:@"UniqueProdSlides.SANAPP"] mutableCopy];
+    //self.UniqueSlides =[[[NSUserDefaults standardUserDefaults] objectForKey:@"UniqueProdSlides.SANAPP"] mutableCopy];
+    self.UniqueSlides = [self filterProductBrand:self.prodcutSlide];
+
     self.AllGroupSlides=[[[NSUserDefaults standardUserDefaults] objectForKey:@"GroupSlides.SANAPP"]     mutableCopy];
     if(self.OrgAllSlides==nil) self.OrgAllSlides=[[[NSMutableArray alloc] init] mutableCopy];
     if(self.UniqueSlides==nil) self.UniqueSlides=[[[NSMutableArray alloc] init] mutableCopy];
@@ -64,7 +68,9 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
     
     self.SelectedSlides=[[[NSArray alloc] init] mutableCopy];
     self.currSlideList=[[[NSMutableArray alloc] init] mutableCopy];
-    if (self.UniqueSlides.count>0) {self.currSlideList= [[self.AllSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code == %@", [self.UniqueSlides[0] valueForKey:@"Code"]]] mutableCopy];
+    if (self.UniqueSlides.count>0)
+    {
+        self.currSlideList= [[self.AllSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code == %@", [self.UniqueSlides[0] valueForKey:@"Code"]]] mutableCopy];
     }
     self.btnBack.layer.cornerRadius=15.0f;
     
@@ -148,8 +154,9 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
     }
     else if(collectionView==self.slideCollectionView)
     {
-        optLst=[self.currSlideList[indexPath.row] mutableCopy];
-    
+        NSMutableArray *arr = [self.currSlideList mutableCopy];
+        arr = [self sortArrayOnPriority:arr ];
+        optLst=[arr[indexPath.row] mutableCopy];
         NSDictionary *effDt=[optLst objectForKey:@"Eff_from"];
         NSDate *dteff=[BaseViewController str2date:[effDt valueForKey:@"date"]];
         NSString *EffDT=[BaseViewController date2str:dteff onlyDate:YES];
@@ -241,7 +248,9 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
         
         self.currSlideList= [[self.AllSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code == %@ and FileTyp!=\"C\"", [self.UniqueSlides[indexPath.row] valueForKey:@"Code"]]] mutableCopy];
         if([Selitem count]<=0)
-            self.SelectedSlides= [[self.SelectedSlides arrayByAddingObjectsFromArray:self.currSlideList] mutableCopy];
+        {
+//            self.SelectedSlides= [[self.SelectedSlides arrayByAddingObjectsFromArray:self.currSlideList] mutableCopy];
+        }
         else if(cell.Selected==false)
         {
             [self.SelectedSlides removeObjectsInArray:Selitem];
@@ -373,6 +382,7 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
 
 -(IBAction)SaveSlideGroup:(id)sender{
     if([self.txtGroupName.text isEqualToString:@""]){
+        [BaseViewController Toast:@"Please Enter Presentation Name!"];
         
     }else{
         
@@ -495,10 +505,31 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
     }
 }
 
+-(NSMutableArray *)sortArrayOnPriority :(NSMutableArray *)arrToSort
+{
+    NSSortDescriptor *sortByName = [NSSortDescriptor sortDescriptorWithKey:@"Priority"
+        ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortByName];
+    return [[arrToSort sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
+}
 -(void)CloseModalPresentation:(UITapGestureRecognizer *) pressRecognizer {
     CGPoint startPoint = [pressRecognizer locationInView:self.view];
     if(!CGRectContainsPoint(_ddrPrsntGrp.frame, startPoint)){
         _ddrPrsntModal.hidden=YES;
     }
+}
+
+-(NSMutableArray *)filterProductBrand:(NSArray *)arrData
+{
+    NSMutableArray *arrResponse = [[NSMutableArray alloc] init];
+    for (int i = 0; i < arrData.count; i++) {
+        
+        
+        self.UniqueSlides = [[self.OrgAllSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code == %@ && Priority == %@", [arrData[i] valueForKey:@"Product_Brd_Code"],@"1"]] mutableCopy];
+        [arrResponse addObjectsFromArray:self.UniqueSlides];
+    }
+
+    return arrResponse;
+    
 }
 @end

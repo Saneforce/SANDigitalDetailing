@@ -94,6 +94,7 @@
         [[List alloc] initWithName:@"HQDetails.SANAPP" andApiPath:@"GET/HQ" Parameters:nil],
         [[List alloc] initWithName:@"CompetitorDetails.SANAPP" andApiPath:@"GET/CompDet" Parameters:nil],
         [[List alloc] initWithName:@"Inputs.SANAPP" andApiPath:@"GET/Inputs" Parameters:nil],
+        [[List alloc] initWithName:@"SlideBrand.SANAPP" andApiPath:@"GET/slidebrand" Parameters:nil],
         [[List alloc] initWithName:@"Products.SANAPP" andApiPath:@"GET/Products" Parameters:nil],
         [[List alloc] initWithName:@"ProdSlides.SANAPP" andApiPath:@"GET/ProdSlides" Parameters:nil],
         [[List alloc] initWithName:@"Brands.SANAPP" andLabel:@"Brands" andApiPath:@"GET/Brands" Parameters:nil],
@@ -921,7 +922,8 @@
     
     for(List* list in MasterList){
         [WBService SendServerRequest:list.apiPath withParameter:list.param withImages:nil DataSF:self.UserDet.SF completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage) {
-            NSMutableDictionary *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
+            id jsonDAta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
+            id receivedDta=  [WBService removeNullValues:jsonDAta];
             [WBService saveData:receivedDta forKey:list.name];
             //if([list.apiPath isEqual:@"GET/ProdSlides"]){[self loadSlides];}
             self.numberLoaded++;
