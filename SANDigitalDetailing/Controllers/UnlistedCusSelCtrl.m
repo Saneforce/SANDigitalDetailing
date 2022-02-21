@@ -528,7 +528,6 @@
        [SVProgressHUD dismiss];
     }];
 }
-
  
 -(void)clearNewDrForm
 { 
@@ -544,6 +543,7 @@
     self.nwDrPhone.text = @"";
     self.nwDrMobile.text = @""; 
 }
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([[segue identifier] isEqualToString:@"ShowNdrActivity"]){
         DynamicActivityCtrl *ActivityCTRL=[segue destinationViewController];
