@@ -20,6 +20,8 @@
 @property (nonatomic, weak) IBOutlet UICollectionView* slideCollectionView;
 @property (nonatomic, weak) IBOutlet UICollectionViewFlowLayout* slideLayout;
 
+@property (nonatomic, weak) IBOutlet UICollectionView* specCollectionView;
+
 @property (weak, nonatomic) IBOutlet UILabel *lblCusName;
 @property (nonatomic, weak) IBOutlet UIButton* btnBack;
 @property (nonatomic, weak) IBOutlet UIButton* btnStartDemo;
@@ -34,6 +36,13 @@
 @property (nonatomic,weak) NSString *ModeScr;
 
 @property (strong, nonatomic) IBOutlet UISegmentedControl * segmentedControl;
+@property (weak, nonatomic) IBOutlet UIImageView *imgForward;
+@property (weak, nonatomic) IBOutlet UIButton *btnFilterSpec;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *cnstrntSpecFilterViewOrigin;
+@property (weak, nonatomic) IBOutlet UIView *vwSpecFilter;
+
+- (IBAction)btnFilterSpec:(id)sender;
+- (IBAction)btnCloseFilter:(id)sender;
 
 -(IBAction)CancelPresentation:(id)sender;
 

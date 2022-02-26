@@ -8,6 +8,7 @@
 
 #import "PresentationSelCtrl.h"
 #import "mSlideCell.h"
+#import "filterCell.h"
 #import "TBSelectionBxCell.h"
 #import "PresentationViewCtrl.h"
 #import "ImageScale.h"
@@ -23,6 +24,8 @@
 @property (nonatomic,assign) NSInteger filterType;
 @property (nonatomic,strong) NSMutableDictionary* selProduct;
 @property (nonatomic,weak) NSString* fileType;
+@property (nonatomic,strong) NSArray* SpecList;
+@property (nonatomic,weak) NSString* selectedSpec;
 
 
 
@@ -39,6 +42,9 @@
     self.slideCollectionView.delegate = self;
     self.slideCollectionView.dataSource = self;
     
+    self.specCollectionView.delegate = self;
+    self.specCollectionView.dataSource = self;
+    
     self.tvFilterType.delegate = self;
     self.tvFilterType.dataSource = self;
     self.tvProdList.delegate = self;
@@ -46,6 +52,11 @@
     //@{@"id":@3,@"Name":@"Therapeutics"},
     self.filterTypes=[@[@{@"id":@1,@"Name":@"Brand Matrix"}, @{@"id":@2,@"Name":@"Specialitywise"}, @{@"id":@4,@"Name":@"All Brands"}] mutableCopy];
     
+    self.vwSpecFilter.layer.borderWidth=2.0;
+    self.vwSpecFilter.layer.cornerRadius= 3.0;
+    self.vwSpecFilter.clipsToBounds = YES;
+    self.vwSpecFilter.layer.borderColor=[UIColor redColor].CGColor;
+
     self.btnFilterType.layer.cornerRadius=5.0f;
     
     self.AllGroupSlides=[[[NSUserDefaults standardUserDefaults] objectForKey:@"GroupSlides.SANAPP"]     mutableCopy];
@@ -58,7 +69,8 @@
         [flTyp setValue:[dic valueForKey:@"GroupName"] forKey:@"Name"];
         [self.filterTypes addObject:flTyp];
     }
-    
+    self.SpecList =[[[NSUserDefaults standardUserDefaults] objectForKey:@"Specialitys.SANAPP"] mutableCopy];
+
     self.OrgAllSlides =[[[NSUserDefaults standardUserDefaults] objectForKey:@"ProdSlides.SANAPP"] mutableCopy];
     self.UniqueSlides =[[[NSUserDefaults standardUserDefaults] objectForKey:@"UniqueProdSlides.SANAPP"] mutableCopy];
     if (self.SetupData.RatingBasedSlide==1){
@@ -181,7 +193,20 @@
         sortDescriptors = [NSArray arrayWithObjects:CampField, PTypField, nil];
     }else if(_filterType>=4 && _filterType<=9){
         resultArr = [self.UniqueSlides mutableCopy];
-    }else{
+    }
+    else if(_filterType==2 && self.selectedSpec!=nil)
+    {
+        NSMutableArray *arr = [[NSMutableArray alloc] init];
+        for (int i = 0; i<resultArr.count; i++) {
+            NSArray *arrSecond = [[[resultArr objectAtIndex:i] objectForKey:@"Speciality_Code"] componentsSeparatedByString:@","];
+            if([arrSecond containsObject:_selectedSpec])
+            {
+                [arr addObject:resultArr[i]];
+            }
+        }
+        resultArr = arr;
+    }
+    else{
         if(self.filterType>9)
         {
             NSLog(@"%d",(int)self.filterType);
@@ -245,6 +270,33 @@
     NSArray *viewControllers = [self.navigationController viewControllers];
     [self.navigationController popToViewController:[viewControllers objectAtIndex:viewControllers.count-2] animated:NO];
 }
+
+- (IBAction)btnCloseFilter:(id)sender {
+    [self callORdismissFilter];
+}
+
+- (IBAction)btnFilterSpec:(id)sender {
+    
+    [self.specCollectionView reloadData];
+    [self callORdismissFilter];
+}
+-(void)callORdismissFilter
+{
+    if(self.cnstrntSpecFilterViewOrigin.constant == -200)
+    {
+        [UIView animateWithDuration:1.0 animations:^{
+            self.cnstrntSpecFilterViewOrigin.constant = - self.view.frame.size.height;
+            [self.view layoutIfNeeded];
+        }];
+    }
+    else
+    {
+    [UIView animateWithDuration:1.0 animations:^{
+        self.cnstrntSpecFilterViewOrigin.constant = -200;
+        [self.view layoutIfNeeded];
+    }];
+    }
+}
 -(IBAction)dismissModalStack:(id)sender {
     NSArray *viewControllers = [self.navigationController viewControllers];
     [self.navigationController popToViewController:[viewControllers objectAtIndex:0] animated:NO];
@@ -289,50 +341,92 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.currSlideList.count;
-}
-
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    mSlideCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath] ;
-    NSDictionary *optLst=self.currSlideList[indexPath.row];
-    
-    NSDictionary *effDt=[optLst objectForKey:@"Eff_from"];
-    NSDate *dteff=[BaseViewController str2date:[effDt valueForKey:@"date"]];
-    NSString *EffDT=[BaseViewController date2str:dteff onlyDate:YES];
-    
-    NSString *SlidesDirectory = [BaseViewController getSlidesDirectory];
-    NSString *fileName=[NSString stringWithFormat:@"%@/%@",EffDT,[optLst objectForKey:@"FilePath"]];
-    cell.ImgView.layer.cornerRadius=5.0f;
-    if([[optLst objectForKey:@"FileTyp"] isEqual:@"H"]){
-        cell.ImgView.image=[ImageScale imageWithImage:[BaseViewController loadSlideImage:[NSString stringWithFormat:@"%@/%@",EffDT,[optLst objectForKey:@"FilePath"]]] scaledToSize:CGSizeMake(cell.ImgView.frame.size.width, cell.ImgView.frame.size.height)];
-        cell.ImgView.contentMode = UIViewContentModeScaleToFill;
-        
-    }
-    else if([[optLst objectForKey:@"FileTyp"] isEqual:@"I"]){
-        cell.ImgView.image= [ImageScale imageWithImage:[UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/%@",SlidesDirectory,fileName]] scaledToSize:CGSizeMake(cell.ImgView.frame.size.width, cell.ImgView.frame.size.height)];
-    }
-    else if([[optLst objectForKey:@"FileTyp"] isEqual:@"V"]){
-        NSURL *urlVideoFile = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@",SlidesDirectory,fileName]];
-        cell.ImgView.image=[ImageScale imageWithImage:[BaseViewController getVideoThumbnail:urlVideoFile] scaledToSize:CGSizeMake(cell.ImgView.frame.size.width, cell.ImgView.frame.size.height)];
-        cell.ImgView.contentMode = UIViewContentModeScaleToFill;
-    }
-    else if([[optLst objectForKey:@"FileTyp"] isEqual:@"P"])
+    if(collectionView == _slideCollectionView)
     {
-        NSURL *PDFFile = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@",SlidesDirectory,fileName]];
-        cell.ImgView.image=[ImageScale imageWithImage:[BaseViewController imageFromPDFWithDocumentRef:CGPDFDocumentCreateWithURL( (__bridge CFURLRef) PDFFile)] scaledToSize:CGSizeMake(cell.ImgView.frame.size.width, cell.ImgView.frame.size.height)];
-        cell.ImgView.contentMode = UIViewContentModeScaleAspectFill;
-        
-        
+    return self.currSlideList.count;
     }
-    cell.ImgView.clipsToBounds = YES;
-    cell.ImgView.layer.borderColor=[UIColor colorWithRed:0.929 green:0.929 blue:0.929 alpha:1.00].CGColor;
-    cell.ImgView.layer.borderWidth=1;
-    return cell;
+    else if (collectionView == _specCollectionView)
+        return self.SpecList.count;
+    else
+        return 0;
+}
+- (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (cv == _slideCollectionView) {
+        mSlideCell * cell =[cv dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+
+        NSDictionary *optLst=self.currSlideList[indexPath.row];
+
+        NSDictionary *effDt=[optLst objectForKey:@"Eff_from"];
+        NSDate *dteff=[BaseViewController str2date:[effDt valueForKey:@"date"]];
+        NSString *EffDT=[BaseViewController date2str:dteff onlyDate:YES];
+
+        NSString *SlidesDirectory = [BaseViewController getSlidesDirectory];
+        NSString *fileName=[NSString stringWithFormat:@"%@/%@",EffDT,[optLst objectForKey:@"FilePath"]];
+        cell.ImgView.layer.cornerRadius=5.0f;
+        if([[optLst objectForKey:@"FileTyp"] isEqual:@"H"]){
+            cell.ImgView.image=[ImageScale imageWithImage:[BaseViewController loadSlideImage:[NSString stringWithFormat:@"%@/%@",EffDT,[optLst objectForKey:@"FilePath"]]] scaledToSize:CGSizeMake(cell.ImgView.frame.size.width, cell.ImgView.frame.size.height)];
+            cell.ImgView.contentMode = UIViewContentModeScaleToFill;
+
+        }
+        else if([[optLst objectForKey:@"FileTyp"] isEqual:@"I"]){
+            cell.ImgView.image= [ImageScale imageWithImage:[UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/%@",SlidesDirectory,fileName]] scaledToSize:CGSizeMake(cell.ImgView.frame.size.width, cell.ImgView.frame.size.height)];
+        }
+        else if([[optLst objectForKey:@"FileTyp"] isEqual:@"V"]){
+            NSURL *urlVideoFile = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@",SlidesDirectory,fileName]];
+            cell.ImgView.image=[ImageScale imageWithImage:[BaseViewController getVideoThumbnail:urlVideoFile] scaledToSize:CGSizeMake(cell.ImgView.frame.size.width, cell.ImgView.frame.size.height)];
+            cell.ImgView.contentMode = UIViewContentModeScaleToFill;
+        }
+        else if([[optLst objectForKey:@"FileTyp"] isEqual:@"P"])
+        {
+            NSURL *PDFFile = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@",SlidesDirectory,fileName]];
+            cell.ImgView.image=[ImageScale imageWithImage:[BaseViewController imageFromPDFWithDocumentRef:CGPDFDocumentCreateWithURL( (__bridge CFURLRef) PDFFile)] scaledToSize:CGSizeMake(cell.ImgView.frame.size.width, cell.ImgView.frame.size.height)];
+            cell.ImgView.contentMode = UIViewContentModeScaleAspectFill;
+
+
+        }
+        cell.ImgView.clipsToBounds = YES;
+        cell.ImgView.layer.borderColor=[UIColor colorWithRed:0.929 green:0.929 blue:0.929 alpha:1.00].CGColor;
+        cell.ImgView.layer.borderWidth=1;
+
+        return cell;
+    } else {
+        filterCell* cell =[cv dequeueReusableCellWithReuseIdentifier:@"fCell" forIndexPath:indexPath];
+        cell.lblFilterType.text = [[self.SpecList objectAtIndex:indexPath.row] objectForKey:@"Name"];
+        
+        cell.layer.borderColor = [UIColor redColor].CGColor;
+        cell.layer.borderWidth = 2.0;
+        cell.layer.cornerRadius = 3.0;
+        cell.layer.masksToBounds = YES;
+        
+        return cell;
+    }
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    if(collectionView == self.specCollectionView)
+    {
+    self.selectedSpec = [[[self.SpecList objectAtIndex:indexPath.row] objectForKey:@"Code"] stringValue];
+    self.SelProductList = [self getFilteredSlides];
+    self.currSlideList=[[NSMutableArray alloc] init];
+    if (self.SelProductList.count>0) {
+
+        self.currSlideList= [[self.AllSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code == %@ and FileTyp!=\"C\"", [self.SelProductList[0] valueForKey:@"Code"]]] mutableCopy];
+        
+        self.selProduct=self.SelProductList[0];
+        
+        NSSortDescriptor *NameField = [NSSortDescriptor sortDescriptorWithKey:@"OrdNo" ascending:YES];
+        NSArray *sortDescriptors = [NSArray arrayWithObjects:NameField, nil];
+
+        self.currSlideList = [[self.currSlideList sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
+        
+    }
+    [self.tvProdList reloadData];
+    [self.slideCollectionView reloadData];
+    [self closeTableViews];
+    [self callORdismissFilter];
+    }
     
 }
 
@@ -425,6 +519,25 @@
     if(tableView==self.tvFilterType) {
         self.filterType=[[_filterTypes[indexPath.row] valueForKey:@"id"] integerValue];
         [self.btnFilterType setTitle:NSLocalizedString([_filterTypes[indexPath.row] objectForKey:@"Name"],[_filterTypes[indexPath.row] objectForKey:@"Name"])  forState:UIControlStateNormal];
+        if(self.filterType == 2)
+        {
+            [self.btnFilterSpec setHidden:NO];
+            [self.imgForward setHidden: NO];
+        }
+        else
+        {
+            if(self.cnstrntSpecFilterViewOrigin.constant == -200)
+            {
+            [UIView animateWithDuration:1.0 animations:^{
+                self.cnstrntSpecFilterViewOrigin.constant = - self.view.frame.size.height;
+                [self.view layoutIfNeeded];
+
+            }];
+            }
+            [self.btnFilterSpec setHidden:YES];
+            [self.imgForward setHidden: YES];
+        }
+        
         self.SelProductList = [self getFilteredSlides];
         self.currSlideList=[[NSMutableArray alloc] init];
         if (self.SelProductList.count>0) {

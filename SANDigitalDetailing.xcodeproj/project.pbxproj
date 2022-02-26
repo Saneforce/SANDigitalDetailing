@@ -166,6 +166,7 @@
 		14FC89BD1EBFB4560036E3B5 /* ReportViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FC89BC1EBFB4560036E3B5 /* ReportViewer.m */; };
 		99FEEA95B1112A97689C4E2F /* Pods_SANDigitalDetailing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 763383533AABC9A0673227CA /* Pods_SANDigitalDetailing.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		E717169B26F0C1AC00B3173C /* Meeting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E717169D26F0C1AC00B3173C /* Meeting.storyboard */; };
+		E718C2F927CA06AA002432E9 /* filterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E718C2F827CA06AA002432E9 /* filterCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -509,6 +510,8 @@
 		E71716B626F0C82200B3173C /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		E71716B726F0C82900B3173C /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E71716B826F0C83100B3173C /* my */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = my; path = my.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E718C2F727CA06AA002432E9 /* filterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = filterCell.h; sourceTree = "<group>"; };
+		E718C2F827CA06AA002432E9 /* filterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = filterCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -815,6 +818,8 @@
 				147686A3218A347400127D6F /* ReplayQueryCell.m */,
 				149238B9233C14AF002DDE6F /* MsngrCell.h */,
 				149238BA233C14AF002DDE6F /* MsngrCell.m */,
+				E718C2F727CA06AA002432E9 /* filterCell.h */,
+				E718C2F827CA06AA002432E9 /* filterCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1286,6 +1291,7 @@
 				14E5291D22A05AF300A327B5 /* EditDateSelectionCtrl.m in Sources */,
 				14864E7B259125A5002AF555 /* DynamicActivityCtrl.m in Sources */,
 				140E7EC41D267DC000161BCB /* BaseViewController.m in Sources */,
+				E718C2F927CA06AA002432E9 /* filterCell.m in Sources */,
 				14FC89BA1EBF7A9A0036E3B5 /* VwCReportMenu.m in Sources */,
 				14613D1A23B21DA000B11FD2 /* ActivityViewCtrl.m in Sources */,
 				144D9955234529CA007F3EBB /* ShadowView.m in Sources */,
