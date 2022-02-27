@@ -101,7 +101,8 @@
     
     NSString *sURL=[[NSString alloc] initWithFormat:@"%@%@",[ServDet objectForKey:@"baseUrl"],keyString];
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:Param options:0 error:nil];
-    
+   // NSString *str = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+
     id postData = @{@"data":[[NSString alloc] initWithData:jsonData  encoding:NSUTF8StringEncoding]};
     
     //id postData = @{@"data":[[NSString alloc] initWithData:jsonData  encoding:NSUTF8StringEncoding]};

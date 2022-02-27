@@ -58,14 +58,14 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
     self.prodcutSlide = [[[NSUserDefaults standardUserDefaults] objectForKey:@"SlideBrand.SANAPP"] mutableCopy];
     self.OrgAllSlides =[[[NSUserDefaults standardUserDefaults] objectForKey:@"ProdSlides.SANAPP"] mutableCopy];
     //self.UniqueSlides =[[[NSUserDefaults standardUserDefaults] objectForKey:@"UniqueProdSlides.SANAPP"] mutableCopy];
-    self.UniqueSlides = [self filterProductBrand:self.prodcutSlide];
 
     self.AllGroupSlides=[[[NSUserDefaults standardUserDefaults] objectForKey:@"GroupSlides.SANAPP"]     mutableCopy];
     if(self.OrgAllSlides==nil) self.OrgAllSlides=[[[NSMutableArray alloc] init] mutableCopy];
     if(self.UniqueSlides==nil) self.UniqueSlides=[[[NSMutableArray alloc] init] mutableCopy];
     if(self.AllGroupSlides==nil) self.AllGroupSlides=[[[NSMutableArray alloc] init] mutableCopy];
     self.AllSlides =[self.OrgAllSlides mutableCopy];
-    
+    self.UniqueSlides = [self filterProductBrand:self.prodcutSlide];
+
     self.SelectedSlides=[[[NSArray alloc] init] mutableCopy];
     self.currSlideList=[[[NSMutableArray alloc] init] mutableCopy];
     if (self.UniqueSlides.count>0)
@@ -525,7 +525,7 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
     for (int i = 0; i < arrData.count; i++) {
         
         
-        self.UniqueSlides = [[self.OrgAllSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code == %@ && Priority == %@", [arrData[i] valueForKey:@"Product_Brd_Code"],@"1"]] mutableCopy];
+        self.UniqueSlides = [[self.OrgAllSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code == %@ && Priority == 1", [[arrData[i] valueForKey:@"Product_Brd_Code"] stringValue]]] mutableCopy];
         [arrResponse addObjectsFromArray:self.UniqueSlides];
     }
 
