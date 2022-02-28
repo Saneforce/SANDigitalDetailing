@@ -80,8 +80,8 @@
     _nwDrsAddr.layer.borderWidth=0.5f;
     _nwDrsAddr.layer.borderColor=[UIColor colorWithRed:0.647 green:0.651 blue:0.675 alpha:1.00].CGColor;
     _nwDrsAddr.layer.cornerRadius=5;
-    _btnNew.hidden=YES;
-    if(_SetupData.AddNewDrNeed==1){_btnNew.hidden=NO;}
+//    _btnNew.hidden=YES;
+//    if(_SetupData.AddNewDrNeed==1){_btnNew.hidden=NO;}
     if(_SetupData.NdrActivityNeed==0){_btnActivity.hidden=YES;}
 }
 
