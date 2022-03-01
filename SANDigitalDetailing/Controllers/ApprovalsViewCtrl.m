@@ -99,8 +99,12 @@
     [Param setValue:[NSString stringWithFormat:@"%i",_TPEntryDet.Year ] forKey:@"Yr"];*/
     [WBService SendServerRequest:@"GET/TPDetails" withParameter:[_TPEntryDet toNSDictionary] withImages:nil DataSF:_TPEntryDet.SF completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage) {
         _TPEntryDet.TPDates=[[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil] mutableCopy];
-        
+        if(_TPEntryDet.TPDates.count >0 )
+        {
         [self performSegueWithIdentifier:@"NavApprovalEditTP" sender:self];
+        }
+        else
+            [BaseViewController Toast:@"TPDetail Empty"];
     }
                            error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage){
                                NSLog(@"%@",errorMsg);

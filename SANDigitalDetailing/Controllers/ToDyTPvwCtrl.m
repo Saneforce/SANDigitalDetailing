@@ -324,11 +324,14 @@
 }
 -(IBAction) CloseTPEntry:(id)sender{
     
-    if([[[NSUserDefaults standardUserDefaults] objectForKey:@"selectedWKType"] isEqualToString:@""])
+    if(![[[NSUserDefaults standardUserDefaults] objectForKey:@"selectedWKType"] isEqualToString:@""])
     {
-        [WBService saveData:@"NO" forKey:@"MyDAyPlanSubmitted"];
+        [WBService saveData:@"YES" forKey:@"MyDAyPlanSubmitted"];
         [self dismissViewControllerAnimated:YES completion:nil];
     }
+    else
+        [WBService saveData:@"NO" forKey:@"MyDAyPlanSubmitted"];
+
 }
         
         
