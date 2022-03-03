@@ -888,7 +888,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lIG-PM-Wu0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="-659"/>
+            <point key="canvasLocation" x="304.6875" y="-659.375"/>
         </scene>
         <!--Master Downloader-->
         <scene sceneID="hdk-bK-ouy">
@@ -1095,7 +1095,6 @@
                     <connections>
                         <outlet property="btnBack" destination="fGW-WG-clG" id="EwS-yA-Hmu"/>
                         <outlet property="lblHQName" destination="hJd-Bk-tIj" id="kkM-dx-gWI"/>
-                        <outlet property="lblSelectHQ" destination="OFI-fZ-f7K" id="auQ-ms-mdL"/>
                         <outlet property="lblTitle" destination="TzQ-oJ-BJi" id="HEM-T9-UaG"/>
                         <outlet property="searchBox" destination="hhD-je-fZR" id="XYZ-q1-Ji0"/>
                         <outlet property="tvMasterList" destination="FNk-vK-Xdb" id="6Db-8Y-IGJ"/>
@@ -1191,7 +1190,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexBackgroundColor" red="0.94901960780000005" green="0.95686274510000002" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="dE8-bH-jW9" customClass="TBSelectionBxCell">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="dE8-bH-jW9" customClass="TBSelectionBxCell">
                                                 <rect key="frame" x="0.0" y="44.5" width="323" height="64"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dE8-bH-jW9" id="R0f-AM-mcx">
@@ -16835,9 +16834,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="X1n-4W-g1c"/>
-        <segue reference="LU3-fW-RHP"/>
-        <segue reference="xx0-mU-gWm"/>
+        <segue reference="UXC-ok-dTZ"/>
+        <segue reference="6I3-oL-otJ"/>
+        <segue reference="Z7m-0V-gdX"/>
         <segue reference="Gkr-7g-6Yc"/>
         <segue reference="odS-nd-Mm4"/>
         <segue reference="QwF-zN-mAL"/>
