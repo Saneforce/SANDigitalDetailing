@@ -46,6 +46,7 @@
 
 @property (nonatomic, retain) IBOutlet UILabel* lblDrCnt;
 @property (nonatomic, retain) IBOutlet UILabel* lblJWCnt;
+@property (nonatomic, retain) IBOutlet UILabel* lblChmCnt;
 
 @property (nonatomic, assign) int DrCnt;
 @property (nonatomic, assign) int ChmCnt;
@@ -148,6 +149,18 @@
     [vwbuget2 addSubview:_lblDrCnt];
     vwbuget2.backgroundColor=[UIColor redColor];
     [_btDoctor.superview addSubview:vwbuget2];
+    
+    UIView* vwbuget3=[[UIView alloc] initWithFrame:CGRectMake(_btChm.frame.origin.x+((_btChm.frame.size.width/4)*3)-2, _btChm.frame.origin.y-3, 18, 18)];
+    _lblChmCnt=[[UILabel alloc] initWithFrame:CGRectMake(0,0, 18, 18)];
+    _lblChmCnt.font=[UIFont fontWithName:@"Poppins-SemiBold" size:10.0];
+    _lblChmCnt.textAlignment=NSTextAlignmentCenter;
+    _lblChmCnt.textColor=[UIColor whiteColor];
+    _lblChmCnt.text=[NSString stringWithFormat:@"%d", _ChmCnt];
+    vwbuget3.clipsToBounds=YES;
+    vwbuget3.layer.cornerRadius=9.0f;
+    [vwbuget3 addSubview:_lblChmCnt];
+    vwbuget3.backgroundColor=[UIColor redColor];
+    [_btChm.superview addSubview:vwbuget3];
     
     if (_SetupData.HospBased==1) {
         _tvClusterList.hidden=YES;
@@ -539,9 +552,13 @@
     if([ArryJW count]>0) _JWCnt=(int)[ArryJW count]-1;
     NSArray*ArryDr=[self.selDrsCds componentsSeparatedByString:@","];
     if([ArryDr count]>0) _DrCnt=(int)[ArryDr count]-1;
+    NSArray*ArryCh=[self.selChmCds componentsSeparatedByString:@","];
+    if([ArryCh count]>0) _ChmCnt=(int)[ArryCh count]-1;
     
     _lblJWCnt.text=[NSString stringWithFormat:@"%d",_JWCnt];
     _lblDrCnt.text=[NSString stringWithFormat:@"%d",_DrCnt];
+    _lblChmCnt.text=[NSString stringWithFormat:@"%d",_ChmCnt];
+
     //if(tableView==self.tvChemistList) {optLst = self.SelChemistList[indexPath.row];tag=2;}
     
     if(tableView==self.tvOptList) {
@@ -712,9 +729,13 @@
         if([ArryJW count]>0) _JWCnt=(int)[ArryJW count]-1;
         NSArray*ArryDr=[self.selDrsCds componentsSeparatedByString:@","];
         if([ArryDr count]>0) _DrCnt=(int)[ArryDr count]-1;
+        NSArray*ArryCh=[self.selChmCds componentsSeparatedByString:@","];
+        if([ArryCh count]>0) _ChmCnt=(int)[ArryCh count]-1;
         
         _lblJWCnt.text=[NSString stringWithFormat:@"%d",_JWCnt];
         _lblDrCnt.text=[NSString stringWithFormat:@"%d",_DrCnt];
+        _lblChmCnt.text=[NSString stringWithFormat:@"%d",_ChmCnt];
+
     }
     if(tableView==self.tvOptList) {
         NSMutableDictionary *item ;
