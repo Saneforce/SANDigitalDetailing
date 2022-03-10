@@ -525,7 +525,7 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
     for (int i = 0; i < arrData.count; i++) {
         
         
-        self.UniqueSlides = [[self.OrgAllSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code == %@ && Priority == 1", [[arrData[i] valueForKey:@"Product_Brd_Code"] stringValue]]] mutableCopy];
+        self.UniqueSlides = [[self.OrgAllSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code == %@ AND Priority == '1'", [arrData[i] valueForKey:@"Product_Brd_Code"]]] mutableCopy];
         [arrResponse addObjectsFromArray:self.UniqueSlides];
     }
 
