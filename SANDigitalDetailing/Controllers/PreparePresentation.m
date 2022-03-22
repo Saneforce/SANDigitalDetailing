@@ -522,8 +522,14 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
 -(NSMutableArray *)filterProductBrand:(NSArray *)arrData
 {
     NSMutableArray *arrResponse = [[NSMutableArray alloc] init];
+    arrData = [self convertToString:arrData withString:@[@"Product_Brd_Code",@"Priority"]];
+    self.OrgAllSlides = [self convertToString:self.OrgAllSlides withString:@[@"Code",@"Priority"]];
+
     for (int i = 0; i < arrData.count; i++) {
-        
+//        id brnhCode = [arrData[i] valueForKey:@"Product_Brd_Code"];
+//        id code = [self.OrgAllSlides[i] valueForKey:@"Code"];
+//        if(![brnhCode isKindOfClass:[NSString class]])
+//            brnhCode = [brnhCode stringValue];
         
         self.UniqueSlides = [[self.OrgAllSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code == %@ AND Priority == '1'", [arrData[i] valueForKey:@"Product_Brd_Code"]]] mutableCopy];
         [arrResponse addObjectsFromArray:self.UniqueSlides];
@@ -531,5 +537,24 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
 
     return arrResponse;
     
+}
+
+-(NSMutableArray *)convertToString :(NSArray *)arrData withString:(NSArray *)arrCode
+{
+    NSMutableArray *arr = [[NSMutableArray alloc] initWithArray:arrData];
+    for (int j = 0; j< arrCode.count ; j++) {
+        
+        for (int i = 0; i < arrData.count; i++) {
+            NSMutableDictionary *dictData = [[NSMutableDictionary alloc] initWithDictionary:arrData[i]];
+            id dataToConvert = [arrData[i] valueForKey:arrCode[j]];
+            
+            if(![dataToConvert isKindOfClass:[NSString class]])
+                dataToConvert = [dataToConvert stringValue];
+            
+            [dictData setValue:dataToConvert forKey:arrCode[j]];
+            [arr replaceObjectAtIndex:i withObject:dictData];
+        }
+    }
+    return arr;
 }
 @end
