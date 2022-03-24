@@ -50,7 +50,7 @@
     self.tvProdList.delegate = self;
     self.tvProdList.dataSource = self;
     //@{@"id":@3,@"Name":@"Therapeutics"},
-    self.filterTypes=[@[@{@"id":@1,@"Name":@"Brand Matrix"}, @{@"id":@2,@"Name":@"Specialitywise"}, @{@"id":@4,@"Name":@"All Brands"}] mutableCopy];
+    self.filterTypes=[@[@{@"id":@1,@"Name":@"Brand Matrix"}, @{@"id":@2,@"Name":@"Specialitywise"}, @{@"id":@4,@"Name":@"All Brands"},@{@"id":@5,@"Name":@"Customize"}] mutableCopy];
     
     self.vwSpecFilter.layer.borderWidth=2.0;
     self.vwSpecFilter.layer.cornerRadius= 3.0;
