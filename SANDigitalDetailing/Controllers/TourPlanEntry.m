@@ -1301,6 +1301,8 @@
         NSMutableArray *mDatas=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
         if([mDatas count]>0)
         {
+            mDatas = [[self removeNullValues:mDatas] mutableCopy];
+
             _isSyncCalled = YES;
             _PrevDates=[[NSMutableArray alloc]init];
             self.CalnDates=[[mDatas[0] objectForKey:@"TPDatas"] mutableCopy];
@@ -1318,6 +1320,30 @@
      
     }];
      
+}
+-(NSArray *)removeNullValues:(NSArray *)arrData
+{
+    NSMutableArray * arrRESP = [[NSMutableArray alloc] initWithArray:arrData];
+    NSDictionary * dictRESPToFilter = [[NSDictionary alloc] initWithDictionary:[arrData objectAtIndex:0]];
+
+    arrData = [[arrData objectAtIndex:0] objectForKey:@"TPDatas"];
+
+    for (int i = 0; i< arrData.count; i++)
+    {
+        NSDictionary *dictDay = [[NSDictionary alloc] initWithDictionary:[arrData objectAtIndex:i]];
+        NSMutableDictionary * dataResp = [[NSMutableDictionary alloc] initWithDictionary:[dictDay objectForKey:@"DayPlan"]];
+
+        for (NSString * key in [[dictDay objectForKey:@"DayPlan"] allKeys])
+        {
+            if ([[[dictDay objectForKey:@"DayPlan"] objectForKey:key] isKindOfClass:[NSNull class]] || [[dictDay objectForKey:@"DayPlan"] objectForKey:key] == NULL )
+            {
+                [dataResp setValue:@"" forKey:key];
+            }
+            [[[[dictRESPToFilter objectForKey:@"TPDatas"] objectAtIndex:0] objectForKey:@"DayPlan"] replaceObjectAtIndex:i withObject:dataResp];
+        }
+        [[[arrRESP objectAtIndex:0] objectForKey:@"TPDatas"] setValue:dictRESPToFilter forKey:@"TPDatas"];
+    }
+    return arrRESP;
 }
 
 -(IBAction) sendToApproval:(id)sender

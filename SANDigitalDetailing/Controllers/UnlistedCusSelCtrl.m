@@ -495,7 +495,7 @@
     [NWDRData setValue:self.nwDrMobile.text forKey:@"DrMob"];
     
     [WBService SendServerRequest:@"SAVE/NewDR" withParameter:[NWDRData mutableCopy] withImages:nil
-                          DataSF:nil
+                          DataSF:[[self.objHQList objectAtIndex:0] objectForKey:@"id"]
                       completion:^(BOOL success, id respData,NSMutableDictionary *uData)
      {
          NSMutableDictionary *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];

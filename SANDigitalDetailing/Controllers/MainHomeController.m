@@ -44,6 +44,7 @@
 @property (nonatomic, assign) BOOL dataLoaded;
 @property (nonatomic, assign) BOOL slideLoaded;
 @property (nonatomic, assign) BOOL lsyncTp;
+@property (nonatomic, assign) BOOL isMenuOpened;
 @property (nonatomic, assign) BOOL lsyncCall;
 @property (nonatomic, assign) BOOL slidesDownloaded;
 @property (nonatomic, assign) int numberLoaded;
@@ -83,6 +84,7 @@
     self.config=[Config sharedConfig];
     self.SetupData=[AppSetupData sharedDatas];
 
+    self.isMenuOpened = NO;
     self.lsyncTp=NO;
     self.lsyncCall=NO;
     self.SlidesFileLists = [[NSMutableArray alloc] init];
@@ -1585,6 +1587,9 @@
 }
 -(void) showMenuView{
     
+    if(!_isMenuOpened)
+    {
+        _isMenuOpened = YES;
     _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap)];
     
     [self.vwModal addGestureRecognizer:_tapGesture];
@@ -1604,7 +1609,11 @@
                              [self.view layoutIfNeeded];
                          }
                          completion:^(BOOL finished) {   }];
-    
+    }
+    else{
+        _isMenuOpened = NO;
+        [self closeMenuView];
+    }
 }
 -(void) closeMenuView{
     
