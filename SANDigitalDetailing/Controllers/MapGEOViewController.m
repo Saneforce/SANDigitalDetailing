@@ -395,7 +395,7 @@ MKPlacemark *marker;
         DataKey=[NSString stringWithFormat:@"StockistDetails_%@.SANAPP",DSF];
         ApiPath=@"GET/Stockist";
     }
-    if([self.eMode isEqualToString:@"N"]){
+    if([self.eMode isEqualToString:@"U"]){
         DataKey=[NSString stringWithFormat:@"UnlistedDR_%@.SANAPP",DSF];
         ApiPath=@"GET/UnlistedDR";
     }
@@ -407,7 +407,7 @@ MKPlacemark *marker;
     NSString *DataKey=[[NSString alloc] initWithFormat:@"DoctorDetails_%@.SANAPP",DSF];
     if([self.eMode isEqualToString:@"C"]) DataKey=[NSString stringWithFormat:@"ChemistDetails_%@.SANAPP",DSF];
     if([self.eMode isEqualToString:@"S"]) DataKey=[NSString stringWithFormat:@"StockistDetails_%@.SANAPP",DSF];
-    if([self.eMode isEqualToString:@"N"]) DataKey=[NSString stringWithFormat:@"UnlistedDR_%@.SANAPP",DSF];
+    if([self.eMode isEqualToString:@"U"]) DataKey=[NSString stringWithFormat:@"UnlistedDR_%@.SANAPP",DSF];
     self.CustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
     self.ObjCustomerList=[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
     self.CustomerList=[[self.ObjCustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"uRwID=='1'"]] mutableCopy];
