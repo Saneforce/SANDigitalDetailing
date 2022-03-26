@@ -547,7 +547,7 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
         for (int i = 0; i < arrData.count; i++) {
             NSMutableDictionary *dictData = [[NSMutableDictionary alloc] initWithDictionary:arrData[i]];
             id dataToConvert = [arrData[i] valueForKey:arrCode[j]];
-            NSString *stringValue;
+            NSString *stringValue = dataToConvert;
             
             if(![dataToConvert isKindOfClass:[NSString class]])
                 stringValue = [NSString stringWithFormat:@"%@",[dataToConvert stringValue]] ;
