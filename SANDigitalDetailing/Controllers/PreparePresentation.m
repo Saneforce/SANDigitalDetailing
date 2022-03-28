@@ -277,6 +277,7 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
                     [nitem setValue:[[NSNumber numberWithInteger:(il+1)] stringValue] forKey:@"OrdNo"];
                     [self.SelectedSlides addObject:nitem];
                 }
+                
             }
             
         }else
@@ -385,6 +386,12 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
         [BaseViewController Toast:@"Please Enter Presentation Name!"];
         
     }else{
+        
+        if(_AllGroupSlides.count == 0 )
+        {
+            [BaseViewController Toast:@"NO Slides Selected"];
+            return;
+        }
         
         NSMutableArray *Selitem = [[self.AllGroupSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"GroupName contains[c] %@", self.txtGroupName.text]] mutableCopy];
         if([Selitem count]>0) [self.AllGroupSlides removeObject:Selitem[0]];

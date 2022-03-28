@@ -214,15 +214,23 @@
             NSMutableArray* dic=[[self.AllGroupSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"GroupId == %d", self.filterType]]mutableCopy];
             self.AllSlides=[dic[0] objectForKey:@"GroupSlides"];
             resultArr=[[[NSMutableArray alloc] init] mutableCopy];
-            NSArray *Ids=[_AllSlides valueForKeyPath:@"@distinctUnionOfObjects.Code"];
-            for(int i=0; i<[Ids count];i++){
-                NSMutableArray* dic = [[self.AllSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code == %@", Ids[i]]]mutableCopy];
+//            NSArray *Ids=[_AllSlides valueForKeyPath:@"@distinctUnionOfObjects.Code"];
+            NSMutableArray *arrData = [[NSMutableArray alloc] init];
+            for (int i = 0; i<self.AllSlides.count; i++) {
+                if(![arrData containsObject:[[self.AllSlides objectAtIndex:i] objectForKey:@"Code"]])
+                {
+                    [arrData addObject:[[self.AllSlides objectAtIndex:i] objectForKey:@"Code"]];
+                }
+            }
+            
+            for(int i=0; i<[arrData count];i++){
+                NSMutableArray* dic = [[self.AllSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code == %@", arrData[i]]]mutableCopy];
                 [resultArr  addObject:dic[0]];
             }
             
         }
     }
-    resultArr = [[resultArr sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
+//    resultArr = [[resultArr sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
     
     return resultArr;
 }
