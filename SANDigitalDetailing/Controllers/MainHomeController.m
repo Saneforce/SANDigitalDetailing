@@ -1591,7 +1591,8 @@
     {
         _isMenuOpened = YES;
     _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap)];
-    
+        self.vwModal.frame = CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height);
+
     [self.vwModal addGestureRecognizer:_tapGesture];
         [self.view layoutIfNeeded];
         [UIView animateWithDuration:0.25

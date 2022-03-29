@@ -448,7 +448,7 @@ MKPlacemark *marker;
     completion:^(BOOL finished) {   }];
 }
 -(void) getTaggedList{
-    [WBService SendServerRequest:@"GET/GEOTag" withParameter:[@{@"cust":self.eMode} mutableCopy] withImages:nil DataSF:nil
+    [WBService SendServerRequest:@"GET/GEOTag" withParameter:[@{@"cust":self.eMode} mutableCopy] withImages:nil DataSF:self.DataSF
                      completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage){
 
                         NSMutableArray *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
