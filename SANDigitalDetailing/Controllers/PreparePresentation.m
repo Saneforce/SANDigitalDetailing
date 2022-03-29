@@ -387,7 +387,7 @@ NSIndexPath *indexPathOfMovingCell;bool _Dragable;bool _EditMode;
         
     }else{
         
-        if(_AllGroupSlides.count == 0 )
+        if(self.SelectedSlides.count == 0 )
         {
             [BaseViewController Toast:@"NO Slides Selected"];
             return;
