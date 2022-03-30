@@ -26,6 +26,7 @@
 @property (nonatomic,weak) NSString* fileType;
 @property (nonatomic,strong) NSArray* SpecList;
 @property (nonatomic,weak) NSString* selectedSpec;
+@property (nonatomic,strong) NSMutableArray* SelectedSlides;
 
 
 
@@ -51,17 +52,18 @@
     self.tvProdList.dataSource = self;
     //@{@"id":@3,@"Name":@"Therapeutics"},
     self.filterTypes=[@[@{@"id":@1,@"Name":@"Brand Matrix"}, @{@"id":@2,@"Name":@"Specialitywise"}, @{@"id":@4,@"Name":@"All Brands"},@{@"id":@5,@"Name":@"Customize"}] mutableCopy];
+    self.SelectedSlides = [[NSMutableArray alloc] init];
     
     self.vwSpecFilter.layer.borderWidth=2.0;
     self.vwSpecFilter.layer.cornerRadius= 3.0;
     self.vwSpecFilter.clipsToBounds = YES;
     self.vwSpecFilter.layer.borderColor=[UIColor redColor].CGColor;
-
+    
     self.btnFilterType.layer.cornerRadius=5.0f;
     
     self.AllGroupSlides=[[[NSUserDefaults standardUserDefaults] objectForKey:@"GroupSlides.SANAPP"]     mutableCopy];
     if(self.AllGroupSlides==nil) self.AllGroupSlides=[[[NSMutableArray alloc] init] mutableCopy];
-
+    
     for(int i=0;i<[self.AllGroupSlides count];i++){
         NSDictionary *dic=_AllGroupSlides[i];
         NSMutableDictionary *flTyp=[[NSMutableDictionary alloc] init];
@@ -70,7 +72,7 @@
         [self.filterTypes addObject:flTyp];
     }
     self.SpecList =[[[NSUserDefaults standardUserDefaults] objectForKey:@"Specialitys.SANAPP"] mutableCopy];
-
+    
     self.OrgAllSlides =[[[NSUserDefaults standardUserDefaults] objectForKey:@"ProdSlides.SANAPP"] mutableCopy];
     self.UniqueSlides =[[[NSUserDefaults standardUserDefaults] objectForKey:@"UniqueProdSlides.SANAPP"] mutableCopy];
     if (self.SetupData.RatingBasedSlide==1){
@@ -86,13 +88,13 @@
     if (self.SelProductList.count>0) {
         self.currSlideList= [[self.AllSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code == %@", [self.SelProductList[0] valueForKey:@"Code"]]] mutableCopy];
         /*NSString* sRtSlides=@"";
-        if (self.SetupData.RatingBasedSlide==1){
-            NSArray* aRtSlides=[_meetData.RatingSlide filteredArrayUsingPredicate:[NSPredicate  predicateWithFormat:@"Code == %@",[self.SelProductList[0] valueForKey:@"Code"]]];
-            sRtSlides=[aRtSlides[0] valueForKey:@"Prods"];
-            if(!([sRtSlides isEqualToString:@""] || [sRtSlides isEqualToString:@"0"]))
-            {    self.currSlideList = [[self.currSlideList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"%@ contains[c] SlideNm", sRtSlides]] mutableCopy];
-            }
-        }*/
+         if (self.SetupData.RatingBasedSlide==1){
+         NSArray* aRtSlides=[_meetData.RatingSlide filteredArrayUsingPredicate:[NSPredicate  predicateWithFormat:@"Code == %@",[self.SelProductList[0] valueForKey:@"Code"]]];
+         sRtSlides=[aRtSlides[0] valueForKey:@"Prods"];
+         if(!([sRtSlides isEqualToString:@""] || [sRtSlides isEqualToString:@"0"]))
+         {    self.currSlideList = [[self.currSlideList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"%@ contains[c] SlideNm", sRtSlides]] mutableCopy];
+         }
+         }*/
         self.selProduct=self.SelProductList[0];
         
         NSSortDescriptor *NameField = [NSSortDescriptor sortDescriptorWithKey:@"OrdNo" ascending:YES];
@@ -125,9 +127,9 @@
         
         if (range.length > 0 )
         {
-                NSMutableDictionary *dic=[nSlides[il] mutableCopy];
-                
-                [resultArr addObject:dic];
+            NSMutableDictionary *dic=[nSlides[il] mutableCopy];
+            
+            [resultArr addObject:dic];
             
         }
     }
@@ -159,14 +161,14 @@
             }
         }
     }
-
+    
     return result;
 }
 - (NSMutableArray *) getFilteredSlides{
     
     self.AllSlides=[self.OrgAllSlides mutableCopy];
     NSMutableArray *resultArr=nil;
-//    NSSortDescriptor *NameField = [NSSortDescriptor sortDescriptorWithKey:@"Name" ascending:YES];
+    //    NSSortDescriptor *NameField = [NSSortDescriptor sortDescriptorWithKey:@"Name" ascending:YES];
     NSArray *sortDescriptors ;//= [NSArray arrayWithObjects:NameField, nil];
     if(_filterType<=3) resultArr = [[self FilterArray:self.UniqueSlides] mutableCopy];
     if(_filterType==1){
@@ -214,7 +216,7 @@
             NSMutableArray* dic=[[self.AllGroupSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"GroupId == %d", self.filterType]]mutableCopy];
             self.AllSlides=[dic[0] objectForKey:@"GroupSlides"];
             resultArr=[[[NSMutableArray alloc] init] mutableCopy];
-//            NSArray *Ids=[_AllSlides valueForKeyPath:@"@distinctUnionOfObjects.Code"];
+            //            NSArray *Ids=[_AllSlides valueForKeyPath:@"@distinctUnionOfObjects.Code"];
             NSMutableArray *arrData = [[NSMutableArray alloc] init];
             for (int i = 0; i<self.AllSlides.count; i++) {
                 if(![arrData containsObject:[[self.AllSlides objectAtIndex:i] objectForKey:@"Code"]])
@@ -230,7 +232,7 @@
             
         }
     }
-//    resultArr = [[resultArr sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
+    //    resultArr = [[resultArr sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
     
     return resultArr;
 }
@@ -261,10 +263,10 @@
         
         self.vwFilter.alpha=1.0;
     } completion:^(BOOL finished){
-    
+        
     }
- 
- ];
+     
+    ];
 }
 
 -(void) closeTableViews{
@@ -299,10 +301,10 @@
     }
     else
     {
-    [UIView animateWithDuration:1.0 animations:^{
-        self.cnstrntSpecFilterViewOrigin.constant = -200;
-        [self.view layoutIfNeeded];
-    }];
+        [UIView animateWithDuration:1.0 animations:^{
+            self.cnstrntSpecFilterViewOrigin.constant = -200;
+            [self.view layoutIfNeeded];
+        }];
     }
 }
 -(IBAction)dismissModalStack:(id)sender {
@@ -317,23 +319,44 @@
                                                             message:@"Can't start Demo."
                                                            delegate:self
                                                   cancelButtonTitle:@"OK"
-                                                otherButtonTitles:nil, nil];
+                                                  otherButtonTitles:nil, nil];
         
         //TODO if user has not given permission to device
         /*if (![CLLocationManager locationServicesEnabled])
-        {
-            alertView.tag = 100;
-        }
-        //TODO if user has not given permission to particular app
-        else
-        {
-            alertView.tag = 200;
-        }*/
+         {
+         alertView.tag = 100;
+         }
+         //TODO if user has not given permission to particular app
+         else
+         {
+         alertView.tag = 200;
+         }*/
         
         [alertView show];
     }
     else{
-    [self performSegueWithIdentifier:@"startDemo" sender:self];
+        if(self.filterType == 5)
+        {
+            NSMutableArray *tempARr = [[NSMutableArray alloc] init];
+            
+            for (int i = 0; i< self.AllGroupSlides.count; i++) {
+                if(![[self.AllGroupSlides[i] objectForKey:@"GroupName"] isEqualToString:@"TEMP"])
+                {
+                    [tempARr addObject:self.AllGroupSlides[i]];
+                }
+            }
+            _AllGroupSlides = [[NSMutableArray alloc] initWithArray:tempARr];
+            NSMutableDictionary *GrpSlide=[[NSMutableDictionary alloc] init];
+            self.selProduct = self.SelectedSlides[0];
+
+            [GrpSlide setValue:@5  forKey:@"GroupId"];
+            [GrpSlide setValue:@"TEMP" forKey:@"GroupName"];
+            [GrpSlide setValue:self.SelectedSlides forKey:@"GroupSlides"];
+            [_AllGroupSlides addObject:GrpSlide];
+        }
+        [[NSUserDefaults standardUserDefaults] setObject:_AllGroupSlides forKey:@"GroupSlides.SANAPP"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [self performSegueWithIdentifier:@"startDemo" sender:self];
     }
 }
 -(IBAction)SegmentChangeViewValueChanged:(UISegmentedControl *)SControl{
@@ -351,7 +374,7 @@
 {
     if(collectionView == _slideCollectionView)
     {
-    return self.currSlideList.count;
+        return self.currSlideList.count;
     }
     else if (collectionView == _specCollectionView)
         return self.SpecList.count;
@@ -362,20 +385,20 @@
 {
     if (cv == _slideCollectionView) {
         mSlideCell * cell =[cv dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-
+        
         NSDictionary *optLst=self.currSlideList[indexPath.row];
-
+        
         NSDictionary *effDt=[optLst objectForKey:@"Eff_from"];
         NSDate *dteff=[BaseViewController str2date:[effDt valueForKey:@"date"]];
         NSString *EffDT=[BaseViewController date2str:dteff onlyDate:YES];
-
+        
         NSString *SlidesDirectory = [BaseViewController getSlidesDirectory];
         NSString *fileName=[NSString stringWithFormat:@"%@/%@",EffDT,[optLst objectForKey:@"FilePath"]];
         cell.ImgView.layer.cornerRadius=5.0f;
         if([[optLst objectForKey:@"FileTyp"] isEqual:@"H"]){
             cell.ImgView.image=[ImageScale imageWithImage:[BaseViewController loadSlideImage:[NSString stringWithFormat:@"%@/%@",EffDT,[optLst objectForKey:@"FilePath"]]] scaledToSize:CGSizeMake(cell.ImgView.frame.size.width, cell.ImgView.frame.size.height)];
             cell.ImgView.contentMode = UIViewContentModeScaleToFill;
-
+            
         }
         else if([[optLst objectForKey:@"FileTyp"] isEqual:@"I"]){
             cell.ImgView.image= [ImageScale imageWithImage:[UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/%@",SlidesDirectory,fileName]] scaledToSize:CGSizeMake(cell.ImgView.frame.size.width, cell.ImgView.frame.size.height)];
@@ -390,13 +413,22 @@
             NSURL *PDFFile = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@",SlidesDirectory,fileName]];
             cell.ImgView.image=[ImageScale imageWithImage:[BaseViewController imageFromPDFWithDocumentRef:CGPDFDocumentCreateWithURL( (__bridge CFURLRef) PDFFile)] scaledToSize:CGSizeMake(cell.ImgView.frame.size.width, cell.ImgView.frame.size.height)];
             cell.ImgView.contentMode = UIViewContentModeScaleAspectFill;
-
-
+            
+            
         }
         cell.ImgView.clipsToBounds = YES;
         cell.ImgView.layer.borderColor=[UIColor colorWithRed:0.929 green:0.929 blue:0.929 alpha:1.00].CGColor;
         cell.ImgView.layer.borderWidth=1;
-
+        if(_filterType == 5)
+        {
+            NSMutableArray *Selitem=[[NSMutableArray alloc] init];
+            Selitem = [[Selitem filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code contains[c] %@ and FilePath==%@", [optLst objectForKey:@"Code"],[optLst objectForKey:@"FilePath"]]] mutableCopy];
+            
+            cell.Selected=([Selitem count]>0)?YES:NO;
+            cell.ImgView.alpha =(cell.Selected==YES)?1.0f:0.2f;
+            
+        }
+        
         return cell;
     } else {
         filterCell* cell =[cv dequeueReusableCellWithReuseIdentifier:@"fCell" forIndexPath:indexPath];
@@ -413,27 +445,77 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    mSlideCell *cell = (mSlideCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    
+    NSDictionary *optLst=[[NSDictionary alloc] init];
+    NSMutableArray *Selitem=[[NSMutableArray alloc] init];
+    
     if(collectionView == self.specCollectionView)
     {
-    self.selectedSpec = [[[self.SpecList objectAtIndex:indexPath.row] objectForKey:@"Code"] stringValue];
-    self.SelProductList = [self getFilteredSlides];
-    self.currSlideList=[[NSMutableArray alloc] init];
-    if (self.SelProductList.count>0) {
-
-        self.currSlideList= [[self.AllSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code == %@ and FileTyp!=\"C\"", [self.SelProductList[0] valueForKey:@"Code"]]] mutableCopy];
-        
-        self.selProduct=self.SelProductList[0];
-        
-        NSSortDescriptor *NameField = [NSSortDescriptor sortDescriptorWithKey:@"OrdNo" ascending:YES];
-        NSArray *sortDescriptors = [NSArray arrayWithObjects:NameField, nil];
-
-        self.currSlideList = [[self.currSlideList sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
-        
+        self.selectedSpec = [[[self.SpecList objectAtIndex:indexPath.row] objectForKey:@"Code"] stringValue];
+        self.SelProductList = [self getFilteredSlides];
+        self.currSlideList=[[NSMutableArray alloc] init];
+        if (self.SelProductList.count>0) {
+            
+            self.currSlideList= [[self.AllSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code == %@ and FileTyp!=\"C\"", [self.SelProductList[0] valueForKey:@"Code"]]] mutableCopy];
+            
+            self.selProduct=self.SelProductList[0];
+            
+            NSSortDescriptor *NameField = [NSSortDescriptor sortDescriptorWithKey:@"OrdNo" ascending:YES];
+            NSArray *sortDescriptors = [NSArray arrayWithObjects:NameField, nil];
+            
+            self.currSlideList = [[self.currSlideList sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
+            
+        }
+        [self.tvProdList reloadData];
+        [self.slideCollectionView reloadData];
+        [self closeTableViews];
+        [self callORdismissFilter];
     }
-    [self.tvProdList reloadData];
-    [self.slideCollectionView reloadData];
-    [self closeTableViews];
-    [self callORdismissFilter];
+    else if (collectionView == _slideCollectionView)
+    {
+        if(self.filterType == 5)
+        {
+            cell.ImgView.alpha =(cell.Selected==YES)?1.0f:0.2f;
+            
+            optLst=[self.currSlideList[indexPath.row] mutableCopy];
+            Selitem = [[self.SelectedSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SlideId==%@", [optLst objectForKey:@"SlideId"]]] mutableCopy];
+            NSArray *selectedBrand = [[self.SelProductList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code==%@", [optLst objectForKey:@"Code"]]] mutableCopy];
+            
+            if(selectedBrand.count>0)
+            {
+                NSMutableDictionary *dictData = [[NSMutableDictionary alloc] initWithDictionary:selectedBrand[0]];
+                NSUInteger index = [_SelProductList indexOfObject:dictData];
+                [dictData setValue:@"YES" forKey:@"isSlideSelected"];
+                [_SelProductList replaceObjectAtIndex:index withObject:dictData];
+                
+                
+            }
+            cell.Selected=([Selitem count]>0)?NO:YES;
+            if(cell.Selected==YES)
+            {
+                [optLst setValue:[[NSNumber numberWithInteger:(indexPath.row+1)] stringValue] forKey:@"OrdNo"];
+                [self.SelectedSlides addObject:optLst];
+                for(int il=0;il<[_currSlideList count];il++)
+                {
+                    NSMutableArray *Selitem = [[self.SelectedSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SlideId==%@", [_currSlideList[il] objectForKey:@"SlideId"]]] mutableCopy];
+                    if([Selitem count]>0)
+                    {
+                        NSMutableDictionary *nitem =[Selitem[0] mutableCopy];
+                        [self.SelectedSlides removeObject:Selitem[0]];
+                        [nitem setValue:[[NSNumber numberWithInteger:(il+1)] stringValue] forKey:@"OrdNo"];
+                        [self.SelectedSlides addObject:nitem];
+                    }
+                }
+            }
+            else
+                [self.SelectedSlides removeObject:Selitem[0]];
+            
+            [self.tvProdList reloadData];
+            cell.ImgView.alpha =(cell.Selected==YES)?1.0f:0.2f;
+            
+            [cell setNeedsDisplay];
+        }
     }
     
 }
@@ -473,7 +555,7 @@
             //UIImage* image =[BaseViewController loadSlideImage:[NSString stringWithFormat:@"%@/%@",EffDT,[optLst objectForKey:@"FilePath"]]];
             cell.lOptImg.image= [ImageScale imageWithImage:[UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/%@",SlidesDirectory,fileName]] scaledToSize:CGSizeMake(cell.lOptImg.frame.size.width, cell.lOptImg.frame.size.height)];
             //UIImage* image = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/%@",SlidesDirectory,fileName]];
-          
+            
             //cell.lOptImg.contentMode = UIViewContentModeScaleAspectFit;
             //cell.lOptImg.clipsToBounds = YES;
             //cell.lOptImg.image=image;
@@ -487,9 +569,9 @@
         else if([[optLst objectForKey:@"FileTyp"] isEqual:@"P"])
         {
             NSURL *PDFFile = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@",SlidesDirectory,fileName]];
-           cell.lOptImg.image=[BaseViewController imageFromPDFWithDocumentRef:CGPDFDocumentCreateWithURL( (__bridge CFURLRef) PDFFile)];
-           // cell.lOptImg.contentMode = UIViewContentModeScaleAspectFill;
-           // cell.lOptImg.clipsToBounds = YES;
+            cell.lOptImg.image=[BaseViewController imageFromPDFWithDocumentRef:CGPDFDocumentCreateWithURL( (__bridge CFURLRef) PDFFile)];
+            // cell.lOptImg.contentMode = UIViewContentModeScaleAspectFill;
+            // cell.lOptImg.clipsToBounds = YES;
             
         }
         
@@ -500,6 +582,16 @@
         
         [cell.lOptText setRoundedCorners:UIRectCornerBottomLeft|UIRectCornerBottomRight radius:5.0];
         //cell.lOptText.
+        
+        if ([[optLst objectForKey:@"isSlideSelected"] isEqualToString:@"YES"]) {
+            cell.selected=YES;
+            cell.lOptImg.alpha =1.0f;
+        }
+        else
+        {
+            cell.selected=NO;
+            cell.lOptImg.alpha =0.2f;
+        }
     }
     if(tableView==self.tvFilterType)
     {
@@ -518,12 +610,14 @@
         pvc.filterType=self.filterType;
         [pvc setStartProductSlide:self.selProduct];
     }
-
+    
 }
 -(void)setCurrentSlide:(NSDictionary *)selSlide{
- //   [self.currentSlide ]
+    //   [self.currentSlide ]
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    TBSelectionBxCell* cell =[tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     if(tableView==self.tvFilterType) {
         self.filterType=[[_filterTypes[indexPath.row] valueForKey:@"id"] integerValue];
         [self.btnFilterType setTitle:NSLocalizedString([_filterTypes[indexPath.row] objectForKey:@"Name"],[_filterTypes[indexPath.row] objectForKey:@"Name"])  forState:UIControlStateNormal];
@@ -536,11 +630,11 @@
         {
             if(self.cnstrntSpecFilterViewOrigin.constant == -200)
             {
-            [UIView animateWithDuration:1.0 animations:^{
-                self.cnstrntSpecFilterViewOrigin.constant = - self.view.frame.size.height;
-                [self.view layoutIfNeeded];
-
-            }];
+                [UIView animateWithDuration:1.0 animations:^{
+                    self.cnstrntSpecFilterViewOrigin.constant = - self.view.frame.size.height;
+                    [self.view layoutIfNeeded];
+                    
+                }];
             }
             [self.btnFilterSpec setHidden:YES];
             [self.imgForward setHidden: YES];
@@ -549,21 +643,21 @@
         self.SelProductList = [self getFilteredSlides];
         self.currSlideList=[[NSMutableArray alloc] init];
         if (self.SelProductList.count>0) {
-
+            
             self.currSlideList= [[self.AllSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code == %@ and FileTyp!=\"C\"", [self.SelProductList[0] valueForKey:@"Code"]]] mutableCopy]; //  and FileTyp=%@ ,self.fileType
             /*NSString* sRtSlides=@"";
-            if (self.SetupData.RatingBasedSlide==1){
-                NSArray* aRtSlides=[_meetData.RatingSlide filteredArrayUsingPredicate:[NSPredicate  predicateWithFormat:@"Code == %@",[self.SelProductList[0] valueForKey:@"Code"]]];
-                sRtSlides=[aRtSlides[0] valueForKey:@"Prods"];
-                if(!([sRtSlides isEqualToString:@""] || [sRtSlides isEqualToString:@"0"]))
-                {    self.currSlideList = [[self.currSlideList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"%@ contains[c] SlideNm", sRtSlides]] mutableCopy];
-                }
-            }*/
+             if (self.SetupData.RatingBasedSlide==1){
+             NSArray* aRtSlides=[_meetData.RatingSlide filteredArrayUsingPredicate:[NSPredicate  predicateWithFormat:@"Code == %@",[self.SelProductList[0] valueForKey:@"Code"]]];
+             sRtSlides=[aRtSlides[0] valueForKey:@"Prods"];
+             if(!([sRtSlides isEqualToString:@""] || [sRtSlides isEqualToString:@"0"]))
+             {    self.currSlideList = [[self.currSlideList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"%@ contains[c] SlideNm", sRtSlides]] mutableCopy];
+             }
+             }*/
             self.selProduct=self.SelProductList[0];
             
             NSSortDescriptor *NameField = [NSSortDescriptor sortDescriptorWithKey:@"OrdNo" ascending:YES];
             NSArray *sortDescriptors = [NSArray arrayWithObjects:NameField, nil];
-
+            
             self.currSlideList = [[self.currSlideList sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
             
         }
@@ -573,21 +667,26 @@
     }
     if(tableView==self.tvProdList) {
         self.selProduct=self.SelProductList[indexPath.row];
+        
+        if(_filterType == 5)
+            cell.lOptImg.alpha =(cell.selected==YES)?1.0f:0.2f;
+        
         self.currSlideList= [[self.AllSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code == %@ and FileTyp!=\"C\"", [self.SelProductList[indexPath.row] valueForKey:@"Code"]]] mutableCopy];
-      /*  NSString* sRtSlides=@"";
-        if (self.SetupData.RatingBasedSlide==1){
-            NSArray* aRtSlides=[_meetData.RatingSlide filteredArrayUsingPredicate:[NSPredicate  predicateWithFormat:@"Code == %@",[self.SelProductList[indexPath.row] valueForKey:@"Code"]]];
-            sRtSlides=[aRtSlides[0] valueForKey:@"Prods"];
-            if(!([sRtSlides isEqualToString:@""] || [sRtSlides isEqualToString:@"0"]))
-            {    self.currSlideList = [[self.currSlideList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"%@ contains[c] SlideNm", sRtSlides]] mutableCopy];
-            }
-        }*/
+        /*  NSString* sRtSlides=@"";
+         if (self.SetupData.RatingBasedSlide==1){
+         NSArray* aRtSlides=[_meetData.RatingSlide filteredArrayUsingPredicate:[NSPredicate  predicateWithFormat:@"Code == %@",[self.SelProductList[indexPath.row] valueForKey:@"Code"]]];
+         sRtSlides=[aRtSlides[0] valueForKey:@"Prods"];
+         if(!([sRtSlides isEqualToString:@""] || [sRtSlides isEqualToString:@"0"]))
+         {    self.currSlideList = [[self.currSlideList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"%@ contains[c] SlideNm", sRtSlides]] mutableCopy];
+         }
+         }*/
         if([_currSlideList count]>0)
         {
             NSSortDescriptor *NameField = [NSSortDescriptor sortDescriptorWithKey:@"OrdNo" ascending:YES];
             NSArray *sortDescriptors = [NSArray arrayWithObjects:NameField, nil];
             self.currSlideList = [[self.currSlideList sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
         }
+        [self.tvProdList reloadData];
         [self.slideCollectionView reloadData];
     }
 }

@@ -1091,8 +1091,10 @@
         
         NSString *sHQCodes=[DayPlanDet valueForKey:@"HQCodes"];
         NSString *sHQNames=[DayPlanDet valueForKey:@"HQNames"];
-        NSArray *HCds=[sHQCodes componentsSeparatedByString:@","];
+        NSMutableArray *HCds= [[NSMutableArray alloc] initWithArray:[sHQCodes componentsSeparatedByString:@","]];
         NSArray *HNms=[sHQNames componentsSeparatedByString:@","];
+//        NSArray * arr=[HCds valueForKeyPath:@"@distinctUnionOfObjects.HQCodes"];
+
         for(int il=0;il<[HCds count];il++){
             if(![HCds[il] isEqualToString:@""]){
                 NSMutableDictionary *Item=[[NSMutableDictionary alloc] init];
@@ -1270,7 +1272,7 @@
         NSMutableDictionary* TPParam=[[NSMutableDictionary alloc] init];
         [TPParam setValue:self.SelMonth forKey:@"Month"];
         [TPParam setValue:self.SelYear forKey:@"Year"];
-        [WBService SendServerRequest:@"GET/TPDetails" withParameter:TPParam withImages:nil DataSF:nil completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage) {
+        [WBService SendServerRequest:@"GET/TPDetails" withParameter:TPParam withImages:nil DataSF:_TPEntryDet.SF completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage) {
             NSMutableArray *mDatas=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
             if([mDatas count]>0)
             {
@@ -1297,11 +1299,11 @@
     NSMutableDictionary* TPParam=[[NSMutableDictionary alloc] init];
     [TPParam setValue:self.SelMonth forKey:@"Month"];
     [TPParam setValue:self.SelYear forKey:@"Year"];
-    [WBService SendServerRequest:@"GET/TPDetails" withParameter:TPParam withImages:nil DataSF:nil completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage) {
+    [WBService SendServerRequest:@"GET/TPDetails" withParameter:TPParam withImages:nil DataSF:_TPEntryDet.SF completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage) {
         NSMutableArray *mDatas=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
         if([mDatas count]>0)
         {
-            mDatas = [[self removeNullValues:mDatas] mutableCopy];
+           // mDatas = [[self removeNullValues:mDatas] mutableCopy];
 
             _isSyncCalled = YES;
             _PrevDates=[[NSMutableArray alloc]init];
