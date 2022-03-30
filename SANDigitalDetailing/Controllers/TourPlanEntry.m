@@ -1091,8 +1091,8 @@
         
         NSString *sHQCodes=[DayPlanDet valueForKey:@"HQCodes"];
         NSString *sHQNames=[DayPlanDet valueForKey:@"HQNames"];
-        NSMutableArray *HCds= [[NSMutableArray alloc] initWithArray:[sHQCodes componentsSeparatedByString:@","]];
-        NSArray *HNms=[sHQNames componentsSeparatedByString:@","];
+        NSMutableArray *HCds= [[NSMutableArray alloc] initWithArray:[self removeduplicate:[sHQCodes componentsSeparatedByString:@","]]];
+        NSArray *HNms=[self removeduplicate:[sHQNames componentsSeparatedByString:@","]];
 //        NSArray * arr=[HCds valueForKeyPath:@"@distinctUnionOfObjects.HQCodes"];
 
         for(int il=0;il<[HCds count];il++){
@@ -1129,7 +1129,11 @@
                      completion:^(BOOL finished) {   }];
     
 }
-
+-(NSArray *)removeduplicate :(NSArray *)arr
+{
+    NSOrderedSet *orderedSet = [NSOrderedSet orderedSetWithArray:arr];
+    return [orderedSet array];
+}
 -(void) closeDayPlan
 {
     self.lblDyMonYr.text=@"";
