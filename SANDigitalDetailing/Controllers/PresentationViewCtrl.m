@@ -221,7 +221,8 @@ CGFloat lastScale = 1.0;
                 }
             }
         }
-        
+        NSSortDescriptor *NameField = [NSSortDescriptor sortDescriptorWithKey:@"Name" ascending:YES];
+
         NSSortDescriptor *CampField = [NSSortDescriptor sortDescriptorWithKey:@"Camp" ascending:YES];
         NSSortDescriptor *PTypField = [NSSortDescriptor sortDescriptorWithKey:@"PCatTyp" ascending:YES];
         sortDescriptors = [NSArray arrayWithObjects:CampField, PTypField, NameField, nil];
@@ -250,6 +251,7 @@ CGFloat lastScale = 1.0;
     }
     else if(_filterType!=5 && _filterType>=4 && _filterType<=9){
         resultArr = [self.UniqueSlides mutableCopy];
+        resultArr = [[resultArr sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
     }
     else{
         if(self.filterType>9)
@@ -273,10 +275,10 @@ CGFloat lastScale = 1.0;
                 NSMutableArray* dic = [[self.AllSlides filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"Code == %@", arrData[i]]]mutableCopy];
                 [resultArr addObject:dic[0]];
             }
-            
+            resultArr = [[resultArr sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
         }
     }
-    resultArr = [[resultArr sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
+//    resultArr = [[resultArr sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
     
     return resultArr;
 }
