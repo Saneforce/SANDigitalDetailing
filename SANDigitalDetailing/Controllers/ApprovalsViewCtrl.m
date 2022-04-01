@@ -86,6 +86,8 @@
 }
 -(IBAction) GotoTPEdit:(id)sender{
     long indx=((UIButton*)sender).tag;
+    self.TPEntryDet=[TPEntryData sharedDatas];
+
     _TPEntryDet.SF=[_TPApproval[indx] valueForKey:@"Sf_Code"];
     _TPEntryDet.SFName=[_TPApproval[indx] valueForKey:@"SFName"];
     _TPEntryDet.Month=[[_TPApproval[indx] valueForKey:@"Mn"] intValue];
@@ -93,22 +95,22 @@
     _TPEntryDet.Flag=1;
     
     /*NSMutableDictionary *Param=[[NSMutableDictionary alloc] init];
-    
-    [Param setValue:SF forKey:@"TPSF"];
-    [Param setValue:[NSString stringWithFormat:@"%i",_TPEntryDet.Month ] forKey:@"Mnth"];
-    [Param setValue:[NSString stringWithFormat:@"%i",_TPEntryDet.Year ] forKey:@"Yr"];*/
+     
+     [Param setValue:SF forKey:@"TPSF"];
+     [Param setValue:[NSString stringWithFormat:@"%i",_TPEntryDet.Month ] forKey:@"Mnth"];
+     [Param setValue:[NSString stringWithFormat:@"%i",_TPEntryDet.Year ] forKey:@"Yr"];*/
     [WBService SendServerRequest:@"GET/TPDetails" withParameter:[_TPEntryDet toNSDictionary] withImages:nil DataSF:_TPEntryDet.SF completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage) {
         _TPEntryDet.TPDates=[[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil] mutableCopy];
         if(_TPEntryDet.TPDates.count >0 )
         {
-        [self performSegueWithIdentifier:@"NavApprovalEditTP" sender:self];
+            [self performSegueWithIdentifier:@"NavApprovalEditTP" sender:self];
         }
         else
             [BaseViewController Toast:@"TPDetail Empty"];
     }
                            error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage){
-                               NSLog(@"%@",errorMsg);
-                           }];
+        NSLog(@"%@",errorMsg);
+    }];
 }
 -(IBAction)ApproveLeave:(id)sender{
     long indx=((UIButton*)sender).tag;

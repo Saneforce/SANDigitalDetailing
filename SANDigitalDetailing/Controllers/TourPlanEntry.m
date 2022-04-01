@@ -1460,7 +1460,9 @@
     else if(buttonIndex == 0 && alertView.tag==1){
         [SVProgressHUD showWithStatus:NSLocalizedString(@"Approving Please Wait...", @"Approving Please Wait...")];
         
-        [WBService SendServerRequest:@"SAVE/TPApproval" withParameter:[_TPData mutableCopy] withImages:nil
+//        [WBService SendServerRequest:@"SAVE/TPApproval" withParameter:[_TPData mutableCopy] withImages:nil
+        
+        [WBService SendServerRequest:@"save/tpapprovalnew" withParameter:[_TPData mutableCopy] withImages:nil
                               DataSF:_TPEntryDet.SF
                           completion:^(BOOL success, id respData,NSMutableDictionary *uData)
          {
