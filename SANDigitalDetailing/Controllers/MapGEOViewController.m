@@ -64,10 +64,10 @@ MKPlacemark *marker;
     [item setValue:@"S" forKey:@"Code"];
     [item setValue:@"Stockist" forKey:@"Name"];
     [self.eModeList addObject:item];
-    item=[[NSMutableDictionary alloc] init];
-    [item setValue:@"U" forKey:@"Code"];
-    [item setValue:@"Unlisted Doctor" forKey:@"Name"];
-    [self.eModeList addObject:item];
+//    item=[[NSMutableDictionary alloc] init];
+//    [item setValue:@"U" forKey:@"Code"];
+//    [item setValue:@"Unlisted Doctor" forKey:@"Name"];
+//    [self.eModeList addObject:item];
     self.objHQList= [[[NSUserDefaults standardUserDefaults] objectForKey:@"HQDetails.SANAPP"] mutableCopy];
     NSString *DataKey=[[NSString alloc] initWithFormat:@"DoctorDetails_%@.SANAPP",self.UserDet.SF];
     self.CustomerList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
@@ -387,17 +387,26 @@ MKPlacemark *marker;
 {
     NSString *DataKey=[[NSString alloc] initWithFormat:@"DoctorDetails_%@.SANAPP",DSF];
     NSString *ApiPath=@"GET/Doctors";
+    if([self.eMode isEqualToString:@"D"])
+    {
+        [_searchBox setPlaceholder:@"Search Listed Doctor"];
+    }
     if([self.eMode isEqualToString:@"C"]){
         DataKey=[NSString stringWithFormat:@"ChemistDetails_%@.SANAPP",DSF];
         ApiPath=@"GET/Chemist";
+        [_searchBox setPlaceholder:@"Search Chemist"];
     }
     if([self.eMode isEqualToString:@"S"]){
         DataKey=[NSString stringWithFormat:@"StockistDetails_%@.SANAPP",DSF];
         ApiPath=@"GET/Stockist";
+        [_searchBox setPlaceholder:@"Search Stockist"];
+
     }
     if([self.eMode isEqualToString:@"U"]){
         DataKey=[NSString stringWithFormat:@"UnlistedDR_%@.SANAPP",DSF];
         ApiPath=@"GET/UnlistedDR";
+        [_searchBox setPlaceholder:@"Search Unlisted Doctor"];
+
     }
     
     [self LoadData:[[List alloc] initWithName:DataKey andLabel:@"" andApiPath:ApiPath Parameters:nil] andDataFor:DSF andIndexPath:nil];
