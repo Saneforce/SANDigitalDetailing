@@ -184,8 +184,8 @@
     
     _tmr=[NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(ShowNotification) userInfo:nil repeats:NO] ;
     [_tmr fire];
-    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(AutoSyncCall) userInfo:nil repeats:NO] ;
-    [NSTimer scheduledTimerWithTimeInterval:0.10 target:self selector:@selector(startLatLngUpd) userInfo:nil repeats:NO] ;
+    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(AutoSyncCall) userInfo:nil repeats:YES] ;
+    [NSTimer scheduledTimerWithTimeInterval:0.10 target:self selector:@selector(startLatLngUpd) userInfo:nil repeats:YES] ;
     //[ltmr fire];
     
     //Dashboard Chart Second Page ( For Allergen )
@@ -406,6 +406,7 @@
     
     self.profileImg.image=[self.BaseCtrlr getProfileImage:@"/images/profile.jpg"];
     [self reloadSubCalls];
+//    [self AutoSyncCall];
     [WBService SendServerRequest:@"GET/CallAvgYrCht" withParameter:nil withImages:nil DataSF:nil
                       completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage){
                           NSMutableArray *receivedDta=[NSJSONSerialization JSONObjectWithData:respData options:NSJSONReadingAllowFragments error:nil];
@@ -1200,8 +1201,11 @@
 }
 -(void)AutoSyncCall{
 
-    NetworkStatus internetStatus = [internetReachability currentReachabilityStatus];
-    if(internetStatus == NotReachable)
+    Reachability *reachability1 = [Reachability reachabilityWithHostName:@"www.google.com"];
+    NetworkStatus netStatus = [reachability1 currentReachabilityStatus];
+
+//    NetworkStatus internetStatus = [internetReachability currentReachabilityStatus];
+    if(netStatus == NotReachable)
     {
         return;
     }
@@ -1304,7 +1308,7 @@
             error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage,NSIndexPath *indexPath){
                 self.lsyncCall=NO;
                 NSLog(@"%@",errorMsg);
-                [NSTimer scheduledTimerWithTimeInterval:60.0 target:self selector:@selector(AutoSyncCall) userInfo:nil repeats:NO];
+                [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(AutoSyncCall) userInfo:nil repeats:NO];
             }
          ];
     }else{

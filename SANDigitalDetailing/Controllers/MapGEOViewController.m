@@ -21,6 +21,8 @@
 @property (nonatomic,assign) NSString* eModeNm;
 @property (nonatomic,assign) NSString* CustCd;
 @property (nonatomic,assign) NSString* CustNm;
+@property (nonatomic, assign) BOOL isTagConfirmOpen;
+
 
 @end
 
@@ -480,7 +482,53 @@ MKPlacemark *marker;
     ];
     
 }
+-(void)handleSingleTap
+{
+    [self.view layoutIfNeeded];
+    [UIView animateWithDuration:0.25
+                          delay:0.0
+                        options: 0
+                     animations:^{
+                        self.vwTagFram.frame = CGRectMake(0.0, self.vwTagFram.frame.origin.y, self.vwTagFram.frame.size.width, self.vwTagFram.frame.size.height);
+                         self.vwTagFram.alpha=0;
+                         self.vwTagFram.hidden=YES;
+                        self.vwCustDet.hidden=YES;
+                        _isTagConfirmOpen = NO;
+                         [self.view layoutIfNeeded];
+                     }
+                     completion:^(BOOL finished) {
+                         [self.view removeGestureRecognizer: _tapGesture];
+                     }];
+}
+-(void)openTagCust
+{
+    if(!_isTagConfirmOpen)
+    {
+        _isTagConfirmOpen = YES;
+    _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap)];
+        self.vwTagFram.frame = CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height);
 
+    [self.vwTagFram addGestureRecognizer:_tapGesture];
+        [self.view layoutIfNeeded];
+        [UIView animateWithDuration:0.25
+                              delay:0.0
+                            options: 0
+                         animations:^{
+                             self.vwTagFram.frame = CGRectMake(0.0, self.vwTagFram.frame.origin.y, self.vwTagFram.frame.size.width, self.vwTagFram.frame.size.height);
+//            [self.vwTagFram addSubview:self.vwCustDet];
+                             self.vwTagFram.alpha=0.60;
+                            self.vwCustDet.alpha =1;
+                             self.vwTagFram.hidden=NO;
+                             self.vwCustDet.hidden=NO;
+                             [self.view layoutIfNeeded];
+                         }
+                         completion:^(BOOL finished) {   }];
+    }
+    else{
+        _isTagConfirmOpen = NO;
+    }
+   
+}
 -(IBAction)ShowDrSelection:(id) sender
 {
     self.vwCustSelect.hidden=YES;
@@ -586,7 +634,7 @@ MKPlacemark *marker;
         
         self.lblDrName.text=self.CustNm;
         self.vwCustSelect.hidden=YES;
-        self.vwCustDet.hidden=NO;
+        [self openTagCust];
         [self.view endEditing:YES];
     }
 }
@@ -596,7 +644,8 @@ MKPlacemark *marker;
     [parm setValue:[NSString stringWithFormat:@"%f",_MapView.centerCoordinate.latitude] forKey:@"lat"];
     [parm setValue:[NSString stringWithFormat:@"%f",_MapView.centerCoordinate.longitude]  forKey:@"long"];
     [parm setValue:self.eMode forKey:@"cust"];
-    
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Submitting Status",  @"Submitting Please Wait...")];
+
     //$div=(string) $data['divcode'];
     [WBService SendServerRequest:@"SAVE/GEOTag" withParameter:parm withImages:nil DataSF:nil
          completion:^(BOOL success, id respData, NSMutableDictionary *DatawithImage){
@@ -604,7 +653,8 @@ MKPlacemark *marker;
         [BaseViewController Toast:[receivedDta valueForKey:@"Msg"]];_CustomerList=[[NSArray alloc] init];_ObjCustomerList=[[NSArray alloc] init];[self.collectionView reloadData];
             [self RefreshDatas:self.DataSF];
             [self getTaggedList ];
-            self.vwCustDet.hidden=YES;
+            [self handleSingleTap];
+        [SVProgressHUD dismiss];
           }
           error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage){
               NSLog(@"%@",errorMsg);
@@ -612,7 +662,7 @@ MKPlacemark *marker;
     ];
 }
 -(IBAction) hideCust:(id) sender{
-    self.vwCustDet.hidden=YES;
+    [self handleSingleTap];
 }
 
 -(IBAction) hideCustSel:(id) sender{

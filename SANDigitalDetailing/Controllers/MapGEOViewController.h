@@ -46,6 +46,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,retain) IBOutlet UIView* vwNewCustDet;
 @property (nonatomic, weak) IBOutlet UICollectionView* collectionView;
 @property (nonatomic, weak) IBOutlet UICollectionViewFlowLayout* layout;
+@property (weak, nonatomic) IBOutlet UIView *vwTagFram;
+@property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
 
 @end
 
