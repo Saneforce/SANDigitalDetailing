@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSMutableArray* SHPlaces;
 @property (nonatomic, strong) NSMutableArray* eModeList;
 @property (nonatomic, strong) NSArray* ObjCustomerList;
+@property (nonatomic, strong) NSDictionary* TP;
 
 @property (nonatomic, strong) NSArray* CustomerList;
 @property (nonatomic,assign) NSString* eMode;
@@ -78,6 +79,8 @@ MKPlacemark *marker;
     self.ObjCustomerList=[[self.ObjCustomerList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"uRwID=='1'"]] mutableCopy];
     self.txtHQ.hidden=YES;
     self.lblHQ.hidden=YES;
+    self.TP =[[[NSUserDefaults standardUserDefaults] objectForKey:@"MyTodayplan.SANAPP"] mutableCopy];
+
     if(![_UserDet.Desig isEqualToString:@"MR"])
     {
         self.lblHQ.hidden=NO;
@@ -85,9 +88,17 @@ MKPlacemark *marker;
     }
     if ([_objHQList count]>0 && ![_UserDet.Desig isEqualToString:@"MR"])
     {
-        NSDictionary *HQ = self.objHQList[0];
-        self.txtHQ.text = [HQ objectForKey:@"name"];
-        self.DataSF = [HQ objectForKey:@"id"];
+        if(_TP.count == 0)
+        {
+            NSDictionary *HQ = self.objHQList[0];
+            self.txtHQ.text = [HQ objectForKey:@"name"];
+            self.DataSF = [HQ objectForKey:@"id"];
+        }
+        else
+        {
+            self.txtHQ.text = [_TP objectForKey:@"HQNm"];
+            self.DataSF = [_TP objectForKey:@"SFMem"];
+        }
     }else{
         self.DataSF=_UserDet.SF;
     }

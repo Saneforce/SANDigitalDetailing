@@ -1190,7 +1190,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexBackgroundColor" red="0.94901960780000005" green="0.95686274510000002" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="dE8-bH-jW9" customClass="TBSelectionBxCell">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="dE8-bH-jW9" customClass="TBSelectionBxCell">
                                                 <rect key="frame" x="0.0" y="44.5" width="323" height="64"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dE8-bH-jW9" id="R0f-AM-mcx">
@@ -5546,14 +5546,14 @@
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="tHX-1G-BWs" customClass="TBSelectionBxCell">
-                                        <rect key="frame" x="0.0" y="44.5" width="210" height="8.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="210" height="8"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tHX-1G-BWs" id="dJ0-lO-lk2">
-                                            <rect key="frame" x="0.0" y="0.0" width="210" height="8.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="210" height="8"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Doctor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVq-9H-vag">
-                                                    <rect key="frame" x="8" y="-10" width="212" height="1"/>
+                                                    <rect key="frame" x="8" y="-10" width="212" height="0.0"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                     <nil key="textColor"/>
@@ -5722,6 +5722,11 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.95686274510000002" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <view alpha="0.34999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k1K-lQ-tL7">
+                                <rect key="frame" x="0.0" y="-722" width="1025" height="722"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uA3-4Y-LBy" customClass="WindowView">
                                 <rect key="frame" x="10" y="565" width="330" height="158"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -5846,6 +5851,7 @@
                         <outlet property="vwCustDet" destination="uA3-4Y-LBy" id="8fy-5v-yWh"/>
                         <outlet property="vwCustSelect" destination="3VK-ak-057" id="3x7-Cp-zi2"/>
                         <outlet property="vwNewCustDet" destination="plc-CB-nQ0" id="83w-Mc-juN"/>
+                        <outlet property="vwTagFram" destination="k1K-lQ-tL7" id="dOl-sz-ROn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAI-Rs-OWt" userLabel="First Responder" sceneMemberID="firstResponder"/>
