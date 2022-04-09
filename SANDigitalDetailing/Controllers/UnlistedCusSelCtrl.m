@@ -510,6 +510,7 @@
                  [WBService saveData:receivedDta forKey:DataKey];
                 self.NwCustList =[[[NSUserDefaults standardUserDefaults] objectForKey:DataKey] mutableCopy];
                  [self.collectionView reloadData];
+                 [self clearNewDrForm];
                  self.nwUnDrView.hidden=YES;
             }
             error:^(NSString *errorMsg, NSMutableDictionary *DatawithImage){
